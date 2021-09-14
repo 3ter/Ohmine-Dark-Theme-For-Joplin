@@ -1,0 +1,484 @@
+:root {
+  /* GROUP STYLING */
+
+  --base-font: "montserrat", "microsoft jhenghei light", avenir,
+    arial, sans-serif;
+  --base-font-size: 14px;
+  --code-font: "cascadia mono light", monospace,
+    "microsoft jhenghei light";
+  --headings-font-weight: 600;
+  --primary-text-color: #bdbdbd;
+  --primary-headings-color: #fff;
+  --primary-link-color: #cdd286;
+  --primary-headings-margin: 1em 0 0.8em 0;
+}
+
+/* BASIC ****************************************** */
+body {
+  font-family: var(--base-font);
+  color: var(--primary-text-color);
+  font-size: var(--base-font-size);
+  background: #151b1a;
+}
+
+/* STYLING: HEADINGS ****************************** */
+h1 {
+  padding: 0;
+  margin: var(--primary-headings-margin);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    85deg,
+    #3bfff7,
+    #16d0c1,
+    #7cffcd,
+    #74dec8,
+    #74dec8,
+    #7cffcd,
+    #16d0c1,
+    #3bfff7
+  );
+  line-height: 1.2em;
+  font-variant: small-caps;
+  color: var(--primary-headings-color);
+  font-size: 2.3em;
+  font-weight: 700;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #396a5b;
+}
+
+h2::before {
+  content: " ";
+  display: inline-block;
+  width: .7em;
+  height: 0.8em;
+  padding: 0;
+  margin: 0 8px 0 0;
+  background: var(--primary-headings-color);
+  border-radius: 0.9em 2.9em 1.1em 3em;
+}
+h2 {
+  padding: 0;
+  margin: var(--primary-headings-margin);
+  color: var(--primary-headings-color);
+  font-size: 1.8em;
+  font-weight: var(--headings-font-weight);
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #949494;
+}
+
+h3 {
+  padding: 0;
+  margin: var(--primary-headings-margin);
+  color: var(--primary-headings-color);
+  font-size: 1.5em;
+  font-weight: var(--headings-font-weight);
+
+}
+
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: var(--primary-headings-margin);
+  color: var(--primary-headings-color);
+  font-size: 1.2em;
+  font-weight: var(--headings-font-weight);
+
+}
+
+/* STYLING: LINK ********************************* */
+a {
+  color: var(--primary-link-color);
+}
+
+.resource-icon {
+  background: var(--primary-link-color);
+}
+
+/* STYLING: FOOTNOTE ***************************** */
+.footnotes-sep {
+  display:none;
+}
+.footnotes:before {
+  content: "Footnotes";
+  display:inline-block;
+  width: 100%;
+  margin-top: 2em;
+  padding-top: 0.5em;
+  border-width: 3px 0 0 0;
+  border-style: double;
+  border-color: #8080807a;
+}
+#fn1,
+#fn2,
+#fn3 {
+  color: grey;
+}
+
+/* STYLING: TEXT ********************************* */
+em,
+strong {
+  color: #e7c297;
+}
+
+s {
+  color: #776857;
+}
+
+ins {
+  color: #ce8864;
+}
+
+mark::before,
+mark::after {
+  content: " ";
+  display: inline-block;
+  width: 0.5em;
+}
+mark {
+  background: #d6b15f;
+  color: #000000;
+  border-radius: 9px;
+}
+
+abbr[title] {
+  color: #54d077;
+  font-weight: 500;
+  text-decoration: underline dotted;
+}
+
+/* STYLING: PARAGRAPH ****************************** */
+p {
+  padding: 0 0 0 4px;
+  margin: 1em 0;
+}
+
+blockquote {
+  padding: 0 0 0 1.2em;
+  margin: 0;
+  color: #a2998f;
+  border-width: 0 0 0 5px;
+  border-style: dotted;
+  border-color: #fbce9a;
+  opacity: 1;
+
+}
+
+/* STYLING: CODE BLOCK | INLINE CODE **************** */
+.hljs {
+  padding: 10px 20px;
+  margin: 25px 0 25px 0;
+  background: #101413;
+  color: var(--primary-text-color);
+  font-size: 13px;
+  border-width: 0 3px;
+  border-style: ridge;
+  border-color: #80f0ff;
+  border-radius: 10px;
+  box-shadow: 0 0 3px #a2f1e3;
+}
+code {
+  font-family: var(--code-font);
+}
+
+/* STYLING: MATH NOTATION *************************** */
+span.katex-display {
+  color: #c5fffc;
+  font-size: 1.5em;
+  text-shadow: 0 0 3px #c5fffc;
+}
+
+/* STYLING: LISTS *********************************** */
+div > ul,
+div > ol {
+  margin: 20px 0 20px 25px;
+}
+li {
+  margin: 0.3em 0;
+  color: #5bb5a2;
+}
+
+input:checked {
+  /* checkbox checked color */
+  filter:hue-rotate(-50deg) brightness(140%);
+}
+
+/* STYLING: TABLE *********************************** */
+table {
+  width:100%;
+  margin: 25px auto 25px auto;
+}
+
+/* STYLING: STICKY NOTES **************************** */
+/* The sticky note-"IMPORTANT" is standalone, not included with this group styling */
+note::after,
+tip::after,
+question::after,
+explain::after,
+warning::after,
+keyword::after {
+  display: table;
+  width: 100;
+  padding: 0 10px 0;
+  margin: 8px 10px 0 0;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px #000000;
+  border-radius: 4px 10px;
+}
+note,
+tip,
+question,
+explain,
+warning,
+keyword {
+  display:block;
+  padding: 10px 20px 10px 20px;
+  margin: 15px 0;
+  background: linear-gradient(120deg, #0c0c0c, #232323, #0c0c0c);
+  color: #eaeaea;
+  border-width: 0px 2px;
+  border-style: solid;
+  border-color: #008c5c;
+  border-radius: 8px 20px;
+  box-shadow: 1px 1px 4px #148059;
+}
+
+/* STYLING: STICKY NOTE- NOTE */
+note::after {
+  content: "NOTE";
+  background: #0065b3;
+}
+
+/* STYLING: STICKY NOTE- TIP */
+tip::after {
+  content: "TIP";
+  background: #b7aa00;
+}
+
+/* STYLING: STICKY NOTE- QUESTION */
+question::after {
+  content: "QUESTION";
+  background: #5a00b5;
+}
+
+/* STYLING: STICKY NOTE- EXPLAIN */
+explain::after {
+  content: "EXPLAIN";
+  background: #00bf88;
+}
+
+/* STYLING: STICKY NOTE- WARNING */
+warning::after {
+  content: "WARNING";
+  background: #c30000;
+}
+
+/* STYLING: STICKY NOTE- KEYWORD */
+keyword::after {
+  content: "KEYWORD";
+  background: #c10074;
+}
+
+/* STYLING: STICKY NOTE- IMPORTANT */
+important::before {
+  content: "IMPORTANT";
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0px 0 10px 0;
+  background: #3c0000;
+  color: red;
+  font-weight: 700;
+  text-align: center;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: red;
+  border-radius: 8px;
+}
+important {
+  display:block;
+  padding: 1em;
+  margin: 1em 2em;
+  background: #edad0b0d;
+  color: #e8c399;
+  font-weight: 500;
+  border-width: 0px 2px;
+  border-style: solid;
+  border-color: #ff0000;
+  border-radius: 8px 20px;
+  box-shadow: 0 0 5px red;
+}
+
+/* STYLING: ART GALLERY ***************************** */
+ag2,
+ag3,
+ag4,
+ag5,
+ag6 {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-height: 60vh;
+  margin: 25px 0;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+ag2 img,
+ag3 img,
+ag4 img,
+ag5 img,
+ag6 img {
+  padding: 5px;
+}
+ag2 img {
+  max-width: calc(100% / 2.1);
+}
+ag3 img {
+  max-width: calc(100% / 3.2);
+}
+ag4 img {
+  max-width: calc(100% / 4.4);
+}
+ag5 img {
+  max-width: calc(100% / 5.6);
+}
+ag6 img {
+  max-width: calc(100% / 6.8);
+}
+
+
+/* STYLING: PRINTING ********************************* */
+@media print {
+
+  /* "AVOID" PRINTING: | sticky notes | */
+
+  note:after,
+  tip:after,
+  question:after,
+  explain:after,
+  warning:after,
+  keyword:after,
+  important:after,
+  note,
+  tip,
+  question,
+  explain,
+  warning,
+  keyword,
+  important {
+    display: none; /* replace this line of codes by "display: block;" for print out the sticky notes */
+  }
+
+  /* RELEASE ART GALLERY OVERFLOW */
+  ag2,
+  ag3,
+  ag4,
+  ag5,
+  ag6 {
+    max-height:none;
+    overflow-y:unset;
+  }
+
+  /* ADJUSTMENTS: | SIZE | COLOR | */
+  body {
+    color:#4c4c4c;
+    font-size: 12px;
+  }
+  h2::before {
+    box-shadow: inset 0 0 0 1000px #00000075; /* repleace this line of codes with "display:none;" if you don't want to print out the heading icon */
+  }
+  h1 {
+    -webkit-text-fill-color: initial;
+    -webkit-background-clip: initial;
+    color: #00000075;
+    font-size: 22px;
+    font-weight: 700;
+    border-bottom: none;
+  }
+  h2 {
+    color: #00000075;
+    font-size: 18px;
+  }
+  h3 {
+    color: #00000075;
+    font-size: 14px;
+  }
+  h4,
+  h5,
+  h6 {
+    color: #00000075;
+    font-size: 12px;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  .hljs,
+  blockquote {
+    margin: 10px 0;
+  }
+
+  div > ul,
+  div > ol {
+    margin: 10px 0 10px 25px;
+  }
+  
+  mark::before,
+  mark::after {
+    width:3px;
+  }
+  mark {
+    font-weight: 500;
+    border-top: 1px solid #0000009e;
+    border-bottom: 1px solid #0000009e;
+    border-radius: 4px;
+  }
+
+  table {
+    margin: 10px auto;
+  }
+
+  .hljs {
+    padding: 10px 20px;
+    background: none;
+    border-color: #0000009e;
+    font-size: 10px;
+    white-space: pre-wrap;
+    box-shadow: none;
+  }
+
+  span.katex-display {
+    color: #7d7d7d;
+    font-size: 12px;
+    text-shadow: none;
+  }
+
+  note::after,
+  tip::after,
+  question::after,
+  explain::after,
+  warning::after,
+  keyword::after {
+    color: #00000075;
+    border: 1px solid #7b7b7b;
+    text-shadow: none;
+  }
+  note,
+  tip,
+  question,
+  explain,
+  warning,
+  keyword {
+    color: #4c4c4c;
+    border: 1px solid #7b7b7b;
+    box-shadow: none;
+  }
+   
+}

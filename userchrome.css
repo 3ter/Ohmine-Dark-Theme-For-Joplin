@@ -1,0 +1,419 @@
+/* ------------------------ */
+/* STYLING: MARKDOWN EDITOR */
+/* ------------------------ */
+
+/* basic **************************************** */
+.CodeMirror:not(.cm-tag) * {
+    font-family: "montserrat", "microsoft Jhenghei light", avenir, arial, sans-serif !important;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+.resizableLayoutItem.rli-root {
+  background-color: #151b1a;
+}
+.codeMirrorEditor {
+  background-color: #151b1a !important;
+}
+
+/* headings ************************************* */
+.cm-header {
+  color: #bdbdbd !important;
+  font-weight: 600;
+}
+.cm-header-1 {
+  font-size: 2.3em !important;
+  font-variant: small-caps;
+}
+.cm-header-2 {
+  font-size: 1.8em !important;
+}
+.cm-header-3 {
+  font-size: 1.5em !important;
+}
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-size: 1.2em !important;
+}
+
+span.cm-rm-link,
+a.cm-link-text:noot(.cm-rm-image) {
+  color: #cdd286 !important;
+}
+
+/* code block ************************************ */
+div.CodeMirror div.cm-jn-code-block {
+  background: #101413 !important;
+}
+
+/* code block text ******************************* */
+div.CodeMirror span.cm-comment:not(.cm-jn-inline-code) {
+  color: #bdbdbd !important;
+}
+
+/* abstract content bar ************************** */
+span[role="presentation"]::after,
+span.cm-header::after,
+span.cm-overlay.cm-rm-link::after,
+span.cm-link-text::after,
+span.cm-overlay.cm-rm-link.cm-rm-image::after,
+div.cm-rm-code-block pre.CodeMirror-line span::after,
+div.CodeMirror span.cm-comment:not(.cm-jn-inline-code)::after,
+span.cm-tag.cm-bracket::after,
+.cm-katex-marker-open::after,
+.cm-katex-marker-close::after,
+span.cm-variable-2.cm-rm-list-token::after,
+span.cm-variable-3.cm-rm-list-token::after,
+span.cm-keyword.cm-rm-list-token::after,
+.cm-rm-checkbox::after,
+span[cm-text]:only-child::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* plain text */
+span[role="presentation"]::after {
+  background: #383838;
+  z-index: 1;
+}
+/* headings */
+span.cm-header::after {
+  background: #ffffff6e;
+  z-index: 2;
+}
+/* web link & file path link */
+span.cm-overlay.cm-rm-link::after {
+  background: #cdd286;
+  z-index: 3;
+}
+/* footnote */
+span.cm-link-text::after {
+  background: #5a5800;
+  z-index: 4;
+}
+/* abbreviation */
+span.cm-em.cm-link-text::after {
+  background: #da8d00;
+  z-index: 5;
+}
+/* attached image */
+span.cm-overlay.cm-rm-link.cm-rm-image::after {
+  background: #008e156e;
+  z-index: 5;
+}
+/* code block */
+div.cm-rm-code-block pre.CodeMirror-line span::after,
+div.CodeMirror span.cm-comment:not(.cm-jn-inline-code)::after {
+  background: #101413;
+  z-index: 10;
+}
+/* html tag */
+span.cm-tag.cm-bracket::after {
+  background: #ff0063;
+  z-index: 6;
+}
+/* math notaion */
+.cm-katex-marker-open::after,
+.cm-katex-marker-close::after {
+  background: #5aa5fb;
+  z-index: 7;
+}
+/* ordered list & unordered list */
+span.cm-variable-2.cm-rm-list-token::after,
+span.cm-variable-3.cm-rm-list-token::after,
+span.cm-keyword.cm-rm-list-token::after {
+  background: #b11da9;
+  z-index: 8;
+}
+/* checklist */
+.cm-rm-checkbox::after {
+  background: #5d00ff;
+  z-index: 9;
+}
+/* blank line: release the below codes will showing the blank line on the abstract content bar */
+/* span[cm-text]:only-child::after {
+    background:#151b1a;
+    z-index:10;
+} */
+
+/* ------------------------ */
+/*    STYLING: JOPLIN UI    */
+/* ------------------------ */
+
+/* STYLING: NOTEBOOKS PANEL ********************** */
+.sidebar {
+  background-color: #191919 !important;
+  border-radius: 0 0 7px 7px;
+  box-shadow: 0 0 2px #33524a;
+}
+/* hiding the "All Notes" link */
+.all-notes {
+  display: none !important;
+}
+/* directory icon */
+i.fas.fa-caret-down,
+i.fas.fa-caret-right {
+  text-shadow: 0 0 5px #dedede;
+  opacity: 1 !important;
+}
+i.fas.fa-caret-right {
+  color: #f6ff67;
+}
+i.fas.fa-caret-down {
+  color: #71ffc4;
+}
+/* notebook hover state */
+.list-item-depth-0,
+.list-item-depth-1,
+.list-item-depth-2,
+.list-item-depth-3,
+.list-item-depth-4,
+.list-item-depth-5,
+.list-item-depth-6,
+.list-item-depth-7,
+.list-item-depth-8,
+.list-item-depth-9,
+.list-item-depth-10,
+.list-item-depth-0:hover,
+.list-item-depth-1:hover,
+.list-item-depth-2:hover,
+.list-item-depth-3:hover,
+.list-item-depth-4:hover,
+.list-item-depth-5:hover,
+.list-item-depth-6:hover,
+.list-item-depth-7:hover,
+.list-item-depth-8:hover,
+.list-item-depth-9:hover,
+.list-item-depth-10:hover {
+  height: fit-content !important;
+  border-radius: 5px 10px;
+}
+.list-item-depth-0:hover,
+.list-item-depth-1:hover,
+.list-item-depth-2:hover,
+.list-item-depth-3:hover,
+.list-item-depth-4:hover,
+.list-item-depth-5:hover,
+.list-item-depth-6:hover,
+.list-item-depth-7:hover,
+.list-item-depth-8:hover,
+.list-item-depth-9:hover,
+.list-item-depth-10:hover {
+  filter: hue-rotate(180deg);
+}
+/* notebooks selected state */
+.list-item-depth-0.selected,
+.list-item-depth-1.selected,
+.list-item-depth-2.selected,
+.list-item-depth-3.selected,
+.list-item-depth-4.selected,
+.list-item-depth-5.selected,
+.list-item-depth-6.selected,
+.list-item-depth-7.selected,
+.list-item-depth-8.selected,
+.list-item-depth-9.selected,
+.list-item-depth-10.selected {
+  background: linear-gradient(60deg, #002f24, #00926a);
+  box-shadow: 0 0 3px #72fdbd;
+}
+/* notebook title indentation */
+.list-item-depth-0 {
+  padding-left: 11px !important;
+}
+.list-item-depth-1 {
+  padding-left: 22px !important;
+}
+.list-item-depth-2 {
+  padding-left: 33px !important;
+}
+.list-item-depth-3 {
+  padding-left: 44px !important;
+}
+.list-item-depth-4 {
+  padding-left: 55px !important;
+}
+.list-item-depth-5 {
+  padding-left: 66px !important;
+}
+.list-item-depth-6 {
+  padding-left: 77px !important;
+}
+.list-item-depth-7 {
+  padding-left: 88px !important;
+}
+.list-item-depth-8 {
+  padding-left: 99px !important;
+}
+.list-item-depth-9 {
+  padding-left: 110px !important;
+}
+.list-item-depth-10 {
+  padding-left: 121px !important;
+}
+/* set limit to the length of notebook title */
+div.list-item-container a.list-item {
+  padding: 4px 0;
+  margin: 1px auto;
+  max-width: 95%;
+  border-width: 0 0 2px 0;
+  border-style: dotted;
+  border-color: #ffffff14;
+}
+/* notebook title wrap text */
+.list-item-depth-0 span.title,
+.list-item-depth-1 span.title,
+.list-item-depth-2 span.title,
+.list-item-depth-3 span.title,
+.list-item-depth-4 span.title,
+.list-item-depth-5 span.title,
+.list-item-depth-6 span.title,
+.list-item-depth-7 span.title,
+.list-item-depth-8 span.title,
+.list-item-depth-9 span.title,
+.list-item-depth-10 span.title {
+  color: #e2e2e2;
+  max-width: 80%;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+/* note count label */
+.note-count-label {
+  display: block;
+  margin: 0 0 0 auto;
+  position: sticky;
+  right: 2px;
+  background: #4affff24;
+  font-size: 10px;
+  text-align: center;
+  border: 1px solid #ffffff1f;
+  border-radius: 8px;
+  opacity: 0.8 !important;
+}
+.note-count-label::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+}
+/* tag-related notebook navigation button */
+.kAMSfD {
+  position: absolute;
+  top: 6px;
+  right: 280px;
+  background: #00926a !important;
+  border-radius: 5px 10px !important;
+}
+.kAMSfD:hover {
+  filter: hue-rotate(180deg);
+}
+.icon-notebooks,
+.icon-notebooks ~ span {
+  color: white !important;
+}
+
+/* synchronize information */
+.sc-fzoxKX {
+  color: #02ffd0 !important;
+}
+
+/* synchronize btn */
+.hEuwIc,
+.hEuwIc:hover {
+  background-color: #313131 !important;
+  border: none !important;
+  border-radius: 1em !important;
+}
+.hEuwIc:hover {
+  filter: brightness(150%);
+}
+
+/* STYLING: NOTE LIST PANEL ********************** */
+.sc-fzqAui {
+  box-shadow: 0 0 2px #33524a;
+  border-radius: 7px;
+}
+
+/* note list panel header */
+.sc-fznLPX {
+  background-color: #191919 !important;
+}
+
+/* search icon & new todo btn & new note btn */
+.icon-search:before,
+.fa-check-square:before,
+.icon-note:before {
+  color: #f5f5f5;
+}
+button[title="New to-do"],
+button[title="New note"],
+button[title="New to-do"]:hover,
+button[title="New note"]:hover {
+  background: #00926a;
+  border-radius: 5px 10px;
+}
+button[title="New to-do"]:hover,
+button[title="New note"]:hover {
+  filter: hue-rotate(180deg);
+}
+
+/* note list panel body */
+.cLdGCO {
+  background: #191919 !important;
+  border: none !important;
+  border-radius: 0 0 7px 7px !important;
+}
+.note-list {
+  padding: 3px 7px 0 0;
+}
+/* note list selected state */
+.selected.note-list-item {
+  margin: 3px;
+  background: linear-gradient(60deg, #002f24, #00926a);
+  border-radius: 6px 15px;
+  box-shadow: 0 0 5px #72fdbd;
+}
+/* note list hover state */
+.note-list-item:hover {
+  border-radius: 6px 15px;
+  filter: hue-rotate(180deg);
+}
+.note-list-item:not(.selected):hover {
+  background: #15283c;
+}
+
+/* STYLING: EDITOR HEADER ************************ */
+/* editor header */
+.sc-fzoXzr.kYItFT {
+  background: #151b1a;
+}
+/* note title input bar */
+input.title-input {
+  padding: 0 140px 0 20px !important;
+  background: #151b1a !important;
+}
+/* time label */
+span.updated-time-label::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+}
+/* header toolbar */
+.updated-time-label ~ .editor-toolbar {
+  background: #151b1a !important;
+  box-shadow: none;
+}
+
+/* STYLING: MAIN EDITOR TOOLBAR ****************** */
+/* main toolbar */
+.editor-toolbar {
+  margin: 0 0 0 -12px;
+  background: #191919 !important;
+  border-radius: 1em;
+  box-shadow: 0 0 2px #33524a;
+}
+
+span.cm-em.cm-link-text {
+}
