@@ -1,8 +1,50 @@
-# Ohmine-Dark-Theme-For-Joplin
-This is a custom CSS theme for the opensource note-taking app [Joplin](https://joplinapp.org).
+# Ohmine Dark Theme for Joplin
+Ohmine Dark Theme is a Joplin CSS theme which aims to providing better read and write experience for long article writers.
 
+Joplin is the best note-taking app in the market if you are looking for the belows:
 
+- Free & Opensource
+- Multiple text editors (Rich Text and Markdown)
+- End-To-End Encryption to secure your notes
+- Cross platforms app that available on Windows, macOS, Linux, Android , iOS and terminal.
+- Synchronising with various services, including Joplin Cloud, Dropbox, OneDrive, Next cloud...
+- Take screenshots and save web pages as note with a Web Clipper browser extension.
+- Customise the app with your own scripts and plugins using the Extension API.
 
+Visit [Joplin homepage](https://joplinapp.org/) to know more.
+
+## Table of contents
+- What's including in the Ohime Dark Theme
+	- Sticky Notes
+	- Art Gallery
+	- Abstract Content Bar
+	- Structural-friendly heading style
+	- Font Family
+	- Text Style
+	- Link
+	- Unordered List & Ordered List
+	- Blockquote
+	- Code block & Inline Code
+	- Math notation
+	- Printing
+	- Color Controller
+- Must knows before use
+- How to use this theme
+- How to delete this theme
+- Recommended plugins
+	- Quick HTML tags (most recommended to use with this theme)
+	- Outline (recommended)
+	- Note Tabs (recommended)
+	- Quick Links (recommended)
+	- Rich Markdown
+	- Automatic Backlinks to note
+	- Combine notes
+ 	- Conflict Resolution
+	- Copy link to active note
+	- Embed Search
+	- Insert Date
+	- Note Statistics
+	- Templates
 ## Feature: Sticky Notes
 
 Here I created 7 custom elements for sticky notes: `note` , `tip` , `question` , `explain` , `warning` , `keyword` , `important`. 
