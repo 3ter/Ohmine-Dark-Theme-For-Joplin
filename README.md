@@ -69,7 +69,7 @@ If you are interested to know more about the Ohmine-3-Grain design:
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
 ## Sticky Notes
-Ohmine Dark Theme has provid 7 custom elements for creating the sticky notes: `note` , `tip` , `question` , `explain` , `warning` , `keyword` , `important`.
+Ohmine Dark Theme has 7 custom elements for creating the sticky notes: `note` , `tip` , `question` , `explain` , `warning` , `keyword` , `important`.
 
 Let’s see what are the sticky notes for:
 
@@ -84,20 +84,20 @@ Let’s see what are the sticky notes for:
 1. Sticky notes *will not display on printing*, it's for personal use by default. In case you want to print it out, you may need to edit a bit of CSS code in the `userstyle.css` file.
 2. Make sure there is a blank line *before the open tag*, otherwise it may cause the format problem.
 
-Code Sample:
+**Code Sample:**
  ```
  
  <note> 
  here to type any of your content.
  </note>
  ```
-Output:
+**Output:**
 
 ![sticky_notes_sample_output1_abg](https://user-images.githubusercontent.com/86870826/134674519-d88f0cee-ee9d-41e0-85a2-2d2e103ce0f5.png)
 
 3. Or, if you want to use markdown codes inside the sticky notes, you should add a blank line *before and after the open tag*:
 
-Code Sample:
+**Code Sample:**
 ```
 
 <keyword>
@@ -107,7 +107,7 @@ Code Sample:
 | 1 | 2 | 3 | 4 |
 </keyword>
 ```
-Output:
+**Output:**
 
 ![sticky_notes_sample_output2_abg](https://user-images.githubusercontent.com/86870826/134674577-10aada6e-4037-474b-bab6-018141f21d45.png)
 
@@ -136,7 +136,7 @@ Below is the sample of the art gallery(ag6) with 48 images:
 2. The art gallery tag must use *right behind the plain text.*
 3. Do not including any blank line within this part of codes, *blank line will break the markdown syntax.*
 
-Code Sample:
+**Code Sample:**
  
  ```
  This is a normal paragraph content. <--
@@ -152,16 +152,17 @@ Code Sample:
  </ag4>
  ```
 
-Output:
+**Output:**
 
 ![art_gallery_output_abg](https://user-images.githubusercontent.com/86870826/134674925-7136494b-9ca1-4694-9ba1-e95ea285364a.png)
 
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
 ## Abstract Content Bar
+
 Abstract Content Bar helps you to identify the elements through the color bar in the markdown editor.
 
-The color line is show at the end of each line of text in the markdown editor. It will check your text line by line and then tell you what they are:
+It will check your text line by line and then tell you what they are:
 
 (bigger number means higher priority)
 
@@ -174,9 +175,10 @@ See the below example screenshot (look to the right):
 It would be helpful when you want to release your eyes from the text for sometimes, or when you are going to double-check the missing part of your content.
 
 ### How to use
-2 things you should know before use:
+
+3 things you should know before use:
 1. If there is more than one element in the same line, it would be showing the color depends on their priority. You can go back to check the color sample list.
-2. The priority is changed in v1.1, you are not able to see "a link within a list" before v1.1.
+2. The priority is changed in the latest update, you are not able to see "a link within a list" in the previous version.
 3. The only thing you may need to do is to understand those colors' meanings.
 
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
@@ -208,8 +210,9 @@ Here show you more detail screenshots:
 ### Font Family
 
 Ohmine dark theme is using the below font family for both markdown editor and render viewer:
+
 - Montserrat - the most recommended font for this theme
-download it for free at (https://fonts.google.com/specimen/Montserrat)
+  download it for free at (https://fonts.google.com/specimen/Montserrat)
 - Microsoft JHengHei Light (for Traditional Chinese 繁體中文)
 - Avenir (default)
 - Arial (default)
@@ -235,6 +238,16 @@ If you didn't install the ==Montserrat== , ==Microsoft JHengHei Light== or ==Cas
 >Ohmine Dark Theme used Montserrat font on both Markdown Editor and the Render Viewer. And I must say that the non-monospace font will cause a little problem when you are trying to select a multiple-line heading by your cursor on the Markdown Editor.
 >
 >Honestly, it will never be a reason to make me choose the other fonts. I've tested over 40 fonts with sizes from 12px to 15px on this theme. And the Montserrat font is the ultimate champion! I think it's providing me the best reading experience by the 14px font size. It's worth me spending over 6 hours a day to work with it!
+
+[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+
+### Code block & Inline Code
+
+![inline_code_sample_abg](https://user-images.githubusercontent.com/86870826/134676173-043817c2-f3cd-4aef-8b24-21caa4ecc051.png)
+
+Then, the code block is showing below:
+
+![code_block_sample_abg](https://user-images.githubusercontent.com/86870826/134676214-8e428002-89b2-4c34-9a36-01e080c826b4.png)
 
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
@@ -266,16 +279,6 @@ If you didn't install the ==Montserrat== , ==Microsoft JHengHei Light== or ==Cas
 ### Blockquote
 
 ![blockquote_sample_abg](https://user-images.githubusercontent.com/86870826/134676125-1bf895c8-a9a3-40b8-b159-72b21fa85782.png)
-
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
-
-### Code block & Inline Code
-
-![inline_code_sample_abg](https://user-images.githubusercontent.com/86870826/134676173-043817c2-f3cd-4aef-8b24-21caa4ecc051.png)
-
-Then, the code block is showing below:
-
-![code_block_sample_abg](https://user-images.githubusercontent.com/86870826/134676214-8e428002-89b2-4c34-9a36-01e080c826b4.png)
 
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
@@ -349,40 +352,30 @@ Below are some of the best plugins on Joplin, if you never try it before it's wo
 - Note Tabs (recommend)
 - Quick Links (recommend)
 
-### Depends on needs
-- Rich Markdown 
-- Automatic Backlinks to note
-- Combine notes
-- Conflict Resolution
-- Copy link to active note
-- Embed Search
-- Insert Date
-- Note Statistics
-- Templates
-
-
+Check out more plugins on [Joplin Plugins Repository](https://github.com/joplin/plugins#joplin-plugin-repository)
 
 ### Quick HTML tags (most recommended to use with this theme)
 
-It let you create HTML tags in your notes easily, and it is a time saver when you using the Sticky Notes, Art Gallery, span tag, and more.
+It let you quick and easy to create HTML tags in your notes, and it's a time saver when you using it to create the Sticky Notes, Art Gallery, span tag, and more.
 
 Quick setting up:
 
 1. Highlight this line of text: `span;note;tip;explain;question;warning;keyword;important;ag2;ag3;ag4;ag5;ag6;`
 2. Press `ctrl+c` to copy the text
-3. Go to `Tools` > `Options` > `Plugins`
-4. Search plugin by input the word "html"
-5. Press `Install` which on the `Quick HTML tags` plugin
-6. Quit & restart Joplin app
-7. Go to `Tools` > `Options` > `Quick HTML tags`
-8. Go to `HTML predefined tags` 
-9. Press  `ctrl+v` to paste text in the input bar
-10.  Press `Ok`  it's done
+3. Open Joplin app
+4. Go to `Tools` > `Options` > `Plugins`
+5. Search plugin by input the word "html"
+6. Press `Install` which on the `Quick HTML tags` plugin
+7. Quit & restart Joplin app
+8. Go to `Tools` > `Options` > `Quick HTML tags`
+9. Go to `HTML predefined tags` 
+10. Press  `ctrl+v` to paste text in the input bar
+11.  Press `Ok`  it's done
 
 After this, you can use this plugin like below:
 
 1. Whenever you want to use an HTML tag just press  `ctrl + h`
-2. Then, Press the `Down` key on your keyboard
-3. Find the right tag and press `Enter` key. It's done!
+2. Then, press the `Down` key on your keyboard to find the right tag
+3. Press `Enter` key. It's done!
 
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
