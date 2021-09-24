@@ -10,6 +10,7 @@ Joplin is the best note-taking app in the market if you are looking for the belo
 - Synchronising with various services, including Joplin Cloud, Dropbox, OneDrive, Next cloud...
 - Take screenshots and save web pages as note with a Web Clipper browser extension.
 - Customise the app with your own scripts and plugins using the Extension API.
+- *You love the Ohmine Dark Theme*  :sunglasses::heart:
 
 Visit [Joplin Homepage](https://joplinapp.org/) to know more.
 
@@ -23,6 +24,7 @@ Visit [Joplin Homepage](https://joplinapp.org/) to know more.
 	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#how-to-use-2)
 - [Structural-friendly heading style](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#structural-friendly-heading-style)
 	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-use-3)
+- [Eye-Protector](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#eye-protector)
 - [Font Family](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#font-family)
 - [Text Style](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#text-style)
 - [Link](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#link)
@@ -106,7 +108,7 @@ Below is the sample of art gallery(ag6) with 48 images:
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
 ## Abstract Content Bar
-
+Identify elements automatically through the color bar in the markdown editor.
 This is the color line which is on the right of the markdown editor. It will check your text line by line and tell you what they are by the colors:
 - plain text <span style="color:#383838;">(color sample)</span>
 - heading <span style="color:#ffffff6e;">(color sample)</span>
@@ -204,6 +206,17 @@ Here are few things you should know before you print out your article:
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
 ## How to use this theme
+
+1. Make sure you are already installed Joplin on you computer. (download at: https://joplinapp.org/download/)
+2. Download and install the most recommended font for this theme. (download at: https://fonts.google.com/specimen/Montserrat)
+3. Open Joplin
+4. Go to `Tools` > `Options` > `Appearance` 
+5. Choose the `Dark` theme and press `Apply` (Ohmine Dark theme need to run with the Joplin built-in dark theme)
+6. In the `Appearance` press `Show Advanced Settings`
+7. Press `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
+8. Press `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
+9. Copy my codes in the `userstyle.css` and `userchrome.css` , then paste them on yours.
+10. Quit & restart Joplin and it's done.
 
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
