@@ -362,9 +362,12 @@ You can control all the color values of the render viewer easily through the Col
 5. Choose the `Dark` theme and press `Apply` (Ohmine Dark theme need to run with the Joplin built-in dark theme)
 6. In the `Appearance` press `Show Advanced Settings`
 7. Press `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
-8. Press `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
-9. Copy my codes in the `userstyle.css` and `userchrome.css` , then paste them on yours.
-10. Quit & restart Joplin and it's done.
+9. Copy my `userstyle.css` codes in this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
+10. And paste on your `userstyle.css`
+11. Back to Joplin again and press `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
+12. Copy my `userchrome.css` codes in this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
+13. And paste on your `userchrome.css`
+14. Quit & restart Joplin and it's done.
 
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
