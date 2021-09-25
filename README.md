@@ -278,11 +278,11 @@ Cascadian Mono Light sample:
 
 ![cascadia_mono_light_font_sample_abg](https://user-images.githubusercontent.com/86870826/134675876-8e6a1593-fbb9-4117-8c91-141a45e1d5dc.png)
 
-If you didn't install the ==Montserrat== , ==Microsoft JHengHei Light== or ==Cascadia Mono Light== on your computer, Joplin will pick the default fonts automatically.
+If you didn't install the Montserrat , Microsoft JHengHei Light or Cascadia Mono Light on your computer, Joplin will pick the default fonts.
 
 >Ohmine Dark Theme used Montserrat font on both Markdown Editor and the Render Viewer. And I must say that the non-monospace font will cause a little problem when you are trying to select a multiple-line heading by your cursor on the Markdown Editor.
 >
->Honestly, it will never be a reason to make me choose the other fonts. I've tested over 40 fonts with sizes from 12px to 15px on this theme. And the Montserrat font is the ultimate champion! I think it's providing me the best reading experience by the 14px font size. It's worth me spending over 6 hours a day to work with it!
+>Honestly, it will never be a reason to make me choose the other fonts. I've tested over 40 fonts with sizes from 12px to 15px on this theme. And the Montserrat font is the ultimate champion! I think it's providing me the best reading experience by the 14px font size. It's worth me spending over 6 hours a day to working with it!
 
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
