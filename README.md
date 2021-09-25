@@ -1,11 +1,10 @@
 # Ohmine Dark Theme for Joplin
 Ohmine Dark Theme is a Joplin CSS theme that aims to provide a better Work-On-Screen experience for those who want to treat their eyes better.
 
+![ohmine_dark_theme_overview](https://user-images.githubusercontent.com/86870826/134758710-65952382-d64c-4f44-b51a-77420082cb1a.png)
 
-![ohmine_dark_theme_overview](https://user-images.githubusercontent.com/86870826/134670582-8cc675d9-72f5-4169-8f8e-3403e3cf8486.png)
-
-
-Joplin is the best note-taking app in the market if you are looking for the below:
+## What is Joplin?
+Joplin is the best note-taking app in the market if you are looking for the below advantages:
 
 - Free & Opensource
 - Multiple text editors (Rich Text and Markdown)
@@ -15,11 +14,13 @@ Joplin is the best note-taking app in the market if you are looking for the belo
 - Take screenshots and save web pages as note with a Web Clipper browser extension.
 - Customise the app with your own scripts and plugins using the Extension API.
 - Or... ***You love the Ohmine Dark Theme***  :sunglasses::heart:
+- And much more...
 
-Visit [Joplin Homepage](https://joplinapp.org/) to know more.
+Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 
 ## Table of contents
 - [Ohmine Dark Theme](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#ohmine-dark-theme)
+- [Notebook Panel](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#notebook-panel)
 - [Sticky Notes](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#sticky-notes)
 	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#how-to-use) 
 - [Art Gallery](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#art-gallery)
@@ -58,8 +59,6 @@ This is a gift from my friend and I was tasting it when I making this theme. I p
 
 <img width="520" alt="ohmine-3-grain-reference_800" src="https://user-images.githubusercontent.com/86870826/134672093-8a9a0405-d9a1-4c7c-9d90-0ac4002c9545.png">
 
-
-
 If you are interested to know more about the Ohmine-3-Grain design:
 
 [Stockholm Design Lab - Ohmine page](https://www.stockholmdesignlab.se/work/ohmine)
@@ -67,6 +66,15 @@ If you are interested to know more about the Ohmine-3-Grain design:
 [Ohmine Official Video on Youtube](https://www.youtube.com/watch?v=L4TtyOKgv9s)
 
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+
+## Notebook Panel
+
+First to take a look at the notebook panel of Ohmine Dark Theme:
+
+![notebook_panel_sample_abg](https://user-images.githubusercontent.com/86870826/134758745-81736f74-97bf-49e2-9779-2fb935085120.png)
+
+The CSS styling of Ohmine Dark Theme will only support up to 10 levels of subdirectories when Joplin didn't limit it to you. And sure, you can edit my css by yourself.
+
 
 ## Sticky Notes
 Ohmine Dark Theme has 7 custom elements for creating the sticky notes: `note` , `tip` , `question` , `explain` , `warning` , `keyword` , `important`.
@@ -205,6 +213,7 @@ All the attached images will be defaulted by 30% darker than the original to avo
 Mouse hover the image to check out the original color, it will getting bright smoothly.
 
 ## More Screenshots
+
 Here show you more detail screenshots:
 
 ### Font Family
@@ -225,7 +234,7 @@ And the monospace font family for codes are:
 (it's for code block & inline code only)
 
 - Cascadia Mono Light
-download it for free at: (https://github.com/microsoft/cascadia-code/releases)
+  download it for free at: (https://github.com/microsoft/cascadia-code/releases)
 - Monospace (default)
 - Microsoft JHengHei Light (for Traditional Chinese comments 繁體中文註釋)
 
@@ -296,8 +305,11 @@ Here are few things you should know before you print out your article:
 
 1. Sticky Notes will not appear in the content by default.
 2. Art Gallery will be releasing the overflow limit and listing out all the images.
-3. A lot of HTML elements are restyled for printing.
-4. I created a few print control properties in the `root:` section of `userstyle.css`, you can easily manage what should print out.
+3. A lot of elements are restyled for printing.
+
+Below is the printing sample for reference:
+
+[ohmine_dark_theme_printing_sample.pdf](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/files/7229144/ohmine_dark_theme_printing_sample.pdf)
 
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
