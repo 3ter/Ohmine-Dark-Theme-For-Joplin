@@ -240,7 +240,7 @@ i.fas.fa-caret-down {
 .list-item-depth-7.selected,
 .list-item-depth-8.selected,
 .list-item-depth-9.selected,
-.list-item-depth-10.selected
+.list-item-depth-10.selected,
 .tags .list-item-container.selected {
   background: linear-gradient(60deg, #002f24, #00926a);
   box-shadow: 0 0 3px #72fdbd;
