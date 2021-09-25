@@ -46,9 +46,11 @@ div.CodeMirror div.cm-jn-code-block {
   background: #101413 !important;
 }
 
-/* code block text ******************************* */
-div.CodeMirror span.cm-comment:not(.cm-jn-inline-code) {
-  color: #bdbdbd !important;
+/* code text */
+div.CodeMirror span.cm-comment {
+  font-family: "cascadia mono light", monospace, "microsoft jhenghei light" !important;
+  color: #cccccc !important;
+
 }
 
 /* abstract content bar ************************** */
