@@ -78,7 +78,6 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 - [How to delete this theme](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-delete-this-theme)
 - [How to install plugins](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-install-plugins)
 - [Recommended plugins](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#recommended-plugins)
-	- [Depends on needs](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#depends-on-needs)
 	- [Quick HTML tags (most recommended to use with this theme)](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#quick-html-tags-most-recommended-to-use-with-this-theme)
 
 ## Ohmine Dark Theme
