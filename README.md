@@ -3,6 +3,40 @@ Ohmine Dark Theme is a Joplin CSS theme that aims to provide a better Work-On-Sc
 
 ![ohmine_dark_theme_overview](https://user-images.githubusercontent.com/86870826/134758710-65952382-d64c-4f44-b51a-77420082cb1a.png)
 
+## Latest Updates
+
+25-SEP-2021:
+
+New: Add Eye-Protector to protect your eyes from bright color images
+
+New: Add "span" tag style in the h1 heading to avoiding background-clip effects the span content
+
+New: Add new H5 & H6 heading style for better content separated experience, it would be useful for a long article writer
+
+New: Abstract Content Bar can now identify the Markdown Table content
+
+New: Add Tag-bar styling
+
+New: Add tag manager modal dialog styling
+
+New: Add option page styling
+
+New: Add Color Controller in the "root:" section of "userstyle.css", make it easy to centrally control all of the color values
+
+New: Add Print Switcher in the "root:" section of "userstyle.css", optional print out note title and sticky notes. (default: hide sticky notes)
+
+Update: Rearrange the priority of Abstract Content Bar color defines
+
+Update: Improve read & write experience, recolored and resized a few elements
+
+Update: Improve printing color & margin
+
+Fix: The "Ok" and "Apply" buttons of the Options page are position wrong
+
+Fix: HTML close tag doesn't show on the Abstract Content Bar when using the "Quick HTML tag" plugin to create the tag
+
+Fix: Sup-list margin wrong
+
 ## What is Joplin?
 Joplin is the best note-taking app in the market if you are looking for the below advantages:
 
@@ -73,7 +107,7 @@ First to take a look at the notebook panel of Ohmine Dark Theme:
 
 ![notebook_panel_sample_abg](https://user-images.githubusercontent.com/86870826/134758745-81736f74-97bf-49e2-9779-2fb935085120.png)
 
-The CSS styling of Ohmine Dark Theme will only support up to 10 levels of subdirectories when Joplin didn't limit it to you. And sure, you can edit my css by yourself.
+The CSS styling of Ohmine Dark Theme will only support up to 10 levels of subdirectories when Joplin didn't limit it to you. And sure, you can edit my CSS by yourself.
 
 
 ## Sticky Notes
@@ -178,7 +212,7 @@ It will check your text line by line and then tell you what they are:
 
 See the below example screenshot (look to the right):
 
-
+![abstract_content_bar_sample_abg](https://user-images.githubusercontent.com/86870826/134760098-806290da-3515-42e4-80c2-a5a23a44c887.png)
 
 It would be helpful when you want to release your eyes from the text for sometimes, or when you are going to double-check the missing part of your content.
 
@@ -210,11 +244,11 @@ Due to the style of headings, something you may need to consider when every time
 
 All the attached images will be defaulted by 30% darker than the original to avoid the bright light flashing your eyes when scrolling down your note.
 
-Mouse hover the image to check out the original color, it will getting bright smoothly.
+Mouse hover on the image to check out the original color, it will be getting bright smoothly.
 
 ## More Screenshots
 
-Here show you more detail screenshots:
+Here show you more detailed screenshots:
 
 ### Font Family
 
@@ -230,7 +264,7 @@ Ohmine dark theme is using the below font family for both markdown editor and re
 Montseratt sample:
 ![montserrat_font_sample_abg](https://user-images.githubusercontent.com/86870826/134675707-a3c36272-7219-4fba-9079-f4aa65c20d48.png)
 
-And the monospace font family for codes are:
+And the monospace font family for codes is:
 (it's for code block & inline code only)
 
 - Cascadia Mono Light
@@ -368,7 +402,7 @@ Check out more plugins on [Joplin Plugins Repository](https://github.com/joplin/
 
 ### Quick HTML tags (most recommended to use with this theme)
 
-It let you quick and easy to create HTML tags in your notes, and it's a time saver when you using it to create the Sticky Notes, Art Gallery, span tag, and more.
+It let you quick and easy to create HTML tags in your notes, and it's helpful to create the Sticky Notes, Art Gallery, span tag, and more.
 
 Quick setting up:
 
