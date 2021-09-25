@@ -4,9 +4,9 @@
 
 /* basic **************************************** */
 .CodeMirror:not(.cm-tag) * {
-    font-family: "montserrat", "microsoft Jhenghei light", avenir, arial, sans-serif !important;
-    color: #bdbdbd;
-    font-size: 14px;
+  font-family: "montserrat", "microsoft Jhenghei light", avenir, arial, sans-serif !important;
+  color: #bdbdbd;
+  font-size: 14px;
 }
 .resizableLayoutItem.rli-root {
   background-color: #151b1a;
@@ -60,6 +60,8 @@ span.cm-overlay.cm-rm-link.cm-rm-image::after,
 div.cm-rm-code-block pre.CodeMirror-line span::after,
 div.CodeMirror span.cm-comment:not(.cm-jn-inline-code)::after,
 span.cm-tag.cm-bracket::after,
+span.cm-tag::after,
+span.cm-null.cm-jn-monospace::after,
 .cm-katex-marker-open::after,
 .cm-katex-marker-close::after,
 span.cm-variable-2.cm-rm-list-token::after,
@@ -75,69 +77,88 @@ span[cm-text]:only-child::after {
   top: 0;
   right: 0;
 }
+
 /* plain text */
 span[role="presentation"]::after {
   background: #383838;
   z-index: 1;
 }
+
 /* headings */
 span.cm-header::after {
   background: #ffffff6e;
   z-index: 2;
 }
-/* web link & file path link */
-span.cm-overlay.cm-rm-link::after {
-  background: #cdd286;
-  z-index: 3;
-}
-/* footnote */
-span.cm-link-text::after {
-  background: #5a5800;
-  z-index: 4;
-}
-/* abbreviation */
-span.cm-em.cm-link-text::after {
-  background: #da8d00;
-  z-index: 5;
-}
-/* attached image */
-span.cm-overlay.cm-rm-link.cm-rm-image::after {
-  background: #008e156e;
-  z-index: 5;
-}
-/* code block */
-div.cm-rm-code-block pre.CodeMirror-line span::after,
-div.CodeMirror span.cm-comment:not(.cm-jn-inline-code)::after {
-  background: #101413;
-  z-index: 10;
-}
-/* html tag */
-span.cm-tag.cm-bracket::after {
-  background: #ff0063;
-  z-index: 6;
-}
-/* math notaion */
-.cm-katex-marker-open::after,
-.cm-katex-marker-close::after {
-  background: #5aa5fb;
-  z-index: 7;
-}
+
+
 /* ordered list & unordered list */
 span.cm-variable-2.cm-rm-list-token::after,
 span.cm-variable-3.cm-rm-list-token::after,
 span.cm-keyword.cm-rm-list-token::after {
   background: #b11da9;
+  z-index: 3;
+}
+
+/* table */
+span.cm-null.cm-jn-monospace::after {
+  background:#3cffd7b3;
+  z-index: 4;
+}
+
+/* attached image */
+span.cm-overlay.cm-rm-link.cm-rm-image::after {
+  background: #008e156e;
+  z-index: 5;
+}
+
+/* footnote */
+span.cm-link-text::after {
+  background: #5a5800;
+  z-index: 6;
+}
+
+/* web link & file path link */
+span.cm-overlay.cm-rm-link::after {
+  background: #cdd286;
+  z-index: 7;
+}
+
+/* abbreviation */
+span.cm-em.cm-link-text::after {
+  background: #da8d00;
   z-index: 8;
 }
+
+/* html tag */
+span.cm-tag::after {
+  background: #ff0063;
+  z-index: 9;
+}
+
+/* math notaion */
+.cm-katex-marker-open::after,
+.cm-katex-marker-close::after {
+  background: #5aa5fb;
+  z-index: 10;
+}
+
 /* checklist */
 .cm-rm-checkbox::after {
   background: #5d00ff;
-  z-index: 9;
+  z-index: 11;
 }
+
+/* code block */
+div.cm-rm-code-block pre.CodeMirror-line span::after,
+div.CodeMirror span.cm-comment:not(.cm-jn-inline-code)::after {
+  background: #101413;
+  z-index: 12;
+}
+
 /* blank line: release the below codes will showing the blank line on the abstract content bar */
 /* span[cm-text]:only-child::after {
     background:#151b1a;
-    z-index:10;
+    z-index:13;
 } */
 
 /* ------------------------ */
@@ -299,14 +320,15 @@ div.list-item-container a.list-item {
   width: 8px;
 }
 /* tag-related notebook navigation button */
-.kAMSfD {
+
+.sc-fznKkj > div > div > div button.kAMSfD {
   position: absolute;
   top: 6px;
   right: 280px;
   background: #00926a !important;
   border-radius: 5px 10px !important;
 }
-.kAMSfD:hover {
+.sc-fznKkj > div > div > div button.kAMSfD:hover {
   filter: hue-rotate(180deg);
 }
 .icon-notebooks,
@@ -373,7 +395,7 @@ button[title="New note"]:hover {
   margin: 3px;
   background: linear-gradient(60deg, #002f24, #00926a);
   border-radius: 6px 15px;
-  box-shadow: 0 0 5px #72fdbd;
+  box-shadow: 0 0 3px #72fdbd;
 }
 /* note list hover state */
 .note-list-item:hover {
@@ -415,5 +437,49 @@ span.updated-time-label::after {
   box-shadow: 0 0 2px #33524a;
 }
 
-span.cm-em.cm-link-text {
+/* STYLING: TAG BAR ****************************** */
+.tag-bar {
+  margin-left: -4px;
+  background: #191919;
+  border-radius: 1em;
+  box-shadow: 0 0 2px #33524a;
+  z-index: 1;
+}
+/* tags */
+div.tag-bar div.tag-list > span {
+  background:#4affff24 !important;
+  border-width:1px;
+  border-style:solid;
+  border-color:#ffffff1f;
+}
+
+/* STYLING: TAG MANAGER MODAL DIALOG ************* */
+.modal-dialog,
+.modal-dialog  button {
+    border-radius:0.5em 1em;
+}
+/* tag selector bar */
+.css-16hp18y-control,
+.tag-selector > div > div > div > div {
+    border-radius:1em;
+}
+
+
+/* STYLING: OPTIONS PAGE ************************* */
+/* dropdown list & input bar */
+select, input {
+  color:#bdbdbd !important;
+  border-radius: 0.8em !important;
+}
+/* plugin card */
+.sc-fzoPby {
+  border-radius: 0.5em 1.5em;
+}
+.sc-fzoPby button {
+  border-radius: 0.5em 1em;
+}
+/* button: | back | ok | apply | */
+#react-root > div > div > div > div.sc-fzoCCn > button,
+#react-root > div > div > div > div.sc-fzoCCn > div > button  {
+  border-radius: 0.5em 1em;
 }

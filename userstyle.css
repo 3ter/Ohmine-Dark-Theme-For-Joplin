@@ -1,33 +1,32 @@
 :root {
+  
   /* GROUP STYLING */
-
-  --base-font: "montserrat", "microsoft jhenghei light", avenir,
-    arial, sans-serif;
+  --base-font: "montserrat", "microsoft jhenghei light", avenir, arial, sans-serif;
   --base-font-size: 14px;
-  --code-font: "cascadia mono light", monospace,
-    "microsoft jhenghei light";
-  --headings-font-weight: 600;
-  --primary-text-color: #bdbdbd;
-  --primary-headings-color: #fff;
-  --primary-link-color: #cdd286;
   --primary-headings-margin: 1em 0 0.8em 0;
-}
+  --code-font: "cascadia mono light", monospace, "microsoft jhenghei light";
+ 
+  /* EYE-PROTECTOR SWITCHER */
+  /* protect your eyes by avoiding bright color from images */
+  /* change the below 2 lines value to "none" to turn off the Eye-Protector effect */
+  --eye-protector-filter: brightness(70%); /*  all images will be default to 30% darker */
+  --eye-protector-animation: eye-protector 2s forwards 1; /* show the original color smoothly when your mouse hover on them */
 
-/* BASIC ****************************************** */
-body {
-  font-family: var(--base-font);
-  color: var(--primary-text-color);
-  font-size: var(--base-font-size);
-  background: #151b1a;
-}
+  /* PRINT SWITCHER */
+  --print-note-title-display: block; /* change the "block;" value to "none;" to hide the note title on printing */
+  --print-sticky-notes-display: block; /* change the "none;" value to "block;" to show all of the sticky notes on printing */
+  --print-h1-heading-border-bottom: none; /* change the "none;" value to "1px solid #505050;" to show the h1 border bottom on printing */
 
-/* STYLING: HEADINGS ****************************** */
-h1 {
-  padding: 0;
-  margin: var(--primary-headings-margin);
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent;
-  background: linear-gradient(
+  
+  /* ************************************************* */
+  /*          COLOR CONTROLLER: SECTION START          */
+  /* ************************************************* */
+  /* you can centrally control all color values of the render viewer within this section: */
+
+  --primary-text-color: #bdbdbd;
+  --primary-render-viewer-background-color: #151b1a;
+
+  --h1-heading-clip-text-color:linear-gradient( /* This is using the "background:" property with the "background-clip" and "text-fill-color" effect */
     85deg,
     #3bfff7,
     #16d0c1,
@@ -38,181 +37,369 @@ h1 {
     #16d0c1,
     #3bfff7
   );
-  line-height: 1.2em;
-  font-variant: small-caps;
-  color: var(--primary-headings-color);
-  font-size: 2.3em;
-  font-weight: 700;
-  border-width: 0 0 1px 0;
-  border-style: solid;
-  border-color: #396a5b;
+  --h1-heading-text-color: #ffffff; /* It will only work when the h1 background-clip effects fails. */
+  --h1-heading-border-color: #396a5b;
+  --h2-heading-icon-color: #e2e2e2;
+  --h2-heading-text-color: #e2e2e2;
+  --h2-heading-border-color: #949494;
+  --h3-heading-text-color: #e2e2e2;
+  --h4-heading-text-color: #e2e2e2;
+  --h5-heading-text-color: #b1b1b1;
+  --h5-heading-border-color: #b1b1b1;
+  --h6-heading-text-color: #b1b1b1;
+
+  --link-text-color: #cdd286;
+  --link-resource-icon-color: #cdd286;
+
+  --emphasize-and-strong-text-color: #e7c297;
+  --strikethrough-text-color: #776857;
+  --inserted-text-color: #ce8864;
+  --abbreviation-text-color: #54d077;
+
+  --mark-text-color: #000000;
+  --mark-text-highlight-color: #d6b15f;
+
+  --blockquote-text-color: #a2998f;
+  --blockquote-border-color: #fbce9a;
+
+  --list-text-color: #51bba8;
+
+  --checklist-unchecked-text-color: #5bb5a2;
+  --checklist-checked-text-color: #5bb5a2;
+  --checkbox-checked-color: hue-rotate(-50deg) brightness(140%); /* This is using the "filter:" property */
+
+  --math-notation-text-color: #c5fffc;
+  --math-notation-text-shadow-color: #c5fffc;
+
+  --table-head-text-color: #6cd4b6;
+  --table-head-background-color: #002931;
+  --table-data-text-color: #bdbdbd;
+  --table-row-odd-background-color: #122527;
+  --table-row-even-background-color: #152c2f;
+
+
+  --footnote-text-color: #808080;
+  --footnote-border-color: #8080807a;
+
+  --code-text-color: #d0d0d0; /* code block txet & inline code text */
+
+  --code-block-background-color: #101413;
+  --code-block-border-color: #80f0ff;
+  --code-block-box-shadow-color: #a2f1e3;
+
+
+  /* sticky notes body: group style */
+  --sticky-notes-background-color:linear-gradient(
+    120deg, 
+    #0c0c0c, 
+    #232323, 
+    #0c0c0c);
+  --sticky-notes-text-color: #eaeaea;
+  --sticky-notes-tags-text-shadow-color: #000000;
+  --sticky-notes-border-color: #008c5c;
+  --sticky-notes-box-shadow-color: #148059;
+
+  /* sticky note tags */
+  --sticky-note-note-tag-color: #0065b3;
+  --sticky-note-tip-tag-color: #b7aa00;
+  --sticky-note-question-tag-color: #5a00b5;
+  --sticky-note-explain-tag-color: #00bf88;
+  --sticky-note-warning-tag-color: #c30000;
+  --sticky-note-keyword-tag-color: #c10074;
+
+  /* sticky note: Important */
+  --sticky-note-important-title-text-color: red;
+  --sticky-note-important-title-background-color: #3c0000;
+  --sticky-note-important-title-border-color: red;
+  --sticky-note-important-text-color: #e8c399;
+  --sticky-note-important-background-color: #edad0b0d;
+  --sticky-note-important-border-color: red;
+  --sticky-note-important-box-shadow-color: red;
+
+
+
+  /* PRINTING COLOR ********************************** */
+  --print-note-title-color: #a7a7a7;
+  --print-body-text-color: #5a5a5a; /* including emphasize,strong,inserted,abbreviation,strikethrough */
+
+  --print-h1-heading-color: #505050;
+  --print-h2-h3-h4-headings-color: #7b7b7b;
+  --print-h5-h6-headings-color: #b1b1b1;
+  --print-h5-heading-border-color: #cccccc;
+
+  --print-links-color: #00b5fb; /* all links */
+
+  --print-mark-text-color: #000000;
+  --print-mark-text-border-color: #cccccc;
+
+  --print-list-text-color: #808080;   /* unordered list, order list, checklist */
+
+  --print-table-td-text-color: #808080; 
+  
+  --print-code-text-color: #505050;   /* code block & inline code */
+  --print-code-border-color: #bfbfbf;  /* code block & inline code */
+
+  --print-math-notation-text-color: #000000;
+
+  /* all sticky notes */
+  --print-sticky-notes-tags-text-color: #a7a7a7; /* not including sticky notes - Important */
+  --print-sticky-notes-text-color: #5a5a5a;
+  --print-sticky-notes-border-color: #e0e0e0;
+  
+  /* sticky note - Imoprtant */
+  --print-sticky-note-important-title-text-color:#ff0000;
+
+  /* ************************************************* */
+  /*           COLOR CONTROLLER: SECTION END           */
+  /* ************************************************* */
+}
+
+
+
+/* BASIC ********************************************* */
+body {
+  font-family:var(--base-font);
+  color:var(--primary-text-color);
+  font-size:var(--base-font-size);
+  background:var(--primary-render-viewer-background-color);
+}
+
+/* STYLING: HEADINGS ********************************* */
+h1 {
+  padding:0;
+  margin:var(--primary-headings-margin);
+  background:var(--h1-heading-clip-text-color);
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent;
+  color:var(--h1-heading-text-color);
+  font-size:2.3em;
+  font-weight:700;
+  line-height:1.2em;
+  font-variant:small-caps;
+  border-width:0 0 1px 0;
+  border-style:solid;
+  border-color:var(--h1-heading-border-color);
+}
+h1 span {
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
 }
 
 h2::before {
-  content: " ";
-  display: inline-block;
-  width: .7em;
-  height: 0.8em;
-  padding: 0;
-  margin: 0 8px 0 0;
-  background: var(--primary-headings-color);
-  border-radius: 0.9em 2.9em 1.1em 3em;
+  content:"";
+  display:inline-block;
+  width:0.7em;
+  height:0.8em;
+  padding:0;
+  margin:0 8px 0 0;
+  background:var(--h2-heading-icon-color);
+  border-radius:0.9em 2.9em 1.1em 3em;
 }
 h2 {
-  padding: 0;
-  margin: var(--primary-headings-margin);
-  color: var(--primary-headings-color);
-  font-size: 1.8em;
-  font-weight: var(--headings-font-weight);
-  border-width: 0 0 1px 0;
-  border-style: solid;
-  border-color: #949494;
+  padding:0;
+  margin:var(--primary-headings-margin);
+  color:var(--h2-heading-text-color);
+  font-size:1.8em;
+  font-weight:600;
+  border-width:0 0 1px 0;
+  border-style:solid;
+  border-color:var(--h2-heading-border-color);
 }
 
 h3 {
-  padding: 0;
-  margin: var(--primary-headings-margin);
-  color: var(--primary-headings-color);
-  font-size: 1.5em;
-  font-weight: var(--headings-font-weight);
-
+  padding:0;
+  margin:var(--primary-headings-margin);
+  color:var(--h3-heading-text-color);
+  font-size:1.5em;
+  font-weight:600;
 }
 
-h4,
-h5,
+h4 {
+  padding:0;
+  margin:var(--primary-headings-margin);
+  color:var(--h4-heading-text-color);
+  font-size:1.2em;
+  font-weight:600;
+}
+
+h5 {
+  padding:0;
+  margin:var(--primary-headings-margin);
+  color:var(--h5-heading-text-color);
+  font-size:1.2em;
+  font-weight:600;
+  border-width:0 0 1px 0;
+  border-style:dotted;
+  border-color:var(--h5-heading-border-color);
+}
+
 h6 {
-  padding: 0;
-  margin: var(--primary-headings-margin);
-  color: var(--primary-headings-color);
-  font-size: 1.2em;
-  font-weight: var(--headings-font-weight);
-
+  padding:0;
+  margin:var(--primary-headings-margin);
+  color:var(--h6-heading-text-color);
+  font-size:1.1em;
+  font-weight:600;
 }
 
-/* STYLING: LINK ********************************* */
+/* STYLING: EYE-PROTECTOR ON IMAGE ******************* */
+@keyframes eye-protector {
+  from {filter:brightness(70%);}
+  to {filter:brightness(100%);}
+}
+#rendered-md img {
+  filter:var(--eye-protector-filter);
+}
+#rendered-md img:hover {
+  animation: var(--eye-protector-animation);
+}
+
+/* STYLING: LINK ************************************* */
 a {
-  color: var(--primary-link-color);
+  color:var(--link-text-color);
 }
 
 .resource-icon {
-  background: var(--primary-link-color);
+  background:var(--link-resource-icon-color);
 }
 
-/* STYLING: FOOTNOTE ***************************** */
+/* STYLING: FOOTNOTE ********************************* */
 .footnotes-sep {
   display:none;
 }
-.footnotes:before {
-  content: "Footnotes";
+.footnotes::before {
+  content:"Footnotes";
   display:inline-block;
-  width: 100%;
-  margin-top: 2em;
-  padding-top: 0.5em;
-  border-width: 3px 0 0 0;
-  border-style: double;
-  border-color: #8080807a;
+  width:100%;
+  margin-top:2em;
+  padding-top:0.5em;
+  border-width:3px 0 0 0;
+  border-style:double;
+  border-color:var(--footnote-border-color);
 }
 #fn1,
 #fn2,
 #fn3 {
-  color: grey;
+  color:var(--footnote-text-color);
 }
 
-/* STYLING: TEXT ********************************* */
+/* STYLING: TEXT ************************************* */
 em,
 strong {
-  color: #e7c297;
+  color:var(--emphasize-and-strong-text-color);
 }
 
 s {
-  color: #776857;
+  color:var(--strikethrough-text-color);
 }
 
 ins {
-  color: #ce8864;
+  color:var(--inserted-text-color);
 }
 
 mark::before,
 mark::after {
-  content: " ";
-  display: inline-block;
-  width: 0.5em;
+  content:"";
+  display:inline-block;
+  width:7px;
 }
 mark {
-  background: #d6b15f;
-  color: #000000;
-  border-radius: 9px;
+  background:var(--mark-text-highlight-color);
+  color:var(--mark-text-color);
+  border-radius:1em;
 }
 
 abbr[title] {
-  color: #54d077;
-  font-weight: 500;
-  text-decoration: underline dotted;
+  color:var(--abbreviation-text-color);
+  font-weight:500;
+  text-decoration:underline dotted;
 }
 
-/* STYLING: PARAGRAPH ****************************** */
-p {
-  padding: 0 0 0 4px;
-  margin: 1em 0;
+/* STYLING: PARAGRAPH ******************************** */
+#rendered-md p {
+  padding:0 0 0 4px;
+  margin:1em 0;
 }
 
-blockquote {
-  padding: 0 0 0 1.2em;
-  margin: 0;
-  color: #a2998f;
-  border-width: 0 0 0 5px;
-  border-style: dotted;
-  border-color: #fbce9a;
-  opacity: 1;
-
+#rendered-md blockquote {
+  padding:0 0 0 13px;
+  margin:0 0 0 5px;
+  color:var(--blockquote-text-color);
+  border-width:0 0 0 5px;
+  border-style:dotted;
+  border-color:var(--blockquote-border-color);
+  opacity:1;
 }
 
-/* STYLING: CODE BLOCK | INLINE CODE **************** */
+/* STYLING: CODE BLOCK | INLINE CODE ***************** */
 .hljs {
-  padding: 10px 20px;
-  margin: 25px 0 25px 0;
-  background: #101413;
-  color: var(--primary-text-color);
-  font-size: 13px;
-  border-width: 0 3px;
-  border-style: ridge;
-  border-color: #80f0ff;
-  border-radius: 10px;
-  box-shadow: 0 0 3px #a2f1e3;
+  padding:10px 20px;
+  margin:25px 0;
+  background:var(--code-block-background-color);
+  font-size:13px;
+  border-width:0 2px;
+  border-style:ridge;
+  border-color:var(--code-block-border-color);
+  border-radius:10px;
+  box-shadow:0 0 3px var(--code-block-box-shadow-color);
 }
-code {
-  font-family: var(--code-font);
+#rendered-md .code, 
+#rendered-md .inline-code {
+  font-family:var(--code-font);
+  color:var(--code-text-color);
 }
 
-/* STYLING: MATH NOTATION *************************** */
+/* STYLING: MATH NOTATION **************************** */
 span.katex-display {
-  color: #c5fffc;
-  font-size: 1.5em;
-  text-shadow: 0 0 3px #c5fffc;
+  color:var(--math-notation-text-color);
+  font-size:1.5em;
+  text-shadow:0 0 3px var(--math-notation-text-shadow-color);
 }
 
-/* STYLING: LISTS *********************************** */
+/* STYLING: LISTS ************************************ */
+  /* ordered list & unordered list */
 div > ul,
 div > ol {
-  margin: 20px 0 20px 25px;
+  margin:20px 0 20px 25px;
 }
 li {
-  margin: 0.3em 0;
-  color: #5bb5a2;
+  margin:0.3em 0;
+  color:var(--list-text-color);
 }
-
+li > p {
+  margin:0;
+}
+  /* checklist */
+label.checkbox-label-unchecked {
+  color:var(--checklist-unchecked-text-color);
+}
+label.checkbox-label-checked {
+  color:var(--checklist-checked-text-color);
+}
+  /* checkbox */
 input:checked {
-  /* checkbox checked color */
-  filter:hue-rotate(-50deg) brightness(140%);
+  filter:var(--checkbox-checked-color);
 }
 
-/* STYLING: TABLE *********************************** */
+/* STYLING: TABLE ************************************ */
 table {
   width:100%;
-  margin: 25px auto 25px auto;
+  margin:25px auto;
+}
+th {
+  color:var(--table-head-text-color);
+  background:var(--table-head-background-color) !important;
+}
+td {
+  color:var(--table-data-text-color) !important;
+}
+.jop-tinymce table tr:nth-child(even), table tr:nth-child(even) {
+  background-color:var(--table-row-even-background-color);
+}
+.jop-tinymce table tr:nth-child(odd), table tr:nth-child(odd) {
+  background-color:var(--table-row-odd-background-color);
 }
 
-/* STYLING: STICKY NOTES **************************** */
+/* STYLING: STICKY NOTES ***************************** */
 /* The sticky note-"IMPORTANT" is standalone, not included with this group styling */
 note::after,
 tip::after,
@@ -220,13 +407,13 @@ question::after,
 explain::after,
 warning::after,
 keyword::after {
-  display: table;
-  width: 100;
-  padding: 0 10px 0;
-  margin: 8px 10px 0 0;
-  font-weight: 700;
-  text-shadow: 1px 1px 3px #000000;
-  border-radius: 4px 10px;
+  display:table;
+  width:100;
+  padding:0 10px 0;
+  margin:8px 10px 0 0;
+  font-weight:700;
+  text-shadow:1px 1px 3px var(--sticky-notes-tags-text-shadow-color);
+  border-radius:4px 10px;
 }
 note,
 tip,
@@ -235,133 +422,136 @@ explain,
 warning,
 keyword {
   display:block;
-  padding: 10px 20px 10px 20px;
-  margin: 15px 0;
-  background: linear-gradient(120deg, #0c0c0c, #232323, #0c0c0c);
-  color: #eaeaea;
-  border-width: 0px 2px;
-  border-style: solid;
-  border-color: #008c5c;
-  border-radius: 8px 20px;
-  box-shadow: 1px 1px 4px #148059;
+  padding:10px 20px 10px 20px;
+  margin:15px 0;
+  background:var(--sticky-notes-background-color);
+  color:var(--sticky-notes-text-color);
+  border-width:0px 2px;
+  border-style:solid;
+  border-color:var(--sticky-notes-border-color);
+  border-radius:8px 20px;
+  box-shadow:1px 1px 4px var(--sticky-notes-box-shadow-color);
 }
 
-/* STYLING: STICKY NOTE- NOTE */
+/* STYLING: STICKY NOTE- NOTE TAG */
 note::after {
-  content: "NOTE";
-  background: #0065b3;
+  content:"NOTE";
+  background:var(--sticky-note-note-tag-color);
 }
 
-/* STYLING: STICKY NOTE- TIP */
+/* STYLING: STICKY NOTE- TIP TAG */
 tip::after {
-  content: "TIP";
-  background: #b7aa00;
+  content:"TIP";
+  background:var(--sticky-note-tip-tag-color);
 }
 
-/* STYLING: STICKY NOTE- QUESTION */
+/* STYLING: STICKY NOTE- QUESTION TAG */
 question::after {
-  content: "QUESTION";
-  background: #5a00b5;
+  content:"QUESTION";
+  background:var(--sticky-note-question-tag-color);
 }
 
-/* STYLING: STICKY NOTE- EXPLAIN */
+/* STYLING: STICKY NOTE- EXPLAIN TAG */
 explain::after {
-  content: "EXPLAIN";
-  background: #00bf88;
+  content:"EXPLAIN";
+  background:var(--sticky-note-explain-tag-color);
 }
 
-/* STYLING: STICKY NOTE- WARNING */
+/* STYLING: STICKY NOTE- WARNING TAG */
 warning::after {
-  content: "WARNING";
-  background: #c30000;
+  content:"WARNING";
+  background:var(--sticky-note-warning-tag-color);
 }
 
-/* STYLING: STICKY NOTE- KEYWORD */
+/* STYLING: STICKY NOTE- KEYWORD TAG */
 keyword::after {
-  content: "KEYWORD";
-  background: #c10074;
+  content:"KEYWORD";
+  background:var(--sticky-note-keyword-tag-color);
 }
 
 /* STYLING: STICKY NOTE- IMPORTANT */
 important::before {
-  content: "IMPORTANT";
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0px 0 10px 0;
-  background: #3c0000;
-  color: red;
-  font-weight: 700;
-  text-align: center;
-  border-width: 1px 0 1px 0;
-  border-style: solid;
-  border-color: red;
-  border-radius: 8px;
+  content:"IMPORTANT";
+  display:block;
+  width:100%;
+  padding:0;
+  margin:0px 0 10px 0;
+  background:var(--sticky-note-important-title-background-color);
+  color:var(--sticky-note-important-title-text-color);
+  font-weight:700;
+  text-align:center;
+  border-width:1px 0 1px 0;
+  border-style:solid;
+  border-color:var(--sticky-note-important-title-border-color);
+  border-radius:8px;
 }
 important {
   display:block;
-  padding: 1em;
-  margin: 1em 2em;
-  background: #edad0b0d;
-  color: #e8c399;
-  font-weight: 500;
-  border-width: 0px 2px;
-  border-style: solid;
-  border-color: #ff0000;
-  border-radius: 8px 20px;
-  box-shadow: 0 0 5px red;
+  padding:1em;
+  margin:1em 2em;
+  background:var(--sticky-note-important-background-color);
+  color:var(--sticky-note-important-text-color);
+  font-weight:500;
+  border-width:0px 2px;
+  border-style:solid;
+  border-color:var(--sticky-note-important-border-color);
+  border-radius:8px 20px;
+  box-shadow:0 0 5px var(--sticky-note-important-box-shadow-color);
 }
 
-/* STYLING: ART GALLERY ***************************** */
+/* STYLING: ART GALLERY ****************************** */
 ag2,
 ag3,
 ag4,
 ag5,
 ag6 {
-  display: inline-flex;
-  flex-wrap: wrap;
-  max-height: 60vh;
-  margin: 25px 0;
-  align-items: center;
-  justify-content: center;
-  overflow-y: scroll;
+  display:inline-flex;
+  flex-wrap:wrap;
+  max-height:60vh;
+  margin:25px 0;
+  align-items:center;
+  justify-content:center;
+  overflow-y:scroll;
 }
 ag2 img,
 ag3 img,
 ag4 img,
 ag5 img,
 ag6 img {
-  padding: 5px;
+  padding:5px;
 }
 ag2 img {
-  max-width: calc(100% / 2.1);
+  max-width:calc(100% / 2.1);
 }
 ag3 img {
-  max-width: calc(100% / 3.2);
+  max-width:calc(100% / 3.2);
 }
 ag4 img {
-  max-width: calc(100% / 4.4);
+  max-width:calc(100% / 4.4);
 }
 ag5 img {
-  max-width: calc(100% / 5.6);
+  max-width:calc(100% / 5.6);
 }
 ag6 img {
-  max-width: calc(100% / 6.8);
+  max-width:calc(100% / 6.8);
 }
 
 
 /* STYLING: PRINTING ********************************* */
 @media print {
 
-  /* "AVOID" PRINTING: | sticky notes | */
-
+  /* PRINTING EXACT COLOR */
+  *,
+  table, 
+  th,
+  td,
   note:after,
   tip:after,
   question:after,
   explain:after,
   warning:after,
   keyword:after,
-  important:after,
+  important:before,
   note,
   tip,
   question,
@@ -369,7 +559,35 @@ ag6 img {
   warning,
   keyword,
   important {
-    display: none; /* replace this line of codes by "display: block;" for print out the sticky notes */
+    background:none !important;
+    -webkit-print-color-adjust:exact;
+  }
+
+  /* "AVOID" PRINTING: | Note title | sticky notes | */
+  /* note title */
+  .exported-note-title {
+    display:var(--print-note-title-display);
+    height:1em;
+    padding:0 0 10px 0;
+    margin:0 0 30px 0;
+    color:var(--print-note-title-color);
+  }
+  /* sticky notes */
+  note:after,
+  tip:after,
+  question:after,
+  explain:after,
+  warning:after,
+  keyword:after,
+  important:before,
+  note,
+  tip,
+  question,
+  explain,
+  warning,
+  keyword,
+  important {
+    display:var(--print-sticky-notes-display);
   }
 
   /* RELEASE ART GALLERY OVERFLOW */
@@ -381,38 +599,18 @@ ag6 img {
     max-height:none;
     overflow-y:unset;
   }
+  /* RELEASE EYE PROTECTOR FROM IMAGES */
+  #rendered-md img {
+    filter:none;
+  }
 
   /* ADJUSTMENTS: | SIZE | COLOR | */
   body {
-    color:#4c4c4c;
-    font-size: 12px;
+    color:var(--print-body-text-color);
+    font-size:12px;
   }
-  h2::before {
-    box-shadow: inset 0 0 0 1000px #00000075; /* repleace this line of codes with "display:none;" if you don't want to print out the heading icon */
-  }
-  h1 {
-    -webkit-text-fill-color: initial;
-    -webkit-background-clip: initial;
-    color: #00000075;
-    font-size: 22px;
-    font-weight: 700;
-    border-bottom: none;
-  }
-  h2 {
-    color: #00000075;
-    font-size: 18px;
-  }
-  h3 {
-    color: #00000075;
-    font-size: 14px;
-  }
-  h4,
-  h5,
-  h6 {
-    color: #00000075;
-    font-size: 12px;
-  }
-  
+
+  /* blocks margin */
   h1,
   h2,
   h3,
@@ -422,63 +620,142 @@ ag6 img {
   p,
   .hljs,
   blockquote {
-    margin: 10px 0;
+    margin:18px 0;
   }
 
-  div > ul,
-  div > ol {
-    margin: 10px 0 10px 25px;
+  /* headings printing */
+  h1 {
+    -webkit-background-clip:initial;
+    -webkit-text-fill-color:initial;
+    color:var(--print-h1-heading-color);
+    font-size:22px;
+    font-weight:700;
+    border-bottom:var(--print-h1-heading-border-bottom);
   }
   
+  h2::before {
+    box-shadow:inset 0 0 0 1000px var(--print-h2-h3-h4-headings-color); /* replace this line of codes by "display:none;" if you don't want to print out the heading icon */
+  }
+  h2 {
+    color:var(--print-h2-h3-h4-headings-color);
+    font-size:19px;
+    border-width:0 0 0.5px 0;
+    border-color:var(--print-h2-h3-h4-headings-color);
+  }
+
+  h3 {
+    color:var(--print-h2-h3-h4-headings-color);
+    font-size:16px;
+  }
+  
+  h4 {
+    color:var(--print-h2-h3-h4-headings-color);
+    font-size:14px;
+  }
+  h5 {
+    color:var(--print-h5-h6-headings-color);
+    font-size:14px;
+    border-color:var(--print-h5-heading-border-color);
+  }
+
+  h6 {
+    color:var(--print-h5-h6-headings-color);
+    font-size:12px;
+  }
+
+  /* link printing */
+  a,
+  .resource-icon {
+    color:var(--print-links-color);
+  }
+  /* emphasize & strong text printing */
+  em,
+  strong,
+  s,
+  ins,
+  abbr[title] {
+    color:var(--print-body-text-color);
+  }
+  /* mark text printing */
   mark::before,
   mark::after {
     width:3px;
   }
   mark {
-    font-weight: 500;
-    border-top: 1px solid #0000009e;
-    border-bottom: 1px solid #0000009e;
-    border-radius: 4px;
+    color:var(--print-mark-text-color);
+    font-weight:500;
+    border-top:1px solid var(--print-mark-text-border-color);
+    border-bottom:1px solid var(--print-mark-text-border-color);
+    border-radius:4px;
   }
 
+  /* list printing */
+  div > ul,
+  div > ol {
+    margin:10px 0 10px 25px;
+  }
+  ul > li,
+  ol > li {
+    color:var(--print-list-text-color);
+  }
+
+  /* table printing */
   table {
-    margin: 10px auto;
+    margin:10px auto;
+  }
+  td {
+    color:var(--print-table-td-text-color) !important;
   }
 
+  /* code block & inline code printing */
   .hljs {
-    padding: 10px 20px;
-    background: none;
-    border-color: #0000009e;
-    font-size: 10px;
-    white-space: pre-wrap;
-    box-shadow: none;
+    padding:10px 20px;
+    background:none;
+    color:var(--print-code-text-color);
+    font-size:10px;
+    white-space:pre-wrap;
+    border-color:var(--print-code-border-color);
+    box-shadow:none;
   }
 
+  #rendered-md .code, 
+  #rendered-md .inline-code {
+    color:var(--print-code-text-color);
+    border-color:var(--print-code-border-color);
+  }
+
+  /* math notation printing */
   span.katex-display {
-    color: #7d7d7d;
-    font-size: 12px;
-    text-shadow: none;
+    color:var(--print-math-notation-text-color);
+    font-size:12px;
+    text-shadow:none;
   }
 
+  /* sticky notes printing */
   note::after,
   tip::after,
   question::after,
   explain::after,
   warning::after,
   keyword::after {
-    color: #00000075;
-    border: 1px solid #7b7b7b;
-    text-shadow: none;
+    width:fit-content;
+    color:var(--print-sticky-notes-tags-text-color);
+    text-shadow:none;
+    border:1px solid var(--print-sticky-notes-border-color);
+  }
+  important::before {
+    color:var(--print-sticky-note-important-title-text-color);
+    border:1px solid var(--print-sticky-notes-border-color);
   }
   note,
   tip,
   question,
   explain,
   warning,
-  keyword {
-    color: #4c4c4c;
-    border: 1px solid #7b7b7b;
-    box-shadow: none;
+  keyword,
+  important {
+    color:var(--print-sticky-notes-text-color);
+    border:1px solid var(--print-sticky-notes-border-color);
+    box-shadow:none;
   }
-   
 }
