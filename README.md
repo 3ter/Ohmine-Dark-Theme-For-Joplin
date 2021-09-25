@@ -243,6 +243,8 @@ Due to the style of headings, something you may need to consider when every time
 
 All the attached images will be defaulted by 30% darker than the original to avoid the bright light flashing your eyes when scrolling down your note.
 
+![eye-protector-sample](https://user-images.githubusercontent.com/86870826/134763020-4662fedb-6bc0-404d-bafc-e16ea5b2ea62.jpg)
+
 Mouse hover on the image to check out the original color, it will be getting bright smoothly.
 
 ## More Screenshots
