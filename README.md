@@ -263,6 +263,7 @@ Ohmine dark theme is using the below font family for both markdown editor and re
 - Sans-Serif (default)
 
 Montseratt sample:
+
 ![montserrat_font_sample_abg](https://user-images.githubusercontent.com/86870826/134675707-a3c36272-7219-4fba-9079-f4aa65c20d48.png)
 
 And the monospace font family for codes is:
