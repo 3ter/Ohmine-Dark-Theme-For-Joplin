@@ -199,6 +199,7 @@ i.fas.fa-caret-down {
 .list-item-depth-8,
 .list-item-depth-9,
 .list-item-depth-10,
+.tags .list-item-container,
 .list-item-depth-0:hover,
 .list-item-depth-1:hover,
 .list-item-depth-2:hover,
@@ -209,7 +210,8 @@ i.fas.fa-caret-down {
 .list-item-depth-7:hover,
 .list-item-depth-8:hover,
 .list-item-depth-9:hover,
-.list-item-depth-10:hover {
+.list-item-depth-10:hover,
+.tags .list-item-container:hover {
   height: fit-content !important;
   border-radius: 5px 10px;
 }
@@ -223,7 +225,8 @@ i.fas.fa-caret-down {
 .list-item-depth-7:hover,
 .list-item-depth-8:hover,
 .list-item-depth-9:hover,
-.list-item-depth-10:hover {
+.list-item-depth-10:hover,
+.tags .list-item-container:hover {
   filter: hue-rotate(180deg);
 }
 /* notebooks selected state */
@@ -237,7 +240,8 @@ i.fas.fa-caret-down {
 .list-item-depth-7.selected,
 .list-item-depth-8.selected,
 .list-item-depth-9.selected,
-.list-item-depth-10.selected {
+.list-item-depth-10.selected
+.tags .list-item-container.selected {
   background: linear-gradient(60deg, #002f24, #00926a);
   box-shadow: 0 0 3px #72fdbd;
 }
