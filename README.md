@@ -343,9 +343,9 @@ Here are few things you should know before you print out your article:
 2. Art Gallery will be releasing the overflow limit and listing out all the images.
 3. A lot of elements are restyled for printing.
 
-Below is the printing sample for reference:
+Below is the printing example PDF file for reference:
 
-[ohmine_dark_theme_printing_sample.pdf](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/files/7229144/ohmine_dark_theme_printing_sample.pdf)
+https://drive.google.com/file/d/15nVAxcLj1LNg1DbvlyMqPVyY49i0rtKM/view?usp=sharing (15.8mb)
 
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
