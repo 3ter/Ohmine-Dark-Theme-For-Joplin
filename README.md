@@ -53,15 +53,15 @@ Joplin is the best note-taking app in the market if you are looking for the belo
 Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 
 ## Table of contents
-- [Ohmine Dark Theme](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#ohmine-dark-theme)
-- [Notebook Panel](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#notebook-panel)
-- [Sticky Notes](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#sticky-notes)
-	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#how-to-use) 
-- [Art Gallery](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#art-gallery)
-	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#how-to-use-1) 
+- [Ohmine Dark Theme](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#ohmine-dark-theme)
+- [Notebook Panel](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#notebook-panel)
+- [Sticky Notes](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#sticky-notes)
+	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-use) 
+- [Art Gallery](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#art-gallery)
+	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-use-1) 
 - [Abstract Content Bar](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#abstract-content-bar)
-	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#how-to-use-2) 
-- [Structural-friendly heading style](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/README.md#structural-friendly-heading-style)
+	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-use-2) 
+- [Structural-friendly heading style](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#structural-friendly-heading-style)
 	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-use-3) 
 - [Eye-Protector](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#eye-protector)
 - [More Screenshots](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#more-screenshots)
