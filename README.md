@@ -54,31 +54,31 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 
 ## Table of contents
 - [Ohmine Dark Theme](#ohmine-dark-theme)
-- [Notebook Panel](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#notebook-panel)
-- [Sticky Notes](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#sticky-notes)
-	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-use) 
-- [Art Gallery](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#art-gallery)
-	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-use-1) 
-- [Abstract Content Bar](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#abstract-content-bar)
-	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-use-2) 
-- [Structural-friendly heading style](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#structural-friendly-heading-style)
-	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-use-3) 
-- [Eye-Protector](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#eye-protector)
-- [More Screenshots](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#more-screenshots)
-	- [Font Family](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#font-family)
-	- [Text Style](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#text-style)
-	- [Link](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#link)
-	- [Unordered List & Ordered List](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#unordered-list--ordered-list)
-	- [Blockquote](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#blockquote)
-	- [Code block & Inline Code](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#code-block--inline-code)
-	- [Math notation](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#math-notation)
-- [Printing](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#printing)
-- [Color Controller](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#color-controller)
-- [How to use this theme](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-use-this-theme)
-- [How to delete this theme](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-delete-this-theme)
-- [How to install plugins](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-install-plugins)
-- [Recommended plugins](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#recommended-plugins)
-	- [Quick HTML tags (most recommended to use with this theme)](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#quick-html-tags-most-recommended-to-use-with-this-theme)
+- [Notebook Panel](#notebook-panel)
+- [Sticky Notes](#sticky-notes)
+	- [How to use](#how-to-use) 
+- [Art Gallery](#art-gallery)
+	- [How to use](#how-to-use-1) 
+- [Abstract Content Bar](#abstract-content-bar)
+	- [How to use](#how-to-use-2) 
+- [Structural-friendly heading style](#structural-friendly-heading-style)
+	- [How to use](#how-to-use-3) 
+- [Eye-Protector](#eye-protector)
+- [More Screenshots](#more-screenshots)
+	- [Font Family](#font-family)
+	- [Text Style](#text-style)
+	- [Link](#link)
+	- [Unordered List & Ordered List](#unordered-list--ordered-list)
+	- [Blockquote](#blockquote)
+	- [Code block & Inline Code](#code-block--inline-code)
+	- [Math notation](#math-notation)
+- [Printing](#printing)
+- [Color Controller](#color-controller)
+- [How to use this theme](#how-to-use-this-theme)
+- [How to delete this theme](#how-to-delete-this-theme)
+- [How to install plugins](#how-to-install-plugins)
+- [Recommended plugins](#recommended-plugins)
+	- [Quick HTML tags (most recommended to use with this theme)](#quick-html-tags-most-recommended-to-use-with-this-theme)
 
 ## Ohmine Dark Theme
 The design inspiration comes from the below Japanese Sake Ohmine-3-Grain: 
@@ -152,7 +152,7 @@ Let’s see what are the sticky notes for:
 
 ![sticky_notes_sample_output2_abg](https://user-images.githubusercontent.com/86870826/134674577-10aada6e-4037-474b-bab6-018141f21d45.png)
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ## Art Gallery
 
@@ -197,7 +197,7 @@ Below is the sample of the art gallery(ag6) with 48 images:
 
 ![art_gallery_output_abg](https://user-images.githubusercontent.com/86870826/134674925-7136494b-9ca1-4694-9ba1-e95ea285364a.png)
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ## Abstract Content Bar
 
@@ -222,7 +222,7 @@ It would be helpful when you want to release your eyes from the text for sometim
 2. The priority is changed in the latest update, you are not able to see "a link within a list" in the previous version.
 3. The only thing you may need to do is to understand those colors' meanings.
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ## Structural-friendly heading style
 
@@ -237,7 +237,7 @@ Due to the style of headings, something you may need to consider when every time
 1. If the H4 heading is the last level heading of your article, use H4.
 2. If not, use the H5 to replaced the H4 to create a better reading experience.
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ## Eye-Protector
 
@@ -290,38 +290,38 @@ Then, the code block is showing below:
 
 ![code_block_sample_abg](https://user-images.githubusercontent.com/86870826/134676214-8e428002-89b2-4c34-9a36-01e080c826b4.png)
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ### Text Style
 
 ![text_sample_abg](https://user-images.githubusercontent.com/86870826/134675980-53e88bae-76dd-4a77-aaf8-2194242be97b.png)
 
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ### Link
 
 ![links_sample_abg](https://user-images.githubusercontent.com/86870826/134676007-f11a7822-610c-4f7e-a351-0366e505cccd.png)
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ### Unordered List & Ordered List
 
 ![unordered_list_and_ordered_list_sample_abg](https://user-images.githubusercontent.com/86870826/134676050-a4a42e70-fb50-4bb0-b58a-b0a88463b42c.png)
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ### Checklist
 
 ![checklist_sample_abg](https://user-images.githubusercontent.com/86870826/134676087-ab2580b3-164c-4da9-8ed6-bcf80ff1087b.png)
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ### Blockquote
 
 ![blockquote_sample_abg](https://user-images.githubusercontent.com/86870826/134676125-1bf895c8-a9a3-40b8-b159-72b21fa85782.png)
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ### Math notation
 
@@ -329,7 +329,7 @@ See how *magical* after added a bit of neon light to your mathematical formulas:
 
 ![math_notation_sample_abg](https://user-images.githubusercontent.com/86870826/134676276-37e88dd9-7485-44de-aedd-29d55869a12d.png)
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ## Printing
 
@@ -343,13 +343,13 @@ Below is the printing example PDF file for reference:
 
 https://drive.google.com/file/d/15nVAxcLj1LNg1DbvlyMqPVyY49i0rtKM/view?usp=sharing (15.8mb)
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ## Color Controller
 
 You can control all the color values of the render viewer easily through the Color Controller section of your `userstyle.css` .
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ## How to use this theme
 
@@ -367,7 +367,7 @@ You can control all the color values of the render viewer easily through the Col
 13. And paste on your `userchrome.css`
 14. Quit & restart Joplin and it's done.
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ## How to delete this theme
 
@@ -377,7 +377,7 @@ You can control all the color values of the render viewer easily through the Col
 4. Press `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
 5. Delete all the code within these two documents. It's done! but I'm hurt!
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ## How to install plugins
 
@@ -394,7 +394,7 @@ If you want to discover all of the Joplin plugins, you can go visit the [Joplin 
 
 Below are some of the best plugins on Joplin, if you never try it before it's worth giving a try.
 
-- Quick HTML tags (most recommend)[quick setting up](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#quick-html-tags-most-recommended-to-use-with-this-theme)
+- Quick HTML tags (most recommend)[quick setting up](#quick-html-tags-most-recommended-to-use-with-this-theme)
 - Outline (recommend)
 - Note Tabs (recommend)
 - Quick Links (recommend)
@@ -425,4 +425,4 @@ After this, you can use this plugin like below:
 2. Then, press the `Down` key on your keyboard to find the right tag
 3. Press `Enter` key. It's done!
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
