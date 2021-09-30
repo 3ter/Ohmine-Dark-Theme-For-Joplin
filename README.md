@@ -53,7 +53,7 @@ Joplin is the best note-taking app in the market if you are looking for the belo
 Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 
 ## Table of contents
-- [Ohmine Dark Theme](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#ohmine-dark-theme)
+- [Ohmine Dark Theme](#ohmine-dark-theme)
 - [Notebook Panel](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#notebook-panel)
 - [Sticky Notes](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#sticky-notes)
 	- [How to use](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#how-to-use) 
