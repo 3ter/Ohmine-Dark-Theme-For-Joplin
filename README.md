@@ -109,6 +109,8 @@ The key adjustments for the Markdown Editor as below:
 - Reduce the use of unnecessary colors
 - Using a MAGICAL background color #151b1a
 
+![2021-10-02 (5)_abg_abg](https://user-images.githubusercontent.com/86870826/135716011-5b4c964d-9ebc-45eb-9cc8-cd3cfa2183d7.png)
+
 I'm choosing this background color based on the needs and not based on my personal favorite. As I tried assorted colors, I think the #151b1a is the most magical one that can always lead me to a deep focus state readily. When you spend an hour working with it, you will feel it.
 
 ## Render Viewer
@@ -121,6 +123,8 @@ The key adjustments for the Render Viewer as below:
 - Well-structural heading style
 - Stand out the key information
 - Avoid bright colors when scrolling down to read content
+
+![2021-10-02 (6)_abg_abg](https://user-images.githubusercontent.com/86870826/135716017-ef57455b-0b9a-4522-b9ef-6084bc874c23.png)
 
 ## Font Family
 
@@ -369,10 +373,6 @@ Here are few things you should know before you print out your article:
 1. Sticky notes *will not display on printing*, it's for personal use by default. In case you want to print it out, just open the `userstyle.css` file and you will understand what to do.
 2. Art Gallery will be releasing the overflow limit and listing out all the images but it won't change the number of columns.
 3. A lot of elements are restyled for printing.
-
-Below is the printing example PDF file for reference:
-
-https://drive.google.com/file/d/15nVAxcLj1LNg1DbvlyMqPVyY49i0rtKM/view?usp=sharing (15.8mb)(updated:1-OCT-2021)
 
 [:arrow_up:Back](#table-of-contents)
 
