@@ -17,7 +17,7 @@ You would never know how better it is when you are not going to try it once!
 - New: add color controller section to the `userchrome.css`
 - Update: rewrite all CSS structure & all selectors
 - Update: small visuals improvements on render viewer
-- Update: markdown syntax is now using the monospace fonts family
+- Update: monospace fonts size now defaults to 12px on the markdown editor
 - Fix: now can work fine on both markdown editor & rich text editor
 - Fix: footnote style dose not effects on all footnote items
 - Fix: a lots styling not showing right 
