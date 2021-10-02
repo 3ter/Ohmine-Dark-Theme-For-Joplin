@@ -90,7 +90,7 @@ If you are interested to know more about the Ohmine-3-Grain design you may like 
 
 [Ohmine Official Video on Youtube](https://www.youtube.com/watch?v=L4TtyOKgv9s)
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ## Markdown Editor
 
@@ -162,7 +162,7 @@ If you didn't install the Montserrat , Microsoft JHengHei Light or Cascadia Mono
 
 If you finally want to use other fonts, you should edit the `userstyle.css` and `userchrome.css`. The settings in `Tools`> `Options`> `Appearance` will no longer work once you install this theme. You should always edit all the font settings through the CSS files.
 
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 
 ## Sticky Notes
@@ -421,7 +421,7 @@ To install plugins:
 
 If you want to discover all of the Joplin plugins, you can go visit the [Joplin Plugins Repository](https://github.com/joplin/plugins#joplin-plugin-repository)
 
-## Recommend plugins
+## Recommended plugins
 
 Below are some of the best plugins on Joplin, if you never try it before it's worth giving a try.
 
