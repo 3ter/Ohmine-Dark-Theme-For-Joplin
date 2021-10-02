@@ -1,43 +1,31 @@
 # Ohmine Dark Theme for Joplin
+
 Ohmine Dark Theme is a Joplin CSS theme that aims to provide a better Work-On-Screen experience for those who want to treat their eyes better.
+
+"Notes are my mind, and I want to be able to spend more time with it every day."
 
 ![ohmine_dark_theme_overview](https://user-images.githubusercontent.com/86870826/134758710-65952382-d64c-4f44-b51a-77420082cb1a.png)
 
+You would never know how better it is when you are not going to try it once!
+
 ## Latest Updates
 
-25-SEP-2021:
+(2-OCT-2021 tested on Joplin v2.4.9)
 
-New: Add Eye-Protector to protect your eyes from bright color images
-
-New: Add "span" tag style in the h1 heading to avoiding background-clip effects the span content
-
-New: Add new H5 & H6 heading style for better content separated experience, it would be useful for a long article writer
-
-New: Abstract Content Bar can now identify the Markdown Table content
-
-New: Add Tag-bar styling
-
-New: Add tag manager modal dialog styling
-
-New: Add option page styling
-
-New: Add Color Controller in the "root:" section of "userstyle.css", make it easy to centrally control all of the color values
-
-New: Add Print Switcher in the "root:" section of "userstyle.css", optional print out note title and sticky notes. (default: hide sticky notes)
-
-Update: Rearrange the priority of Abstract Content Bar color defines
-
-Update: Improve read & write experience, recolored and resized a few elements
-
-Update: Improve printing color & margin
-
-Fix: The "Ok" and "Apply" buttons of the Options page are position wrong
-
-Fix: HTML close tag doesn't show on the Abstract Content Bar when using the "Quick HTML tag" plugin to create the tag
-
-Fix: Sup-list margin wrong
+- New: markdown editor is now using monospace fonts for markdown syntax and non-monospace fonts for content
+- New: add markdown editor styling
+- New: add color controller section to the `userchrome.css`
+- Update: rewrite all CSS structure & all selectors
+- Update: small visuals improvements on render viewer
+- Update: markdown syntax is now using the monospace fonts family
+- Fix: now can work fine on both markdown editor & rich text editor
+- Fix: footnote style dose not effects on all footnote items
+- Fix: a lots styling not showing right 
 
 ## What is Joplin?
+
+![home-top-img-2x](https://user-images.githubusercontent.com/86870826/135713998-ececa8e9-b79a-4b0f-a95d-ee54ca1271b3.png)
+
 Joplin is the best note-taking app in the market if you are looking for the below advantages:
 
 - Free & Opensource
@@ -53,8 +41,11 @@ Joplin is the best note-taking app in the market if you are looking for the belo
 Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 
 ## Table of contents
-- [Ohmine Dark Theme](#ohmine-dark-theme)
-- [Notebook Panel](#notebook-panel)
+
+- [The Inspiration of Ohmine Dark Theme](#the-inspiration-of-ohmine-dark-theme)
+- [Markdown Editor](#markdown-editor)
+- [Render Viewer](#render-viewer)
+- [Font Family](#font-family)
 - [Sticky Notes](#sticky-notes)
 	- [How to use](#how-to-use) 
 - [Art Gallery](#art-gallery)
@@ -65,7 +56,7 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 	- [How to use](#how-to-use-3) 
 - [Eye-Protector](#eye-protector)
 - [More Screenshots](#more-screenshots)
-	- [Font Family](#font-family)
+	- [Notebook Panel](#notebook-panel)
 	- [Text Style](#text-style)
 	- [Link](#link)
 	- [Unordered List & Ordered List](#unordered-list--ordered-list)
@@ -76,11 +67,12 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 - [Color Controller](#color-controller)
 - [How to use this theme](#how-to-use-this-theme)
 - [How to delete this theme](#how-to-delete-this-theme)
-- [How to install plugins](#how-to-install-plugins)
 - [Recommended plugins](#recommended-plugins)
 	- [Quick HTML tags (most recommended to use with this theme)](#quick-html-tags-most-recommended-to-use-with-this-theme)
+- [How to install plugins](#how-to-install-plugins)
+	
+## The Inspiration of Ohmine Dark Theme
 
-## Ohmine Dark Theme
 The design inspiration comes from the below Japanese Sake Ohmine-3-Grain: 
 
 
@@ -92,7 +84,7 @@ This is a gift from my friend and I was tasting it when I making this theme. I p
 
 <img width="520" alt="ohmine-3-grain-reference_800" src="https://user-images.githubusercontent.com/86870826/134672093-8a9a0405-d9a1-4c7c-9d90-0ac4002c9545.png">
 
-If you are interested to know more about the Ohmine-3-Grain design:
+If you are interested to know more about the Ohmine-3-Grain design you may like to check out the below links:
 
 [Stockholm Design Lab - Ohmine page](https://www.stockholmdesignlab.se/work/ohmine)
 
@@ -100,16 +92,77 @@ If you are interested to know more about the Ohmine-3-Grain design:
 
 [:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
-## Notebook Panel
+## Markdown Editor
 
-First to take a look at the notebook panel of Ohmine Dark Theme:
+Markdown Editor is the place where your eyes will always keep focus for a long time when you are writing your Markdown notes. It's means the Markdown Editor is always the key point to protect your eyes.
 
-![notebook_panel_sample_abg](https://user-images.githubusercontent.com/86870826/134758745-81736f74-97bf-49e2-9779-2fb935085120.png)
+- Have you ever felt distressed because you still want to write notes when you have blurred vision?
+- Have you ever felt that visual messy because of using Markdown Syntax to create complex notes?
+- Do you want to experience the feeling of focusing on writing notes for a long time without feeling tired?
 
-The CSS styling of Ohmine Dark Theme will only support up to 10 levels of subdirectories when Joplin didn't limit it to you. And sure, you can edit my CSS by yourself.
+Ohmine Dark Theme is completely designed to solve these problems. 
+
+The key adjustments for the Markdown Editor as below:
+
+- Reduce the color contrast of the main content and the background
+- Darken and reduce fonts for non-essential content
+- Reduce the use of unnecessary colors
+- Using a MAGICAL background color #151b1a
+
+I'm choosing this background color based on the needs and not based on my personal favorite. As I tried assorted colors, I think the #151b1a is the most magical one that can always lead me to a deep focus state readily. When you spend an hour working with it, you will feel it.
+
+## Render Viewer
+
+Render Viewer is the place that you often want to quickly find out the correct information. It' means the Render Viewer need a great content separating structure to let you identify the key information easily.
+
+The key adjustments for the Render Viewer as below:
+
+- Use soft colors to differentiate content
+- Well-structural heading style
+- Stand out the key information
+- Avoid bright colors when scrolling down to read content
+
+## Font Family
+
+Ohmine dark theme is using the below font family for both markdown editor and render viewer:
+
+- Montserrat
+  download it for free at (https://fonts.google.com/specimen/Montserrat)
+- Microsoft JHengHei Light (for Traditional Chinese 繁體中文)
+- Avenir (Joplin default)
+- Arial (Joplin default)
+- Sans-Serif (Joplin default)
+
+Montserrat is the most important part in this theme, I recommended you to use it on this theme. I've tested over 40 fonts with sizes from 12px to 15px and Montserrat is the ultimate champion. It providing the best reading experience with 14px size.
+
+Montseratt sample:
+
+![montserrat_font_sample_abg](https://user-images.githubusercontent.com/86870826/134675707-a3c36272-7219-4fba-9079-f4aa65c20d48.png)
+
+Then, the monospace fonts is using on all Markdown Syntax, such as a Markdown table, Markdown link etc. You'll also see it in the code block and inline code.
+
+Let's take a look at the monospace font family:
+
+- Cascadia Mono Light
+  download it for free at (https://github.com/microsoft/cascadia-code/releases)
+- Monospace (Joplin default)
+- Microsoft JHengHei Light (for Traditional Chinese comments 繁體中文註釋)
+
+Cascadia Mono Light is one of the best monospace fonts. It will be a good choice if you don't need the ligature, and it provides clear symbol characters and works great at the 12px font size.
+
+Cascadian Mono Light sample:
+
+![cascadia_mono_light_font_sample_abg](https://user-images.githubusercontent.com/86870826/134675876-8e6a1593-fbb9-4117-8c91-141a45e1d5dc.png)
+
+If you didn't install the Montserrat , Microsoft JHengHei Light or Cascadia Mono Light on your computer, Joplin will pick the default fonts for you.
+
+If you finally want to use other fonts, you should edit the `userstyle.css` and `userchrome.css`. The settings in `Tools`> `Options`> `Appearance` will no longer work once you install this theme. You should always edit all the font settings through the CSS files.
+
+[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
 
 
 ## Sticky Notes
+
 Ohmine Dark Theme has 7 custom elements for creating the sticky notes: `note` , `tip` , `question` , `explain` , `warning` , `keyword` , `important`.
 
 Let’s see what are the sticky notes for:
@@ -120,10 +173,10 @@ Let’s see what are the sticky notes for:
 
 ### How to use
 
-3 things you should know before you use the sticky notes:
+2 things you should know before use:
 
-1. Sticky notes *will not display on printing*, it's for personal use by default. In case you want to print it out, you may need to edit a bit of CSS code in the `userstyle.css` file.
-2. Make sure there is a blank line *before the open tag*, otherwise it may cause the format problem.
+
+1. Make sure there is a blank line *before the open tag*, otherwise it may cause the format problem.
 
 **Code Sample:**
  ```
@@ -136,7 +189,7 @@ Let’s see what are the sticky notes for:
 
 ![sticky_notes_sample_output1_abg](https://user-images.githubusercontent.com/86870826/134674519-d88f0cee-ee9d-41e0-85a2-2d2e103ce0f5.png)
 
-3. Or, if you want to use markdown codes inside the sticky notes, you should add a blank line *before and after the open tag*:
+2. Or, if you want to use markdown syntax inside the sticky notes, you should add a blank line *before and after the open tag*:
 
 **Code Sample:**
 ```
@@ -157,6 +210,7 @@ Let’s see what are the sticky notes for:
 ## Art Gallery
 
 This art gallery providing 5 custom elements for you:
+
 |Custom Elements|Columns Limit|Gallery Size|Scrolling Trigger|
 |:----------:|:-------:|:------------:|:----------:|
 |ag2|2|W:100% * H:60vh + Scroll|2 images above|
@@ -171,7 +225,7 @@ Below is the sample of the art gallery(ag6) with 48 images:
 
 ### How to use
 
-3 things you should know before you use the art gallery:
+3 things you should know before use:
 
 1. The custom element name `ag` stands for *Art Gallery*.
 2. The art gallery tag must use *right behind the plain text.*
@@ -211,16 +265,16 @@ It will check your text line by line and then tell you what they are:
 
 See the below example screenshot (look to the right):
 
-![abstract_content_bar_sample_abg](https://user-images.githubusercontent.com/86870826/134760098-806290da-3515-42e4-80c2-a5a23a44c887.png)
+![2021-10-02 (3)_abg](https://user-images.githubusercontent.com/86870826/135714146-21eafb39-fd56-4764-bf27-513ecd361f47.png)
 
 It would be helpful when you want to release your eyes from the text for sometimes, or when you are going to double-check the missing part of your content.
 
 ### How to use
 
-3 things you should know before use:
-1. If there is more than one element in the same line, it would be showing the color depends on their priority. You can go back to check the color sample list.
-2. The priority is changed in the latest update, you are not able to see "a link within a list" in the previous version.
-3. The only thing you may need to do is to understand those colors' meanings.
+2 things you should know before use:
+
+1. If there is more than one element in the same line, it would be showing the color depends on their priority.
+2. The only thing you may need to do is to understand those colors' meanings.
 
 [:arrow_up:Back](#table-of-contents)
 
@@ -241,7 +295,7 @@ Due to the style of headings, something you may need to consider when every time
 
 ## Eye-Protector
 
-All the attached images will be defaulted by 30% darker than the original to avoid the bright light flashing your eyes when scrolling down your note.
+All the attached images will be defaulted by 30% darker than the original, to avoid the bright light flashing your eyes when scrolling down your note.
 
 ![eye-protector-sample](https://user-images.githubusercontent.com/86870826/134763020-4662fedb-6bc0-404d-bafc-e16ea5b2ea62.jpg)
 
@@ -251,36 +305,20 @@ Mouse hover on the image to check out the original color, it will be getting bri
 
 Here show you more detailed screenshots:
 
-### Font Family
+### Notebook Panel
 
-Ohmine dark theme is using the below font family for both markdown editor and render viewer:
+notebook panel of Ohmine Dark Theme:
 
-- Montserrat - the most recommended font for this theme
-  download it for free at (https://fonts.google.com/specimen/Montserrat)
-- Microsoft JHengHei Light (for Traditional Chinese 繁體中文)
-- Avenir (default)
-- Arial (default)
-- Sans-Serif (default)
+![notebook_panel_sample_abg](https://user-images.githubusercontent.com/86870826/134758745-81736f74-97bf-49e2-9779-2fb935085120.png)
 
-Montseratt sample:
+The CSS styling of Ohmine Dark Theme will only support up to 10 levels of subdirectories when Joplin didn't limit it to you. And sure, you can edit my CSS to fit your needs.
 
-![montserrat_font_sample_abg](https://user-images.githubusercontent.com/86870826/134675707-a3c36272-7219-4fba-9079-f4aa65c20d48.png)
+### Text Style
 
-And the monospace font family for codes is:
-(it's for code block & inline code only)
+![text_sample_abg](https://user-images.githubusercontent.com/86870826/134675980-53e88bae-76dd-4a77-aaf8-2194242be97b.png)
 
-- Cascadia Mono Light
-  download it for free at: (https://github.com/microsoft/cascadia-code/releases)
-- Monospace (default)
-- Microsoft JHengHei Light (for Traditional Chinese comments 繁體中文註釋)
 
-Cascadian Mono Light sample:
-
-![cascadia_mono_light_font_sample_abg](https://user-images.githubusercontent.com/86870826/134675876-8e6a1593-fbb9-4117-8c91-141a45e1d5dc.png)
-
-If you didn't install the Montserrat , Microsoft JHengHei Light or Cascadia Mono Light on your computer, Joplin will pick the default fonts.
-
-[:arrow_up:Back](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#table-of-contents)
+[:arrow_up:Back](#table-of-contents)
 
 ### Code block & Inline Code
 
@@ -289,13 +327,6 @@ If you didn't install the Montserrat , Microsoft JHengHei Light or Cascadia Mono
 Then, the code block is showing below:
 
 ![code_block_sample_abg](https://user-images.githubusercontent.com/86870826/134676214-8e428002-89b2-4c34-9a36-01e080c826b4.png)
-
-[:arrow_up:Back](#table-of-contents)
-
-### Text Style
-
-![text_sample_abg](https://user-images.githubusercontent.com/86870826/134675980-53e88bae-76dd-4a77-aaf8-2194242be97b.png)
-
 
 [:arrow_up:Back](#table-of-contents)
 
@@ -335,19 +366,19 @@ See how *magical* after added a bit of neon light to your mathematical formulas:
 
 Here are few things you should know before you print out your article:
 
-1. Sticky Notes will not appear in the content by default.
-2. Art Gallery will be releasing the overflow limit and listing out all the images.
+1. Sticky notes *will not display on printing*, it's for personal use by default. In case you want to print it out, just open the `userstyle.css` file and you will understand what to do.
+2. Art Gallery will be releasing the overflow limit and listing out all the images but it won't change the number of columns.
 3. A lot of elements are restyled for printing.
 
 Below is the printing example PDF file for reference:
 
-https://drive.google.com/file/d/15nVAxcLj1LNg1DbvlyMqPVyY49i0rtKM/view?usp=sharing (15.8mb)
+https://drive.google.com/file/d/15nVAxcLj1LNg1DbvlyMqPVyY49i0rtKM/view?usp=sharing (15.8mb)(updated:1-OCT-2021)
 
 [:arrow_up:Back](#table-of-contents)
 
 ## Color Controller
 
-You can control all the color values of the render viewer easily through the Color Controller section of your `userstyle.css` .
+You can control all the color values of both the Render Viewer and Markdown Editor easily through the Color Controller section of your `userstyle.css` and `userchrome.css` .
 
 [:arrow_up:Back](#table-of-contents)
 
