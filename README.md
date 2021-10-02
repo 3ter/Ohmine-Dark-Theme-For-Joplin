@@ -261,11 +261,11 @@ It will check your text line by line and then tell you what they are:
 
 (bigger number means higher priority)
 
-![color_sample_of_abstract_content_bar_abg](https://user-images.githubusercontent.com/86870826/134675374-5fea2921-0471-474b-8835-26ddbc3683d5.png)
+![2021-10-02 (3)_abg](https://user-images.githubusercontent.com/86870826/135714146-21eafb39-fd56-4764-bf27-513ecd361f47.png)
 
 See the below example screenshot (look to the right):
 
-![2021-10-02 (3)_abg](https://user-images.githubusercontent.com/86870826/135714146-21eafb39-fd56-4764-bf27-513ecd361f47.png)
+![abstract_content_bar_sample_abg](https://user-images.githubusercontent.com/86870826/135714961-b866070d-609d-4b65-931c-ad90d2a8202d.png)
 
 It would be helpful when you want to release your eyes from the text for sometimes, or when you are going to double-check the missing part of your content.
 
