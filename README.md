@@ -12,15 +12,18 @@ You would never know how better it is when you are not going to try it once!
 
 (2-OCT-2021 tested on Joplin v2.4.9)
 
-- New: markdown editor is now using monospace fonts for markdown syntax and non-monospace fonts for content
-- New: add markdown editor styling
-- New: add color controller section to the `userchrome.css`
+- New: markdown editor is now using monospace fonts for all markdown syntax and non-monospace fonts for content
+- New: add markdown editor styling - reduce visual clutter caused by complicated note content
+- New: add blockquote to Abstract content bar
+- New: add Color Controller section to the `userchrome.css`
 - Update: rewrite all CSS structure & all selectors
 - Update: small visuals improvements on render viewer
-- Update: monospace fonts size now defaults to 12px on the markdown editor
-- Fix: now can work fine on both markdown editor & rich text editor
+- Fix: some CSS effects lost when switching between markdown editor and rich text editor
 - Fix: footnote style dose not effects on all footnote items
-- Fix: a lots styling not showing right 
+- Fix: the math formula dose not show the right color on Abstract content bar
+- Fix: some of the print color setting properties are invalid 
+- fix: code block overflow text not hidden in the rich text editor
+
 
 ## What is Joplin?
 
