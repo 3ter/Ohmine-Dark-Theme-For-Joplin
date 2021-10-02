@@ -4,7 +4,7 @@ Ohmine Dark Theme is a Joplin CSS theme that aims to provide a better Work-On-Sc
 
 "Notes are my mind, and I want to be able to spend more time with it every day."
 
-![ohmine_dark_theme_overview](https://user-images.githubusercontent.com/86870826/134758710-65952382-d64c-4f44-b51a-77420082cb1a.png)
+![2021-10-02 (71)_abg](https://user-images.githubusercontent.com/86870826/135724024-bf6631a1-b1df-4170-b748-3751f82e791a.png)
 
 You would never know how better it is when you are not going to try it once!
 
