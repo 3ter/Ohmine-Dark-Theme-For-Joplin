@@ -1,322 +1,549 @@
-/* ------------------------ */
-/* STYLING: MARKDOWN EDITOR */
-/* ------------------------ */
+:root {
+  
+  /* GENERAL STYLING */
+  --base-font: "montserrat", "microsoft Jhenghei light", avenir, arial, sans-serif;
+  --base-font-size: 14px;
+  --headings-line-height: 5px;
+  /* markdown syntax | code block | inline code | math notation | anchor text link | file path link */
+  --code-font: "cascadia mono light", monospace, "microsoft jhenghei light";
+  --code-font-size: 12px;
+  --code-font-line-height: normal;
+  /* the all note button*/
+  --hide-all-note-button: none; /* value change to "flex;" to showing the "All Notes" button */
+  
+  /* ************************************************* */
+  /*          COLOR CONTROLLER: SECTION START          */
+  /* ************************************************* */
 
-/* basic **************************************** */
-.CodeMirror:not(.cm-tag) * {
-  font-family: "montserrat", "microsoft Jhenghei light", avenir, arial, sans-serif !important;
-  color: #bdbdbd;
-  font-size: 14px;
-}
-.resizableLayoutItem.rli-root {
-  background-color: #151b1a;
-}
-.codeMirrorEditor {
-  background-color: #151b1a !important;
+  /* MARKDOWN EDITOR ************************************* */
+  --root-background: #151b1a;
+  --base-text: #bdbdbd; /* | paragraph | footnote | */
+  --code-text: #949494; /* | markdown syntax | code block | inline code | */
+
+  --heading-text: #bdbdbd;
+  --heading-text-shadow: #bfbfbf; 
+
+  --link-text: #9a9a7e;
+  --list-text: #a5a5a5;
+  --list-token: #a5a5a5;
+  
+  --mark-text: #dedede;
+  --mark-text-highlight: none;
+
+  --emphasize-text: #bdbdbd;
+  --strong-text: #bdbdbd;
+  --insert-text: #b1a291;
+  --strikethrough-text: #b1a291;
+
+  --mark-emphasize-strong-abbr-border: #565656;
+
+  --blockquote-text: #808080;
+
+  --inline-code-text: #bdbdbd;
+  --inline-code-border: #383838;
+  --code-block-text: #bdbdbd;
+  --code-block-background: #101413;
+  
+  --html-and-math-notation-tag: #a0a0a0;
+  --html-and-math-notation-tag-background: #2f0008;
+  --html-string: #a0a0a0;
+  --html-string-background: #1e3100;
+  --html-attribute: #a0a0a0;
+  --html-attribute-background: #390061;
+
+  /* abstract content bar */
+  --acb-plain-text: #383838;
+  --acb-headings: #ffffff6e;
+  --acb-block-quote: #985e00;
+  --acb-list: #ab2da4;
+  --acb-table: #3cffd7b3;
+  --acb-image: #045d00;
+  --acb-footnote: #5a5800;
+  --acb-links: #cdd286;
+  --acb-abbreviation: #00c538;
+  --acb-html-tags: #ff0063;
+  --acb-math-notaion: #5aa5fb;
+  --acb-checklist: #5d00ff;
+  --acb-code-block: var(--code-block-background);
+  --acb-blank-line: var(--root-background);
+
+  /* JOPLIN UI ******************************************* */
+
+  /* notebook panel */
+  --np-background: #191919;
+  --np-box-shadow: #33524a;
+
+  --np-directory-icon-close: #f6ff67;
+  --np-directory-icon-open: #71ffc4;
+  --np-directory-icon-shadow: #dedede;
+
+  --np-notebook-hover: hue-rotate(180deg);
+  --np-notebook-selected: linear-gradient(60deg, #002f24, #00926a);
+  --np-notebook-selected-box-shadow: #72fdbd;
+  --np-notebook-title-border: #ffffff14;
+  --np-notebook-title-text: #e2e2e2;
+
+  --np-note-count-label-background: #4affff24;
+  --np-note-count-label-border: #ffffff1f;
+
+  --np-tag-related-nav-btn: #00926a;
+  --np-tag-related-nav-btn-hover: hue-rotate(180deg); /* "filter:" */
+
+  --np-notebook-icon: white; /* top left notebook icon and tag-related nav button icon */
+
+  --np-sync-info-text: #02ffd0;
+  --np-sync-button: #313131;
+  --np-sync-btn-hover: brightness(150%); /* "filter:" */
+
+  /* notelist panel */
+  --nlp-box-shadow: #33524a;
+  --nlp-header: #191919;
+
+  --nlp-btn-icons: #f5f5f5;
+  --nlp-btns: #00926a;
+  --nlp-btns-hover: hue-rotate(180deg);
+
+  --nlp-body: #191919;
+
+  --nlp-note-selected: linear-gradient(60deg, #002f24, #00926a);
+  --nlp-note-selected-box-shadow: #72fdbd;
+  --nlp-note-hover: hue-rotate(180deg);
+  --nlp-note-hover2: #15283c;
+
+  /* editor header */
+  --eh-background: #151b1a;
+  --eh-note-title-input-bar: #151b1a;
+  --eh-right-side-toolbar: #151b1a;
+
+  /* top toolbar */
+  --tt-editor-toolbar: #191919;
+  --tt-editor-toolbar-box-shadow: #33524a;
+
+  /* bottom tag bar */
+  --btb-background: #191919;
+  --btb-box-shadow: #33524a;
+  --btb-tags: #4affff24;
+  --btb-tags-border: #ffffff1f;
+
+  /* option page */
+  --op-dropdown-list-and-input-text: #bdbdbd;
+
+
+  /* ************************************************* */
+  /*           COLOR CONTROLLER: SECTION END           */
+  /* ************************************************* */
+
 }
 
-/* headings ************************************* */
-.cm-header {
-  color: #bdbdbd !important;
+/* ************************************************* */
+/*              STYLING: MARKDOWN EDITOR             */
+/* ************************************************* */
+
+/* BASIC ************************************************ */
+/* base fonts */
+.codeMirrorEditor .CodeMirror * {
+  font-family: var(--base-font) !important;
+  font-size: var(--base-font-size);
+}
+  
+/* code fonts & markdown fonts -------------------------- */
+.CodeMirror-line .cm-jn-monospace,
+.CodeMirror-line .cm-string,
+.CodeMirror-line .cm-rm-image,
+.CodeMirror-line .cm-tag,
+.CodeMirror-line .cm-bracket,
+.CodeMirror-line .cm-katex-marker-open,
+.CodeMirror-line .cm-katex-marker-close,
+.CodeMirror-line .cm-rm-sup,
+.CodeMirror-line .cm-number,
+.CodeMirror-line .cm-number ~ .cm-variable-2,
+.CodeMirror-line .cm-bracket ~ .cm-variable-2 {
+  font-family: var(--code-font) !important;
+  font-size: var(--code-font-size);
+  line-height: var(--code-font-line-height);
+  color: var(--code-text);
+  }
+
+/* markdown editor background --------------------------- */
+.resizableLayoutItem.rli-root ,
+.codeMirrorEditor,
+.CodeMirror {
+  background-color: var(--root-background) !important;
+}
+/* text: | headings | paragraph | footnote -------------- */
+.CodeMirror span[role="presentation"]:only-child,
+.CodeMirror .CodeMirror-line .cm-header {
+  color: var(--base-text);
+}
+
+  
+/* HEADINGS ********************************************* */
+.CodeMirror .CodeMirror-line .cm-header {
+  color:var(--heading-text);
+  text-shadow:0 0 2px var(--heading-text-shadow);
+
+}
+.CodeMirror-line .cm-header {
   font-weight: 600;
+  line-height: 1em;
 }
-.cm-header-1 {
-  font-size: 2.3em !important;
+.CodeMirror-line .cm-header.cm-header-1 {
+  font-size: 2.3em;
   font-variant: small-caps;
 }
-.cm-header-2 {
-  font-size: 1.8em !important;
+.CodeMirror-line .cm-header.cm-header-2 {
+  font-size: 1.8em;
 }
-.cm-header-3 {
-  font-size: 1.5em !important;
+.CodeMirror-line .cm-header.cm-header-3 {
+  font-size: 1.5em;
 }
-.cm-header-4,
-.cm-header-5,
-.cm-header-6 {
-  font-size: 1.2em !important;
+.CodeMirror-line .cm-header.cm-header-4,
+.CodeMirror-line .cm-header.cm-header-5 {
+  font-size: 1.2em;
 }
-
-span.cm-rm-link,
-a.cm-link-text:noot(.cm-rm-image) {
-  color: #cdd286 !important;
+.CodeMirror-line .cm-header.cm-header-6 {
+  font-size: 1.1em;
 }
 
-/* code block ************************************ */
-div.CodeMirror div.cm-jn-code-block {
-  background: #101413 !important;
+
+/* TEXT ************************************************* */
+.cm-search-marker,
+.cm-em,
+.cm-strong {
+  border:1px solid var(--mark-emphasize-strong-abbr-border) !important;
+  border-radius: 1em;
+} 
+
+/* MARK TEXT -------------------------------------------- */
+.cm-overlay.cm-search-marker {
+  color: var(--mark-text) !important;
+  padding: 0 10px;
+  background: var(--mark-text-highlight) !important;
 }
 
-/* code text */
-div.CodeMirror span.cm-comment {
-  font-family: "cascadia mono light", monospace, "microsoft jhenghei light" !important;
-  color: #cccccc !important;
-
+/* EMPHASIZE TEXT --------------------------------------- */
+.cm-em {
+  color: var(--emphasize-text) !important;
+  padding: 0 10px;
+}
+/* STRONG TEXT ------------------------------------------ */
+.cm-strong {
+  color: var(--strong-text) !important;
+  padding: 0 10px;
+}
+/* INSERT TEXT ------------------------------------------ */
+.cm-rm-ins {
+  color: var(--insert-text) !important;
+}
+/* STRIKETHROUGH TEXT ----------------------------------- */
+.cm-strikethrough {
+  color: var(--strikethrough-text) !important;
 }
 
-/* abstract content bar ************************** */
+
+
+/* SYNTAX: HTML, MATH *********************************** */
+.CodeMirror .CodeMirror-line .cm-tag,
+.CodeMirror .CodeMirror-line .cm-tag,
+.CodeMirror .CodeMirror-line .cm-number {
+  color: var(--html-and-math-notation-tag);
+  background: var(--html-and-math-notation-tag-background); 
+}
+.CodeMirror .CodeMirror-line .cm-string.cm-jn-monospace { 
+  color: var(--html-string);
+  background: var(--html-string-background);
+}
+.CodeMirror .CodeMirror-line .cm-attribute.cm-jn-monospace { 
+  color: var(--html-attribute); 
+  background: var(--html-attribute-background);
+}
+
+
+
+/* LIST ************************************************* */
+.CodeMirror .CodeMirror-line .cm-variable-2,
+.CodeMirror .CodeMirror-line .cm-variable-3,
+.CodeMirror .CodeMirror-line .cm-keyword {
+  color: var(--list-text);
+}
+.cm-variable-2.cm-overlay.cm-rm-list-token,
+.cm-variable-3.cm-overlay.cm-rm-list-token,
+.cm-keyword.cm-overlay.cm-rm-list-token {
+  color: var(--list-token);
+}
+
+
+
+/* LINK ************************************************* */
+.CodeMirror .CodeMirror-line .cm-rm-link,
+.CodeMirror .CodeMirror-line .cm-url,
+.CodeMirror .CodeMirror-line .cm-link-text {
+  color: var(--link-text);
+}
+
+
+
+/* Blockquote ******************************************* */
+.CodeMirror .CodeMirror-line .cm-quote {
+  color: var(--blockquote-text);
+  opacity:1;
+}
+
+
+
+/* CODE BLOCK ******************************************* */
+.CodeMirror-code > .cm-rm-code-block > .cm-jn-code-block {
+  background: var(--code-block-background);
+}
+/* code block text -------------------------------------- */
+.CodeMirror-line > span > .cm-comment:not(.cm-jn-inline-code) {
+  color: var(--code-block-text);
+}
+/* inline code text ------------------------------------- */
+.CodeMirror-line > span > .cm-comment.cm-jn-inline-code {
+  color: var(--inline-code-text);
+  padding: 0 5px;
+  border-color: var(--inline-code-border) !important;
+  background: none !important;
+}
+  
+
+
+/* ABSTRACT CONTENT BAR ********************************* */
 span[role="presentation"]::after,
-span.cm-header::after,
-span.cm-overlay.cm-rm-link::after,
-span.cm-link-text::after,
-span.cm-overlay.cm-rm-link.cm-rm-image::after,
-div.cm-rm-code-block pre.CodeMirror-line span::after,
-div.CodeMirror span.cm-comment:not(.cm-jn-inline-code)::after,
-span.cm-tag.cm-bracket::after,
-span.cm-tag::after,
-span.cm-null.cm-jn-monospace::after,
+.cm-header::after,
+.cm-quote::after,
+.cm-variable-2::after,
+.cm-variable-3::after,
+.cm-keyword::after,
+.cm-null.cm-jn-monospace::after,
+.cm-overlay.cm-rm-link.cm-rm-image::after,
+.cm-link-text::after,
+.cm-overlay.cm-rm-link::after,
+.cm-em.cm-link-text::after,
+.cm-tag::after,
 .cm-katex-marker-open::after,
 .cm-katex-marker-close::after,
-span.cm-variable-2.cm-rm-list-token::after,
-span.cm-variable-3.cm-rm-list-token::after,
-span.cm-keyword.cm-rm-list-token::after,
+.cm-rm-sup::after,
+.cm-number::after,
 .cm-rm-checkbox::after,
+.cm-rm-code-block > .CodeMirror-line > span::after,
 span[cm-text]:only-child::after {
-  content: "";
+  content: " ";
+  position: absolute;
+  top: 0px;
+  right: 0px;
   display: inline-block;
   width: 2px;
   height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
-/* plain text */
+/* plain text ------------------------------------------- */
 span[role="presentation"]::after {
-  background: #383838;
+  background: var(--acb-plain-text);
   z-index: 1;
 }
 
-/* headings */
-span.cm-header::after {
-  background: #ffffff6e;
+/* headings --------------------------------------------- */
+.cm-header::after {
+  background: var(--acb-headings);
   z-index: 2;
 }
 
 
-/* ordered list & unordered list */
-span.cm-variable-2.cm-rm-list-token::after,
-span.cm-variable-3.cm-rm-list-token::after,
-span.cm-keyword.cm-rm-list-token::after {
-  background: #b11da9;
+/* blockquote ------------------------------------------- */
+.cm-quote::after {
+  background: var(--acb-block-quote);
   z-index: 3;
 }
 
-/* table */
-span.cm-null.cm-jn-monospace::after {
-  background:#3cffd7b3;
+/* ordered list & unordered list ------------------------ */
+.cm-variable-2::after,
+.cm-variable-3::after,
+.cm-keyword::after {
+  background: var(--acb-list);
   z-index: 4;
 }
 
-/* attached image */
-span.cm-overlay.cm-rm-link.cm-rm-image::after {
-  background: #008e156e;
+/* table ------------------------------------------------ */
+.cm-null.cm-jn-monospace::after {
+  background: var(--acb-table);
   z-index: 5;
 }
-
-/* footnote */
-span.cm-link-text::after {
-  background: #5a5800;
+  
+/* attached image --------------------------------------- */
+.cm-overlay.cm-rm-link.cm-rm-image::after {
+  background: var(--acb-image);
   z-index: 6;
 }
-
-/* web link & file path link */
-span.cm-overlay.cm-rm-link::after {
-  background: #cdd286;
+  
+/* footnote --------------------------------------------- */
+.cm-link-text::after {
+  background: var(--acb-footnote);
   z-index: 7;
 }
-
-/* abbreviation */
-span.cm-em.cm-link-text::after {
-  background: #da8d00;
+  
+/* simple link & anchor text link & file path link ------ */
+.cm-overlay.cm-rm-link::after {
+  background: var(--acb-links);
   z-index: 8;
 }
-
-/* html tag */
-span.cm-tag::after {
-  background: #ff0063;
+  
+/* abbreviation ----------------------------------------- */
+.cm-em.cm-link-text::after {
+  background: var(--acb-abbreviation);
   z-index: 9;
 }
-
-/* math notaion */
-.cm-katex-marker-open::after,
-.cm-katex-marker-close::after {
-  background: #5aa5fb;
+  
+/* html tag --------------------------------------------- */
+.cm-tag::after {
+  background: var(--acb-html-tags);
   z-index: 10;
 }
-
-/* checklist */
-.cm-rm-checkbox::after {
-  background: #5d00ff;
+  
+/* math notation ----------------------------------------- */
+.cm-katex-marker-open::after,
+.cm-katex-marker-close::after,
+.cm-rm-sup::after,
+.cm-number::after {
+  background: var(--acb-math-notaion);
   z-index: 11;
 }
-
-/* code block */
-div.cm-rm-code-block pre.CodeMirror-line span::after,
-div.CodeMirror span.cm-comment:not(.cm-jn-inline-code)::after {
-  background: #101413;
+  
+/* checklist -------------------------------------------- */
+.cm-rm-checkbox::after {
+  background: var(--acb-checklist);
   z-index: 12;
 }
+  
+/* code block ------------------------------------------- */
+.cm-rm-code-block > .CodeMirror-line > span::after {
+  background: var(--acb-code-block);
+  z-index: 13;
+}
+  
+/* blank line ------------------------------------------- */
+/* uncomment the below codes will showing the blank line on the abstract content bar */
 
-/* blank line: release the below codes will showing the blank line on the abstract content bar */
 /* span[cm-text]:only-child::after {
-    background:#151b1a;
-    z-index:13;
+    background: var(--acb-blank-line);
+    z-index: 14;
 } */
+  
 
-/* ------------------------ */
-/*    STYLING: JOPLIN UI    */
-/* ------------------------ */
+  
+/* ************************************************* */
+/*                 STYLING: JOPLIN UI                */
+/* ************************************************* */
+  
 
-/* STYLING: NOTEBOOKS PANEL ********************** */
+
+/* STYLING: NOTEBOOKS PANEL ***************************** */
 .sidebar {
-  background-color: #191919 !important;
+  background-color: var(--np-background) !important;
   border-radius: 0 0 7px 7px;
-  box-shadow: 0 0 2px #33524a;
+  box-shadow: 0 0 2px var(--np-box-shadow);
 }
-/* hiding the "All Notes" link */
+
+/* hiding the "All Notes" link -------------------------- */
 .all-notes {
-  display: none !important;
+  display: var(--hide-all-note-button) !important;
 }
-/* directory icon */
+
+/* directory icon --------------------------------------- */
 i.fas.fa-caret-down,
 i.fas.fa-caret-right {
-  text-shadow: 0 0 5px #dedede;
+  text-shadow: 0 0 5px var(--np-directory-icon-shadow);
   opacity: 1 !important;
 }
 i.fas.fa-caret-right {
-  color: #f6ff67;
+  color: var(--np-directory-icon-close);
 }
 i.fas.fa-caret-down {
-  color: #71ffc4;
+  color: var(--np-directory-icon-open);
 }
-/* notebook hover state */
-.list-item-depth-0,
-.list-item-depth-1,
-.list-item-depth-2,
-.list-item-depth-3,
-.list-item-depth-4,
-.list-item-depth-5,
-.list-item-depth-6,
-.list-item-depth-7,
-.list-item-depth-8,
-.list-item-depth-9,
-.list-item-depth-10,
-.tags .list-item-container,
-.list-item-depth-0:hover,
-.list-item-depth-1:hover,
-.list-item-depth-2:hover,
-.list-item-depth-3:hover,
-.list-item-depth-4:hover,
-.list-item-depth-5:hover,
-.list-item-depth-6:hover,
-.list-item-depth-7:hover,
-.list-item-depth-8:hover,
-.list-item-depth-9:hover,
-.list-item-depth-10:hover,
-.tags .list-item-container:hover {
-  height: fit-content !important;
-  border-radius: 5px 10px;
+
+/* notebook hover state --------------------------------- */
+.rli-sideBar .tags .list-item-container,
+.rli-sideBar [class*="list-item-depth"],
+.rli-sideBar [class*="list-item-depth"]:hover {
+  height: fit-content;
+  border-radius: 5px 10px !important;
 }
-.list-item-depth-0:hover,
-.list-item-depth-1:hover,
-.list-item-depth-2:hover,
-.list-item-depth-3:hover,
-.list-item-depth-4:hover,
-.list-item-depth-5:hover,
-.list-item-depth-6:hover,
-.list-item-depth-7:hover,
-.list-item-depth-8:hover,
-.list-item-depth-9:hover,
-.list-item-depth-10:hover,
-.tags .list-item-container:hover {
-  filter: hue-rotate(180deg);
+.rli-sideBar .tags .list-item-container:hover,
+.rli-sideBar [class*="list-item-depth"]:hover {
+  filter: var(--np-notebook-hover);
 }
-/* notebooks selected state */
-.list-item-depth-0.selected,
-.list-item-depth-1.selected,
-.list-item-depth-2.selected,
-.list-item-depth-3.selected,
-.list-item-depth-4.selected,
-.list-item-depth-5.selected,
-.list-item-depth-6.selected,
-.list-item-depth-7.selected,
-.list-item-depth-8.selected,
-.list-item-depth-9.selected,
-.list-item-depth-10.selected,
-.tags .list-item-container.selected {
+
+/* notebooks selected state------------------------------ */
+.rli-sideBar .tags .list-item-container.selected,
+.rli-sideBar [class*="list-item-depth"].selected {
   background: linear-gradient(60deg, #002f24, #00926a);
-  box-shadow: 0 0 3px #72fdbd;
+  box-shadow: 0 0 3px var(--np-notebook-selected-box-shadow);
 }
-/* notebook title indentation */
-.list-item-depth-0 {
-  padding-left: 11px !important;
+
+/* notebook title indentation --------------------------- */
+.rli-sideBar .list-item-depth-0 {
+  padding-left: 11px;
 }
-.list-item-depth-1 {
-  padding-left: 22px !important;
+.rli-sideBar .list-item-depth-1 {
+  padding-left: 22px;
 }
-.list-item-depth-2 {
-  padding-left: 33px !important;
+.rli-sideBar .list-item-depth-2 {
+  padding-left: 33px;
 }
-.list-item-depth-3 {
-  padding-left: 44px !important;
+.rli-sideBar .list-item-depth-3 {
+  padding-left: 44px;
 }
-.list-item-depth-4 {
-  padding-left: 55px !important;
+.rli-sideBar .list-item-depth-4 {
+  padding-left: 55px;
 }
-.list-item-depth-5 {
-  padding-left: 66px !important;
+.rli-sideBar .list-item-depth-5 {
+  padding-left: 66px;
 }
-.list-item-depth-6 {
-  padding-left: 77px !important;
+.rli-sideBar .list-item-depth-6 {
+  padding-left: 77px;
 }
-.list-item-depth-7 {
-  padding-left: 88px !important;
+.rli-sideBar .list-item-depth-7 {
+  padding-left: 88px;
 }
-.list-item-depth-8 {
-  padding-left: 99px !important;
+.rli-sideBar .list-item-depth-8 {
+  padding-left: 99px;
 }
-.list-item-depth-9 {
-  padding-left: 110px !important;
+.rli-sideBar .list-item-depth-9 {
+  padding-left: 110px;
 }
-.list-item-depth-10 {
-  padding-left: 121px !important;
+.rli-sideBar .list-item-depth-10 {
+  padding-left: 121px;
 }
+
+/* notebook title --------------------------------------- */
 /* set limit to the length of notebook title */
 div.list-item-container a.list-item {
   padding: 4px 0;
   margin: 1px auto;
   max-width: 95%;
-  border-width: 0 0 2px 0;
-  border-style: dotted;
-  border-color: #ffffff14;
+  border-bottom: 2px dotted var(--np-notebook-title-border);
 }
-/* notebook title wrap text */
-.list-item-depth-0 span.title,
-.list-item-depth-1 span.title,
-.list-item-depth-2 span.title,
-.list-item-depth-3 span.title,
-.list-item-depth-4 span.title,
-.list-item-depth-5 span.title,
-.list-item-depth-6 span.title,
-.list-item-depth-7 span.title,
-.list-item-depth-8 span.title,
-.list-item-depth-9 span.title,
-.list-item-depth-10 span.title {
-  color: #e2e2e2;
+
+/* notebook title text ---------------------------------- */
+.rli-sideBar [class*="list-item-depth"] span.title {
+  color: var(--np-notebook-title-text);
   max-width: 80%;
   white-space: normal;
   overflow-wrap: break-word;
 }
-/* note count label */
+
+/* note count label ------------------------------------- */
 .note-count-label {
   display: block;
-  margin: 0 0 0 auto;
   position: sticky;
   right: 2px;
-  background: #4affff24;
   font-size: 10px;
   text-align: center;
-  border: 1px solid #ffffff1f;
+  margin: 0 0 0 auto;
+  background: var(--np-note-count-label-background);
+  border: 1px solid var(--np-note-count-label-border);
   border-radius: 8px;
   opacity: 0.8 !important;
 }
@@ -325,166 +552,176 @@ div.list-item-container a.list-item {
   display: inline-block;
   width: 8px;
 }
-/* tag-related notebook navigation button */
-
+ 
+/* tag-related notebook navigation button --------------- */
 .sc-fznKkj > div > div > div button.kAMSfD {
   position: absolute;
   top: 6px;
   right: 280px;
-  background: #00926a !important;
+  background: var(--np-tag-related-nav-btn) !important;
   border-radius: 5px 10px !important;
 }
 .sc-fznKkj > div > div > div button.kAMSfD:hover {
-  filter: hue-rotate(180deg);
+  filter: var(--np-tag-related-nav-btn-hover);
 }
 .icon-notebooks,
 .icon-notebooks ~ span {
-  color: white !important;
+  color: var(--np-notebook-icon) !important;
 }
 
-/* synchronize information */
+/* synchronize information ------------------------------ */
 .sc-fzoxKX {
-  color: #02ffd0 !important;
+  color: var(--np-sync-info-text) !important;
 }
 
-/* synchronize btn */
+/* synchronize btn -------------------------------------- */
 .hEuwIc,
 .hEuwIc:hover {
-  background-color: #313131 !important;
+  background-color: var(--np-sync-button) !important;
   border: none !important;
   border-radius: 1em !important;
 }
 .hEuwIc:hover {
-  filter: brightness(150%);
+  filter: var(--np-sync-btn-hover);
 }
 
-/* STYLING: NOTE LIST PANEL ********************** */
+
+
+/* STYLING: NOTE LIST PANEL ***************************** */
 .sc-fzqAui {
-  box-shadow: 0 0 2px #33524a;
+  box-shadow: 0 0 2px var(--nlp-box-shadow);
   border-radius: 7px;
 }
 
-/* note list panel header */
+/* note list panel header ------------------------------- */
 .sc-fznLPX {
-  background-color: #191919 !important;
+  background-color: var(--nlp-header) !important;
 }
 
-/* search icon & new todo btn & new note btn */
+/* search icon & new todo btn & new note btn ------------ */
 .icon-search:before,
 .fa-check-square:before,
 .icon-note:before {
-  color: #f5f5f5;
+  color: var(--nlp-btn-icons);
 }
 button[title="New to-do"],
 button[title="New note"],
 button[title="New to-do"]:hover,
 button[title="New note"]:hover {
-  background: #00926a;
+  background: var(--nlp-btns);
   border-radius: 5px 10px;
 }
 button[title="New to-do"]:hover,
 button[title="New note"]:hover {
-  filter: hue-rotate(180deg);
+  filter: var(--nlp-btns-hover);
 }
-
-/* note list panel body */
+  
+/* notelist panel body ---------------------------------- */
 .cLdGCO {
-  background: #191919 !important;
+  background: var(--nlp-body) !important;
   border: none !important;
   border-radius: 0 0 7px 7px !important;
 }
 .note-list {
   padding: 3px 7px 0 0;
 }
-/* note list selected state */
+/* notelist selected state ------------------------------ */
 .selected.note-list-item {
   margin: 3px;
-  background: linear-gradient(60deg, #002f24, #00926a);
+  background: var(--nlp-note-selected);
   border-radius: 6px 15px;
-  box-shadow: 0 0 3px #72fdbd;
+  box-shadow: 0 0 3px var(--nlp-note-selected-box-shadow);
 }
-/* note list hover state */
+/* notelist hover state --------------------------------- */
 .note-list-item:hover {
   border-radius: 6px 15px;
-  filter: hue-rotate(180deg);
+  filter: var(--nlp-note-hover);
 }
 .note-list-item:not(.selected):hover {
-  background: #15283c;
+  background: var(--nlp-note-hover2);
 }
 
-/* STYLING: EDITOR HEADER ************************ */
-/* editor header */
+
+
+/* STYLING: EDITOR HEADER ******************************* */
+
+/* editor header ---------------------------------------- */
 .sc-fzoXzr.kYItFT {
-  background: #151b1a;
+  background: var(--eh-background);
 }
-/* note title input bar */
+/* note title input bar --------------------------------- */
 input.title-input {
   padding: 0 140px 0 20px !important;
-  background: #151b1a !important;
+  background: var(--eh-note-title-input-bar) !important;
 }
-/* time label */
+/* time label ------------------------------------------- */
 span.updated-time-label::after {
   content: "";
   display: inline-block;
   width: 16px;
 }
-/* header toolbar */
+/* header toolbar --------------------------------------- */
 .updated-time-label ~ .editor-toolbar {
-  background: #151b1a !important;
+  background: var(--eh-right-side-toolbar) !important;
   box-shadow: none;
 }
 
-/* STYLING: MAIN EDITOR TOOLBAR ****************** */
-/* main toolbar */
+
+  
+/* STYLING: TOP TOOLBAR ********************************* */
+
+/* main toolbar ----------------------------------------- */
 .editor-toolbar {
   margin: 0 0 0 -12px;
-  background: #191919 !important;
+  background: var(--tt-editor-toolbar) !important;
   border-radius: 1em;
-  box-shadow: 0 0 2px #33524a;
+  box-shadow: 0 0 2px var(--tt-editor-toolbar-box-shadow);
 }
 
-/* STYLING: TAG BAR ****************************** */
+
+
+/* STYLING: BOTTOM TAG BAR ****************************** */
 .tag-bar {
   margin-left: -4px;
-  background: #191919;
+  background: var(--btb-background);
   border-radius: 1em;
-  box-shadow: 0 0 2px #33524a;
+  box-shadow: 0 0 2px var(--btb-box-shadow);
   z-index: 1;
 }
 /* tags */
 div.tag-bar div.tag-list > span {
-  background:#4affff24 !important;
-  border-width:1px;
-  border-style:solid;
-  border-color:#ffffff1f;
+  background: var(--btb-tags) !important;
+  border: 1px solid var(--btb-tags-border);
 }
-
-/* STYLING: TAG MANAGER MODAL DIALOG ************* */
+  
+/* STYLING: TAG MANAGER MODAL DIALOG ******************** */
 .modal-dialog,
-.modal-dialog  button {
-    border-radius:0.5em 1em;
+.modal-dialog button {
+  border-radius:0.5em 1em;
 }
-/* tag selector bar */
+/* tag selector bar ------------------------------------- */
 .css-16hp18y-control,
 .tag-selector > div > div > div > div {
-    border-radius:1em;
+  border-radius:1em;
 }
 
 
-/* STYLING: OPTIONS PAGE ************************* */
-/* dropdown list & input bar */
+  
+/* STYLING: OPTIONS PAGE ******************************** */
+
+/* dropdown list & input bar ---------------------------- */
 select, input {
-  color:#bdbdbd !important;
+  color: var(--op-dropdown-list-and-input-text) !important;
   border-radius: 0.8em !important;
 }
-/* plugin card */
-.sc-fzoPby {
-  border-radius: 0.5em 1.5em;
+/* plugin card ------------------------------------------ */
+#react-root .sc-fzocqA .sc-fzoPby {
+  border-radius: 0.8em 1.5em;
 }
-.sc-fzoPby button {
+#react-root .sc-fzoPby button {
   border-radius: 0.5em 1em;
 }
-/* button: | back | ok | apply | */
+/* button: | back | ok | apply | ------------------------ */
 #react-root > div > div > div > div.sc-fzoCCn > button,
 #react-root > div > div > div > div.sc-fzoCCn > div > button  {
   border-radius: 0.5em 1em;

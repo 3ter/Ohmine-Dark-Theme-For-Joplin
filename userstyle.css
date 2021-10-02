@@ -1,33 +1,36 @@
 :root {
-  
-  /* GROUP STYLING */
-  --base-font: "montserrat", "microsoft jhenghei light", avenir, arial, sans-serif;
+  /* GENERAL STYLING */
+  --base-font: "montserrat", "microsoft jhenghei light", avenir, arial,
+    sans-serif;
   --base-font-size: 14px;
-  --primary-headings-margin: 1em 0 0.8em 0;
   --code-font: "cascadia mono light", monospace, "microsoft jhenghei light";
- 
+  --code-font-size: 12px;
+  --primary-headings-font-weight: 600;
+  --primary-headings-margin: 1em 0 0.8em 0;
+
   /* EYE-PROTECTOR SWITCHER */
-  /* protect your eyes by avoiding bright color from images */
-  /* change the below 2 lines value to "none" to turn off the Eye-Protector effect */
+  /* avoiding bright color from images */
+  /* change values to "none;" to stop Eye-Protector effect */
   --eye-protector-filter: brightness(70%); /*  all images will be default to 30% darker */
-  --eye-protector-animation: eye-protector 2s forwards 1; /* show the original color smoothly when your mouse hover on them */
+  --eye-protector-animation: eye-protector 2s forwards 1; /* show the original color smoothly when mouse hover on image */
 
   /* PRINT SWITCHER */
   --print-note-title-display: block; /* change the "block;" value to "none;" to hide the note title on printing */
   --print-sticky-notes-display: block; /* change the "none;" value to "block;" to show all of the sticky notes on printing */
-  --print-h1-heading-border-bottom: none; /* change the "none;" value to "1px solid #505050;" to show the h1 border bottom on printing */
+  --print-h1-border: none; /* change the "none;" value to "1px solid #505050;" to show the h1 border bottom on printing */
 
-  
   /* ************************************************* */
   /*          COLOR CONTROLLER: SECTION START          */
   /* ************************************************* */
   /* you can centrally control all color values of the render viewer within this section: */
 
-  --primary-text-color: #bdbdbd;
-  --primary-render-viewer-background-color: #151b1a;
+  --primary-text: #bdbdbd;
+  --primary-render-viewer-background: #151b1a;
 
-  --h1-heading-clip-text-color:linear-gradient( /* This is using the "background:" property with the "background-clip" and "text-fill-color" effect */
-    85deg,
+  /* HEADINGS COLOR -------------------------------------- */
+  --h1-clip-text: linear-gradient(
+    /* This is using the "background:" property with the "background-clip" and "text-fill-color" effect */
+      85deg,
     #3bfff7,
     #16d0c1,
     #7cffcd,
@@ -37,369 +40,367 @@
     #16d0c1,
     #3bfff7
   );
-  --h1-heading-text-color: #ffffff; /* It will only work when the h1 background-clip effects fails. */
-  --h1-heading-border-color: #396a5b;
-  --h2-heading-icon-color: #e2e2e2;
-  --h2-heading-text-color: #e2e2e2;
-  --h2-heading-border-color: #949494;
-  --h3-heading-text-color: #e2e2e2;
-  --h4-heading-text-color: #e2e2e2;
-  --h5-heading-text-color: #b1b1b1;
-  --h5-heading-border-color: #b1b1b1;
-  --h6-heading-text-color: #b1b1b1;
+  --h1-text: #ffffff; /* It will only work when the h1 background-clip effects fails. */
+  --h1-border: #396a5b;
+  --h2-icon: #e2e2e2;
+  --h2-text: #e2e2e2;
+  --h2-border: #949494;
+  --h3-text: #e2e2e2;
+  --h4-text: #e2e2e2;
+  --h5-text: #b1b1b1;
+  --h5-border: #b1b1b1;
+  --h6-text: #b1b1b1;
 
-  --link-text-color: #cdd286;
-  --link-resource-icon-color: #cdd286;
+  /* LINKS COLOR ----------------------------------------- */
+  --link-text: #cdd286;
+  --link-resource-icon: #cdd286;
 
-  --emphasize-and-strong-text-color: #e7c297;
-  --strikethrough-text-color: #776857;
-  --inserted-text-color: #ce8864;
-  --abbreviation-text-color: #54d077;
+  /* TEXT COLOR ------------------------------------------ */
+  --emphasize-text: #e7c297;
+  --strong-text: #e7c297;
+  --strikethrough-text: #776857;
+  --inserted-text: #ce8864;
+  --abbreviation-text: #54d077;
 
-  --mark-text-color: #000000;
-  --mark-text-highlight-color: #d6b15f;
+  --mark-text: #000000;
+  --mark-text-highlight: #d6b15f;
 
-  --blockquote-text-color: #a2998f;
-  --blockquote-border-color: #fbce9a;
+  --math-notation-text: #c5fffc;
+  --math-notation-text-shadow: #c5fffc;
 
-  --list-text-color: #51bba8;
+  /* BLOCKQUOTE ------------------------------------------ */
+  --blockquote-text: #a2998f;
+  --blockquote-border: #fbce9a;
 
-  --checklist-unchecked-text-color: #5bb5a2;
-  --checklist-checked-text-color: #5bb5a2;
-  --checkbox-checked-color: hue-rotate(-50deg) brightness(140%); /* This is using the "filter:" property */
+  /* LIST ------------------------------------------------ */
+  --list-text: #51bba8;
 
-  --math-notation-text-color: #c5fffc;
-  --math-notation-text-shadow-color: #c5fffc;
+  /* CHECKLIST ------------------------------------------- */
+  --unchecked-text: #5bb5a2;
+  --checked-text: #5bb5a2;
+  --checked-checkbox: hue-rotate(-50deg) brightness(140%); /* This is using the "filter:" property */
 
-  --table-head-text-color: #6cd4b6;
-  --table-head-background-color: #002931;
-  --table-data-text-color: #bdbdbd;
-  --table-row-odd-background-color: #122527;
-  --table-row-even-background-color: #152c2f;
+  /* TABLE ----------------------------------------------- */
+  --th-text: #6cd4b6;
+  --th-background: #002931;
+  --td-text: #bdbdbd;
+  --tr-odd-background: #172425;
+  --tr-even-background: #1d2b2d;
 
+  /* FOOTNOTES ------------------------------------------- */
+  --footnote-text: #808080;
+  --footnote-border: #8080807a;
 
-  --footnote-text-color: #808080;
-  --footnote-border-color: #8080807a;
+  /* CODE BLOCK | INLINE CODE | PRE ---------------------- */
+  --code-text: #c2c2c2;
+  --inline-code-background: #2d2d2d;
+  --code-block-background: #141819;
+  --code-block-border: #80f0ff;
+  --code-block-box-shadow: #a2f1e3;
 
-  --code-text-color: #d0d0d0; /* code block txet & inline code text */
+  /* STICKY NOTES BODY: GROUP STYLE ---------------------- */
+  --sticky-notes-background: linear-gradient(120deg, #0c0c0c, #232323, #0c0c0c);
+  --sticky-notes-text: #eaeaea;
+  --sticky-notes-tags-text-shadow: #000000;
+  --sticky-notes-border: #008c5c;
+  --sticky-notes-box-shadow: #148059;
 
-  --code-block-background-color: #101413;
-  --code-block-border-color: #80f0ff;
-  --code-block-box-shadow-color: #a2f1e3;
+  /* STICKY NOTES TAGS BACKGROUND ------------------------ */
+  --note-tag: #0065b3;
+  --tip-tag: #b7aa00;
+  --question-tag: #5a00b5;
+  --explain-tag: #00bf88;
+  --warning-tag: #c30000;
+  --keyword-tag: #c10074;
 
-
-  /* sticky notes body: group style */
-  --sticky-notes-background-color:linear-gradient(
-    120deg, 
-    #0c0c0c, 
-    #232323, 
-    #0c0c0c);
-  --sticky-notes-text-color: #eaeaea;
-  --sticky-notes-tags-text-shadow-color: #000000;
-  --sticky-notes-border-color: #008c5c;
-  --sticky-notes-box-shadow-color: #148059;
-
-  /* sticky note tags */
-  --sticky-note-note-tag-color: #0065b3;
-  --sticky-note-tip-tag-color: #b7aa00;
-  --sticky-note-question-tag-color: #5a00b5;
-  --sticky-note-explain-tag-color: #00bf88;
-  --sticky-note-warning-tag-color: #c30000;
-  --sticky-note-keyword-tag-color: #c10074;
-
-  /* sticky note: Important */
-  --sticky-note-important-title-text-color: red;
-  --sticky-note-important-title-background-color: #3c0000;
-  --sticky-note-important-title-border-color: red;
-  --sticky-note-important-text-color: #e8c399;
-  --sticky-note-important-background-color: #edad0b0d;
-  --sticky-note-important-border-color: red;
-  --sticky-note-important-box-shadow-color: red;
+  /* STANDALONE STYLING "IMPORTANT" STICKY NOTE ---------- */
+  --important-title-text: red;
+  --important-title-background: #3c0000;
+  --important-title-border: red;
+  --important-text: #e8c399;
+  --important-background: #edad0b0d;
+  --important-border: red;
+  --important-box-shadow: red;
 
 
 
-  /* PRINTING COLOR ********************************** */
-  --print-note-title-color: #a7a7a7;
-  --print-body-text-color: #5a5a5a; /* including emphasize,strong,inserted,abbreviation,strikethrough */
+  /* PRINTING COLOR ************************************** */
+  --print-note-title: #a7a7a7;
+  --print-body-text: #707070; /* including emphasize,strong,inserted,abbreviation,strikethrough */
 
-  --print-h1-heading-color: #505050;
-  --print-h2-h3-h4-headings-color: #7b7b7b;
-  --print-h5-h6-headings-color: #b1b1b1;
-  --print-h5-heading-border-color: #cccccc;
+  --print-h1-text: #505050;
+  --print-h2-h3-h4-text: #7b7b7b;
+  --print-h5-h6-text: #b1b1b1;
+  --print-h5-border: #cccccc;
 
-  --print-links-color: #00b5fb; /* all links */
+  --print-links: #00b5fb; /* all links */
 
-  --print-mark-text-color: #000000;
-  --print-mark-text-border-color: #cccccc;
+  --print-mark-text: #000000;
+  --print-mark-text-border: #cccccc;
 
-  --print-list-text-color: #808080;   /* unordered list, order list, checklist */
+  --print-list-text: #808080; /* unordered list, order list, checklist */
 
-  --print-table-td-text-color: #808080; 
-  
-  --print-code-text-color: #505050;   /* code block & inline code */
-  --print-code-border-color: #bfbfbf;  /* code block & inline code */
+  --print-td-text: #808080;
 
-  --print-math-notation-text-color: #000000;
+  --print-code-text: #505050; /* code block & inline code & pre */
+  --print-code-border: #bfbfbf; /* code block & inline code & pre */
+
+  --print-math-notation-text: #000000;
 
   /* all sticky notes */
-  --print-sticky-notes-tags-text-color: #a7a7a7; /* not including sticky notes - Important */
-  --print-sticky-notes-text-color: #5a5a5a;
-  --print-sticky-notes-border-color: #e0e0e0;
-  
+  --print-sticky-notes-tags-text: #a7a7a7; /* not including sticky notes - Important */
+  --print-sticky-notes-text: #5a5a5a;
+  --print-sticky-notes-border: #e0e0e0;
+
   /* sticky note - Imoprtant */
-  --print-sticky-note-important-title-text-color:#ff0000;
+  --print-sticky-note-important-title-text: #ff0000;
 
   /* ************************************************* */
   /*           COLOR CONTROLLER: SECTION END           */
   /* ************************************************* */
 }
 
-
-
-/* BASIC ********************************************* */
-body {
-  font-family:var(--base-font);
-  color:var(--primary-text-color);
-  font-size:var(--base-font-size);
-  background:var(--primary-render-viewer-background-color);
+/* GENERAL STYLING: RENDER VIEWER & RICH TEXT EDITOR ****** */
+#tinymce,
+#joplin-container-content {
+  font-family: var(--base-font);
+  font-size: var(--base-font-size);
+  color: var(--primary-text);
+  background: var(--primary-render-viewer-background);
 }
 
-/* STYLING: HEADINGS ********************************* */
-h1 {
-  padding:0;
-  margin:var(--primary-headings-margin);
-  background:var(--h1-heading-clip-text-color);
-  -webkit-background-clip:text !important;
-  -webkit-text-fill-color:transparent;
-  color:var(--h1-heading-text-color);
-  font-size:2.3em;
-  font-weight:700;
-  line-height:1.2em;
-  font-variant:small-caps;
-  border-width:0 0 1px 0;
-  border-style:solid;
-  border-color:var(--h1-heading-border-color);
+/* STYLING: HEADINGS ************************************** */
+#rendered-md > h1,
+#rendered-md > h2,
+#rendered-md > h3,
+#rendered-md > h4,
+#rendered-md > h5,
+#rendered-md > h6 {
+  font-weight: var(--primary-headings-font-weight);
+  line-height: 1.3em;
+  padding: 0;
+  margin: var(--primary-headings-margin);
 }
-h1 span {
+
+#rendered-md > h1 {
+  font-size: 2.3em;
+  font-variant: small-caps;
+  line-height: 1.2em;
+  color: var(--h1-text);
+  background: var(--h1-clip-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1px solid var(--h1-border);
+}
+#rendered-md > h1 > span {
+  /* avoiding clip effects on span content */
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
 }
 
-h2::before {
-  content:"";
-  display:inline-block;
-  width:0.7em;
-  height:0.8em;
-  padding:0;
-  margin:0 8px 0 0;
-  background:var(--h2-heading-icon-color);
-  border-radius:0.9em 2.9em 1.1em 3em;
+#rendered-md > h2::before {
+  /* the rice icon of h2 heading */
+  content: "";
+  display: inline-block;
+  width: 0.7em;
+  height: 0.8em;
+  margin: 0 8px 0 0;
+  background: var(--h2-icon);
+  border-radius: 0.9em 2.9em 1.1em 3em;
 }
-h2 {
-  padding:0;
-  margin:var(--primary-headings-margin);
-  color:var(--h2-heading-text-color);
-  font-size:1.8em;
-  font-weight:600;
-  border-width:0 0 1px 0;
-  border-style:solid;
-  border-color:var(--h2-heading-border-color);
+#rendered-md > h2 {
+  font-size: 1.8em;
+  color: var(--h2-text);
+  border-bottom: 1px solid var(--h2-border);
 }
 
-h3 {
-  padding:0;
-  margin:var(--primary-headings-margin);
-  color:var(--h3-heading-text-color);
-  font-size:1.5em;
-  font-weight:600;
+#rendered-md > h3 {
+  font-size: 1.5em;
+  color: var(--h3-text);
 }
 
-h4 {
-  padding:0;
-  margin:var(--primary-headings-margin);
-  color:var(--h4-heading-text-color);
-  font-size:1.2em;
-  font-weight:600;
+#rendered-md > h4 {
+  font-size: 1.2em;
+  color: var(--h4-text);
 }
 
-h5 {
-  padding:0;
-  margin:var(--primary-headings-margin);
-  color:var(--h5-heading-text-color);
-  font-size:1.2em;
-  font-weight:600;
-  border-width:0 0 1px 0;
-  border-style:dotted;
-  border-color:var(--h5-heading-border-color);
+#rendered-md > h5 {
+  font-size: 1.2em;
+  color: var(--h5-text);
+  border-bottom: 1px dotted var(--h5-border);
 }
 
-h6 {
-  padding:0;
-  margin:var(--primary-headings-margin);
-  color:var(--h6-heading-text-color);
-  font-size:1.1em;
-  font-weight:600;
+#rendered-md > h6 {
+  font-size: 1.1em;
+  color: var(--h6-text);
 }
 
-/* STYLING: EYE-PROTECTOR ON IMAGE ******************* */
-@keyframes eye-protector {
-  from {filter:brightness(70%);}
-  to {filter:brightness(100%);}
+/* STYLING: LINKS *************************************** */
+#rendered-md a {
+  color: var(--link-text);
 }
-#rendered-md img {
-  filter:var(--eye-protector-filter);
-}
-#rendered-md img:hover {
-  animation: var(--eye-protector-animation);
+/* link resource icon */
+#rendered-md .resource-icon {
+  font-size: 12px;
+  background: var(--link-resource-icon);
 }
 
-/* STYLING: LINK ************************************* */
-a {
-  color:var(--link-text-color);
+/* STYLING: TEXT **************************************** */
+#rendered-md em {
+  color: var(--emphasize-text);
 }
 
-.resource-icon {
-  background:var(--link-resource-icon-color);
+#rendered-md strong {
+  color: var(--strong-text);
 }
 
-/* STYLING: FOOTNOTE ********************************* */
-.footnotes-sep {
-  display:none;
-}
-.footnotes::before {
-  content:"Footnotes";
-  display:inline-block;
-  width:100%;
-  margin-top:2em;
-  padding-top:0.5em;
-  border-width:3px 0 0 0;
-  border-style:double;
-  border-color:var(--footnote-border-color);
-}
-#fn1,
-#fn2,
-#fn3 {
-  color:var(--footnote-text-color);
+#rendered-md s {
+  color: var(--strikethrough-text);
 }
 
-/* STYLING: TEXT ************************************* */
-em,
-strong {
-  color:var(--emphasize-and-strong-text-color);
+#rendered-md ins {
+  color: var(--inserted-text);
 }
 
-s {
-  color:var(--strikethrough-text-color);
+#rendered-md abbr {
+  color: var(--abbreviation-text);
+  font-weight: 500;
+  text-decoration: underline dotted;
 }
 
-ins {
-  color:var(--inserted-text-color);
+#rendered-md mark::before,
+#rendered-md mark::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+}
+#rendered-md mark {
+  color: var(--mark-text);
+  background: var(--mark-text-highlight);
+  border-radius: 1em;
 }
 
-mark::before,
-mark::after {
-  content:"";
-  display:inline-block;
-  width:7px;
-}
-mark {
-  background:var(--mark-text-highlight-color);
-  color:var(--mark-text-color);
-  border-radius:1em;
+#rendered-md .katex-display {
+  color: var(--math-notation-text);
+  font-size: 1.5em;
+  text-shadow: 0 0 3px var(--math-notation-text-shadow);
 }
 
-abbr[title] {
-  color:var(--abbreviation-text-color);
-  font-weight:500;
-  text-decoration:underline dotted;
+/* STYLING: UNORDERED LIST & ORDERED LIST & CHECKLIST ***** */
+#rendered-md > ul,
+#rendered-md > ol {
+  color: var(--list-text);
+  margin: 20px 0 20px 25px;
 }
 
-/* STYLING: PARAGRAPH ******************************** */
-#rendered-md p {
-  padding:0 0 0 4px;
-  margin:1em 0;
+#rendered-md ul > li,
+#rendered-md ol > li {
+  margin: 2px 0;
 }
 
-#rendered-md blockquote {
-  padding:0 0 0 13px;
-  margin:0 0 0 5px;
-  color:var(--blockquote-text-color);
-  border-width:0 0 0 5px;
-  border-style:dotted;
-  border-color:var(--blockquote-border-color);
-  opacity:1;
+/* sublist ------------------------------------------------ */
+#rendered-md ul ul,
+#rendered-md ol ol,
+#rendered-md ul > ol,
+#rendered-md ol > ul {
+  margin: 0 0 0 20px;
 }
 
-/* STYLING: CODE BLOCK | INLINE CODE ***************** */
-.hljs {
-  padding:10px 20px;
-  margin:25px 0;
-  background:var(--code-block-background-color);
-  font-size:13px;
-  border-width:0 2px;
-  border-style:ridge;
-  border-color:var(--code-block-border-color);
-  border-radius:10px;
-  box-shadow:0 0 3px var(--code-block-box-shadow-color);
+/* checklist ---------------------------------------------- */
+#rendered-md .checkbox-label-unchecked {
+  color: var(--unchecked-text);
 }
-#rendered-md .code, 
-#rendered-md .inline-code {
-  font-family:var(--code-font);
-  color:var(--code-text-color);
+#rendered-md .checkbox-label-checked {
+  color: var(--checked-text);
 }
-
-/* STYLING: MATH NOTATION **************************** */
-span.katex-display {
-  color:var(--math-notation-text-color);
-  font-size:1.5em;
-  text-shadow:0 0 3px var(--math-notation-text-shadow-color);
-}
-
-/* STYLING: LISTS ************************************ */
-  /* ordered list & unordered list */
-div > ul,
-div > ol {
-  margin:20px 0 20px 25px;
-}
-li {
-  margin:0.3em 0;
-  color:var(--list-text-color);
-}
-li > p {
-  margin:0;
-}
-  /* checklist */
-label.checkbox-label-unchecked {
-  color:var(--checklist-unchecked-text-color);
-}
-label.checkbox-label-checked {
-  color:var(--checklist-checked-text-color);
-}
-  /* checkbox */
+/* checkbox */
 input:checked {
-  filter:var(--checkbox-checked-color);
+  filter: var(--checked-checkbox);
 }
 
-/* STYLING: TABLE ************************************ */
-table {
-  width:100%;
-  margin:25px auto;
-}
-th {
-  color:var(--table-head-text-color);
-  background:var(--table-head-background-color) !important;
-}
-td {
-  color:var(--table-data-text-color) !important;
-}
-.jop-tinymce table tr:nth-child(even), table tr:nth-child(even) {
-  background-color:var(--table-row-even-background-color);
-}
-.jop-tinymce table tr:nth-child(odd), table tr:nth-child(odd) {
-  background-color:var(--table-row-odd-background-color);
+/* STYLING: PARAGRAPH ************************************* */
+#rendered-md p {
+  padding-left: 3px;
 }
 
-/* STYLING: STICKY NOTES ***************************** */
+#rendered-md > blockquote {
+  color: var(--blockquote-text);
+  padding: 0 0 0 10px;
+  margin: 0 0 0 5px;
+  border-left: 5px dotted var(--blockquote-border);
+  opacity: 0.8;
+}
+
+/* STYLING: CODE BLOCK, INLINE CODE, PRE ****************** */
+/* codes group styling ------------------------------------ */
+.joplin-editable > pre,
+.joplin-editable > pre > code,
+#rendered-md .inline-code {
+  font-family: "cascadia mono light", monospace, "microsoft jhenghei light";
+  font-size: var(--code-font-size);
+  color: var(--code-text);
+}
+
+/* code block --------------------------------------------- */
+.joplin-editable > pre {
+  padding: 10px 12px;
+  margin: 20px 0;
+  background: var(--code-block-background);
+  border-width: 0 2px;
+  border-style: ridge;
+  border-color: var(--code-block-border);
+  border-radius: 8px;
+  box-shadow: 0 0 3px var(--code-block-box-shadow);
+  overflow-y:scroll;
+}
+
+.mce-content-body [contentEditable=false][data-mce-selected] {
+  outline: 3px solid #002688;
+}
+
+/* inline code -------------------------------------------- */
+#rendered-md .inline-code {
+  background: var(--inline-code-background);
+}
+
+/* STYLING: TABLE ***************************************** */
+#rendered-md table {
+  width: 100%;
+  margin: 25px auto;
+}
+#rendered-md table th {
+  color: var(--th-text);
+  background: var(--th-background);
+}
+#rendered-md table td {
+  color: var(--td-text);
+}
+.jop-tinymce table tr:nth-child(even),
+table tr:nth-child(even) {
+  background-color: var(--tr-even-background);
+}
+.jop-tinymce table tr:nth-child(odd),
+table tr:nth-child(odd) {
+  background-color: var(--tr-odd-background);
+}
+
+/* STYLING: FOOTNOTE ************************************ */
+#rendered-md .footnotes-sep {
+  display: none;
+}
+#rendered-md .footnotes::before {
+  content: "Footnotes";
+  display: inline-block;
+  width: 100%;
+  margin-top: 2em;
+  padding-top: 0.5em;
+  border-top: 3px double var(--footnote-border);
+}
+#rendered-md .footnote-item {
+  color: var(--footnote-text);
+}
+
+/* STYLING: STICKY NOTES ******************************** */
 /* The sticky note-"IMPORTANT" is standalone, not included with this group styling */
 note::after,
 tip::after,
@@ -407,13 +408,13 @@ question::after,
 explain::after,
 warning::after,
 keyword::after {
-  display:table;
-  width:100;
-  padding:0 10px 0;
-  margin:8px 10px 0 0;
-  font-weight:700;
-  text-shadow:1px 1px 3px var(--sticky-notes-tags-text-shadow-color);
-  border-radius:4px 10px;
+  font-weight: 700;
+  display: table;
+  width: 100;
+  padding: 0 10px 0;
+  margin: 8px 10px 0 0;
+  text-shadow: 1px 1px 3px var(--sticky-notes-tags-text-shadow);
+  border-radius: 4px 10px;
 }
 note,
 tip,
@@ -421,130 +422,152 @@ question,
 explain,
 warning,
 keyword {
-  display:block;
-  padding:10px 20px 10px 20px;
-  margin:15px 0;
-  background:var(--sticky-notes-background-color);
-  color:var(--sticky-notes-text-color);
-  border-width:0px 2px;
-  border-style:solid;
-  border-color:var(--sticky-notes-border-color);
-  border-radius:8px 20px;
-  box-shadow:1px 1px 4px var(--sticky-notes-box-shadow-color);
+  color: var(--sticky-notes-text);
+  display: block;
+  padding: 10px 20px 10px 20px;
+  margin: 15px 0;
+  background: var(--sticky-notes-background);
+  border-width: 0px 2px;
+  border-style: solid;
+  border-color: var(--sticky-notes-border);
+  border-radius: 8px 20px;
+  box-shadow: 1px 1px 4px var(--sticky-notes-box-shadow);
 }
 
-/* STYLING: STICKY NOTE- NOTE TAG */
+/* STYLING: NOTE TAG -------------------------------------- */
 note::after {
-  content:"NOTE";
-  background:var(--sticky-note-note-tag-color);
+  content: "NOTE";
+  background: var(--note-tag);
 }
 
-/* STYLING: STICKY NOTE- TIP TAG */
+/* STYLING: TIP TAG --------------------------------------- */
 tip::after {
-  content:"TIP";
-  background:var(--sticky-note-tip-tag-color);
+  content: "TIP";
+  background: var(--tip-tag);
 }
 
-/* STYLING: STICKY NOTE- QUESTION TAG */
+/* STYLING: QUESTION TAG ---------------------------------- */
 question::after {
-  content:"QUESTION";
-  background:var(--sticky-note-question-tag-color);
+  content: "QUESTION";
+  background: var(--question-tag);
 }
 
-/* STYLING: STICKY NOTE- EXPLAIN TAG */
+/* STYLING: EXPLAIN TAG ----------------------------------- */
 explain::after {
-  content:"EXPLAIN";
-  background:var(--sticky-note-explain-tag-color);
+  content: "EXPLAIN";
+  background: var(--explain-tag);
 }
 
-/* STYLING: STICKY NOTE- WARNING TAG */
+/* STYLING: WARNING TAG ----------------------------------- */
 warning::after {
-  content:"WARNING";
-  background:var(--sticky-note-warning-tag-color);
+  content: "WARNING";
+  background: var(--warning-tag);
 }
 
-/* STYLING: STICKY NOTE- KEYWORD TAG */
+/* STYLING: KEYWORD TAG ----------------------------------- */
 keyword::after {
-  content:"KEYWORD";
-  background:var(--sticky-note-keyword-tag-color);
+  content: "KEYWORD";
+  background: var(--keyword-tag);
 }
 
-/* STYLING: STICKY NOTE- IMPORTANT */
+/* STYLING: IMPORTANT ------------------------------------- */
 important::before {
-  content:"IMPORTANT";
-  display:block;
-  width:100%;
-  padding:0;
-  margin:0px 0 10px 0;
-  background:var(--sticky-note-important-title-background-color);
-  color:var(--sticky-note-important-title-text-color);
-  font-weight:700;
-  text-align:center;
-  border-width:1px 0 1px 0;
-  border-style:solid;
-  border-color:var(--sticky-note-important-title-border-color);
-  border-radius:8px;
+  content: "IMPORTANT";
+  color: var(--important-title-text);
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0px 0 10px 0;
+  background: var(--important-title-background);
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: var(--important-title-border);
+  border-radius: 8px;
 }
 important {
-  display:block;
-  padding:1em;
-  margin:1em 2em;
-  background:var(--sticky-note-important-background-color);
-  color:var(--sticky-note-important-text-color);
-  font-weight:500;
-  border-width:0px 2px;
-  border-style:solid;
-  border-color:var(--sticky-note-important-border-color);
-  border-radius:8px 20px;
-  box-shadow:0 0 5px var(--sticky-note-important-box-shadow-color);
+  font-weight: 500;
+  color: var(--important-text);
+  display: block;
+  padding: 1em;
+  margin: 1em 2em;
+  background: var(--important-background);
+  border-width: 0px 2px;
+  border-style: solid;
+  border-color: var(--important-border);
+  border-radius: 8px 20px;
+  box-shadow: 0 0 5px var(--important-box-shadow);
 }
 
-/* STYLING: ART GALLERY ****************************** */
+/* STYLING: ART GALLERY ************************************ */
 ag2,
 ag3,
 ag4,
 ag5,
 ag6 {
-  display:inline-flex;
-  flex-wrap:wrap;
-  max-height:60vh;
-  margin:25px 0;
-  align-items:center;
-  justify-content:center;
-  overflow-y:scroll;
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-height: 60vh;
+  margin: 25px 0;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
 }
 ag2 img,
 ag3 img,
 ag4 img,
 ag5 img,
 ag6 img {
-  padding:5px;
+  padding: 5px;
 }
 ag2 img {
-  max-width:calc(100% / 2.1);
+  max-width: calc(100% / 2.1);
 }
 ag3 img {
-  max-width:calc(100% / 3.2);
+  max-width: calc(100% / 3.2);
 }
 ag4 img {
-  max-width:calc(100% / 4.4);
+  max-width: calc(100% / 4.4);
 }
 ag5 img {
-  max-width:calc(100% / 5.6);
+  max-width: calc(100% / 5.6);
 }
 ag6 img {
-  max-width:calc(100% / 6.8);
+  max-width: calc(100% / 6.8);
+}
+
+/* STYLING: EYE-PROTECTOR ON IMAGE ************************* */
+@keyframes eye-protector {
+  from {
+    filter: brightness(70%);
+  }
+  to {
+    filter: brightness(100%);
+  }
+}
+#rendered-md img {
+  filter: var(--eye-protector-filter);
+}
+#rendered-md img:hover {
+  animation: var(--eye-protector-animation);
 }
 
 
-/* STYLING: PRINTING ********************************* */
-@media print {
 
-  /* PRINTING EXACT COLOR */
-  *,
-  table, 
-  th,
-  td,
+/* STYLING: PRINTING *************************************** */
+@media print {
+  /* PRINTING EXACT COLOR ********************************** */
+  #tinymce,
+  #joplin-container-body,
+  body,
+  note,
+  tip,
+  question,
+  explain,
+  warning,
+  keyword,
+  important,
   note:after,
   tip:after,
   question:after,
@@ -552,34 +575,60 @@ ag6 img {
   warning:after,
   keyword:after,
   important:before,
-  note,
-  tip,
-  question,
-  explain,
-  warning,
-  keyword,
-  important {
-    background:none !important;
-    -webkit-print-color-adjust:exact;
+  #rendered-md h1,
+  #rendered-md h2,
+  #rendered-md h3,
+  #rendered-md h4,
+  #rendered-md h5,
+  #rendered-md h6,
+  #rendered-md p,
+  #rendered-md mark,
+  #rendered-md table,
+  #rendered-md table th,
+  #rendered-md table td,
+  #rendered-md table tr,
+  #rendered-md .footnote-item,
+  #rendered-md .footnotes::before,
+  #rendered-md ul,
+  #rendered-md ol,
+  #rendered-md ul li,
+  #rendered-md ol li,
+  #rendered-md span.katex-display,
+  #rendered-md a,
+  #rendered-md .resource-icon,
+  #rendered-md s,
+  #rendered-md em,
+  #rendered-md ins,
+  #rendered-md strong,
+  #rendered-md mark,
+  #rendered-md mark::before,
+  #rendered-md mark::after,
+  #rendered-md abbr,
+  .joplin-editable pre,
+  #rendered-md .inline-code {
+    -webkit-print-color-adjust: exact;
+    background: none;
+    text-shadow: none;
   }
 
-  /* "AVOID" PRINTING: | Note title | sticky notes | */
+  /* "AVOID" PRINTING: | note title | sticky notes | ******* */
   /* note title */
   .exported-note-title {
-    display:var(--print-note-title-display);
-    height:1em;
-    padding:0 0 10px 0;
-    margin:0 0 30px 0;
-    color:var(--print-note-title-color);
+    display: var(--print-note-title-display);
+    height: 1em;
+    padding: 0 0 10px 0;
+    margin: 0 0 30px 0;
+    color: var(--print-note-title);
   }
-  /* sticky notes */
-  note:after,
-  tip:after,
-  question:after,
-  explain:after,
-  warning:after,
-  keyword:after,
-  important:before,
+  
+  /* sticky notes ****************************************** */
+  note::after,
+  tip::after,
+  question::after,
+  explain::after,
+  warning::after,
+  keyword::after,
+  important::before,
   note,
   tip,
   question,
@@ -587,165 +636,151 @@ ag6 img {
   warning,
   keyword,
   important {
-    display:var(--print-sticky-notes-display);
+    display: var(--print-sticky-notes-display);
   }
 
-  /* RELEASE ART GALLERY OVERFLOW */
+  /* RELEASE ART GALLERY OVERFLOW ************************** */
   ag2,
   ag3,
   ag4,
   ag5,
   ag6 {
-    max-height:none;
-    overflow-y:unset;
+    max-height: none;
+    overflow-y: unset;
   }
-  /* RELEASE EYE PROTECTOR FROM IMAGES */
+
+  /* RELEASE EYE PROTECTOR FROM IMAGES ********************* */
   #rendered-md img {
-    filter:none;
+    filter: none;
   }
 
-  /* ADJUSTMENTS: | SIZE | COLOR | */
+  /* ADJUSTMENTS: | SIZE | COLOR | ************************* */
+  #joplin-container-body,
+  #tinymce,
   body {
-    color:var(--print-body-text-color);
-    font-size:12px;
+    color: var(--print-body-text);
+    font-size: 12px;
   }
 
-  /* blocks margin */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  .hljs,
-  blockquote {
-    margin:18px 0;
+  /* headings printing ------------------------------------- */
+  #rendered-md > h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--print-h1-text);
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    border-bottom: var(--print-h1-border);
   }
 
-  /* headings printing */
-  h1 {
-    -webkit-background-clip:initial;
-    -webkit-text-fill-color:initial;
-    color:var(--print-h1-heading-color);
-    font-size:22px;
-    font-weight:700;
-    border-bottom:var(--print-h1-heading-border-bottom);
+  #rendered-md > h2::before {
+    box-shadow: inset 0 0 0 1000px var(--print-h2-h3-h4-text); /* replace this line of codes by "display:none;" if you don't want to print out the heading icon */
   }
-  
-  h2::before {
-    box-shadow:inset 0 0 0 1000px var(--print-h2-h3-h4-headings-color); /* replace this line of codes by "display:none;" if you don't want to print out the heading icon */
-  }
-  h2 {
-    color:var(--print-h2-h3-h4-headings-color);
-    font-size:19px;
-    border-width:0 0 0.5px 0;
-    border-color:var(--print-h2-h3-h4-headings-color);
+  #rendered-md > h2 {
+    font-size: 19px;
+    color: var(--print-h2-h3-h4-text);
+    border-width: 0 0 0.5px 0;
+    border-color: var(--print-h2-h3-h4-text);
   }
 
-  h3 {
-    color:var(--print-h2-h3-h4-headings-color);
-    font-size:16px;
-  }
-  
-  h4 {
-    color:var(--print-h2-h3-h4-headings-color);
-    font-size:14px;
-  }
-  h5 {
-    color:var(--print-h5-h6-headings-color);
-    font-size:14px;
-    border-color:var(--print-h5-heading-border-color);
+  #rendered-md > h3 {
+    font-size: 16px;
+    color: var(--print-h2-h3-h4-text);
   }
 
-  h6 {
-    color:var(--print-h5-h6-headings-color);
-    font-size:12px;
+  #rendered-md > h4 {
+    font-size: 14px;
+    color: var(--print-h2-h3-h4-text);
   }
 
-  /* link printing */
-  a,
-  .resource-icon {
-    color:var(--print-links-color);
-  }
-  /* emphasize & strong text printing */
-  em,
-  strong,
-  s,
-  ins,
-  abbr[title] {
-    color:var(--print-body-text-color);
-  }
-  /* mark text printing */
-  mark::before,
-  mark::after {
-    width:3px;
-  }
-  mark {
-    color:var(--print-mark-text-color);
-    font-weight:500;
-    border-top:1px solid var(--print-mark-text-border-color);
-    border-bottom:1px solid var(--print-mark-text-border-color);
-    border-radius:4px;
+  #rendered-md > h5 {
+    font-size: 14px;
+    color: var(--print-h5-h6-text);
+    border-color: var(--print-h5-border);
   }
 
-  /* list printing */
-  div > ul,
-  div > ol {
-    margin:10px 0 10px 25px;
-  }
-  ul > li,
-  ol > li {
-    color:var(--print-list-text-color);
+  #rendered-md > h6 {
+    font-size: 12px;
+    color: var(--print-h5-h6-text);
   }
 
-  /* table printing */
-  table {
-    margin:10px auto;
-  }
-  td {
-    color:var(--print-table-td-text-color) !important;
+  /* link printing ----------------------------------------- */
+  #rendered-md a,
+  #rendered-md .resource-icon {
+    color: var(--print-links);
   }
 
-  /* code block & inline code printing */
-  .hljs {
-    padding:10px 20px;
-    background:none;
-    color:var(--print-code-text-color);
-    font-size:10px;
-    white-space:pre-wrap;
-    border-color:var(--print-code-border-color);
-    box-shadow:none;
+  /* text printing ----------------------------------------- */
+  #rendered-md s,
+  #rendered-md em,
+  #rendered-md ins,
+  #rendered-md strong,
+  #rendered-md abbr {
+    color: var(--print-body-text);
+  }
+  /* mark text printing ------------------------------------ */
+  #rendered-md mark::before,
+  #rendered-md mark::after {
+    width: 3px;
+  }
+  #rendered-md mark {
+    font-weight: 500;
+    color: var(--print-mark-text);
+    border-top: 1px solid var(--print-mark-text-border);
+    border-bottom: 1px solid var(--print-mark-text-border);
+    border-radius: 4px;
   }
 
-  #rendered-md .code, 
+  /* list printing ---------------------------------------- */
+  #rendered-md ul > li,
+  #rendered-md ol > li {
+    color: var(--print-list-text);
+  }
+
+  /* table printing --------------------------------------- */
+  #rendered-md table {
+    margin: 10px auto;
+  }
+  #rendered-md table td {
+    color: var(--print-td-text);
+  }
+
+  /* code block & inline code printing -------------------- */
+  .joplin-editable pre {
+    font-size: 10px;
+    white-space: pre-wrap;
+    color: var(--print-code-text);
+    padding: 10px 20px;
+    border-color: var(--print-code-border);
+    box-shadow: none;
+  }
+
+  .joplin-editable pre,
+  .joplin-editable pre > code,
   #rendered-md .inline-code {
-    color:var(--print-code-text-color);
-    border-color:var(--print-code-border-color);
+    color: var(--print-code-text);
+    border-color: var(--print-code-border);
   }
 
-  /* math notation printing */
-  span.katex-display {
-    color:var(--print-math-notation-text-color);
-    font-size:12px;
-    text-shadow:none;
+  /* math notation printing ------------------------------- */
+  #rendered-md span.katex-display {
+    font-size: 12px;
+    color: var(--print-math-notation-text);
   }
 
-  /* sticky notes printing */
+  /* sticky notes printing -------------------------------- */
   note::after,
   tip::after,
   question::after,
   explain::after,
   warning::after,
   keyword::after {
-    width:fit-content;
-    color:var(--print-sticky-notes-tags-text-color);
-    text-shadow:none;
-    border:1px solid var(--print-sticky-notes-border-color);
+    width: fit-content;
+    color: var(--print-sticky-notes-tags-text);
+    border: 1px solid var(--print-sticky-notes-border);
   }
   important::before {
-    color:var(--print-sticky-note-important-title-text-color);
-    border:1px solid var(--print-sticky-notes-border-color);
+    color: var(--print-sticky-note-important-title-text);
+    border: 1px solid var(--print-sticky-notes-border);
   }
   note,
   tip,
@@ -754,8 +789,8 @@ ag6 img {
   warning,
   keyword,
   important {
-    color:var(--print-sticky-notes-text-color);
-    border:1px solid var(--print-sticky-notes-border-color);
-    box-shadow:none;
+    color: var(--print-sticky-notes-text);
+    border: 1px solid var(--print-sticky-notes-border);
+    box-shadow: none;
   }
 }
