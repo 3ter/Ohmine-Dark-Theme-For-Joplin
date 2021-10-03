@@ -333,7 +333,13 @@ Color was not always the best choice for indentifying information. Sometimes, ci
 
 ## Code block & Inline Code
 
+In the Render Viewer:
+
 ![inline_code_sample_abg](https://user-images.githubusercontent.com/86870826/134676173-043817c2-f3cd-4aef-8b24-21caa4ecc051.png)
+
+In the Markdown Editor:
+
+![md_inline_code_sample](https://user-images.githubusercontent.com/86870826/135751564-9cbd2d2c-5e63-4ba5-b413-f2254cf958b6.png)
 
 Then, the code block is showing below:
 
