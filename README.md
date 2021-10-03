@@ -68,11 +68,11 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 	- [Math notation](#math-notation)
 - [Printing](#printing)
 - [Color Controller](#color-controller)
-- [How to use this theme](#how-to-use-this-theme)
+- [How to install this theme](#how-to-install-this-theme)
 - [How to delete this theme](#how-to-delete-this-theme)
 - [Recommended plugins](#recommended-plugins)
 	- [Quick HTML tags (most recommended to use with this theme)](#quick-html-tags-most-recommended-to-use-with-this-theme)
-- [How to install plugins](#how-to-install-plugins)
+- [How to install Joplin plugins](#how-to-install-joplin-plugins)
 	
 ## The Inspiration of Ohmine Dark Theme
 
@@ -308,11 +308,7 @@ All the attached images will be defaulted by 30% darker than the original, to av
 
 Mouse hover on the image to check out the original color, it will be getting bright smoothly.
 
-## More Screenshots
-
-Here show you more detailed screenshots:
-
-### Notebook Panel
+## Notebook Panel
 
 notebook panel of Ohmine Dark Theme:
 
@@ -320,7 +316,7 @@ The CSS styling of Ohmine Dark Theme will only support up to 10 levels of subdir
 
 ![notebook_panel_sample_abg](https://user-images.githubusercontent.com/86870826/134758745-81736f74-97bf-49e2-9779-2fb935085120.png)
 
-### Text Style
+## Text Style
 
 A sample of the Render Viewer:
 
@@ -334,7 +330,7 @@ Color was not always the best choice for indentifying information. Sometimes, ci
 
 [:arrow_up:Back](#table-of-contents)
 
-### Code block & Inline Code
+## Code block & Inline Code
 
 ![inline_code_sample_abg](https://user-images.githubusercontent.com/86870826/134676173-043817c2-f3cd-4aef-8b24-21caa4ecc051.png)
 
@@ -344,31 +340,31 @@ Then, the code block is showing below:
 
 [:arrow_up:Back](#table-of-contents)
 
-### Link
+## Link
 
 ![links_sample_abg](https://user-images.githubusercontent.com/86870826/134676007-f11a7822-610c-4f7e-a351-0366e505cccd.png)
 
 [:arrow_up:Back](#table-of-contents)
 
-### Unordered List & Ordered List
+## Unordered List & Ordered List
 
 ![unordered_list_and_ordered_list_sample_abg](https://user-images.githubusercontent.com/86870826/134676050-a4a42e70-fb50-4bb0-b58a-b0a88463b42c.png)
 
 [:arrow_up:Back](#table-of-contents)
 
-### Checklist
+## Checklist
 
 ![checklist_sample_abg](https://user-images.githubusercontent.com/86870826/134676087-ab2580b3-164c-4da9-8ed6-bcf80ff1087b.png)
 
 [:arrow_up:Back](#table-of-contents)
 
-### Blockquote
+## Blockquote
 
 ![blockquote_sample_abg](https://user-images.githubusercontent.com/86870826/134676125-1bf895c8-a9a3-40b8-b159-72b21fa85782.png)
 
 [:arrow_up:Back](#table-of-contents)
 
-### Math notation
+## Math notation
 
 See how *magical* after added a bit of neon light to your mathematical formulas:
 
@@ -392,7 +388,7 @@ You can control all the color values of both the Render Viewer and Markdown Edit
 
 [:arrow_up:Back](#table-of-contents)
 
-## How to use this theme
+## How to install this theme
 
 If you know where exactly your `userstyle.css` and `userchrome.css` are stored, you can download my files and replace them directly. And don't forget to download and install the recommended fonts: [Montserrat](https://fonts.google.com/specimen/Montserrat) | [Cascadia Mono Light](https://github.com/microsoft/cascadia-code/releases)
 
@@ -426,7 +422,7 @@ After this, quit & restart Joplin app and then enjoy it.
 
 [:arrow_up:Back](#table-of-contents)
 
-## How to install plugins
+## How to install Joplin plugins
 
 To install plugins:
 
