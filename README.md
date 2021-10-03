@@ -387,6 +387,8 @@ Here are few things you should know before you print out your article:
 2. Art Gallery will be releasing the overflow limit and listing out all the images but it won't change the number of columns.
 3. A lot of elements are restyled for printing.
 
+The printing sample PDF for reference: https://drive.google.com/file/d/1HVphdMbILIiA79pYtmkKf85os4DWZeQq/view?usp=sharing
+
 [:arrow_up:Back](#table-of-contents)
 
 ## Color Controller
