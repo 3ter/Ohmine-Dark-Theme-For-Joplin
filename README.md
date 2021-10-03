@@ -73,6 +73,7 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 - [Recommended plugins](#recommended-plugins)
 	- [Quick HTML tags (most recommended to use with this theme)](#quick-html-tags-most-recommended-to-use-with-this-theme)
 - [How to install Joplin plugins](#how-to-install-joplin-plugins)
+- [Report Bugs](#report-bugs)
 	
 ## The Inspiration of Ohmine Dark Theme
 
@@ -469,3 +470,7 @@ After this, you can use this plugin like below:
 3. Press `Enter` key. It's done!
 
 [:arrow_up:Back](#table-of-contents)
+
+## Report Bugs
+
+If you experiencing any bugs or bad issues while using this theme, please create a bug report on [issues page](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/issues/new/choose) and let me know it.
