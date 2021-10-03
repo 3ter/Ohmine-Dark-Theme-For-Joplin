@@ -58,7 +58,7 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 - [Structural-friendly heading style](#structural-friendly-heading-style)
 	- [How to use](#how-to-use-3) 
 - [Eye-Protector](#eye-protector)
-- [More Screenshots](#more-screenshots)
+- More Screenshots
 	- [Notebook Panel](#notebook-panel)
 	- [Text Style](#text-style)
 	- [Link](#link)
