@@ -134,7 +134,7 @@ The key adjustments for the Render Viewer as below:
 Ohmine dark theme is using the below font family for both markdown editor and render viewer:
 
 - Montserrat
-  download it for free at (https://fonts.google.com/specimen/Montserrat)
+  ([download it for free](https://fonts.google.com/specimen/Montserrat))
 - Microsoft JHengHei Light (for Traditional Chinese 繁體中文)
 - Avenir (Joplin default)
 - Arial (Joplin default)
@@ -151,7 +151,7 @@ Then, the monospace fonts is using on all Markdown Syntax, such as a Markdown ta
 Let's take a look at the monospace font family:
 
 - Cascadia Mono Light
-  download it for free at (https://github.com/microsoft/cascadia-code/releases)
+  ([download it for free](https://github.com/microsoft/cascadia-code/releases))
 - Monospace (Joplin default)
 - Microsoft JHengHei Light (for Traditional Chinese comments 繁體中文註釋)
 
@@ -272,7 +272,7 @@ It will check your text line by line and then tell you what they are:
 
 See the below example screenshot (look to the right):
 
-![abstract_content_bar_sample_abg](https://user-images.githubusercontent.com/86870826/135714961-b866070d-609d-4b65-931c-ad90d2a8202d.png)
+![abstract_content_bar_sample](https://user-images.githubusercontent.com/86870826/135735799-8c4b7110-84c2-4b38-8a68-3da96d479667.png)
 
 It would be helpful when you want to release your eyes from the text for sometimes, or when you are going to double-check the missing part of your content.
 
@@ -316,14 +316,21 @@ Here show you more detailed screenshots:
 
 notebook panel of Ohmine Dark Theme:
 
-![notebook_panel_sample_abg](https://user-images.githubusercontent.com/86870826/134758745-81736f74-97bf-49e2-9779-2fb935085120.png)
-
 The CSS styling of Ohmine Dark Theme will only support up to 10 levels of subdirectories when Joplin didn't limit it to you. And sure, you can edit my CSS to fit your needs.
+
+![notebook_panel_sample_abg](https://user-images.githubusercontent.com/86870826/134758745-81736f74-97bf-49e2-9779-2fb935085120.png)
 
 ### Text Style
 
+A sample of the Render Viewer:
+
 ![text_sample_abg](https://user-images.githubusercontent.com/86870826/134675980-53e88bae-76dd-4a77-aaf8-2194242be97b.png)
 
+Another sample of the Markdown Editor:
+
+Color was not always the best choice for indentifying information. Sometimes, circle the keywords just like what you do on a paper is the much better option for less noise. And this style will apply to the emphazise text, strong text, mark text, and the abbrviation text.
+
+![circle_keywords_sample](https://user-images.githubusercontent.com/86870826/135735920-f06de4c2-c832-481b-bc10-22ee2ca09f36.png)
 
 [:arrow_up:Back](#table-of-contents)
 
@@ -387,17 +394,23 @@ You can control all the color values of both the Render Viewer and Markdown Edit
 
 ## How to use this theme
 
-1. Make sure you are already installed Joplin on your computer. (download at: https://joplinapp.org/download/)
-2. Download and install the most recommended font for this theme. (download at: https://fonts.google.com/specimen/Montserrat)
+If you know where exactly your `userstyle.css` and `userchrome.css` are stored, you can download my files and replace them directly. And don't forget to download and install the recommended fonts: [Montserrat](https://fonts.google.com/specimen/Montserrat) | [Cascadia Mono Light](https://github.com/microsoft/cascadia-code/releases)
+
+After this, quit & restart Joplin app and then enjoy it.
+
+**If you are not sure where your files are stored, you can follow the steps below:**
+
+1. Make sure you are already installed Joplin on your computer. [Download Joplin](https://joplinapp.org/download/)
+2. Download and install the most recommended font for this theme. [Montserrat](https://fonts.google.com/specimen/Montserrat) | [Cascadia Mono Light](https://github.com/microsoft/cascadia-code/releases)
 3. Open Joplin
 4. Go to `Tools` > `Options` > `Appearance` 
 5. Choose the `Dark` theme and press `Apply` (Ohmine Dark theme need to run with the Joplin built-in dark theme)
 6. In the `Appearance` press `Show Advanced Settings`
 7. Press `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
-9. Copy my `userstyle.css` codes in this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
+9. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
 10. And paste on your `userstyle.css`
 11. Back to Joplin again and press `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
-12. Copy my `userchrome.css` codes in this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
+12. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
 13. And paste on your `userchrome.css`
 14. Quit & restart Joplin and it's done.
 
