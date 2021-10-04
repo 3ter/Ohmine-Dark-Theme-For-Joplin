@@ -7,6 +7,15 @@ assignees: ''
 
 ---
 
+**Where did you meet the bug? (choose one)**
+
+- [ ] Markdown Editor
+- [ ] Rich Text Editor
+- [ ] Render Viewer
+- [ ] Notebook Panel
+- [ ] Notelist Panel
+- [ ] Option Page
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
@@ -22,10 +31,3 @@ A clear and concise description of what you expected to happen.
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - OS: [e.g. Windows, Mac...]
- - Joplin Version: 
-
-**Additional context**
-Add any other context about the problem here.
