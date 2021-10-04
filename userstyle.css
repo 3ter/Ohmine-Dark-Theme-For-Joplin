@@ -1,7 +1,6 @@
 :root {
   /* GENERAL STYLING */
-  --base-font: "montserrat", "microsoft jhenghei light", avenir, arial,
-    sans-serif;
+  --base-font: "montserrat", "microsoft jhenghei light", avenir, arial, sans-serif;
   --base-font-size: 14px;
   --code-font: "cascadia mono light", monospace, "microsoft jhenghei light";
   --code-font-size: 12px;
@@ -15,7 +14,7 @@
   --eye-protector-animation: eye-protector 2s forwards 1; /* show the original color smoothly when mouse hover on image */
 
   /* PRINT SWITCHER */
-  --print-note-title-display: block; /* change the "block;" value to "none;" to hide the note title on printing */
+  --print-note-title-display: none; /* change the "block;" value to "none;" to hide the note title on printing */
   --print-sticky-notes-display: block; /* change the "none;" value to "block;" to show all of the sticky notes on printing */
   --print-h1-border: none; /* change the "none;" value to "1px solid #505050;" to show the h1 border bottom on printing */
 

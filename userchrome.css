@@ -162,7 +162,7 @@
   font-size: var(--code-font-size);
   line-height: var(--code-font-line-height);
   color: var(--code-text);
-  }
+}
 
 /* markdown editor background --------------------------- */
 .resizableLayoutItem.rli-root ,
@@ -208,28 +208,24 @@
 
 /* TEXT ************************************************* */
 .cm-search-marker,
-.cm-em,
+.cm-em:not(.cm-image-alt-text),
 .cm-strong {
   border:1px solid var(--mark-emphasize-strong-abbr-border) !important;
   border-radius: 1em;
+  padding: 0 10px;
 } 
-
 /* MARK TEXT -------------------------------------------- */
 .cm-overlay.cm-search-marker {
   color: var(--mark-text) !important;
-  padding: 0 10px;
   background: var(--mark-text-highlight) !important;
 }
-
 /* EMPHASIZE TEXT --------------------------------------- */
-.cm-em {
+.cm-em:not(.cm-image-alt-text) {
   color: var(--emphasize-text) !important;
-  padding: 0 10px;
 }
 /* STRONG TEXT ------------------------------------------ */
 .cm-strong {
   color: var(--strong-text) !important;
-  padding: 0 10px;
 }
 /* INSERT TEXT ------------------------------------------ */
 .cm-rm-ins {
@@ -292,9 +288,10 @@
 
 
 /* CODE BLOCK ******************************************* */
-.CodeMirror-code > .cm-rm-code-block > .cm-jn-code-block {
+.CodeMirror .cm-jn-code-block-background.CodeMirror-linebackground {
   background: var(--code-block-background);
 }
+
 /* code block text -------------------------------------- */
 .CodeMirror-line > span > .cm-comment:not(.cm-jn-inline-code) {
   color: var(--code-block-text);
@@ -306,7 +303,6 @@
   border-color: var(--inline-code-border) !important;
   background: none !important;
 }
-  
 
 
 /* ABSTRACT CONTENT BAR ********************************* */
