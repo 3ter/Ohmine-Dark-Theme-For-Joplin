@@ -9,12 +9,12 @@ assignees: ''
 
 **1. Where did you meet the bug? (delete whichever is inapplicable)**
 
-Markdown Editor
-Rich Text Editor
-Render Viewer
-Notebook Panel
-Notelist Panel
-Option Page
+- Markdown Editor
+- Rich Text Editor
+- Render Viewer
+- Notebook Panel
+- Notelist Panel
+- Option Page
 
 **2. Describe the bug**
 A clear and concise description of what the bug is.
