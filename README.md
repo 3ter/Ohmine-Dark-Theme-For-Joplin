@@ -10,7 +10,11 @@ You would never know how better it is when you are not going to try it once!
 
 ## Latest Updates
 
-(2-OCT-2021 tested on Joplin v2.4.9)
+v1.14 (4-OCT-2021 tested on joplin v2.4.9)
+Fix: code block text selection highlight effect missing
+Fix: image alt text is treated as emphasize text when it names is including an underscore
+
+v1.12 (2-OCT-2021 tested on Joplin v2.4.9)
 
 - New: markdown editor is now using monospace fonts for all markdown syntax and non-monospace fonts for content
 - New: add markdown editor styling - reduce visual clutter caused by complicated note content
