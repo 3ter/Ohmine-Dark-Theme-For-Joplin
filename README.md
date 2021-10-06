@@ -10,6 +10,11 @@ You would never know how better it is when you are not going to try it once!
 
 ## Latest Updates
 
+(6-OCT-2021 tested on Joplin v2.4.9)
+
+- New: Add link href on printing - it's mainly for anchor text link but will affects to all links
+- New: Add `--print-link-href` in to the Print Switcher section of `userstyle.css`
+
 v1.14 (4-OCT-2021 tested on joplin v2.4.9)
 
 - Fix: code block text selection highlight effect missing
