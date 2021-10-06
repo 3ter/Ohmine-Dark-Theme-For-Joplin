@@ -14,9 +14,10 @@
   --eye-protector-animation: eye-protector 2s forwards 1; /* show the original color smoothly when mouse hover on image */
 
   /* PRINT SWITCHER */
-  --print-note-title-display: none; /* change the "block;" value to "none;" to hide the note title on printing */
-  --print-sticky-notes-display: block; /* change the "none;" value to "block;" to show all of the sticky notes on printing */
+  --print-note-title-display: block; /* change the "block;" value to "none;" to hide the note title on printing */
+  --print-sticky-notes-display: none; /* change the "none;" value to "block;" to show all of the sticky notes on printing */
   --print-h1-border: none; /* change the "none;" value to "1px solid #505050;" to show the h1 border bottom on printing */
+  --print-link-href: inline; /* change the "inline;" value to "none;" to hide link href on printing */
 
   /* ************************************************* */
   /*          COLOR CONTROLLER: SECTION START          */
@@ -706,6 +707,13 @@ ag6 img {
   #rendered-md a,
   #rendered-md .resource-icon {
     color: var(--print-links);
+  }
+
+  #rendered-md a[href]::after {
+    font-family: "cascadia mono light", monospace;
+    font-size: 10px;
+    content: " ("attr(href)")";
+    display: var(--print-link-href);
   }
 
   /* text printing ----------------------------------------- */
