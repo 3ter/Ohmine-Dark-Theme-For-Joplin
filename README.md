@@ -10,6 +10,14 @@ You would never know how better it is when you are not going to try it once!
 
 ## Latest Updates
 
+v1.21 (10-OCT-2021 tested on Joplin v2.4.9)
+
+- New: Add [Custom Title Block](#custom-title-block-custom-element) - to create a custom information for readers
+- New: Add [span tag](#span) styling in a list - to stand out the reference details
+- New: Add Custom Title Block and Span tag color properties to Color Controller of both `userchrome.css` and `userstyle.css`
+- New: Add [search text](#text-style) styling on both Markdown Editor and Render Viewer - to reduce the confusion between search results and content
+- New: Add Search text color properties to the Color Controller of both `userchrome.css` and `userstyle.css`
+
 v1.16 (6-OCT-2021 tested on Joplin v2.4.9)
 
 - New: Add link href on printing - it's mainly for anchor text link but will affects to all links
@@ -20,22 +28,8 @@ v1.14 (4-OCT-2021 tested on joplin v2.4.9)
 - Fix: code block text selection highlight effect missing
 - Fix: image alt text is treated as emphasize text when it names is including an underscore
 
-v1.12 (2-OCT-2021 tested on Joplin v2.4.9)
 
-- New: markdown editor is now using monospace fonts for all markdown syntax and non-monospace fonts for content
-- New: add markdown editor styling - reduce visual clutter caused by complicated note content
-- New: add blockquote to Abstract content bar
-- New: add Color Controller section to the `userchrome.css`
-- Update: rewrite all CSS structure & all selectors
-- Update: small visuals improvements on render viewer
-- Fix: some CSS effects lost when switching between markdown editor and rich text editor
-- Fix: footnote style dose not effects on all footnote items
-- Fix: the math formula dose not show the right color on Abstract content bar
-- Fix: some of the print color setting properties are invalid 
-- fix: code block overflow text not hidden in the rich text editor
-
-
-## What is Joplin?
+## Not a Joplin user yet?
 
 ![home-top-img-2x](https://user-images.githubusercontent.com/86870826/135713998-ececa8e9-b79a-4b0f-a95d-ee54ca1271b3.png)
 
@@ -51,6 +45,8 @@ Joplin is the best note-taking app in the market if you are looking for the belo
 - Or... ***You love the Ohmine Dark Theme***  :sunglasses::heart:
 - And much more...
 
+It can be covering all your needs in note-taking! Especially the privacy protection!
+
 Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 
 ## Table of contents
@@ -59,20 +55,24 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 - [Markdown Editor](#markdown-editor)
 - [Render Viewer](#render-viewer)
 - [Font Family](#font-family)
-- [Sticky Notes](#sticky-notes)
+- [Sticky Notes (custom element)](#sticky-notes-custom-element)
 	- [How to use](#how-to-use) 
-- [Art Gallery](#art-gallery)
-	- [How to use](#how-to-use-1) 
-- [Abstract Content Bar](#abstract-content-bar)
+- [Custom Title Block (custom element)](#custom-title-block-custom-element)
+	- [How to use](#how-to-use-1)
+- [Art Gallery (custom element)](#art-gallery-custom-element)
 	- [How to use](#how-to-use-2) 
-- [Structural-friendly heading style](#structural-friendly-heading-style)
+- [Abstract Content Bar](#abstract-content-bar)
 	- [How to use](#how-to-use-3) 
+- [Structural-friendly heading style](#structural-friendly-heading-style)
+	- [How to use](#how-to-use-4) 
 - [Eye-Protector](#eye-protector)
 - More Screenshots
 	- [Notebook Panel](#notebook-panel)
 	- [Text Style](#text-style)
 	- [Link](#link)
 	- [Unordered List & Ordered List](#unordered-list--ordered-list)
+	- [Checklist](#checklist)
+	- [Span](#span)
 	- [Blockquote](#blockquote)
 	- [Code block & Inline Code](#code-block--inline-code)
 	- [Math notation](#math-notation)
@@ -179,11 +179,11 @@ If you finally want to use other fonts, you should edit the `userstyle.css` and 
 [:arrow_up:Back](#table-of-contents)
 
 
-## Sticky Notes
+## Sticky Notes (custom element)
 
-Ohmine Dark Theme has 7 custom elements for creating the sticky notes: `note` , `tip` , `question` , `explain` , `warning` , `keyword` , `important`.
+Ohmine Dark Theme has 7 custom elements for creating the Sticky Notes: `note` , `tip` , `question` , `explain` , `warning` , `keyword` , `important`. They can help you to create an article and only for personal reference. Normally, you would be removing them from the content once you are complete your article. 
 
-Let’s see what are the sticky notes for:
+Let’s see what are the Sticky Notes for:
 
 
 ![sticky_notes_sample_abg](https://user-images.githubusercontent.com/86870826/134674480-1283d933-bd48-46f2-a2f8-1fbf8c42dd17.png)
@@ -203,6 +203,7 @@ Let’s see what are the sticky notes for:
  here to type any of your content.
  </note>
  ```
+
 **Output:**
 
 ![sticky_notes_sample_output1_abg](https://user-images.githubusercontent.com/86870826/134674519-d88f0cee-ee9d-41e0-85a2-2d2e103ce0f5.png)
@@ -219,13 +220,41 @@ Let’s see what are the sticky notes for:
 | 1 | 2 | 3 | 4 |
 </keyword>
 ```
+
 **Output:**
 
 ![sticky_notes_sample_output2_abg](https://user-images.githubusercontent.com/86870826/134674577-10aada6e-4037-474b-bab6-018141f21d45.png)
 
 [:arrow_up:Back](#table-of-contents)
 
-## Art Gallery
+## Custom Title Block (custom element)
+Custom Title Block is a public information for readers, it would be suitable for supplementing information which you think is important to readers. 
+
+Let's see what it looks like:
+
+![custom-title-block-sample](https://user-images.githubusercontent.com/86870826/136669416-8c087607-4657-49e5-8612-75e945ba9635.png)
+
+### How to use
+
+1. The custom elemenet name `ctb` stands for Custom Title Block.
+2. Type your title *next to the open tag* .
+3. Keep your title *within one line*.
+4. Start typing your content *in the second line*.
+
+**Code Sample:**
+```
+<ctb>Your title
+Your content
+</ctb>
+```
+
+**Output:**
+
+![custom-title-block-outpput](https://user-images.githubusercontent.com/86870826/136669432-24e36c8a-9e75-4235-ab99-99803a1c41c7.png)
+
+[:arrow_up:Back](#table-of-contents)
+
+## Art Gallery (custom element)
 
 This art gallery providing 5 custom elements for you:
 
@@ -246,8 +275,8 @@ Below is the sample of the art gallery(ag6) with 48 images:
 3 things you should know before use:
 
 1. The custom element name `ag` stands for *Art Gallery*.
-2. The art gallery tag must use *right behind the plain text.*
-3. Do not including any blank line within this part of codes, *blank line will break the markdown syntax.*
+2. The art gallery tag must use *right behind the plain text* .
+3. Do not including any blank line within this part of codes, *blank line will break the markdown syntax* .
 
 **Code Sample:**
  
@@ -339,6 +368,14 @@ Color was not always the best choice for indentifying information. Sometimes, ci
 
 ![circle_keywords_sample](https://user-images.githubusercontent.com/86870826/135735920-f06de4c2-c832-481b-bc10-22ee2ca09f36.png)
 
+Here is the search text sample of Render Viewer:
+
+![search-text-sample-rv](https://user-images.githubusercontent.com/86870826/136669473-937b68a9-6e16-45c9-90dc-372b800ae419.png)
+
+Another search text sample of Markdown Editor: 
+
+![search-text-me](https://user-images.githubusercontent.com/86870826/136669482-13958ace-2521-43fd-843a-168d952d7071.png)
+
 [:arrow_up:Back](#table-of-contents)
 
 ## Code block & Inline Code
@@ -375,6 +412,28 @@ Then, the code block is showing below:
 
 [:arrow_up:Back](#table-of-contents)
 
+## Span
+
+Sometimes, you may want to use a span tag with in a list or h1 heading:
+
+**Sample Code:**
+```
+- If you want to separate a content to discribe the list item
+<span>you should use a span tag like this</span>
+- Here is another list item
+```
+```
+# Ohmine Dark Theme For Joplin <span>:rocket:</span>
+```
+**Output:**
+
+![span-in-a-list-sample](https://user-images.githubusercontent.com/86870826/136670375-00da0920-dd29-44bf-8762-fafaf92adf10.png)
+
+![span-in-h1-heading-sample](https://user-images.githubusercontent.com/86870826/136670451-f7f68c1d-58bc-4a19-adb3-7aaccacc8e62.png)
+
+
+[:arrow_up:Back](#table-of-contents)
+
 ## Blockquote
 
 ![blockquote_sample_abg](https://user-images.githubusercontent.com/86870826/134676125-1bf895c8-a9a3-40b8-b159-72b21fa85782.png)
@@ -398,7 +457,7 @@ Here are few things you should know before you print out your article:
 3. A lot of elements are restyled for printing.
 4. By Joplin default, you are not able to select and copy text if you are using the `print` to create a PDF file. If you expect to create a PDF file that allow you to do it, please use the `export`.
 
-The printing sample PDF for reference: https://drive.google.com/file/d/1HVphdMbILIiA79pYtmkKf85os4DWZeQq/view?usp=sharing
+The printing sample PDF for reference: https://drive.google.com/file/d/1-02bcRflR-b2zj4AaZPtyQqMfvUcLrud/view?usp=sharing (10-OCT-2021 updated)
 
 [:arrow_up:Back](#table-of-contents)
 
@@ -470,7 +529,7 @@ It let you quick and easy to create HTML tags in your notes, and it's helpful to
 
 Quick setting up:
 
-1. Highlight this line of text: `span;note;tip;explain;question;warning;keyword;important;ag2;ag3;ag4;ag5;ag6;`
+1. Highlight this line of text: `span;ctb;note;tip;explain;question;warning;keyword;important;ag2;ag3;ag4;ag5;ag6;`
 2. Press `ctrl+c` to copy the text
 3. Open Joplin app
 4. Go to `Tools` > `Options` > `Plugins`
