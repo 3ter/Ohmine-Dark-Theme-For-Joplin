@@ -9,9 +9,8 @@
 
   /* EYE-PROTECTOR SWITCHER */
   /* avoiding bright color from images */
-  /* change values to "none;" to stop Eye-Protector effect */
-  --eye-protector-filter: brightness(70%); /*  all images will be default to 30% darker */
-  --eye-protector-animation: eye-protector 2s forwards 1; /* show the original color smoothly when mouse hover on image */
+  --eye-protector-filter: brightness(70%);  /* change the "brightness(70%);" value to "none;" to stop Eye-Protector effect */
+  --eye-protector-animation: eye-protector 2s forwards 1; /* change the "eye-protector 2s forwards 1;" value to "none;" to stop Eye-Protector hover effect */
 
   /* PRINT SWITCHER */
   --print-note-title-display: block; /* change the "block;" value to "none;" to hide the note title on printing */
@@ -65,6 +64,9 @@
   --mark-text: #000000;
   --mark-text-highlight: #d6b15f;
 
+  --search-text: #ffff00;
+  --search-text-border: #ffff00;
+
   --math-notation-text: #c5fffc;
   --math-notation-text-shadow: #c5fffc;
 
@@ -91,12 +93,19 @@
   --footnote-text: #808080;
   --footnote-border: #8080807a;
 
+  /* SPAN ------------------------------------------------ */
+  --span-text-in-a-list: #808080;
+
   /* CODE BLOCK | INLINE CODE | PRE ---------------------- */
   --code-text: #c2c2c2;
   --inline-code-background: #2d2d2d;
   --code-block-background: #141819;
   --code-block-border: #80f0ff;
   --code-block-box-shadow: #a2f1e3;
+
+  /* CUSTOM TITLE BLOCK ---------------------------------- */
+  --ctb-title-text: #93bf74;
+  --ctb-background: #212925;
 
   /* STICKY NOTES BODY: GROUP STYLE ---------------------- */
   --sticky-notes-background: linear-gradient(120deg, #0c0c0c, #232323, #0c0c0c);
@@ -146,6 +155,11 @@
   --print-code-border: #bfbfbf; /* code block & inline code & pre */
 
   --print-math-notation-text: #000000;
+  
+  /* custom title block */
+  --print-ctb-title-text: #949494;
+  --print-ctb-text: #707070;
+  --print-ctb-border: #cccccc;
 
   /* all sticky notes */
   --print-sticky-notes-tags-text: #a7a7a7; /* not including sticky notes - Important */
@@ -280,6 +294,17 @@
   border-radius: 1em;
 }
 
+#rendered-md mark[data-markjs="true"] {
+  font-size: 18px;
+  color: var(--search-text);
+  background: black;
+  border: 2px dotted var(--search-text-border);
+}
+#rendered-md h1 > mark[data-markjs="true"] {
+  font-size: 1em;
+  background: none;
+}
+
 #rendered-md .katex-display {
   color: var(--math-notation-text);
   font-size: 1.5em;
@@ -400,6 +425,33 @@ table tr:nth-child(odd) {
   color: var(--footnote-text);
 }
 
+/* STYLING: SPAN **************************************** */
+/* span in h1 heading ----------------------------------- */
+#rendered-md > h1 > span {
+  /* avoiding clip effects on span content */
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+/* span in a list --------------------------------------- */
+#rendered-md > ul li span,
+#rendered-md > ol li span {
+  color: var(--span-text-in-a-list);
+}
+
+/* STYLING: CUSTOM TITLE BLOCK ************************** */
+ctb:first-line {
+  font-size: 15px;
+  font-weight:700;
+  color: var(--ctb-title-text);
+}
+ctb {
+  display:block;
+  padding:10px 20px;
+  background: var(--ctb-background);
+  border-radius: 6px 16px;
+}
+
 /* STYLING: STICKY NOTES ******************************** */
 /* The sticky note-"IMPORTANT" is standalone, not included with this group styling */
 note::after,
@@ -424,7 +476,7 @@ warning,
 keyword {
   color: var(--sticky-notes-text);
   display: block;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   margin: 15px 0;
   background: var(--sticky-notes-background);
   border-width: 0px 2px;
@@ -561,6 +613,7 @@ ag6 img {
   #tinymce,
   #joplin-container-body,
   body,
+  ctb,
   note,
   tip,
   question,
@@ -774,6 +827,16 @@ ag6 img {
     color: var(--print-math-notation-text);
   }
 
+  /* custom title block printing -------------------------- */
+  ctb:first-line {
+    font-size:14px;
+    color: var(--print-ctb-title-text);
+  }
+  ctb {
+    color: var(--print-ctb-text);
+    border: 1px solid var(--print-ctb-border);
+  }
+  
   /* sticky notes printing -------------------------------- */
   note::after,
   tip::after,

@@ -37,6 +37,10 @@
 
   --mark-emphasize-strong-abbr-border: #565656;
 
+  --search-text-selected: #ffff00;
+  --search-text-selected-border: #ffff00;
+  --search-marker-scrollbar: #ffff00;
+
   --blockquote-text: #808080;
 
   --inline-code-text: #bdbdbd;
@@ -214,11 +218,26 @@
   border-radius: 1em;
   padding: 0 10px;
 } 
+
 /* MARK TEXT -------------------------------------------- */
 .cm-overlay.cm-search-marker {
   color: var(--mark-text) !important;
   background: var(--mark-text-highlight) !important;
 }
+
+/* SEARCH TEXT ------------------------------------------ */
+.cm-overlay.cm-search-marker-selected {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--search-text-selected) !important;
+    border: 2px dotted var(--search-text-selected-border) !important;
+    z-index:1;
+}
+.cm-search-marker-scrollbar {
+    background: var(--search-marker-scrollbar) !important;
+    opacity:1;
+}
+
 /* EMPHASIZE TEXT --------------------------------------- */
 .cm-em:not(.cm-image-alt-text) {
   color: var(--emphasize-text) !important;
