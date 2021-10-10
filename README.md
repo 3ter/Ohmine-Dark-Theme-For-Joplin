@@ -181,7 +181,7 @@ If you finally want to use other fonts, you should edit the `userstyle.css` and 
 
 ## Sticky Notes (custom element)
 
-Ohmine Dark Theme has 7 custom elements for creating the Sticky Notes: `note` , `tip` , `question` , `explain` , `warning` , `keyword` , `important`. They can help you to create an article and only for personal reference. Normally, you would be removing them from the content once you are complete your article. 
+Ohmine Dark Theme has 7 custom elements for creating the Sticky Notes: `note` , `tip` , `question` , `explain` , `warning` , `keyword` , `important`. They can help you to building the structure of article and only for personal reference. Normally, you would be removing them from the content once you are complete your article. 
 
 Let’s see what are the Sticky Notes for:
 
