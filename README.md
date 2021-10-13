@@ -83,7 +83,9 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 - [Recommended plugins](#recommended-plugins)
 	- [Quick HTML tags (most recommended to use with this theme)](#quick-html-tags-most-recommended-to-use-with-this-theme)
 - [How to install Joplin plugins](#how-to-install-joplin-plugins)
-- [Report Bugs](#report-bugs)
+- [Contribution](#contribution)
+	- [Give me a user feedback](#give-me-a-user-feedback)
+	- [Report Bugs](#report-bugs)
 	
 ## The Inspiration of Ohmine Dark Theme
 
