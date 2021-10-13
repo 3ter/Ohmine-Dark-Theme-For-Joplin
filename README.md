@@ -550,6 +550,12 @@ After this, you can use this plugin like below:
 
 [:arrow_up:Back](#table-of-contents)
 
-## Report Bugs
+## Contribution
+
+### Give me a user feedback
+
+Whatever you like this theme or not, I'll open my mind to accept any of you comments and treat your feeling as mine. It would be my pleasure if I could get any feedback from you! [Go to leave me a message](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/discussions/new)
+
+### Report Bugs
 
 If you experiencing any bugs or bad issues while using this theme, please create a bug report on [issues page](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/issues/new/choose) and let me know it.
