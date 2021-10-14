@@ -556,7 +556,7 @@ After this, you can use this plugin like below:
 
 ### Give me a user feedback
 
-Whatever you like this theme or not, I'll open my mind to accept any of you comments and treat your feeling as mine. It would be my pleasure if I could get any feedback from you! [Go to leave me a message](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/discussions/new)
+Whatever you like this theme or not, I'll open my mind to accept any of you comments and treat your feeling as mine. It would be my pleasure if I could get any feedback from you! Go to leave me a message on [Joplin Forum](https://discourse.joplinapp.org/t/css-theme-ohmine-dark-theme/21000) on [Github Discussions](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/discussions/new)
 
 ### Report Bugs
 
