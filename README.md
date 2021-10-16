@@ -461,7 +461,7 @@ Here are few things you should know before you print out your article:
 4. By Joplin default, you are not able to select and copy text if you are using the `print` to create a PDF file. If you expect to create a PDF file that allow you to do it, please use the `export`.
 
 The printing sample PDF for reference:
-https://drive.google.com/file/d/1-02bcRflR-b2zj4AaZPtyQqMfvUcLrud/view?usp=sharing (10-OCT-2021 updated)
+https://drive.google.com/file/d/1-1s3Kbzz4lOkAt2CApq2Znkz-lpjT1mM/view?usp=sharing (16-OCT-2021 updated)
 
 [:arrow_up:Back](#table-of-contents)
 
