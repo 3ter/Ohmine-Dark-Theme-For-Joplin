@@ -197,6 +197,7 @@ Let’s see what are the Sticky Notes for:
 
 
 1. Make sure there is a blank line *before the open tag*, otherwise it may cause the format problem.
+2. Use plain text within a custom element.
 
 **Code Sample:**
  ```
@@ -209,25 +210,6 @@ Let’s see what are the Sticky Notes for:
 **Output:**
 
 ![sticky_notes_sample_output1_abg](https://user-images.githubusercontent.com/86870826/134674519-d88f0cee-ee9d-41e0-85a2-2d2e103ce0f5.png)
-
-2. Or, if you want to use markdown syntax inside the sticky notes, you should add a blank line *before and after the open tag*:
-
-**Code Sample:**
-```
-
-<keyword>
-
-| A | B | C | D |
-|:-:|:-:|:-:|:-:|
-| 1 | 2 | 3 | 4 |
-</keyword>
-```
-
-**Output:**
-
-![sticky_notes_sample_output2_abg](https://user-images.githubusercontent.com/86870826/134674577-10aada6e-4037-474b-bab6-018141f21d45.png)
-
-[:arrow_up:Back](#table-of-contents)
 
 ## Custom Title Block (custom element)
 Custom Title Block is a public information for readers, it would be suitable for supplementing information which you think is important to readers. 
@@ -242,6 +224,7 @@ Let's see what it looks like:
 2. Type your title *next to the open tag* .
 3. Keep your title *within one line*.
 4. Start typing your content *in the second line*.
+5. Use plain text within a custom element.
 
 **Code Sample:**
 ```
