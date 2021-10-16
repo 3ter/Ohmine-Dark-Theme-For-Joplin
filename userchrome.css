@@ -20,7 +20,7 @@
   --base-text: #bdbdbd; /* | paragraph | footnote | */
   --code-text: #949494; /* | markdown syntax | code block | inline code | */
 
-  --heading-text: #bdbdbd;
+  --heading-text: #cacaca;
   --heading-text-shadow: #bfbfbf; 
 
   --link-text: #9a9a7e;
@@ -122,6 +122,8 @@
   /* top toolbar */
   --tt-editor-toolbar: #191919;
   --tt-editor-toolbar-box-shadow: #33524a;
+  --tt-rich-text-editor-toolbar-background: #191919;
+  --tt-rich-text-editor-toolbar-box-shadow: #33504a;
 
   /* bottom tag bar */
   --btb-background: #191919;
@@ -184,11 +186,11 @@
 /* HEADINGS ********************************************* */
 .CodeMirror .CodeMirror-line .cm-header {
   color:var(--heading-text);
-  text-shadow:0 0 2px var(--heading-text-shadow);
+  text-shadow:0 0 3px var(--heading-text-shadow);
 
 }
 .CodeMirror-line .cm-header {
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1em;
 }
 .CodeMirror-line .cm-header.cm-header-1 {
@@ -478,6 +480,12 @@ i.fas.fa-caret-down {
   color: var(--np-directory-icon-open);
 }
 
+/* notebook --------------------------------------------- */
+.rli-sideBar .tags .list-item-container,
+.rli-sideBar [class*="list-item-depth"] {
+  margin:0 3px;
+}
+
 /* notebook hover state --------------------------------- */
 .rli-sideBar .tags .list-item-container,
 .rli-sideBar [class*="list-item-depth"],
@@ -493,7 +501,7 @@ i.fas.fa-caret-down {
 /* notebooks selected state------------------------------ */
 .rli-sideBar .tags .list-item-container.selected,
 .rli-sideBar [class*="list-item-depth"].selected {
-  background: linear-gradient(60deg, #002f24, #00926a);
+  background: var(--np-notebook-selected);
   box-shadow: 0 0 3px var(--np-notebook-selected-box-shadow);
 }
 
@@ -533,11 +541,12 @@ i.fas.fa-caret-down {
 }
 
 /* notebook title --------------------------------------- */
-/* set limit to the length of notebook title */
 div.list-item-container a.list-item {
+  display:flex;
+  flex-direction:row;
   padding: 4px 0;
   margin: 1px auto;
-  max-width: 95%;
+  max-width: 90%;
   border-bottom: 2px dotted var(--np-notebook-title-border);
 }
 
@@ -550,24 +559,20 @@ div.list-item-container a.list-item {
 }
 
 /* note count label ------------------------------------- */
-.note-count-label {
-  display: block;
-  position: sticky;
-  right: 2px;
+.note-count-label.ihcmBd {
+  padding-left:0;
+}
+.ihcmBd.note-count-label {
+  display:flex;
   font-size: 10px;
-  text-align: center;
-  margin: 0 0 0 auto;
+  margin:0 0 0 auto;
+  padding: 0 5px;
   background: var(--np-note-count-label-background);
   border: 1px solid var(--np-note-count-label-border);
   border-radius: 8px;
   opacity: 0.8 !important;
 }
-.note-count-label::after {
-  content: "";
-  display: inline-block;
-  width: 8px;
-}
- 
+
 /* tag-related notebook navigation button --------------- */
 .sc-fznKkj > div > div > div button.kAMSfD {
   position: absolute;
@@ -637,24 +642,35 @@ button[title="New note"]:hover {
   border: none !important;
   border-radius: 0 0 7px 7px !important;
 }
-.note-list {
-  padding: 3px 7px 0 0;
+.note-list-item {
+  width:auto;
+  height: 32px;
+  margin:2px 5px;
 }
+
 /* notelist selected state ------------------------------ */
 .selected.note-list-item {
-  margin: 3px;
+  width:auto;
+  height: 32px;
+  margin:2px 5px;
   background: var(--nlp-note-selected);
-  border-radius: 6px 15px;
+  border-radius: 5px 10px;
   box-shadow: 0 0 3px var(--nlp-note-selected-box-shadow);
 }
+
 /* notelist hover state --------------------------------- */
 .note-list-item:hover {
-  border-radius: 6px 15px;
+  width:auto;
+  margin:2px 5px;
+  border-radius: 5px 10px;
   filter: var(--nlp-note-hover);
 }
 .note-list-item:not(.selected):hover {
+  width:auto;
+  margin:2px 5px;
   background: var(--nlp-note-hover2);
 }
+
 
 
 
@@ -691,6 +707,33 @@ span.updated-time-label::after {
   background: var(--tt-editor-toolbar) !important;
   border-radius: 1em;
   box-shadow: 0 0 2px var(--tt-editor-toolbar-box-shadow);
+}
+
+/* rich text editor main toolbar ------------------------ */
+div.joplin-tinymce > div:nth-child(1) {
+  width:90px !important;
+  margin-top:1px;
+  margin-left:-11px;
+  background: var(--tt-rich-text-editor-toolbar-background) !important;
+  border-radius: 1em 0 0 1em !important;
+  box-shadow: 0 0 2px var(--tt-rich-text-editor-toolbar-box-shadow);
+}
+div.joplin-tinymce > div:nth-child(2) {
+  margin-top:1px;
+  background: var(--tt-rich-text-editor-toolbar-background) !important;
+  border-radius: 0 1em 1em 0 !important;
+  box-shadow: 0 0 2px var(--tt-rich-text-editor-toolbar-box-shadow);
+}
+
+.tox .tox-toolbar__group,
+.tox.tox-tinymce .tox-toolbar__primary,
+.tox.tox-tinymce .tox-toolbar__overflow {
+  background-color: var(--tt-rich-text-editor-toolbar-background) !important;
+}
+
+.tox:not(.tox-tinymce-inline) .tox-editor-header {
+  margin-top:1px;
+  box-shadow: 0 0 2px var(--tt-rich-text-editor-toolbar-box-shadow) !important;
 }
 
 
@@ -730,7 +773,8 @@ select, input {
   border-radius: 0.8em !important;
 }
 /* plugin card ------------------------------------------ */
-#react-root .sc-fzocqA .sc-fzoPby {
+#react-root .sc-fzocqA .sc-fzoPby,
+#react-root .sc-fzppip .sc-fzoPby {
   border-radius: 0.8em 1.5em;
 }
 #react-root .sc-fzoPby button {
