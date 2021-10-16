@@ -55,6 +55,7 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 - [Markdown Editor](#markdown-editor)
 - [Render Viewer](#render-viewer)
 - [Font Family](#font-family)
+- [Must Knows About Custom Element](#must-knows-about-custom-element)
 - [Sticky Notes (custom element)](#sticky-notes-custom-element)
 	- [How to use](#how-to-use) 
 - [Custom Title Block (custom element)](#custom-title-block-custom-element)
@@ -65,6 +66,8 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 	- [How to use](#how-to-use-3) 
 - [Structural-friendly heading style](#structural-friendly-heading-style)
 	- [How to use](#how-to-use-4) 
+- [Span](#span)
+	- [How to use](#how-to-use-5)
 - [Eye-Protector](#eye-protector)
 - More Screenshots
 	- [Notebook Panel](#notebook-panel)
@@ -72,12 +75,12 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 	- [Link](#link)
 	- [Unordered List & Ordered List](#unordered-list--ordered-list)
 	- [Checklist](#checklist)
-	- [Span](#span)
 	- [Blockquote](#blockquote)
 	- [Code block & Inline Code](#code-block--inline-code)
 	- [Math notation](#math-notation)
 - [Printing](#printing)
 - [Color Controller](#color-controller)
+- [Requirements of Ohmine Dark Theme](#requirements-of-ohmine-dark-theme)
 - [How to install this theme](#how-to-install-this-theme)
 - [How to delete this theme](#how-to-delete-this-theme)
 - [Recommended plugins](#recommended-plugins)
@@ -180,6 +183,14 @@ If you finally want to use other fonts, you should edit the `userstyle.css` and 
 
 [:arrow_up:Back](#table-of-contents)
 
+## Must knows about Custom Element
+
+OhmineDT providing some of the features that function by Custom Elements. I absolutely recommend you to use it to create a better reading experience, but you have to consider the below:
+
+1. Not all Markdown editor software support using Custom Elements.
+2. Custom Elements content will become plain text format when you export your notes to `.md` file or transfer your notes to other software.
+
+So, if you are only take notes within Joplin, you don't have to worry about that. Otherwise, you should considering which notes you should use Custom Elements and which doesn't.
 
 ## Sticky Notes (custom element)
 
@@ -325,6 +336,35 @@ Due to the style of headings, something you may need to consider when every time
 
 [:arrow_up:Back](#table-of-contents)
 
+## Span
+
+There are 2 situations you may want to use the span tag to separating the content:
+
+1. When you want to use an emoji on the H1 heading
+2. When you want to split out the side informantion whitin a list
+
+### How to use
+
+1. You can start a open tag in a new line but don't include any blank line between the paragraph content and span content.
+
+**Sample Code:**
+```
+- If you want to separate a content to discribe the list item
+<span>you should use a span tag like this</span>
+- Here is another list item
+```
+```
+# Ohmine Dark Theme For Joplin <span>:rocket:</span>
+```
+**Output:**
+
+![span-in-a-list-sample](https://user-images.githubusercontent.com/86870826/136670375-00da0920-dd29-44bf-8762-fafaf92adf10.png)
+
+![span-in-h1-heading-sample](https://user-images.githubusercontent.com/86870826/136670451-f7f68c1d-58bc-4a19-adb3-7aaccacc8e62.png)
+
+
+[:arrow_up:Back](#table-of-contents)
+
 ## Eye-Protector
 
 All the attached images will be defaulted by 30% darker than the original, to avoid the bright light flashing your eyes when scrolling down your note.
@@ -347,9 +387,9 @@ A sample of the Render Viewer:
 
 ![text_sample_abg](https://user-images.githubusercontent.com/86870826/134675980-53e88bae-76dd-4a77-aaf8-2194242be97b.png)
 
-Another sample of the Markdown Editor:
-
 Color was not always the best choice for indentifying information. Sometimes, circle the keywords just like what you do on a paper is the much better option for less noise. And this style will apply to the emphazise text, strong text, mark text, and the abbrviation text.
+
+Another sample of the Markdown Editor:
 
 ![circle_keywords_sample](https://user-images.githubusercontent.com/86870826/135735920-f06de4c2-c832-481b-bc10-22ee2ca09f36.png)
 
@@ -397,28 +437,6 @@ Then, the code block is showing below:
 
 [:arrow_up:Back](#table-of-contents)
 
-## Span
-
-Sometimes, you may want to use a span tag within a list or h1 heading:
-
-**Sample Code:**
-```
-- If you want to separate a content to discribe the list item
-<span>you should use a span tag like this</span>
-- Here is another list item
-```
-```
-# Ohmine Dark Theme For Joplin <span>:rocket:</span>
-```
-**Output:**
-
-![span-in-a-list-sample](https://user-images.githubusercontent.com/86870826/136670375-00da0920-dd29-44bf-8762-fafaf92adf10.png)
-
-![span-in-h1-heading-sample](https://user-images.githubusercontent.com/86870826/136670451-f7f68c1d-58bc-4a19-adb3-7aaccacc8e62.png)
-
-
-[:arrow_up:Back](#table-of-contents)
-
 ## Blockquote
 
 ![blockquote_sample_abg](https://user-images.githubusercontent.com/86870826/134676125-1bf895c8-a9a3-40b8-b159-72b21fa85782.png)
@@ -453,24 +471,39 @@ You can control all the color values of both the Render Viewer and Markdown Edit
 
 [:arrow_up:Back](#table-of-contents)
 
+## Requirements of Ohmine Dark Theme
+
+For the complete experience of using OhmineDT, please make sure you have done the below before you clone my CSS codes:
+
+1. Use the Joplin built-in dark theme: `preference` > `Appearance` > `Theme` > `Dark`
+2. Install the [Montserrat](https://fonts.google.com/specimen/Montserrat) font - The default font for OhmineDT
+3. Install the [Cascadia](https://github.com/microsoft/cascadia-code/releases) font - The defualt monospace font for OhmineDT 
+4. If you want your plugin background color is matching with OhmineDT, please change that plugin background color to #191919 (optional)
+
+[:arrow_up:Back](#table-of-contents)
+
 ## How to install this theme
 
-If you know where exactly your `userstyle.css` and `userchrome.css` are stored, you can download my files and replace them directly. And don't forget to download and install the recommended fonts: [Montserrat](https://fonts.google.com/specimen/Montserrat) | [Cascadia Mono Light](https://github.com/microsoft/cascadia-code/releases)
+If you know where exactly your userstyle.css and userchrome.css are stored:
 
-After this, quit & restart Joplin app and then enjoy it.
+1. Make sure you have done the requirements of using the OhmineDT
+2. Clone my codes
+3. Copy my `userstyle.css` and `userchrome.css`
+4. Repleace your `userstyle.css` and `userchrome.css`
+5. Quit & restart Joplin
 
-**If you are not sure where your files are stored, you can follow the steps below:**
+If you are not sure where your files stored, you can follow the steps below:
 
 1. Make sure you are already installed Joplin on your computer. [Download Joplin](https://joplinapp.org/download/)
-2. Download and install the most recommended font for this theme. [Montserrat](https://fonts.google.com/specimen/Montserrat) | [Cascadia Mono Light](https://github.com/microsoft/cascadia-code/releases)
+2. Download and install the most recommended font for this theme. [Montserrat](https://fonts.google.com/specimen/Montserrat) | [Cascadia](https://github.com/microsoft/cascadia-code/releases)
 3. Open Joplin
 4. Go to `Tools` > `Options` > `Appearance` 
-5. Choose the `Dark` theme and press `Apply` (Ohmine Dark theme need to run with the Joplin built-in dark theme)
-6. In the `Appearance` press `Show Advanced Settings`
-7. Press `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
+5. Choose the `Dark` theme and click `Apply` (OhmineDT is better to run with the Joplin built-in dark theme)
+6. In the `Appearance` page, click `Show Advanced Settings`
+7. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
 9. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
 10. And paste on your `userstyle.css`
-11. Back to Joplin again and press `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
+11. Back to the `Appearance` page again and click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
 12. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
 13. And paste on your `userchrome.css`
 14. Quit & restart Joplin and it's done.
@@ -480,20 +513,18 @@ After this, quit & restart Joplin app and then enjoy it.
 ## How to delete this theme
 
 1. Go to `Tools` > `Options` > `Appearance` 
-2. Press `Show Advanced Settings`
-3. Press `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
-4. Press `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
+2. Click `Show Advanced Settings`
+3. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
+4. Click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
 5. Delete all the code within these two documents. It's done! but I'm hurt!
 
 [:arrow_up:Back](#table-of-contents)
 
 ## How to install Joplin plugins
 
-To install plugins:
-
 1. Go to `Tools` > `Options` > `Plugins`
 2. Search a plugin name
-3. Press `Install`
+3. Click `Install`
 4. After installed all you need, quit & restart Joplin app
 
 If you want to discover all of the Joplin plugins, you can go visit the [Joplin Plugins Repository](https://github.com/joplin/plugins#joplin-plugin-repository)
@@ -509,7 +540,6 @@ Below are some of the best plugins on Joplin, if you never try it before it's wo
 - Quick Links (recommend)
 - Menu items, Shortcuts, Toolbar icons(recommend)
 
-
 Check out more plugins on [Joplin Plugins Repository](https://github.com/joplin/plugins#joplin-plugin-repository)
 
 ### Quick HTML tags (most recommended to use with this theme)
@@ -518,17 +548,16 @@ It let you quick and easy to create HTML tags in your notes, and it's helpful to
 
 Quick setting up:
 
-1. Highlight this line of text: `span;ctb;note;tip;explain;question;warning;keyword;important;ag2;ag3;ag4;ag5;ag6;`
-2. Press `ctrl+c` to copy the text
-3. Open Joplin app
-4. Go to `Tools` > `Options` > `Plugins`
-5. Search plugin by input the word "html"
-6. Press `Install` which on the `Quick HTML tags` plugin
-7. Quit & restart Joplin app
-8. Go to `Tools` > `Options` > `Quick HTML tags`
-9. Go to `HTML predefined tags` 
-10. Press  `ctrl+v` to paste text in the input bar
-11.  Press `Ok`  it's done
+1. Copy this line of text: `span;ctb;note;tip;explain;question;warning;keyword;important;ag2;ag3;ag4;ag5;ag6;`
+2. Open Joplin
+3. Go to `Tools` > `Options` > `Plugins`
+4. Search plugin by input the word `html`
+5. Click `Install` which on the `Quick HTML tags` plugin
+6. Quit & restart Joplin app
+7. Go to `Tools` > `Options` > `Quick HTML tags`
+8. Go to `HTML predefined tags` 
+9. Press `ctrl+v` to paste text in the input bar
+10. Press `Ok` it's done!
 
 After this, you can use this plugin like below:
 
@@ -542,7 +571,7 @@ After this, you can use this plugin like below:
 
 ### Give me a user feedback
 
-Whatever you like this theme or not, I'll open my mind to accept any of you comments and treat your feeling as mine. It would be my pleasure if I could get any feedback from you! Go to leave me a message on [Joplin Forum](https://discourse.joplinapp.org/t/css-theme-ohmine-dark-theme/21000) on [Github Discussions](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/discussions/new)
+Whatever you like this theme or not, I'll open my mind to accept any of you comments and treat your feeling as mine. It would be my pleasure if I could get any feedback from you! Go to leave me a message on [Joplin Forum](https://discourse.joplinapp.org/t/css-theme-ohmine-dark-theme/21000) or [Github Discussions](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/discussions/new)
 
 ### Report Bugs
 
