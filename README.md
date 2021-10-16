@@ -12,12 +12,12 @@ You would never know how better it is when you are not going to try it once!
 
 v1.27 (16-OCT-2021 tested on Joplin v2.4.12)
 
-New: main toolbar styling for rich text editor
-New: add main toolbar color properties to the color controller section of `userchrome.css`
-New: add plugin cards styling for search results
-Fix: note count label style is abnormal
-Fix: notebook panel list & notelist panel list styling
-Change: a few color adjustments
+- New: main toolbar styling for rich text editor
+- New: add main toolbar color properties to the color controller section of `userchrome.css`
+- New: add plugin cards styling for search results
+- Fix: note count label style is abnormal
+- Fix: notebook panel list & notelist panel list styling
+- Change: a few color adjustments
 
 v1.21 (10-OCT-2021 tested on Joplin v2.4.9)
 
