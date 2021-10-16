@@ -503,9 +503,12 @@ If you want to discover all of the Joplin plugins, you can go visit the [Joplin 
 Below are some of the best plugins on Joplin, if you never try it before it's worth giving a try.
 
 - Quick HTML tags (most recommend)[quick setting up](#quick-html-tags-most-recommended-to-use-with-this-theme)
+- Rich Markdown (most recommend)
 - Outline (recommend)
 - Note Tabs (recommend)
 - Quick Links (recommend)
+- Menu items, Shortcuts, Toolbar icons(recommend)
+
 
 Check out more plugins on [Joplin Plugins Repository](https://github.com/joplin/plugins#joplin-plugin-repository)
 
