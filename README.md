@@ -10,6 +10,15 @@ You would never know how better it is when you are not going to try it once!
 
 ## Latest Updates
 
+v1.27 (16-OCT-2021 tested on Joplin v2.4.12)
+
+New: main toolbar styling for rich text editor
+New: add main toolbar color properties to the color controller section of `userchrome.css`
+New: add plugin cards styling for search results
+Fix: note count label style is abnormal
+Fix: notebook panel list & notelist panel list styling
+Change: a few color adjustments
+
 v1.21 (10-OCT-2021 tested on Joplin v2.4.9)
 
 - New: Add [Custom Title Block](#custom-title-block-custom-element) - to create a custom information for readers
@@ -17,17 +26,6 @@ v1.21 (10-OCT-2021 tested on Joplin v2.4.9)
 - New: Add Custom Title Block and Span tag color properties to Color Controller of both `userchrome.css` and `userstyle.css`
 - New: Add [search text](#text-style) styling on both Markdown Editor and Render Viewer - to reduce the confusion between search results and content
 - New: Add Search text color properties to the Color Controller of both `userchrome.css` and `userstyle.css`
-
-v1.16 (6-OCT-2021 tested on Joplin v2.4.9)
-
-- New: Add link href on printing - it's mainly for anchor text link but will affects to all links
-- New: Add `--print-link-href` in to the Print Switcher section of `userstyle.css`
-
-v1.14 (4-OCT-2021 tested on joplin v2.4.9)
-
-- Fix: code block text selection highlight effect missing
-- Fix: image alt text is treated as emphasize text when it names is including an underscore
-
 
 ## Not a Joplin user yet?
 
