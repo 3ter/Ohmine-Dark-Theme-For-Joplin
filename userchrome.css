@@ -37,7 +37,7 @@
   --all-note-button: flex; /* "flex;" value change to "none;" to hide the "All Notes" button */
   --abstract-content-bar: block; /* "block;" value change to "none;" to hide the Abstract Content Bar */
   --abstract-content-bar-blank-line: none; /* "none;" value change to "block;" to show blank line on the Abstract Content Bar */
-  --rich-text-editor-switch-btn: block; /* "block;" value change to "none;" to hide the rich text editor switch button form the main toolbar */
+  --rich-text-editor-switch-btn: flex; /* "flex;" value change to "none;" to hide the rich text editor switch button form the main toolbar */
 
 
 
