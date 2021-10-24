@@ -10,7 +10,7 @@ You would never know how better it is when you are not going to try it once!
 
 ## Latest Updates
 
-v2.0.0 (24-OCT-2021 tested on Joplin v2.4.12)
+v2.0.1 (24-OCT-2021 tested on Joplin v2.4.12)
 
 - New: add styling for the markdown TOC
 - New: add Abstract Content Bar blank line switcher to `userchrome.css`
@@ -25,6 +25,7 @@ v2.0.0 (24-OCT-2021 tested on Joplin v2.4.12)
 - Fix: invaid values
 - Fix: the notebook navigation button is overlap on the toolbar
 - Fix: search text displaying wrong size on headings
+- Fix: rich text editor switch button displaying wrong
 - Change: note title default to showing on printing - please edit `userstyle.css` if you wanna hide it
 - Change: printing colors all to go darker - I expect that's fit for all printer
 - Change: "All Notes" button default to "not hide" - if you want to hide it please go edit in the `userchrome.css`
