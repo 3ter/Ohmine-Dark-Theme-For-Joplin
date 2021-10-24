@@ -10,22 +10,28 @@ You would never know how better it is when you are not going to try it once!
 
 ## Latest Updates
 
-v1.27 (16-OCT-2021 tested on Joplin v2.4.12)
+v2.0.0 (24-OCT-2021 tested on Joplin v2.4.12)
 
-- New: main toolbar styling for rich text editor
-- New: add main toolbar color properties to the color controller section of `userchrome.css`
-- New: add plugin cards styling for search results
-- Fix: note count label style is abnormal
-- Fix: notebook panel list & notelist panel list styling
-- Change: a few color adjustments
-
-v1.21 (10-OCT-2021 tested on Joplin v2.4.9)
-
-- New: Add [Custom Title Block](#custom-title-block-custom-element) - to create a custom information for readers
-- New: Add [span tag](#span) styling in a list - to stand out the reference details
-- New: Add Custom Title Block and Span tag color properties to Color Controller of both `userchrome.css` and `userstyle.css`
-- New: Add [search text](#text-style) styling on both Markdown Editor and Render Viewer - to reduce the confusion between search results and content
-- New: Add Search text color properties to the Color Controller of both `userchrome.css` and `userstyle.css`
+New: add styling for the markdown TOC
+New: add Abstract Content Bar blank line switcher to `userchrome.css`
+New: add `print general` section to `userstyle.css` to control the printing fonts and font size
+New: add mouse hover effect on the sync button icon - (just for fun)
+New: add mouse hover effect on the bottom tag bar tags - to zoom bigger
+New: bold up the code block bottom scrollbar - make it easier to click and slide while using the mouse
+New: add css porperty to hiding the rich text editor button - see it in the `userchrome.css` > `switcher` section
+New: add aviod page break in the `custom title block` , `sticky notes` , `table` while print it out
+New: add printing properties to the `color controller` section of `userstyle.css`
+Fix: missing printing values
+Fix: invaid values
+Fix: the notebook navigation button is overlap on the toolbar
+Fix: search text displaying wrong size on headings
+Change: note title default to showing on printing - please edit `userstyle.css` if you wanna hide it
+Change: printing colors all to go darker - I expect that's fit for all printer
+Change: "All Notes" button default to "not hide" - if you want to hide it please go edit in the `userchrome.css`
+Change: in `userchrome.css`, the text grouping of non-monospace font and monospace font are now much clear
+Change: restructure the CSS codes
+Change: rename some of the root porperty names
+Change: improve some of the CSS selectors
 
 ## Not a Joplin user yet?
 
