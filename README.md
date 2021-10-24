@@ -8,11 +8,11 @@ Ohmine Dark Theme is a Joplin CSS theme that aims to provide a better Work-On-Sc
 
 You would never know how better it is when you are not going to try it once!
 
-## Latest Updates
+## Latest Released
 
 v2.0.1 (24-OCT-2021 tested on Joplin v2.4.12)
 
-- New: add styling for the markdown TOC
+- New: add styling for the [Markdown TOC](#markdown-toc)
 - New: add Abstract Content Bar blank line switcher to `userchrome.css`
 - New: add `print general` section to `userstyle.css` to control the printing fonts and font size
 - New: add mouse hover effect on the sync button icon - (just for fun)
@@ -34,7 +34,7 @@ v2.0.1 (24-OCT-2021 tested on Joplin v2.4.12)
 - Change: rename some of the root porperty names
 - Change: improve some of the CSS selectors
 
-[OhmineDT v2.0.0 Printing Sample PDF](https://drive.google.com/file/d/1oNKLplwMn0tq5MnPnbk0L8xASQ_mZD25/view?usp=sharing)
+[OhmineDT v2.0.1 Printing Sample PDF](https://drive.google.com/file/d/1oNKLplwMn0tq5MnPnbk0L8xASQ_mZD25/view?usp=sharing)
 
 ## Not a Joplin user yet?
 
@@ -85,6 +85,7 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 	- [Blockquote](#blockquote)
 	- [Code block & Inline Code](#code-block--inline-code)
 	- [Math notation](#math-notation)
+	- [Markdown TOC](#markdow-toc)
 - [Printing](#printing)
 - [Color Controller](#color-controller)
 - [Requirements of Ohmine Dark Theme](#requirements-of-ohmine-dark-theme)
@@ -457,6 +458,10 @@ See how *magical* after added a bit of neon light to your mathematical formulas:
 ![math_notation_sample_abg](https://user-images.githubusercontent.com/86870826/134676276-37e88dd9-7485-44de-aedd-29d55869a12d.png)
 
 [:arrow_up:Back](#table-of-contents)
+
+## Markdown TOC
+
+![markdown_toc_sample](https://user-images.githubusercontent.com/86870826/138591403-6827e185-072c-4641-9a95-91313fe3e6ed.png)
 
 ## Printing
 
