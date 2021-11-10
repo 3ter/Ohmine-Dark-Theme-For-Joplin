@@ -1,6 +1,6 @@
-/* OhmineDT v2.0.0 */
-/* This is the userstyle.css which let you styling the Render Viewer and Printing Output */
-/* By usual case, you would only to edit the source code within the root section (line 11 to 287) to fulfill most of your personal needs */
+/* OhmineDT v2.1.18 | userstyle.css | styling the Render Viewer and Printing Output */
+
+/* By usual case, you would only to edit the source code within the root section (line 11 to 336) to fulfill most of your personal needs */
 
 /* Please let me know if you found any bad issue when using OhmineDT. */ 
 /* And sure, you can share any of your ideas with me too! */
@@ -35,6 +35,14 @@
   /* CODE BLOCK ------------------------------------------ */
   --code-block-line-height: 1.7em;
 
+  /* SPAN ------------------------------------------------ */
+  --span-in-spoiler-text-size: 1.1em; /* this is use as a heading within the spoiler block */
+
+  /* CUSTOM TITLE BLOCK ---------------------------------- */
+  --ctb-title-size: 15px;
+
+  --ctb-in-spoiler-block-title-size: 1.1em;
+  
   /* SWITCHER -------------------------------------------- */
   --h2-heading-rice-icon: inline-block; /* "inline-block;" value change to "none;" to hide the rice icon from h2 heading */
   --eye-protector-filter: brightness(70%); /* "brightness(70%);" value change to "none;" to stop Eye-Protector effect */
@@ -42,13 +50,14 @@
   
   /* PRINT SWITCHER -------------------------------------- */
   --print-note-title-display: block; /* "block;" value change to "none;" to hide the note title from printing */
-  --print-sticky-notes-display: block; /* "none;" value change to "block;" to show all sticky notes on printing */
+  --print-sticky-notes-display: none; /* "none;" value change to "block;" to show all sticky notes on printing */
   --print-h1-border: none; /* "none;" value change to "1px solid #505050;" to show the h1 border bottom on printing */
   --print-link-href-display: inline; /* "inline;" value change to "none;" to hide link href from printing */
 
 
 
   /* PRINT GENERAL *************************************** */
+
   /* edit the print general section will only affects on the printing output */
   
   /* PRINT CONTENT:  all elements that other than code block & inline code */
@@ -60,7 +69,7 @@
   --print-syntax-font-size: 10px; /*  */
   
   /* print heading --------------------------------------- */
-  --print-note-title-size: 22px; /* It will doing nothing when you are hidden the note title from printing.  */
+  --print-note-title-size: 22px; /* It will doing nothing when you are hidden the note title from printing. */
   --print-h1-heading-size: 22px;
   --print-h2-heading-size: 20px;
   --print-h3-h4-heading-size: 17px;
@@ -74,7 +83,7 @@
   --print-markdown-toc-title-size: 18px;
   
   /* print link ------------------------------------------ */
-  --print-link-text-size: 10px; /**/
+  --print-link-text-size: 10px;
 
   /* print code block ------------------------------------ */
   --print-code-block-line-height: 1.4em;
@@ -147,12 +156,18 @@
   /* unordered list & ordered list ----------------------- */
   --list-text: #51bba8;
 
+  --list-in-spoiler-text: #b2e2cb;
+
   /* checklist ------------------------------------------- */
   --checklist-text: #5bb5a2;
   --checkbox-checked: hue-rotate(-50deg) brightness(140%); /* This is using the "filter:" property */
 
   /* span ------------------------------------------------ */
-  --span-text-in-list: #808080;
+  --span-in-list-text: #808080;
+
+  --span-in-spoiler-text: #d0cc8b;
+  --span-in-spoiler-background: #504f46;
+  --span-in-spoiler-list-text: #d0d0d0;
 
   /* link ------------------------------------------------ */
   --link-text: #cdd286;
@@ -189,6 +204,9 @@
   --ctb-title-text: #93bf74;
   --ctb-background: #212925;
 
+  --ctb-in-spoiler-block-title-text: #afac7e;
+  --ctb-in-spoiler-background: #1d1d1c;
+
   /* sticky notes group:  note | tip | question | explain | warning */
   --sticky-notes-background: linear-gradient(120deg, #0c0c0c, #232323, #0c0c0c);
   --sticky-notes-text: #eaeaea;
@@ -212,6 +230,23 @@
   --important-background: #edad0b0d;
   --important-border: red;
   --important-box-shadow: red;
+
+  /* spoiler --------------------------------------------- */
+  --spoiler-block-title-text: #dadada;
+  --spoiler-block-title-text-shadow: #000000;
+  --spoiler-block-title-background: linear-gradient(to right, #868672, #5f5f42);
+
+  --spoiler-block-text: #d0d0d0;
+  --spoiler-block-text-shadow: #000000;
+  --spoiler-block-background: #252523;
+
+  --spoiler-inline-icon: #9ace01;
+  --spoiler-inline-icon-hover: #ff0047;
+  --spoiler-inline-border: #46792b;
+  --spoiler-inline-background: #000000;
+
+  /* horizontal line ------------------------------------- */
+  --horizontal-line-in-spoiler: #46463d;
 
 
 
@@ -270,6 +305,9 @@
   --print-ctb-text: #555555;
   --print-ctb-border: #888888;
 
+  --print-ctb-in-spoiler-title-text: #666666;
+  --print-ctb-in-spoiler-border: #888888;
+
   /* print sticky notes ---------------------------------- */
   --print-sticky-notes-tags-text: #888888; /* not including sticky notes - Important */
   --print-sticky-notes-text: #555555;
@@ -278,7 +316,18 @@
   /* print sticky note - Important ----------------------- */
   --print-sticky-note-important-title-text: #ff0000;
 
+  /* print spoiler --------------------------------------- */
+  --print-spoiler-block-title-text: #666666;
+  --print-spoiler-block-text: #555555;
+  --print-spoiler-block-border: #888888;
+
+  --print-spoiler-inline-border: #888888;
+  --print-spoiler-inline-icon: #555555;
+
+  /* print horizontal line ------------------------------- */
+  --print-horizontal-line-in-spoiler: #888888;
   
+
 
   /* ***************************************************** */
   /*             COLOR CONTROLLER: SECTION END             */
@@ -498,6 +547,13 @@
   filter: var(--checkbox-checked);
 }
 
+/* list in spoiler --------------------------------------- */
+#rendered-md > .spoiler-block > .summary-content ul > li,
+#rendered-md > .spoiler-block > .summary-content ol > li {
+  color: var(--list-in-spoiler-text);
+  margin: 0px;
+}
+
 
 
 /* LINK ************************************************** */
@@ -539,7 +595,7 @@
 }
 
 /* code block -------------------------------------------- */
-.joplin-editable > pre {
+.joplin-editable > pre:not(.mermaid) {
   line-height: var(--code-block-line-height); 
   padding: 10px 12px;
   margin: 20px 0;
@@ -599,6 +655,7 @@ table > tbody > tr:nth-child(odd) {
 }
 
 
+
 /* FOOTNOTE ********************************************** */
 #rendered-md .footnotes-sep {
   display: none;
@@ -626,17 +683,34 @@ table > tbody > tr:nth-child(odd) {
   -webkit-text-fill-color: initial;
 }
 
-/* span in list ---------------------------------------- */
+/* span in list ------------------------------------------ */
 #rendered-md > ul li span,
 #rendered-md > ol li span {
-  color: var(--span-text-in-list);
+  color: var(--span-in-list-text);
+}
+
+/* span in spoiler block --------------------------------- */
+.spoiler-block > .summary-content > p > span {
+  display: block;
+  padding: 2px 15px;
+  font-size: var(--span-in-spoiler-text-size);
+  font-weight: 700;
+  color: var(--span-in-spoiler-text);
+  background: var(--span-in-spoiler-background);
+  border-radius: 5px;
+}
+
+/* span in spoiler list ---------------------------------- */
+.spoiler-block > .summary-content > ul li span,
+.spoiler-block > .summary-content > ol li span {
+  color: var(--span-in-spoiler-list-text);
 }
 
 
 
 /* CUSTOM TITLE BLOCK ************************************ */
 #rendered-md > p > ctb:first-line {
-  font-size: 15px;
+  font-size: var(--ctb-title-size);
   font-weight: 700;
   color: var(--ctb-title-text);
 }
@@ -645,6 +719,22 @@ table > tbody > tr:nth-child(odd) {
   padding: 10px 20px;
   background: var(--ctb-background);
   border-radius: 7px 17px;
+}
+
+/* custom title block in spoiler block ------------------- */
+.spoiler-block > .summary-content > p > ctb {
+  display: block;
+  padding: 5px 15px 15px 15px;
+  margin: 20px 0 20px -3px;
+  background: var(--ctb-in-spoiler-background);
+  border-radius: 5px;
+
+}
+.spoiler-block > .summary-content > p > ctb:first-line {
+  font-size: var(--ctb-in-spoiler-block-title-size);
+  font-weight: 800;
+  line-height: 40px;
+  color: var(--ctb-in-spoiler-block-title-text);
 }
 
 
@@ -800,11 +890,87 @@ ag6 img {
     filter: brightness(100%);
   }
 }
-#rendered-md img {
+#rendered-md img,
+#rendered-md .mermaid {
   filter: var(--eye-protector-filter);
 }
-#rendered-md img:hover {
+#rendered-md img:hover,
+#rendered-md .mermaid:hover {
   animation: var(--eye-protector-animation);
+}
+
+
+
+/* SPOILER *********************************************** */
+
+/* spoiler block group:  block | title ------------------- */
+.spoiler-block,
+.summary-title {
+  font-size: 20px;
+  color: var(--spoiler-block-title-text);
+  background: var(--spoiler-block-title-background);
+  border-radius: 7px 17px;
+  text-shadow: 0 0 2px var(--spoiler-block-title-text-shadow);
+  border:none;
+}
+
+/* spoiler block title icon ------------------------------ */
+.summary-title::before {
+  position: relative; 
+  font-size: 18px;
+}
+
+/* spoiler block title ----------------------------------- */
+.summary-title {
+  padding: 8px 15px;
+  font-weight: 700;
+}
+.summary-title:hover {
+  filter: brightness(113%);
+  opacity: 0.9;
+}
+
+/* spoiler block body ------------------------------------ */
+.summary-content {
+  display: block;
+  padding: 30px 15px 15px 15px;
+  color: var(--spoiler-block-text);
+  background: var(--spoiler-block-background);
+  border-radius: 0 0 7px 17px;
+  text-shadow: 0 0 2px var(--spoiler-block-text-shadow);
+}
+
+/* spoiler inline ---------------------------------------- */
+#spoiler-block-body > p > label.spoiler-inline,
+#rendered-md > p > label.spoiler-inline {
+  display: inline-block;
+  padding: 0 12px 0 8px;
+  line-height:1.4;
+  border: 1px solid var(--spoiler-inline-border);
+  background: var(--spoiler-inline-background);
+  border-radius: 1em;
+}
+label.spoiler-inline::before {
+  content: "(?)";
+  font-family: var(--syntax-font);
+  font-weight: 600;
+  margin-right: 6px;
+  color: var(--spoiler-inline-icon);
+}
+label.spoiler-inline:hover::before {
+  color: var(--spoiler-inline-icon-hover);
+  transition: color 2.5s;
+}
+
+
+
+/* HORIZONTAL LINE **************************************** */
+
+/* horizontal line in spoiler block ----------------------- */
+#rendered-md > .spoiler-block > .summary-content > hr {
+  margin: 25px auto;
+  width: 85%;
+  border-bottom: 2px solid var(--horizontal-line-in-spoiler);
 }
 
 
@@ -858,7 +1024,17 @@ ag6 img {
   #rendered-md table {
     break-inside: avoid;
   }
+
+  #rendered-md > h1,
+  #rendered-md > h2,
+  #rendered-md > h3,
+  #rendered-md > h4,
+  #rendered-md > h5,
+  #rendered-md > h6 {
+    break-after: avoid;
+  }
    
+
 
   /* RELEASE ART GALLERY OVERFLOW ************************ */
   ag2,
@@ -1040,9 +1216,16 @@ ag6 img {
     color: var(--print-checklist-text);
   }
   
-  /* checkbox -------------------------------------------- */
+  /* print checkbox -------------------------------------- */
   .joplin-checkbox > .checkbox-wrapper > input[checked="checked"] {
     filter: grayscale(1);
+  }
+
+  /* print list is spoiler ------------------------------- */
+  #rendered-md > .spoiler-block > .summary-content ul > li,
+  #rendered-md > .spoiler-block > .summary-content ol > li {
+    color: var(--print-list-in-spoiler-text);
+    --print-list-in-spoiler-text: #666666;
   }
 
 
@@ -1111,11 +1294,30 @@ ag6 img {
   
 
 
-  /* SPAN ************************************************ */
-  /* span in list ---------------------------------------- */
+  /* PRINT SPAN ****************************************** */
+
+  /* print span in list ---------------------------------- */
   #rendered-md > ul li span,
   #rendered-md > ol li span {
     color: var(--print-span-text-in-list);
+  }
+  
+  /* print span in spoiler block ------------------------- */
+  .spoiler-block > .summary-content > p > span {
+    font-size: 14px;
+    color: var(--print-span-in-spoiler-text);
+    padding: 0;
+    border-bottom: 1px solid var(--print-span-in-spoiler-bolder);
+    border-radius: 0;
+    --print-span-in-spoiler-text: #555555;
+    --print-span-in-spoiler-bolder: #888888;
+  }
+
+  /* print span in spoiler list -------------------------- */
+  .spoiler-block > .summary-content > ul li span,
+  .spoiler-block > .summary-content > ol li span {
+    color: var(--print-span-in-spoiler-list-text);
+    --print-span-in-spoiler-list-text: #777777;
   }
 
 
@@ -1141,6 +1343,7 @@ ag6 img {
 
 
   /* PRINT STICKY NOTES ********************************** */
+
   /* sticky note tags group:  not including sticky note - Important */
   note::after,
   tip::after,
@@ -1172,6 +1375,68 @@ ag6 img {
     border: 1px solid var(--print-sticky-notes-border);
     box-shadow: none;
   }
+
+
+
+  /* PRINT SPOILER *************************************** */
+  .spoiler-block {
+    padding-top:8px;
+    border: 1px solid var(--print-spoiler-block-border);
+  }
   
+  /* print spoiler title --------------------------------- */
+  .summary-title:before {
+    content: "";
+    display: none;
+  }
+  #spoiler-block-title {
+    font-size: 17px;
+    color: var(--print-spoiler-block-title-text);
+  }
+  
+  /* print spoiler body ---------------------------------- */
+  #spoiler-block-body {
+    display: block;
+    margin: 8px 0;
+    animation: none;
+    color: var(--print-spoiler-block-text);
+    border-top: 1px solid var(--print-spoiler-block-border);
+  }
+  
+  /* print spoiler inline -------------------------------- */
+  #spoiler-block-body > p > label.spoiler-inline,
+  #rendered-md > p > label.spoiler-inline {
+    border: 1px solid var(--print-spoiler-inline-border);
+    background: none;
+  }
+  label.spoiler-inline::before {
+    content: "(?)";
+    font-family: var(--print-syntax-font);
+    color: var(--print-spoiler-inline-icon);
+  }
+  label.spoiler-inline:hover::before {
+    color: unset;
+    transition: unset;
+  }
+  
+  /* print spoiler input --------------------------------- */
+  .spoiler-block-input,
+  input.spoiler-inline {
+    display:none;
+  }
+
+  /* print horizontal line in spoiler -------------------- */
+  #rendered-md > .spoiler-block > .summary-content > hr {
+  border: 1px solid var(--print-horizontal-line-in-spoiler);
+  }
+
+  /* custom title block in spoiler block ----------------- */
+  .spoiler-block > .summary-content > p > ctb {
+    border: 1px solid var(--print-ctb-in-spoiler-border);  
+  }
+
+  .spoiler-block > .summary-content > p > ctb:first-line {
+    color: var(--print-ctb-in-spoiler-title-text);
+  }
+
 }
- 
