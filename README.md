@@ -33,7 +33,7 @@ v2.1.18 (11-NOV-2021 tested on Joplin v2.5.12)
 - Change: color adjustments
 - Change: rename CSS variable - to keep all the keywords are at the end of variable names, such as `text`, `size`, `background` etc. (e.g. `--span-text-in-list` > `--span-in-list-text`)
 
-[OhmineDT v2.1.0 Printing Sample PDF](https://drive.google.com/file/d/1oNKLplwMn0tq5MnPnbk0L8xASQ_mZD25/view?usp=sharing)
+[OhmineDT v2.1.18 Printing Sample PDF](https://drive.google.com/file/d/1xSRkQxBqpMQzz7jU_BLgVmCCb1UgvCoT/view?usp=sharing)
 
 <!-- ================================================================================================================================================= Not a Joplin user yet? -->
 
@@ -626,7 +626,7 @@ Here are few things you should know before you print out your article:
 4. By Joplin default, you are not able to select and copy text if you are using the `print` to create a PDF file. If you expect to create a PDF file that allow you to do it, please use the `export`.
 
 The printing sample PDF for reference:
-https://drive.google.com/file/d/1oNKLplwMn0tq5MnPnbk0L8xASQ_mZD25/view?usp=sharing (24-OCT-2021 updated)
+https://drive.google.com/file/d/1xSRkQxBqpMQzz7jU_BLgVmCCb1UgvCoT/view?usp=sharing (11-NOV-2021 updated)
 
 [:arrow_up:Back](#table-of-contents)
 
