@@ -6,35 +6,36 @@ Ohmine Dark Theme is a Joplin CSS theme that aims to provide a better Work-On-Sc
 
 ![2021-10-02 (71)_abg](https://user-images.githubusercontent.com/86870826/135724024-bf6631a1-b1df-4170-b748-3751f82e791a.png)
 
-You would never know how better it is when you are not going to try it once!
+
+<!-- ======================================================================================================================================================== Latest Released -->
 
 ## Latest Released
 
-v2.0.1 (24-OCT-2021 tested on Joplin v2.4.12)
+v2.1.18 (11-NOV-2021 tested on Joplin v2.5.12)
 
-- New: add styling for the [Markdown TOC](#markdown-toc)
-- New: add Abstract Content Bar blank line switcher to `userchrome.css`
-- New: add `print general` section to `userstyle.css` to control the printing fonts and font size
-- New: add mouse hover effect on the sync button icon - (just for fun)
-- New: add mouse hover effect on the bottom tag bar tags - to zoom bigger
-- New: bold up the code block bottom scrollbar - make it easier to click and slide while using the mouse
-- New: add css porperty to hiding the rich text editor button - see it in the `userchrome.css` > `switcher` section
-- New: add aviod page break in the `custom title block` , `sticky notes` , `table` while print it out
-- New: add printing properties to the `color controller` section of `userstyle.css`
-- Fix: missing printing values
-- Fix: invaid values
-- Fix: the notebook navigation button is overlap on the toolbar
-- Fix: search text displaying wrong size on headings
-- Fix: rich text editor switch button displaying wrong
-- Change: note title default to showing on printing - please edit `userstyle.css` if you wanna hide it
-- Change: printing colors all to go darker - I expect that's fit for all printer
-- Change: "All Notes" button default to "not hide" - if you want to hide it please go edit in the `userchrome.css`
-- Change: in `userchrome.css`, the text grouping of non-monospace font and monospace font are now much clear
-- Change: restructure the CSS codes
-- Change: rename some of the root porperty names
-- Change: improve some of the CSS selectors
+- New: add styling for spoiler plugin - use [spoiler](#spoiler) like a pro!
+- New: add styling for [custom title block in spoiler](#custom-title-block-custom-element) - for advanced information
+- New: add styling for horizontal line in spoiler
+- New: add styling for [list in spoiler](#unordered-list--ordered-list) - matching the spoiler
+- New: add styling for [span in spoiler](#span) - to define a heading which is not showing in the outline plugin
+- New: add styling for [span in spoiler list](#span)
+- New: add hover effect on the [inline spoiler](#spoiler) - make it a bit fun before you uncover an inline spoiler
+- New: add Eye-protector effect on Mermaid charts - avoid bright light background
+- New: add page break location before all headings when printing - to avoid the heading and content divide into different pages
+- New: add all new CSS styling variables to the `root:` section of `userstyle.css`
+- New: add toggle editor button switcher to `userchrome.css`
+- New: add variable `ctb-title-size` to the `root:` section of `userstyle.css`
+- Fix: Mermaid chart content is hard to read due to the background color
+- Fix: Abstract Content Bar appears in the wrong place in code block
+- Fix: Abstract Content Bar - list and plain text are accidentally appeared in the code block
+- Fix: abbreviation text wrong size in Markdown Editor
+- Fix: html syntax string value color wrong
+- Change: color adjustments
+- Change: rename CSS variable - to keep all the keywords are at the end of variable names, such as `text`, `size`, `background` etc. (e.g. `--span-text-in-list` > `--span-in-list-text`)
 
-[OhmineDT v2.0.1 Printing Sample PDF](https://drive.google.com/file/d/1oNKLplwMn0tq5MnPnbk0L8xASQ_mZD25/view?usp=sharing)
+[OhmineDT v2.1.0 Printing Sample PDF](https://drive.google.com/file/d/1oNKLplwMn0tq5MnPnbk0L8xASQ_mZD25/view?usp=sharing)
+
+<!-- ================================================================================================================================================= Not a Joplin user yet? -->
 
 ## Not a Joplin user yet?
 
@@ -46,9 +47,9 @@ Joplin is the best note-taking app in the market if you are looking for the belo
 - Multiple text editors (Rich Text and Markdown)
 - End-To-End Encryption to secure your notes
 - Cross platforms app that available on Windows, macOS, Linux, Android, iOS, and terminal.
-- Synchronising with various services, including Joplin Cloud, Dropbox, OneDrive, Next cloud...
+- Synchronizing with various services, including Joplin Cloud, Dropbox, OneDrive, Next cloud...
 - Take screenshots and save web pages as note with a Web Clipper browser extension.
-- Customise the app with your own scripts and plugins using the Extension API.
+- Customize the app with your own scripts and plugins using the Extension API.
 - Or... ***You love the Ohmine Dark Theme***  :sunglasses::heart:
 - And much more...
 
@@ -56,27 +57,31 @@ It can be covering all your needs in note-taking! Especially the privacy protect
 
 Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 
+<!-- ====================================================================================================================================================== Table of contents -->
+
 ## Table of contents
 
-- [The Inspiration of Ohmine Dark Theme](#the-inspiration-of-ohmine-dark-theme)
-- [Markdown Editor](#markdown-editor)
-- [Render Viewer](#render-viewer)
-- [Font Family](#font-family)
-- [Must Knows About Custom Element](#must-knows-about-custom-element)
-- [Sticky Notes (custom element)](#sticky-notes-custom-element)
-	- [How to use](#how-to-use) 
-- [Custom Title Block (custom element)](#custom-title-block-custom-element)
-	- [How to use](#how-to-use-1)
-- [Art Gallery (custom element)](#art-gallery-custom-element)
-	- [How to use](#how-to-use-2) 
-- [Abstract Content Bar](#abstract-content-bar)
-	- [How to use](#how-to-use-3) 
-- [Structural-friendly heading style](#structural-friendly-heading-style)
-	- [How to use](#how-to-use-4) 
-- [Span](#span)
-	- [How to use](#how-to-use-5)
-- [Eye-Protector](#eye-protector)
-- More Screenshots
+- DESIGN
+	- [The Inspiration of Ohmine Dark Theme](#the-inspiration-of-ohmine-dark-theme)
+	- [Markdown Editor](#markdown-editor)
+	- [Render Viewer](#render-viewer)
+	- [Font Family](#font-family)
+- FEATURES
+	- [Sticky Notes (custom element)](#sticky-notes-custom-element)
+		- [How to use](#how-to-use) 
+	- [Custom Title Block (custom element)](#custom-title-block-custom-element)
+		- [How to use](#how-to-use-1)
+	- [Art Gallery (custom element)](#art-gallery-custom-element)
+		- [How to use](#how-to-use-2) 
+	- [Abstract Content Bar](#abstract-content-bar)
+		- [How to use](#how-to-use-3) 
+	- [Structural-friendly heading style](#structural-friendly-heading-style)
+		- [How to use](#how-to-use-4) 
+	- [Span](#span)
+		- [How to use](#how-to-use-5)
+	- [Eye-Protector](#eye-protector)
+	- [Spoiler](#spoiler)
+- MORE SCREENSHOTS
 	- [Notebook Panel](#notebook-panel)
 	- [Text Style](#text-style)
 	- [Link](#link)
@@ -85,19 +90,25 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 	- [Blockquote](#blockquote)
 	- [Code block & Inline Code](#code-block--inline-code)
 	- [Math notation](#math-notation)
-	- [Markdown TOC](#markdow-toc)
-- [Printing](#printing)
-- [Color Controller](#color-controller)
-- [Requirements of Ohmine Dark Theme](#requirements-of-ohmine-dark-theme)
-- [How to install this theme](#how-to-install-this-theme)
-- [How to delete this theme](#how-to-delete-this-theme)
-- [Recommended plugins](#recommended-plugins)
-	- [Quick HTML tags (most recommended to use with this theme)](#quick-html-tags-most-recommended-to-use-with-this-theme)
-- [How to install Joplin plugins](#how-to-install-joplin-plugins)
-- [Contribution](#contribution)
-	- [Give me a user feedback](#give-me-a-user-feedback)
-	- [Report Bugs](#report-bugs)
-	
+	- [Markdown TOC](#markdown-toc)
+- MORE INFORMATION
+	- [Requirements of Ohmine Dark Theme](#requirements-of-ohmine-dark-theme)
+	- [Must Knows About Custom Element](#must-knows-about-custom-element)
+	- [About Printing](#about-printing)
+	- [Recommended plugins](#recommended-plugins)
+		- [Quick HTML tags (most recommended to use with this theme)](#quick-html-tags-most-recommended-to-use-with-this-theme)
+- FAQ
+	- [How to install this theme?](#how-to-install-this-theme)
+	- [How to delete this theme?](#how-to-delete-this-theme)
+	- [How to customize this theme?(Coming Soon...)](#how-to-customize-this-theme)
+	- [How to install Joplin plugins?](#how-to-install-joplin-plugins)
+	- [How to contribute?](#how-to-contribute)
+		- [Give me a user feedback](#give-me-a-user-feedback)
+		- [Report Bugs](#report-bugs)
+
+<!-- ================================================================================================================================================================= DESIGN -->
+<!-- =================================================================================================================================== The Inspiration of Ohmine Dark Theme -->
+
 ## The Inspiration of Ohmine Dark Theme
 
 The design inspiration comes from the below Japanese Sake Ohmine-3-Grain: 
@@ -119,6 +130,8 @@ If you are interested to know more about the Ohmine-3-Grain design you may like 
 
 [:arrow_up:Back](#table-of-contents)
 
+<!-- ======================================================================================================================================================== Markdown Editor -->
+
 ## Markdown Editor
 
 Markdown Editor is the place where your eyes will always keep focus for a long time when you are writing your Markdown notes. It's means the Markdown Editor is always the key point to protect your eyes.
@@ -131,7 +144,7 @@ Ohmine Dark Theme is completely designed to solve these problems.
 
 The key adjustments for the Markdown Editor as below:
 
-- Reduce the color contrast of the main content and the background
+- Reduce the color contrast between the main content and the background
 - Darken and reduce fonts for non-essential content
 - Reduce the use of unnecessary colors
 - Using a MAGICAL background color #151b1a
@@ -139,6 +152,10 @@ The key adjustments for the Markdown Editor as below:
 ![2021-10-02 (5)_abg_abg](https://user-images.githubusercontent.com/86870826/135716011-5b4c964d-9ebc-45eb-9cc8-cd3cfa2183d7.png)
 
 I'm choosing this background color based on the needs and not based on my personal favorite. As I tried assorted colors, I think the #151b1a is the most magical one that can always lead me to a deep focus state readily. When you spend an hour working with it, you will feel it.
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ========================================================================================================================================================== Render Viewer -->
 
 ## Render Viewer
 
@@ -153,9 +170,13 @@ The key adjustments for the Render Viewer as below:
 
 ![2021-10-02 (6)_abg_abg](https://user-images.githubusercontent.com/86870826/135716017-ef57455b-0b9a-4522-b9ef-6084bc874c23.png)
 
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ============================================================================================================================================================ Font Family -->
+
 ## Font Family
 
-Ohmine dark theme is using the below font family for both markdown editor and render viewer:
+Ohmine dark theme is using the below font family for both Markdown Editor and Render Viewer:
 
 - Montserrat
   ([download it for free](https://fonts.google.com/specimen/Montserrat))
@@ -164,13 +185,13 @@ Ohmine dark theme is using the below font family for both markdown editor and re
 - Arial (Joplin default)
 - Sans-Serif (Joplin default)
 
-Montserrat is the most important part in this theme, I recommended you to use it on this theme. I've tested over 40 fonts with sizes from 12px to 15px and Montserrat is the ultimate champion. It providing the best reading experience with 14px size.
+Montserrat is the most important part in this theme, I recommended you use it on this theme. I've tested over 40 fonts with sizes from 12 to 15px and Montserrat is the ultimate champion. It providing the best reading experience with 14px.
 
 Montseratt sample:
 
 ![montserrat_font_sample_abg](https://user-images.githubusercontent.com/86870826/134675707-a3c36272-7219-4fba-9079-f4aa65c20d48.png)
 
-Then, the monospace fonts is using on all Markdown Syntax, such as a Markdown table, Markdown link etc. You'll also see it in the code block and inline code.
+Then, the monospace font is using on all Markdown Syntax, such as a Markdown table, Markdown link etc. You'll also see it in the code block and inline code.
 
 Let's take a look at the monospace font family:
 
@@ -179,26 +200,21 @@ Let's take a look at the monospace font family:
 - Monospace (Joplin default)
 - Microsoft JHengHei Light (for Traditional Chinese comments 繁體中文註釋)
 
-Cascadia Mono Light is one of the best monospace fonts. It will be a good choice if you don't need the ligature, and it provides clear symbol characters and works great at the 12px font size.
+Cascadia Mono Light is one of the best monospace font. It would be a good choice if you don't need the ligature, and it provides clear symbol characters and works great at the 12px font size.
 
-Cascadian Mono Light sample:
+Cascadia Mono Light sample:
 
 ![cascadia_mono_light_font_sample_abg](https://user-images.githubusercontent.com/86870826/134675876-8e6a1593-fbb9-4117-8c91-141a45e1d5dc.png)
 
-If you didn't install the Montserrat , Microsoft JHengHei Light or Cascadia Mono Light on your computer, Joplin will pick the default fonts for you.
+If you didn't install the above recommend fonts on your computer, Joplin will pick the default fonts for you.
 
-If you finally want to use other fonts, you should edit the `userstyle.css` and `userchrome.css`. The settings in `Tools`> `Options`> `Appearance` will no longer work once you install this theme. You should always edit all the font settings through the CSS files.
+The settings in `Tools`> `Options`> `Appearance` will no longer work once you installed this theme. You should always edit all the font-related settings through the CSS files. 
+(P.S.  `Tools` > `Options` > ` Appearance` > `Editor maximum width` is excepted)
 
 [:arrow_up:Back](#table-of-contents)
 
-## Must knows about Custom Element
-
-OhmineDT providing some of the features that function by Custom Elements. I absolutely recommend you to use it to create a better reading experience, but you have to consider the below:
-
-1. Not all Markdown editor software support using Custom Elements.
-2. Custom Elements content will become plain text format when you export your notes to `.md` file or transfer your notes to other software.
-
-So, if you are only take notes within Joplin, you don't have to worry about that. Otherwise, you should considering which notes you should use Custom Elements and which doesn't.
+<!-- =============================================================================================================================================================== FEATURES -->
+<!-- ========================================================================================================================================== Sticky Notes (custom element) -->
 
 ## Sticky Notes (custom element)
 
@@ -207,7 +223,7 @@ Ohmine Dark Theme has 7 custom elements for creating the Sticky Notes: `note` , 
 Let’s see what are the Sticky Notes for:
 
 
-![sticky_notes_sample_abg](https://user-images.githubusercontent.com/86870826/134674480-1283d933-bd48-46f2-a2f8-1fbf8c42dd17.png)
+![sticky_notes_sample_abg](https://user-images.githubusercontent.com/86870826/141187967-74fb903e-6a1a-4b1d-8baa-cbc09d5b3bc7.png)
 
 
 ### How to use
@@ -230,6 +246,10 @@ Let’s see what are the Sticky Notes for:
 
 ![sticky_notes_sample_output1_abg](https://user-images.githubusercontent.com/86870826/134674519-d88f0cee-ee9d-41e0-85a2-2d2e103ce0f5.png)
 
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ==================================================================================================================================== Custom Title Block (custom element) -->
+
 ## Custom Title Block (custom element)
 Custom Title Block is a public information for readers, it would be suitable for supplementing information which you think is important to readers. 
 
@@ -239,7 +259,7 @@ Let's see what it looks like:
 
 ### How to use
 
-1. The custom elemenet name `ctb` stands for Custom Title Block.
+1. The custom element name `ctb` stands for Custom Title Block.
 2. Type your title *next to the open tag* .
 3. Keep your title *within one line*.
 4. Start typing your content *in the second line*.
@@ -251,24 +271,40 @@ Let's see what it looks like:
 Your content
 </ctb>
 ```
+```
+:[
+Custom title block sample
+
+<ctb>Custom Title Block In Spoiler
+It's looks different in the spoiler block! 
+</ctb>
+
+]:
+```
 
 **Output:**
 
 ![custom-title-block-outpput](https://user-images.githubusercontent.com/86870826/136669432-24e36c8a-9e75-4235-ab99-99803a1c41c7.png)
 
+![custom_title_block_in_spoiler_sample](https://user-images.githubusercontent.com/86870826/141188768-70e4de89-29c2-410f-9b4b-f2300fc29b71.png)
+
 [:arrow_up:Back](#table-of-contents)
+
+<!-- =========================================================================================================================================== Art Gallery (custom element) -->
 
 ## Art Gallery (custom element)
 
 This art gallery providing 5 custom elements for you:
 
-|Custom Elements|Columns Limit|Gallery Size|Scrolling Trigger|
-|:----------:|:-------:|:------------:|:----------:|
-|ag2|2|W:100% * H:60vh + Scroll|2 images above|
-|ag3|3|W:100% * H:60vh + Scroll|6 images above|
-|ag4|4|W:100% * H:60vh + Scroll|12 images above|
-|ag5|5|W:100% * H:60vh + Scroll|20 images above|
-|ag6|6|W:100% * H:60vh + Scroll|30 images above|
+| Custom Elements | Columns Limit |       Gallery Size       | Scrolling Trigger (split layout) |
+|:---------------:|:-------------:|:------------------------:|:--------------------------------:|
+|       ag2       |       2       | W:100% * H:60vh + Scroll |          2 images above          |
+|       ag3       |       3       | W:100% * H:60vh + Scroll |          6 images above          |
+|       ag4       |       4       | W:100% * H:60vh + Scroll |         12 images above          |
+|       ag5       |       5       | W:100% * H:60vh + Scroll |         20 images above          |
+|       ag6       |       6       | W:100% * H:60vh + Scroll |         30 images above          |
+
+(The data is based on the default margin value of editor in split layout.)
 
 Below is the sample of the art gallery(ag6) with 48 images: 
 
@@ -280,7 +316,7 @@ Below is the sample of the art gallery(ag6) with 48 images:
 
 1. The custom element name `ag` stands for *Art Gallery*.
 2. The art gallery tag must use *right behind the plain text* .
-3. Do not including any blank line within this part of codes, *blank line will break the markdown syntax* .
+3. Do not including any blank line within this part of codes, *blank line will break the format* .
 
 **Code Sample:**
  
@@ -303,6 +339,8 @@ Below is the sample of the art gallery(ag6) with 48 images:
 ![art_gallery_output_abg](https://user-images.githubusercontent.com/86870826/134674925-7136494b-9ca1-4694-9ba1-e95ea285364a.png)
 
 [:arrow_up:Back](#table-of-contents)
+
+<!-- =================================================================================================================================================== Abstract Content Bar -->
 
 ## Abstract Content Bar
 
@@ -329,6 +367,8 @@ It would be helpful when you want to release your eyes from the text for sometim
 
 [:arrow_up:Back](#table-of-contents)
 
+<!-- ====================================================================================================================================== Structural-friendly heading style -->
+
 ## Structural-friendly heading style
 
 Here showing the heading samples:
@@ -344,25 +384,51 @@ Due to the style of headings, something you may need to consider when every time
 
 [:arrow_up:Back](#table-of-contents)
 
+<!-- =================================================================================================================================================================== Span -->
+
 ## Span
 
-There are 2 situations you may want to use the span tag to separating the content:
+There are 4 situations you may want to use the span tag to separating the content:
 
 1. When you want to use an emoji on the H1 heading
-2. When you want to split out the side informantion whitin a list
+2. When you want to create a heading within the [spoiler block](#spoiler) - It wouldn't be treat as a heading in the Outline plugin
+3. When you want to split out the side information within a list
+4. When you want to split out the side information within a list which is in the [spoiler block](#spoiler)
 
 ### How to use
 
-1. You can start a open tag in a new line but don't include any blank line between the paragraph content and span content.
+If you are using span in the H1 heading or in a list:
+- You can start an open tag in a new line but don't including any blank line between the paragraph content and span content.
+
+If you are using span in the spoiler block to create a heading:
+- Please always start an open tag in a new line.
 
 **Sample Code:**
 ```
-- If you want to separate a content to discribe the list item
+- If you want to separate a content to describe the list item
 <span>you should use a span tag like this</span>
 - Here is another list item
 ```
 ```
 # Ohmine Dark Theme For Joplin <span>:rocket:</span>
+```
+```
+:[
+spoiler block
+
+<span>This is a span in spoiler block looks like</span>
+
+]:
+```
+```
+:[
+spoiler block
+
+- Spoiler list item
+<span>This is a span within a spoiler list looks like</span>
+- Spoiler list item
+
+]:
 ```
 **Output:**
 
@@ -370,46 +436,119 @@ There are 2 situations you may want to use the span tag to separating the conten
 
 ![span-in-h1-heading-sample](https://user-images.githubusercontent.com/86870826/136670451-f7f68c1d-58bc-4a19-adb3-7aaccacc8e62.png)
 
+![span_in_spoiler_sample](https://user-images.githubusercontent.com/86870826/141186027-91542c39-ac66-4830-b124-4be2ef3babaf.png)
+
+![span_in_spoiler_list_sample](https://user-images.githubusercontent.com/86870826/141186050-881c202c-db93-4bf0-adb6-acd690098b1f.png)
 
 [:arrow_up:Back](#table-of-contents)
 
+<!-- ========================================================================================================================================================== Eye-Protector -->
+
 ## Eye-Protector
 
-All the attached images will be defaulted by 30% darker than the original, to avoid the bright light flashing your eyes when scrolling down your note.
+All the attached images and Mermaid Charts will be defaulted by 30% darker than the original, to avoid the bright light flashing your eyes when scrolling down your note.
 
 ![eye-protector-sample](https://user-images.githubusercontent.com/86870826/134763020-4662fedb-6bc0-404d-bafc-e16ea5b2ea62.jpg)
 
-Mouse hover on the image to check out the original color, it will be getting bright smoothly.
+Mouse hover on them to check out the original color, it will be getting bright smoothly.
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ================================================================================================================================================================ Spoiler -->
+
+## Spoiler
+
+OhmineDT has been styling for the Spoiler plugin, please make sure you are already installed Spoiler plugin to get it work.
+
+This is a closed spoiler block:
+
+![closed_spoiler_sample](https://user-images.githubusercontent.com/86870826/141187215-b3412759-f494-4f8a-9e17-2810f96eccee.png)
+
+Here showing the inline spoiler and an opened spoiler block:
+
+![opened_spoiler_sample](https://user-images.githubusercontent.com/86870826/141187235-27b61e58-96e7-471a-af53-36fe035d8238.png)
+
+In addition, I've created 4 more custom styles that you can use within the Spoiler block for advanced usage:
+
+1. Span in Spoiler - more details in [Span](#span)
+2. Span in Spoiler List - more details in [Span](#span)
+3. List in Spoiler - more details in [List](#unordered-list--ordered-list)
+4. Custom Title Block in Spoiler - more details in [Custom Title Block](#custom-title-block-custom-element)
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ======================================================================================================================================================= MORE SCREENSHOTS -->
+<!-- ========================================================================================================================================================= Notebook Panel -->
 
 ## Notebook Panel
-
-notebook panel of Ohmine Dark Theme:
 
 The CSS styling of Ohmine Dark Theme will only support up to 10 levels of subdirectories when Joplin didn't limit it to you. And sure, you can edit my CSS to fit your needs.
 
 ![notebook_panel_sample_abg](https://user-images.githubusercontent.com/86870826/134758745-81736f74-97bf-49e2-9779-2fb935085120.png)
 
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ============================================================================================================================================================= Text Style -->
+
 ## Text Style
 
-A sample of the Render Viewer:
+A sample in Render Viewer:
 
 ![text_sample_abg](https://user-images.githubusercontent.com/86870826/134675980-53e88bae-76dd-4a77-aaf8-2194242be97b.png)
 
 Color was not always the best choice for indentifying information. Sometimes, circle the keywords just like what you do on a paper is the much better option for less noise. And this style will apply to the emphazise text, strong text, mark text, and the abbrviation text.
 
-Another sample of the Markdown Editor:
+A sample in Markdown Editor:
 
 ![circle_keywords_sample](https://user-images.githubusercontent.com/86870826/135735920-f06de4c2-c832-481b-bc10-22ee2ca09f36.png)
 
-Here is the search text sample of Render Viewer:
+Search text sample in Render Viewer:
 
 ![search-text-sample-rv](https://user-images.githubusercontent.com/86870826/136669473-937b68a9-6e16-45c9-90dc-372b800ae419.png)
 
-Another search text sample of Markdown Editor: 
+Search text sample in Markdown Editor: 
 
 ![search-text-me](https://user-images.githubusercontent.com/86870826/136669482-13958ace-2521-43fd-843a-168d952d7071.png)
 
 [:arrow_up:Back](#table-of-contents)
+
+<!-- =================================================================================================================================================================== Link -->
+
+## Link
+
+![links_sample_abg](https://user-images.githubusercontent.com/86870826/134676007-f11a7822-610c-4f7e-a351-0366e505cccd.png)
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ========================================================================================================================================== Unordered List & Ordered List -->
+
+## Unordered List & Ordered List
+
+![unordered_list_and_ordered_list_sample_abg](https://user-images.githubusercontent.com/86870826/134676050-a4a42e70-fb50-4bb0-b58a-b0a88463b42c.png)
+
+A List in Spoiler Block:
+
+![list_in_spoiler_sample](https://user-images.githubusercontent.com/86870826/141187686-7d9e4b2a-7a5c-4736-80d8-6305ace1256d.png)
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ============================================================================================================================================================== Checklist -->
+
+## Checklist
+
+![checklist_sample_abg](https://user-images.githubusercontent.com/86870826/134676087-ab2580b3-164c-4da9-8ed6-bcf80ff1087b.png)
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ============================================================================================================================================================= Blockquote -->
+
+## Blockquote
+
+![blockquote_sample_abg](https://user-images.githubusercontent.com/86870826/134676125-1bf895c8-a9a3-40b8-b159-72b21fa85782.png)
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- =============================================================================================================================================== Code block & Inline Code -->
 
 ## Code block & Inline Code
 
@@ -427,29 +566,7 @@ Then, the code block is showing below:
 
 [:arrow_up:Back](#table-of-contents)
 
-## Link
-
-![links_sample_abg](https://user-images.githubusercontent.com/86870826/134676007-f11a7822-610c-4f7e-a351-0366e505cccd.png)
-
-[:arrow_up:Back](#table-of-contents)
-
-## Unordered List & Ordered List
-
-![unordered_list_and_ordered_list_sample_abg](https://user-images.githubusercontent.com/86870826/134676050-a4a42e70-fb50-4bb0-b58a-b0a88463b42c.png)
-
-[:arrow_up:Back](#table-of-contents)
-
-## Checklist
-
-![checklist_sample_abg](https://user-images.githubusercontent.com/86870826/134676087-ab2580b3-164c-4da9-8ed6-bcf80ff1087b.png)
-
-[:arrow_up:Back](#table-of-contents)
-
-## Blockquote
-
-![blockquote_sample_abg](https://user-images.githubusercontent.com/86870826/134676125-1bf895c8-a9a3-40b8-b159-72b21fa85782.png)
-
-[:arrow_up:Back](#table-of-contents)
+<!-- ========================================================================================================================================================== Math notation -->
 
 ## Math notation
 
@@ -459,11 +576,47 @@ See how *magical* after added a bit of neon light to your mathematical formulas:
 
 [:arrow_up:Back](#table-of-contents)
 
+<!-- =========================================================================================================================================================== Markdown TOC -->
+
 ## Markdown TOC
 
 ![markdown_toc_sample](https://user-images.githubusercontent.com/86870826/138591403-6827e185-072c-4641-9a95-91313fe3e6ed.png)
 
-## Printing
+To use markdown TOC, you should enable the the extension first: 
+`Tools` > `Options` > `Markdown` > `Enable table of contents extension (wysiwyg: no)`
+Then, you can create the TOC with a very easy markdown syntax `[[toc]]` .
+
+<!-- ======================================================================================================================================================= MORE INFORMATION -->
+<!-- ====================================================================================================================================== Requirements of Ohmine Dark Theme -->
+
+## Requirements of Ohmine Dark Theme
+
+For the complete experience of using OhmineDT, please make sure you have done the below before you clone my CSS codes:
+
+1. Use the Joplin built-in dark theme: `preference` > `Appearance` > `Theme` > `Dark`
+2. Install the [Montserrat](https://fonts.google.com/specimen/Montserrat) font - The recommend font for OhmineDT
+3. Install the [Cascadia](https://github.com/microsoft/cascadia-code/releases) font - The recommend monospace font for OhmineDT 
+4. If you want your plugin background color is matching with OhmineDT, please change that plugin background color to #191919 (optional)
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ======================================================================================================================================== Must knows about Custom Element -->
+
+## Must knows about Custom Element
+
+OhmineDT providing some of the features that function by Custom Elements. I absolutely recommend you use it to create a better reading experience, but first you have to consider the below:
+
+1. Not all Markdown editor software support using Custom Elements.
+2. Custom Elements content will become plain text format when you export your notes to `.md` file or transfer your notes to other software.
+3. Even if other note-taking software is supported to using Custom Element you may need to copy the related codes to that software manually.
+
+So, if you are only take notes within Joplin, you don't have to worry about that. Otherwise, you should considering which notes you should use Custom Elements and which doesn't.
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ========================================================================================================================================================= About Printing -->
+
+## About Printing
 
 Here are few things you should know before you print out your article:
 
@@ -477,82 +630,24 @@ https://drive.google.com/file/d/1oNKLplwMn0tq5MnPnbk0L8xASQ_mZD25/view?usp=shari
 
 [:arrow_up:Back](#table-of-contents)
 
-## Color Controller
-
-You can control all the color values of both the Render Viewer and Markdown Editor easily through the Color Controller section of your `userstyle.css` and `userchrome.css` .
-
-[:arrow_up:Back](#table-of-contents)
-
-## Requirements of Ohmine Dark Theme
-
-For the complete experience of using OhmineDT, please make sure you have done the below before you clone my CSS codes:
-
-1. Use the Joplin built-in dark theme: `preference` > `Appearance` > `Theme` > `Dark`
-2. Install the [Montserrat](https://fonts.google.com/specimen/Montserrat) font - The default font for OhmineDT
-3. Install the [Cascadia](https://github.com/microsoft/cascadia-code/releases) font - The defualt monospace font for OhmineDT 
-4. If you want your plugin background color is matching with OhmineDT, please change that plugin background color to #191919 (optional)
-
-[:arrow_up:Back](#table-of-contents)
-
-## How to install this theme
-
-If you know where exactly your userstyle.css and userchrome.css are stored:
-
-1. Make sure you have done the requirements of using the OhmineDT
-2. Clone my codes
-3. Copy my `userstyle.css` and `userchrome.css`
-4. Repleace your `userstyle.css` and `userchrome.css`
-5. Quit & restart Joplin
-
-If you are not sure where your files stored, you can follow the steps below:
-
-1. Make sure you are already installed Joplin on your computer. [Download Joplin](https://joplinapp.org/download/)
-2. Download and install the most recommended font for this theme. [Montserrat](https://fonts.google.com/specimen/Montserrat) | [Cascadia](https://github.com/microsoft/cascadia-code/releases)
-3. Open Joplin
-4. Go to `Tools` > `Options` > `Appearance` 
-5. Choose the `Dark` theme and click `Apply` (OhmineDT is better to run with the Joplin built-in dark theme)
-6. In the `Appearance` page, click `Show Advanced Settings`
-7. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
-9. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
-10. And paste on your `userstyle.css`
-11. Back to the `Appearance` page again and click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
-12. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
-13. And paste on your `userchrome.css`
-14. Quit & restart Joplin and it's done.
-
-[:arrow_up:Back](#table-of-contents)
-
-## How to delete this theme
-
-1. Go to `Tools` > `Options` > `Appearance` 
-2. Click `Show Advanced Settings`
-3. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
-4. Click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
-5. Delete all the code within these two documents. It's done! but I'm hurt!
-
-[:arrow_up:Back](#table-of-contents)
-
-## How to install Joplin plugins
-
-1. Go to `Tools` > `Options` > `Plugins`
-2. Search a plugin name
-3. Click `Install`
-4. After installed all you need, quit & restart Joplin app
-
-If you want to discover all of the Joplin plugins, you can go visit the [Joplin Plugins Repository](https://github.com/joplin/plugins#joplin-plugin-repository)
+<!-- ==================================================================================================================================================== Recommended plugins -->
 
 ## Recommended plugins
 
 Below are some of the best plugins on Joplin, if you never try it before it's worth giving a try.
 
 - Quick HTML tags (most recommend)[quick setting up](#quick-html-tags-most-recommended-to-use-with-this-theme)
-- Rich Markdown (most recommend)
-- Outline (recommend)
-- Note Tabs (recommend)
-- Quick Links (recommend)
-- Menu items, Shortcuts, Toolbar icons(recommend)
+- Table Formatter (most recommend)
+- Spoiler (most recommend - OhmineDT has styles for it)
+- Outline
+- Note Tabs
+- Quick Links
+- Rich Markdown
+- Menu items, Shortcuts, Toolbar icons
 
 Check out more plugins on [Joplin Plugins Repository](https://github.com/joplin/plugins#joplin-plugin-repository)
+
+[:arrow_up:Back](#table-of-contents)
 
 ### Quick HTML tags (most recommended to use with this theme)
 
@@ -579,12 +674,72 @@ After this, you can use this plugin like below:
 
 [:arrow_up:Back](#table-of-contents)
 
-## Contribution
+<!-- ==================================================================================================================================================================== FAQ -->
+<!-- ============================================================================================================================================== How to install this theme -->
+
+## How to install this theme
+
+If you know where exactly your `userstyle.css` and `userchrome.css` are stored:
+
+1. Make sure you have done the requirements of using the OhmineDT
+2. Clone my codes
+3. Copy my `userstyle.css` and `userchrome.css`
+4. Replace your `userstyle.css` and `userchrome.css`
+5. Quit & restart Joplin
+
+If you are not sure where your files are stored, you can follow the steps below:
+
+1. Make sure you are already installed Joplin on your computer. [Download Joplin](https://joplinapp.org/download/)
+2. Download and install the most recommend fonts for this theme. [Montserrat](https://fonts.google.com/specimen/Montserrat) | [Cascadia](https://github.com/microsoft/cascadia-code/releases)
+3. Open Joplin
+4. Go to `Tools` > `Options` > `Appearance` 
+5. Choose the `Dark` theme and click `Apply` (OhmineDT is better to run with the Joplin built-in dark theme)
+6. In the `Appearance` page, click `Show Advanced Settings`
+7. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
+9. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
+10. And paste on your `userstyle.css`
+11. Back to the `Appearance` page again and click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
+12. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
+13. And paste on your `userchrome.css`
+14. Quit & restart Joplin and it's done.
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- =============================================================================================================================================== How to delete this theme -->
+
+## How to delete this theme
+
+1. Go to `Tools` > `Options` > `Appearance` 
+2. Click `Show Advanced Settings`
+3. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
+4. Click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
+5. Delete all the code within these two documents. It's done! but I'm hurt!
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ========================================================================================================================================== How to install Joplin plugins -->
+
+## How to install Joplin plugins
+
+1. Go to `Tools` > `Options` > `Plugins`
+2. Search a plugin name
+3. Click `Install`
+4. After installed all you needs, quit & restart Joplin app
+
+If you want to discover all of the Joplin plugins, you can go visit the [Joplin Plugins Repository](https://github.com/joplin/plugins#joplin-plugin-repository)
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ====================================================================================================================================================== How to contribute -->
+
+## How to contribute
 
 ### Give me a user feedback
 
-Whatever you like this theme or not, I'll open my mind to accept any of you comments and treat your feeling as mine. It would be my pleasure if I could get any feedback from you! Go to leave me a message on [Joplin Forum](https://discourse.joplinapp.org/t/css-theme-ohmine-dark-theme/21000) or [Github Discussions](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/discussions/new)
+Whatever you like this theme or not, I'll open my mind to accept any of your comments and treat your feeling as mine. It would be my pleasure if I could get any feedback from you! Go to leave me a message on [Joplin Forum](https://discourse.joplinapp.org/t/css-theme-ohmine-dark-theme/21000) or [Github Discussions](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/discussions/new)
 
 ### Report Bugs
 
 If you experiencing any bugs or bad issues while using this theme, please create a bug report on [issues page](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/issues/new/choose) and let me know it.
+
+[:arrow_up:Back](#table-of-contents)
