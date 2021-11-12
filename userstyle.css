@@ -45,6 +45,7 @@
   
   /* SWITCHER -------------------------------------------- */
   --h2-heading-rice-icon: inline-block; /* "inline-block;" value change to "none;" to hide the rice icon from h2 heading */
+  /* eye-protector is effects on both images and mermaid charts */
   --eye-protector-filter: brightness(70%); /* "brightness(70%);" value change to "none;" to stop Eye-Protector effect */
   --eye-protector-animation: eye-protector 2s forwards 1; /* "eye-protector 2s forwards 1;" value change to "none;" to stop Eye-Protector hover effect */
   
