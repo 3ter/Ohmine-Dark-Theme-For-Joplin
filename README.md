@@ -624,6 +624,8 @@ Here are few things you should know before you print out your article:
 2. Art Gallery will be releasing the overflow limit and listing out all the images but it won't change the number of columns.
 3. A lot of elements are restyled for printing.
 4. By Joplin default, you are not able to select and copy text if you are using the `print` to create a PDF file. If you expect to create a PDF file that allow you to do it, please use the `export`.
+5. By the Spoiler plugin default, Spoiler Block will only appears normally when you use `export`.
+6. By the Spoiler plugin default, Inline Spoiler will not print out the text.
 
 The printing sample PDF for reference:
 https://drive.google.com/file/d/1xSRkQxBqpMQzz7jU_BLgVmCCb1UgvCoT/view?usp=sharing (11-NOV-2021 updated)
