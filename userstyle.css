@@ -1,6 +1,6 @@
-/* OhmineDT v2.1.18 | userstyle.css | styling the Render Viewer and Printing Output */
+/* OhmineDT v2.2.5 | userstyle.css | styling the Render Viewer and Printing Output */
 
-/* By usual case, you would only to edit the source code within the root section (line 11 to 337) to fulfill most of your personal needs */
+/* By usual case, you would only to edit the source code within the root section (line 11 to 336) to fulfill most of your personal needs */
 
 /* Please let me know if you found any bad issue when using OhmineDT. */ 
 /* And sure, you can share any of your ideas with me too! */
@@ -45,13 +45,12 @@
   
   /* SWITCHER -------------------------------------------- */
   --h2-heading-rice-icon: inline-block; /* "inline-block;" value change to "none;" to hide the rice icon from h2 heading */
-  /* eye-protector is effects on both images and mermaid charts */
   --eye-protector-filter: brightness(70%); /* "brightness(70%);" value change to "none;" to stop Eye-Protector effect */
   --eye-protector-animation: eye-protector 2s forwards 1; /* "eye-protector 2s forwards 1;" value change to "none;" to stop Eye-Protector hover effect */
   
   /* PRINT SWITCHER -------------------------------------- */
   --print-note-title-display: block; /* "block;" value change to "none;" to hide the note title from printing */
-  --print-sticky-notes-display: none; /* "none;" value change to "block;" to show all sticky notes on printing */
+  --print-sticky-notes-display: block; /* "none;" value change to "block;" to show all sticky notes on printing */
   --print-h1-border: none; /* "none;" value change to "1px solid #505050;" to show the h1 border bottom on printing */
   --print-link-href-display: inline; /* "inline;" value change to "none;" to hide link href from printing */
 

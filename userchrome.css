@@ -1,6 +1,6 @@
-/* OhmineDT v2.1.18 | userchrome.css | styling the Markdown Editor and Joplin UI */
+/* OhmineDT v2.2.5 | userchrome.css | styling the Markdown Editor and Joplin UI */
 
-/* By usual case, you would only to edit the source code within the root section (line 11 to 193) to fulfill most of your personal needs */
+/* By usual case, you would only to edit the source code within the root section (line 11 to 228) to fulfill most of your personal needs */
 
 /* Please let me know if you found any bad issue when using OhmineDT. */ 
 /* And sure, you can share any of your ideas with me too! */
@@ -22,11 +22,11 @@
 
   /* BIGGER SYNTAX:  simple link | anchor text | abbreviation text */
   --bigger-syntax-font-size: 14px;
-  
+
   /* HEADING SIZE ------------------------------------------ */
   --heading-font-weight: 500;
   --heading-line-height: 1em;
-  
+
   --h1-heading-size: 2.3em;
   --h2-heading-size: 1.8em;
   --h3-heading-size: 1.5em;
@@ -78,6 +78,41 @@
   --syntax-attribute: #a0a0a0;
   --syntax-attribute-background: #36005a;
 
+  /* plugin: markdown table colorize ----------------------- */
+  --mtc-table-vertical-bar: #5a5a5a;
+  --mtc-table-text: #bdbdbd;
+
+  --mtc-table-row-separate-text: #949494;
+  --mtc-table-row-separate-background: #1b1b1b;
+  --mtc-table-row-separate-shadow: #c5c5c5;
+  --mtc-table-row-separate-hover: brightness(160%);
+
+  --mtc-table-column-mark-background: black;
+  --mtc-table-column-mark-hover: brightness(170%);
+
+  --mtc-table-column-mark-border: #4c4c4c; /* only for column 10 to 19 */
+
+  --mtc-table-col0-mark: #ff8080cc;
+  --mtc-table-col1-mark: #fff980cc;
+  --mtc-table-col2-mark: #80fff7cc;
+  --mtc-table-col3-mark: #9080ffcc;
+  --mtc-table-col4-mark: #ff80fdcc;
+  --mtc-table-col5-mark: #a3ffa5cc;
+  --mtc-table-col6-mark: #ff9500cc;
+  --mtc-table-col7-mark: #2eff62cc;
+  --mtc-table-col8-mark: #579dffcc;
+  --mtc-table-col9-mark: #ff00cc;
+  --mtc-table-col10-mark: #ff8080cc;
+  --mtc-table-col11-mark: #fff980cc;
+  --mtc-table-col12-mark: #80fff7cc;
+  --mtc-table-col13-mark: #9080ffcc;
+  --mtc-table-col14-mark: #ff80fdcc;
+  --mtc-table-col15-mark: #a3ffa5cc;
+  --mtc-table-col16-mark: #ff9500cc;
+  --mtc-table-col17-mark: #2eff62cc;
+  --mtc-table-col18-mark: #579dffcc;
+  --mtc-table-col19-mark: #ff00cc;
+
   /* list -------------------------------------------------- */
   --list-text: #a5a5a5;
   --list-token: #a5a5a5;
@@ -94,7 +129,7 @@
 
   --code-block-text: #bdbdbd;
   --code-block-background: #101413;
-  
+
   /* abstract content bar ---------------------------------- */
   --acb-plain-text: #383838;
   --acb-headings: #ffffff6e;
@@ -132,7 +167,7 @@
 
   --np-notebook-title-text: #e2e2e2;
   --np-notebook-title-border: #ffffff14;
-  
+
   --np-note-count-label-background: #4affff24;
   --np-note-count-label-border: #ffffff1f;
 
@@ -144,9 +179,9 @@
 
   /* note list panel --------------------------------------- */
   --nlp-box-shadow: #33524a;
-  
+
   --nlp-header: #191919;
-  
+
   --nlp-btn-icons: #f5f5f5; /* icon group:  search | cancel | new todo | new note */
   --nlp-btns: #00926a; /* button group:  new todo | new note */
   --nlp-btns-hover: hue-rotate(180deg); /* button group:  new todo | new note */
@@ -165,7 +200,7 @@
 
   --eh-notebook-navigation-button: #00926a;
   --eh-notebook-navigation-button-hover: hue-rotate(180deg); /* "filter:" */
-  
+
   --eh-notebook-icon: white; /* top left notebook icon and tag-related nav button icon */
 
   /* top toolbar ------------------------------------------- */
@@ -191,29 +226,29 @@
   /* ******************************************************* */
 
   }
-  
+
   /* ******************************************************* */
   /*                 STYLING: MARKDOWN EDITOR                */
   /* ******************************************************* */
-  
+
   /* GENERAL STYLING *************************************** */
-  
+
   /* markdown editor background ---------------------------- */
   .resizableLayoutItem.rli-root,
   .codeMirrorEditor {
-    background-color: var(--root-background) !important;
+      background-color: var(--root-background) !important;
   }
-  
+
   /* content font ------------------------------------------ */
   .codeMirrorEditor > .CodeMirror .CodeMirror-line *,
   .codeMirrorEditor > .CodeMirror .cm-overlay.cm-rm-list-token {
-    font-family: var(--content-font) !important;
-    font-size: var(--content-font-size);
+      font-family: var(--content-font) !important;
+      font-size: var(--content-font-size);
   }
   .CodeMirror-line span[role="presentation"]:only-child {
-    color: var(--primary-text-color);
+      color: var(--primary-text-color);
   }
-  
+
   /* syntax font ------------------------------------------- */
   .codeMirrorEditor > .CodeMirror .cm-url.cm-rm-link,
   .codeMirrorEditor > .CodeMirror .cm-hr,
@@ -231,193 +266,369 @@
   .codeMirrorEditor > .CodeMirror [class|="cm-katex"] ~ .cm-variable-2,
   .codeMirrorEditor > .CodeMirror .cm-bracket ~ .cm-variable-2,
   .codeMirrorEditor > .CodeMirror .CodeMirror-line .cm-jn-monospace {
-    font-family: var(--syntax-font) !important;
-    font-size: var(--syntax-font-size);
-    line-height: normal;
+      font-family: var(--syntax-font) !important;
+      font-size: var(--syntax-font-size);
+      line-height: normal;
   }
-  
+
   /* bigger syntax font ------------------------------------ */
   .codeMirrorEditor > .CodeMirror .cm-rm-link,
   .codeMirrorEditor > .CodeMirror .cm-em.cm-link-text {
-    font-size: var(--bigger-syntax-font-size);
+      font-size: var(--bigger-syntax-font-size);
   }
-  
-  
-  
+
+
+
   /* HEADING *********************************************** */
   .CodeMirror .CodeMirror-line .cm-header {
-    color: var(--heading-text);
-    text-shadow: 0 0 3px var(--heading-text-shadow);
+      color: var(--heading-text);
+      text-shadow: 0 0 3px var(--heading-text-shadow);
   }
-  
+
   .CodeMirror-line .cm-header {
-    font-weight: var(--heading-font-weight);
-    line-height: var(--heading-line-height);
+      font-weight: var(--heading-font-weight);
+      line-height: var(--heading-line-height);
   }
-  
+
   .CodeMirror-line .cm-header.cm-header-1 {
-    font-size: var(--h1-heading-size);
-    font-variant: small-caps;
+      font-size: var(--h1-heading-size);
+      font-variant: small-caps;
   }
-  
+
   .CodeMirror-line .cm-header.cm-header-2 {
-    font-size: var(--h2-heading-size);
+      font-size: var(--h2-heading-size);
   }
-  
+
   .CodeMirror-line .cm-header.cm-header-3 {
-    font-size: var(--h3-heading-size);
+      font-size: var(--h3-heading-size);
   }
-  
+
   .CodeMirror-line .cm-header.cm-header-4,
   .CodeMirror-line .cm-header.cm-header-5 {
-    font-size: var(--h4-h5-heading-size)
+      font-size: var(--h4-h5-heading-size)
   }
-  
+
   .CodeMirror-line .cm-header.cm-header-6 {
-    font-size: var(--h6-heading-size);
+      font-size: var(--h6-heading-size);
   }
-  
-  
-  
+
+
+
   /* SPECIAL TEXT ****************************************** */
-  
+
   /* group:  mark | search | emphasize | strong | abbreviation */
   .cm-search-marker,
   .cm-em:not(.cm-image-alt-text),
   .cm-strong {
-    border: 1px solid var(--special-text-border) !important;
-    border-radius: 1em;
-    padding: 0 8px;
+      border: 1px solid var(--special-text-border) !important;
+      border-radius: 1em;
+      padding: 0 8px;
   } 
-  
+
   /* group:  mark | search --------------------------------- */
   .cm-overlay.cm-search-marker {
-    color: var(--mark-text) !important;
-    background: var(--mark-text-background) !important;
+      color: var(--mark-text) !important;
+      background: var(--mark-text-background) !important;
   }
-  
+
   /* search text ------------------------------------------- */
   .cm-overlay.cm-search-marker-selected {
-    font-weight: 600;
-    color: var(--search-text-selected) !important;
-    border: 2px dotted var(--search-text-selected-border) !important;
-    z-index:1;
+      font-weight: 600;
+      color: var(--search-text-selected) !important;
+      border: 2px dotted var(--search-text-selected-border) !important;
+      z-index:1;
   }
-  
+
   /* search marker on scrollbar */
   .cm-search-marker-scrollbar {
-    background: var(--search-marker-scrollbar) !important;
-    opacity: 1;
+      background: var(--search-marker-scrollbar) !important;
+      opacity: 1;
   }
   .CodeMirror-line .cm-header[class*="cm-search"] {
-    text-shadow: none;
+      text-shadow: none;
   }
-  
+
   /* group:  emphasize | abbreviation ---------------------- */
   .cm-em:not(.cm-image-alt-text) {
-    color: var(--emphasize-text) !important;
+      color: var(--emphasize-text) !important;
   }
-  
+
   /* strong text ------------------------------------------- */
   .cm-strong {
-    color: var(--strong-text) !important;
+      color: var(--strong-text) !important;
   }
-  
+
   /* insert text ------------------------------------------- */
   .cm-rm-ins {
-    color: var(--insert-text) !important;
+      color: var(--insert-text) !important;
   }
-  
+
   /* strikethrough text ------------------------------------ */
   .cm-strikethrough {
-    color: var(--strikethrough-text) !important;
+      color: var(--strikethrough-text) !important;
   }
-  
-  
-  
+
+
+
   /* SYNTAX:  MATH | HTML ********************************** */
   .CodeMirror .CodeMirror-line .cm-tag,
   .CodeMirror .CodeMirror-line .cm-number {
-    color: var(--syntax-tag);
-    background: var(--syntax-tag-background); 
+      color: var(--syntax-tag);
+      background: var(--syntax-tag-background); 
   }
-  
+
   .CodeMirror .CodeMirror-line .cm-string.cm-jn-monospace:not(.cm-url),
   .CodeMirror .CodeMirror-line .cm-string:not(.cm-url),
   .CodeMirror .CodeMirror-line .cm-string.cm-rm-image:not(.cm-rm-link) { 
-    color: var(--syntax-string);
-    background: var(--syntax-string-background);
+      color: var(--syntax-string);
+      background: var(--syntax-string-background);
   }
-  
+
   .CodeMirror .CodeMirror-line .cm-attribute.cm-jn-monospace,
   .CodeMirror-line .cm-attribute { 
-    color: var(--syntax-attribute); 
-    background: var(--syntax-attribute-background);
+      color: var(--syntax-attribute); 
+      background: var(--syntax-attribute-background);
   }
-  
-  
-  
+
+
+
+  /* PLUGIN: MARKDOWN TABLE COLORIZE *********************** */
+  .CodeMirror .CodeMirror-line [class*=cm-tabcolor-col] {
+      background: none;
+  }
+
+  /* table vertical bar ------------------------------------ */
+  .CodeMirror .CodeMirror-line .cm-tabcolor-pipe {
+      color: var(--mtc-table-vertical-bar);
+  }
+
+  /* table text -------------------------------------------- */
+  .CodeMirror .CodeMirror-line [class*=cm-tabcolor-col]:not(.cm-tabcolor-pipe) {
+      font-weight: normal;
+      color: var(--mtc-table-text);
+  }
+
+  /* table row separate ------------------------------------ */
+  .cm-tabcolor-firstch::before,
+  .cm-tabcolor-row.cm-tabcolor-firstch::before {
+      display: block;
+      margin: 5px 2px;
+      font-weight: 100;
+      font-size: 9px;
+      color: var(--mtc-table-row-separate-text);
+      background: var(--mtc-table-row-separate-background);
+      box-shadow: 0 0 1px var(--mtc-table-row-separate-shadow);
+  }
+  .cm-tabcolor-firstch::before {
+      content: " H E A D E R > ";
+  }
+  .cm-tabcolor-row.cm-tabcolor-firstch::before {
+      content: " R O W > ";
+  }
+  /* table row separate hover ------------------------------ */
+  .CodeMirror-line:hover .cm-tabcolor-firstch::before {
+      filter: var(--mtc-table-row-separate-hover);
+      transition: filter .3s;
+  }
+
+  /* table column mark ------------------------------------- */
+  [class*=cm-tabcolor-col].cm-tabcolor-pipe::after {
+      content: "";
+      position: initial;
+      display: inline-block;
+      padding: 1px;
+      margin: 0 5px 0 0;
+      font-weight: 100;
+      font-size: 9px;
+      background: var(--mtc-table-column-mark-background);
+      border-radius: 2px;
+  }
+  .CodeMirror-line .cm-tabcolor-pipe:last-child::after {
+      display: none;
+  }
+
+  .CodeMirror-line:hover .cm-tabcolor-pipe::after {
+      filter: var(--mtc-table-column-mark-hover);
+      transition: filter .3s;
+  }
+
+  /* table column mark color ------------------------------- */
+  [class*=cm-tabcolor-col].cm-tabcolor-firstch::after {
+      content: "A:";
+      color: var(--mtc-table-col0-mark);
+  }
+
+  .cm-tabcolor-col1.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "B:";
+      color: var(--mtc-table-col1-mark);
+  }
+
+  .cm-tabcolor-col2.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "C:";
+      color: var(--mtc-table-col2-mark);
+  }
+
+  .cm-tabcolor-col3.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "D:";
+      color: var(--mtc-table-col3-mark);
+  }
+
+  .cm-tabcolor-col4.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "E:";
+      color: var(--mtc-table-col4-mark);
+  }
+
+  .cm-tabcolor-col5.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "F:";
+      color: var(--mtc-table-col5-mark);
+  }
+
+  .cm-tabcolor-col6.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "G:";
+      color: var(--mtc-table-col6-mark);
+  }
+
+  .cm-tabcolor-col7.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "H:";
+      color: var(--mtc-table-col7-mark);
+  }
+
+  .cm-tabcolor-col8.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "I:";
+      color: var(--mtc-table-col8-mark);
+  }
+
+  .cm-tabcolor-col9.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "J:";
+      color: var(--mtc-table-col9-mark);
+  }
+
+  .cm-tabcolor-col10.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+  .cm-tabcolor-col11.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+  .cm-tabcolor-col12.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+  .cm-tabcolor-col13.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+  .cm-tabcolor-col14.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+  .cm-tabcolor-col15.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+  .cm-tabcolor-col16.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+  .cm-tabcolor-col17.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+  .cm-tabcolor-col18.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+  .cm-tabcolor-col19.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      border: 1px solid var(--mtc-table-column-mark-border);
+  }
+
+  .cm-tabcolor-col10.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "K:";
+      color: var(--mtc-table-col10-mark);
+  }
+
+  .cm-tabcolor-col11.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "L:";
+      color: var(--mtc-table-col11-mark);
+  }
+
+  .cm-tabcolor-col12.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "M:";
+      color: var(--mtc-table-col12-mark);
+  }
+
+  .cm-tabcolor-col13.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "N:";
+      color: var(--mtc-table-col13-mark);
+  }
+
+  .cm-tabcolor-col14.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "O:";
+      color: var(--mtc-table-col14-mark);
+  }
+
+  .cm-tabcolor-col15.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "P:";
+      color: var(--mtc-table-col15-mark);
+  }
+
+  .cm-tabcolor-col16.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "Q:";
+      color: var(--mtc-table-col16-mark);
+  }
+
+  .cm-tabcolor-col17.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "R:";
+      color: var(--mtc-table-col17-mark);
+  }
+
+  .cm-tabcolor-col18.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "S:";
+      color: var(--mtc-table-col18-mark);
+  }
+
+  .cm-tabcolor-col19.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+      content: "T:";
+      color: var(--mtc-table-col19-mark);
+  }
+
+
+
   /* LIST ************************************************** */
   .CodeMirror .CodeMirror-line .cm-variable-2,
   .CodeMirror .CodeMirror-line .cm-variable-3,
   .CodeMirror .CodeMirror-line .cm-keyword {
-    color: var(--list-text);
+      color: var(--list-text);
   }
-  
+
   .cm-variable-2.cm-overlay.cm-rm-list-token,
   .cm-variable-3.cm-overlay.cm-rm-list-token,
   .cm-keyword.cm-overlay.cm-rm-list-token {
-    color: var(--list-token);
+      color: var(--list-token);
   }
-  
-  
-  
+
+
+
   /* LINK ************************************************** */
   .CodeMirror .CodeMirror-line .cm-rm-link,
   .CodeMirror .CodeMirror-line .cm-url,
   .CodeMirror .CodeMirror-line .cm-link-text {
-    color: var(--link-text);
+      color: var(--link-text);
   }
-  
-  
-  
+
+
+
   /* BLOCKQUOTE ******************************************** */
   .CodeMirror .CodeMirror-line .cm-quote {
-    color: var(--blockquote-text);
-    opacity: 1;
+      color: var(--blockquote-text);
+      opacity: 1;
   }
-  
-  
-  
+
+
+
   /* CODE BLOCK & INLINE CODE ****************************** */
   .CodeMirror .cm-jn-code-block-background.CodeMirror-linebackground {
-    background: var(--code-block-background);
+      background: var(--code-block-background);
   }
-  
+
   /* code block text --------------------------------------- */
   .CodeMirror-line > span > .cm-comment:not(.cm-jn-inline-code) {
-    color: var(--code-block-text);
+      color: var(--code-block-text);
   }
   .cm-jn-code-block > span  {
-    filter: grayscale(0.1);
+      filter: grayscale(0.1);
   }
-  
+
   /* inline code text -------------------------------------- */
   .CodeMirror-line > span > .cm-comment.cm-jn-inline-code {
-    color: var(--inline-code-text);
-    padding: 0 5px;
-    border-color: var(--inline-code-border) !important;
-    background: none !important;
+      color: var(--inline-code-text);
+      padding: 0 5px;
+      border-color: var(--inline-code-border) !important;
+      background: none !important;
   }
-  
-  
-  
+
+
+
   /* ABSTRACT CONTENT BAR ********************************** */
   .CodeMirror-code > .CodeMirror-line > span[role="presentation"]::after,
   .cm-header::after,
   .cm-quote::after,
   .cm-rm-list-token::after,
-  .CodeMirror-code > .CodeMirror-line > span > .cm-null.cm-jn-monospace::after,
+  .CodeMirror-code > .CodeMirror-line > span > .cm-null.cm-jn-monospace:not(.cm-tabcolor-pipe)::after,
   .cm-overlay.cm-rm-link.cm-rm-image::after,
   .cm-link-text::after,
   .cm-overlay.cm-rm-link::after,
@@ -430,501 +641,495 @@
   .cm-rm-checkbox::after,
   .cm-jn-code-block.CodeMirror-line::after,
   span[cm-text]:only-child::after {
-    content: " ";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    display: var(--abstract-content-bar);
-    width: 2px;
-    height: 100%;
+      content: " ";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      display: var(--abstract-content-bar);
+      width: 2px;
+      height: 100%;
   }
-  
+
   /* plain text -------------------------------------------- */
   .CodeMirror-code > .CodeMirror-line > span[role="presentation"]::after {
-    background: var(--acb-plain-text);
-    z-index: 1;
+      background: var(--acb-plain-text);
+      z-index: 1;
   }
-  
+
   /* headings ---------------------------------------------- */
   .cm-header::after {
-    background: var(--acb-headings);
-    z-index: 2;
+      background: var(--acb-headings);
+      z-index: 2;
   }
-  
+
   /* blockquote -------------------------------------------- */
   .cm-quote::after {
-    background: var(--acb-block-quote);
-    z-index: 3;
+      background: var(--acb-block-quote);
+      z-index: 3;
   }
-  
+
   /* ordered list & unordered list ------------------------- */
   .cm-rm-list-token::after {
-    background: var(--acb-list);
-    z-index: 4;
+      background: var(--acb-list);
+      z-index: 4;
   }
-  
+
   /* table ------------------------------------------------- */
-  .CodeMirror-code > .CodeMirror-line > span > .cm-null.cm-jn-monospace::after {
-    background: var(--acb-table);
-    z-index: 5;
+  .CodeMirror-code > .CodeMirror-line > span > .cm-null.cm-jn-monospace:not(.cm-tabcolor-pipe)::after {
+      background: var(--acb-table);
+      z-index: 5;
   }
-    
+      
   /* attached image ---------------------------------------- */
   .cm-overlay.cm-rm-link.cm-rm-image::after {
-    background: var(--acb-image);
-    z-index: 6;
+      background: var(--acb-image);
+      z-index: 6;
   }
-    
+      
   /* footnote ---------------------------------------------- */
   .cm-link-text::after {
-    background: var(--acb-footnote);
-    z-index: 7;
+      background: var(--acb-footnote);
+      z-index: 7;
   }
-    
+      
   /* simple link & anchor text link & file path link ------- */
   .cm-overlay.cm-rm-link::after {
-    background: var(--acb-links);
-    z-index: 8;
+      background: var(--acb-links);
+      z-index: 8;
   }
-    
+      
   /* abbreviation ------------------------------------------ */
   .cm-em.cm-link-text::after {
-    background: var(--acb-abbreviation);
-    z-index: 9;
+      background: var(--acb-abbreviation);
+      z-index: 9;
   }
-    
+      
   /* html tag ---------------------------------------------- */
   .cm-tag::after {
-    background: var(--acb-html-tags);
-    z-index: 10;
+      background: var(--acb-html-tags);
+      z-index: 10;
   }
-    
+      
   /* math notation ----------------------------------------- */
   .cm-katex-marker-open::after,
   .cm-katex-marker-close::after,
   .cm-rm-sup::after,
   .cm-number::after {
-    background: var(--acb-math-notation);
-    z-index: 11;
+      background: var(--acb-math-notation);
+      z-index: 11;
   }
-    
+      
   /* checklist --------------------------------------------- */
   .cm-rm-checkbox::after {
-    background: var(--acb-checklist);
-    z-index: 12;
+      background: var(--acb-checklist);
+      z-index: 12;
   }
-    
+      
   /* code block -------------------------------------------- */
   .cm-jn-code-block.CodeMirror-line::after {
-    background: var(--acb-code-block);
-    z-index: 13;
+      background: var(--acb-code-block);
+      z-index: 13;
   }
-    
+      
   /* blank line -------------------------------------------- */
   span[cm-text]:only-child::after {
-    display: var(--abstract-content-bar-blank-line);
-    background: var(--acb-blank-line);
-    z-index: 14;
+      display: var(--abstract-content-bar-blank-line);
+      background: var(--acb-blank-line);
+      z-index: 14;
   }
-  
-  
-  
+
+
+
   /* ******************************************************* */
   /*                    STYLING: JOPLIN UI                   */
   /* ******************************************************* */
-    
-  
-  
+      
+
+
   /* STYLING: NOTEBOOKS PANEL ****************************** */
   .sidebar {
-    background-color: var(--np-background) !important;
-    border-radius: 0 0 7px 7px;
-    box-shadow: 0 0 2px var(--np-box-shadow);
+      background-color: var(--np-background) !important;
+      border-radius: 0 0 7px 7px;
+      box-shadow: 0 0 2px var(--np-box-shadow);
   }
-  
+
   /* notebooks panel header -------------------------------- */
   /* group:  notebook icon | text | plus icon */
   .sidebar > div:first-child > div:first-child > div > .icon-notebooks,
   .sidebar > div:first-child > div:first-child > div > .icon-notebooks ~ span,
   .sidebar > div:first-child > div:first-child > button > span {
-    color: var(--np-header) !important;
+      color: var(--np-header) !important;
   }
-  
+
   /* hiding the "All Notes" link --------------------------- */
   .all-notes {
-    display: var(--all-note-button) !important;
+      display: var(--all-note-button) !important;
   }
-  
+
   /* directory icon ---------------------------------------- */
   i.fas.fa-caret-down,
   i.fas.fa-caret-right {
-    text-shadow: 0 0 5px var(--np-directory-icon-shadow);
-    opacity: 1 !important;
+      text-shadow: 0 0 5px var(--np-directory-icon-shadow);
+      opacity: 1 !important;
   }
   i.fas.fa-caret-right {
-    color: var(--np-directory-icon-close);
+      color: var(--np-directory-icon-close);
   }
   i.fas.fa-caret-down {
-    color: var(--np-directory-icon-open);
+      color: var(--np-directory-icon-open);
   }
-  
+
   /* notebooks --------------------------------------------- */
   .rli-sideBar .tags .list-item-container,
   .rli-sideBar [class*="list-item-depth"] {
-    margin: 0 3px;
+      margin: 0 3px;
   }
-  
+
   /* notebooks hover state --------------------------------- */
   .rli-sideBar .tags .list-item-container,
   .rli-sideBar [class*="list-item-depth"],
   .rli-sideBar [class*="list-item-depth"]:hover {
-    height: fit-content;
-    border-radius: 5px 10px !important;
+      height: fit-content;
+      border-radius: 5px 10px !important;
   }
   .rli-sideBar .tags .list-item-container:hover,
   .rli-sideBar [class*="list-item-depth"]:hover {
-    filter: var(--np-notebook-hover);
+      filter: var(--np-notebook-hover);
   }
-  
+
   /* notebooks selected state------------------------------- */
   .rli-sideBar .tags .list-item-container.selected,
   .rli-sideBar [class*="list-item-depth"].selected {
-    background: var(--np-notebook-selected);
-    box-shadow: 0 0 3px var(--np-notebook-selected-box-shadow);
+      background: var(--np-notebook-selected);
+      box-shadow: 0 0 3px var(--np-notebook-selected-box-shadow);
   }
-  
+
   /* notebook title indentation ---------------------------- */
   .rli-sideBar .list-item-depth-0 {
-    padding-left: 11px;
+      padding-left: 11px;
   }
   .rli-sideBar .list-item-depth-1 {
-    padding-left: 22px;
+      padding-left: 22px;
   }
   .rli-sideBar .list-item-depth-2 {
-    padding-left: 33px;
+      padding-left: 33px;
   }
   .rli-sideBar .list-item-depth-3 {
-    padding-left: 44px;
+      padding-left: 44px;
   }
   .rli-sideBar .list-item-depth-4 {
-    padding-left: 55px;
+      padding-left: 55px;
   }
   .rli-sideBar .list-item-depth-5 {
-    padding-left: 66px;
+      padding-left: 66px;
   }
   .rli-sideBar .list-item-depth-6 {
-    padding-left: 77px;
+      padding-left: 77px;
   }
   .rli-sideBar .list-item-depth-7 {
-    padding-left: 88px;
+      padding-left: 88px;
   }
   .rli-sideBar .list-item-depth-8 {
-    padding-left: 99px;
+      padding-left: 99px;
   }
   .rli-sideBar .list-item-depth-9 {
-    padding-left: 110px;
+      padding-left: 110px;
   }
   .rli-sideBar .list-item-depth-10 {
-    padding-left: 121px;
+      padding-left: 121px;
   }
-  
+
   /* notebook title ---------------------------------------- */
   div.list-item-container a.list-item {
-    display: flex;
-    flex-direction: row;
-    padding: 4px 0;
-    margin: 1px auto;
-    max-width: 90%;
-    border-bottom: 2px dotted var(--np-notebook-title-border);
+      display: flex;
+      flex-direction: row;
+      padding: 4px 0;
+      margin: 1px auto;
+      max-width: 90%;
+      border-bottom: 2px dotted var(--np-notebook-title-border);
   }
-  
+
   /* notebook title text ----------------------------------- */
   .rli-sideBar [class*="list-item-depth"] span.title {
-    color: var(--np-notebook-title-text);
-    max-width: 80%;
-    white-space: normal;
-    overflow-wrap: break-word;
+      color: var(--np-notebook-title-text);
+      max-width: 80%;
+      white-space: normal;
+      overflow-wrap: break-word;
   }
-  
+
   /* note count label -------------------------------------- */
   .note-count-label.ihcmBd {
-    padding-left: 0;
+      padding-left: 0;
   }
   .ihcmBd.note-count-label {
-    display: flex;
-    font-size: 10px;
-    margin: 0 0 0 auto;
-    padding: 0 5px;
-    background: var(--np-note-count-label-background);
-    border: 1px solid var(--np-note-count-label-border);
-    border-radius: 8px;
-    opacity: 0.8 !important;
+      display: flex;
+      font-size: 10px;
+      margin: 0 0 0 auto;
+      padding: 0 5px;
+      background: var(--np-note-count-label-background);
+      border: 1px solid var(--np-note-count-label-border);
+      border-radius: 8px;
+      opacity: 0.8 !important;
   }
-  
+
   /* synchronize information ------------------------------- */
   .sc-fzoxKX {
-    color: var(--np-sync-info-text) !important;
+      color: var(--np-sync-info-text) !important;
   }
-  
+
   /* synchronize btn --------------------------------------- */
-  .hEuwIc,
-  .hEuwIc:hover {
-    background-color: var(--np-sync-button) !important;
-    border: none !important;
-    border-radius: 1em !important;
+  .sidebar > div > button,
+  .sidebar > div > button:hover {
+      height: 25px;
+      min-height: 25px;
+      max-height: 30px;
+      background-color: var(--np-sync-button) !important;
+      border: none !important;
+      border-radius: 1em !important;
   }
-  .hEuwIc:hover {
-    filter: var(--np-sync-btn-hover);
+  .sidebar > div > button:hover {
+      filter: var(--np-sync-btn-hover);
   }
-  
+
   /* turbo sync (for fun) ---------------------------------- */
   .icon-sync {
-    font-size: 18px;
-    text-shadow: none;
-    -webkit-transition: transform .8s, font-size .8s, text-shadow .8s;
-    transition: transform .8s, font-size .8s, text-shadow .8s;
+      font-size: 18px;
+      text-shadow: none;
+      -webkit-transition: transform .8s, font-size .8s, text-shadow .8s;
+      transition: transform .8s, font-size .8s, text-shadow .8s;
   }
-  .icon-sync:hover {
-    font-size: 25px;
-    text-shadow: 0 0 5px var(--np-turbo-sync-icon-lightspeed-hover) !important;
-    transform: rotateZ(11000deg);
-    -webkit-transition: transform 10s, font-size 1s, text-shadow 3s;
-    transition: transform 10s, font-size 1s, text-shadow 3s;
+  .sidebar > div > button:hover .icon-sync {
+      font-size: 21px;
+      text-shadow: 0 0 5px var(--np-turbo-sync-icon-lightspeed-hover) !important;
+      transform: rotateZ(11000deg);
+      -webkit-transition: transform 10s, font-size 1s, text-shadow 3s;
+      transition: transform 10s, font-size 1s, text-shadow 3s;
   }
-  
-  
-  
+
+
+
   /* STYLING: NOTE LIST PANEL ****************************** */
-  
+
   /* note list panel container ----------------------------- */
   .rli-noteList > div {
-    box-shadow: 0 0 2px var(--nlp-box-shadow);
-    border-radius: 7px;
+      box-shadow: 0 0 2px var(--nlp-box-shadow);
+      border-radius: 7px;
   }
-  
+
   /* note list panel header -------------------------------- */
   .rli-noteList > div > div > div {
-    background-color: var(--nlp-header) !important;
+      background-color: var(--nlp-header) !important;
   }
-  
+
   /* icon group:  search | cancel | new todo | new note ---- */
   .fa-check-square:before,
   .icon-note:before,
   .search-bar > div > button > span {
-    color: var(--nlp-btn-icons);
+      color: var(--nlp-btn-icons);
   }
   .search-bar > div > button > span:not(.icon-search) {
-    transform: rotateZ(0deg);
-    font-size: 1.3em;
-    -webkit-transition: transform 0.5s, font-size 0.5s;
-    transition: transform 0.5s, font-size 0.5s;
+      transform: rotateZ(0deg);
+      font-size: 1.3em;
+      -webkit-transition: transform 0.5s, font-size 0.5s;
+      transition: transform 0.5s, font-size 0.5s;
   }
   .search-bar > div > button > span:not(.icon-search):hover {
-    transform: rotateZ(360deg);
-    font-size: 1.6em;
-    -webkit-transition: transform 0.2s, font-size 0.2s;
-    transition: transform 0.2s, font-size 0.2s;
+      transform: rotateZ(360deg);
+      font-size: 1.6em;
+      -webkit-transition: transform 0.2s, font-size 0.2s;
+      transition: transform 0.2s, font-size 0.2s;
   }
-  
+
   /* button group:  new todo | new note -------------------- */
   button[title="New to-do"],
   button[title="New note"],
   button[title="New to-do"]:hover,
   button[title="New note"]:hover {
-    background: var(--nlp-btns);
-    border-radius: 5px 10px;
+      background: var(--nlp-btns);
+      border-radius: 5px 10px;
   }
   button[title="New to-do"]:hover,
   button[title="New note"]:hover {
-    filter: var(--nlp-btns-hover);
+      filter: var(--nlp-btns-hover);
   }
-    
+      
   /* note list panel body ---------------------------------- */
   .rli-noteList > div > div > div,
   .note-list {
-    background: var(--nlp-body) !important;
-    border: none !important;
-    border-radius: 0 0 7px 7px !important;
+      background: var(--nlp-body) !important;
+      border: none !important;
+      border-radius: 0 0 7px 7px !important;
   }
   .note-list-item {
-    width: auto;
-    height: 32px;
-    margin: 2px 5px;
+      width: auto;
+      height: 32px;
+      margin: 2px 5px;
   }
-  
+
   /* note list selected state ------------------------------ */
   .selected.note-list-item {
-    width: auto;
-    height: 31px;
-    margin: 2px 5px;
-    background: var(--nlp-note-selected);
-    border-radius: 5px 10px;
-    box-shadow: 0 0 3px var(--nlp-note-selected-box-shadow);
+      width: auto;
+      height: 31px;
+      margin: 2px 5px;
+      background: var(--nlp-note-selected);
+      border-radius: 5px 10px;
+      box-shadow: 0 0 3px var(--nlp-note-selected-box-shadow);
   }
-  
+
   /* note list hover state --------------------------------- */
   .note-list-item:hover {
-    width: auto;
-    margin: 2px 5px;
-    border-radius: 5px 10px;
-    filter: var(--nlp-note-hover);
+      width: auto;
+      margin: 2px 5px;
+      border-radius: 5px 10px;
+      filter: var(--nlp-note-hover);
   }
   .note-list-item:not(.selected):hover {
-    width: auto;
-    margin: 2px 5px;
-    background: var(--nlp-note-hover2);
+      width: auto;
+      margin: 2px 5px;
+      background: var(--nlp-note-hover2);
   }
-  
-  
-  
+
+
+
   /* STYLING: EDITOR HEADER ******************************** */
-  
+
   /* editor header ----------------------------------------- */
   .rli-editor > div > div > div > div:first-child {
-    background: var(--eh-background);
+      background: var(--eh-background);
   }
   /* note title input bar ---------------------------------- */
   .rli-editor input.title-input {
-    padding: 0 0 0 2px !important;
-    background: var(--eh-note-title-input-bar) !important;
+      padding: 0 0 0 2px !important;
+      background: var(--eh-note-title-input-bar) !important;
   }
   /* time label -------------------------------------------- */
   span.updated-time-label {
-    padding-right: 20px;
+      padding-right: 20px;
   }
   /* header toolbar ---------------------------------------- */
   .updated-time-label ~ .editor-toolbar {
-    background: var(--eh-right-side-toolbar) !important;
-    box-shadow: none;
+      background: var(--eh-right-side-toolbar) !important;
+      box-shadow: none;
   }
-  
+
   /* notebook navigation button ----------------------------- */
-  @keyframes pulse {
-    from {transform: scale3d(1, 1, 1);}
-    10% {transform: scale3d(1.12, 1.12, 1.12);}
-    20% {transform: scale3d(1.02, 1.02, 1.02);}
-    30% {transform: scale3d(1.12, 1.12, 1.12);}
-    to {transform: scale3d(1, 1, 1);}
-  }
-  
   .rli-editor > div > div > div > div > button {
-    background: var(--eh-notebook-navigation-button) !important;
-    border-radius: 5px 10px !important;
-    animation: pulse .8s forwards 2;
+      background: var(--eh-notebook-navigation-button) !important;
+      border-radius: 5px 10px !important;
   }
   .rli-editor > div > div > div > div > button:hover {
-    filter: var(--eh-notebook-navigation-button-hover);
+      filter: var(--eh-notebook-navigation-button-hover);
   }
   .icon-notebooks,
   .icon-notebooks ~ span {
-    color: var(--eh-notebook-icon) !important;
+      color: var(--eh-notebook-icon) !important;
   }
-  
-  
-  
+
+
+
   /* STYLING: MAIN TOOLBAR ********************************** */
-  
+
   /* main toolbar ------------------------------------------- */
   .editor-toolbar {
-    margin: 0 0 0 -12px;
-    background: var(--tt-editor-toolbar) !important;
-    border-radius: 1em;
-    box-shadow: 0 0 2px var(--tt-editor-toolbar-box-shadow);
+      margin: 0 0 0 -12px;
+      background: var(--tt-editor-toolbar) !important;
+      border-radius: 1em;
+      box-shadow: 0 0 2px var(--tt-editor-toolbar-box-shadow);
   }
-  
+
   /* editor rich text editor witch button ------------------- */
   div.editor-toolbar div button {
-       display: var(--rich-text-editor-switch-btn) !important;
+          display: var(--rich-text-editor-switch-btn) !important;
   }
-  
+
   /* rich text editor main toolbar -------------------------- */
   div.joplin-tinymce > div:nth-child(1) {
-    width: 90px !important;
-    margin-top: 1px;
-    margin-left: -11px;
-    background: var(--tt-rich-text-editor-toolbar-background) !important;
-    border-radius: 1em 0 0 1em !important;
-    box-shadow: 0 0 2px var(--tt-rich-text-editor-toolbar-box-shadow);
+      width: 90px !important;
+      margin-top: 1px;
+      margin-left: -11px;
+      background: var(--tt-rich-text-editor-toolbar-background) !important;
+      border-radius: 1em 0 0 1em !important;
+      box-shadow: 0 0 2px var(--tt-rich-text-editor-toolbar-box-shadow);
   }
   div.joplin-tinymce > div:nth-child(2) {
-    margin-top: 1px;
-    background: var(--tt-rich-text-editor-toolbar-background) !important;
-    border-radius: 0 1em 1em 0 !important;
-    box-shadow: 0 0 2px var(--tt-rich-text-editor-toolbar-box-shadow);
+      margin-top: 1px;
+      background: var(--tt-rich-text-editor-toolbar-background) !important;
+      border-radius: 0 1em 1em 0 !important;
+      box-shadow: 0 0 2px var(--tt-rich-text-editor-toolbar-box-shadow);
   }
-  
+
   .tox .tox-toolbar__group,
   .tox.tox-tinymce .tox-toolbar__primary,
   .tox.tox-tinymce .tox-toolbar__overflow {
-    background-color: var(--tt-rich-text-editor-toolbar-background) !important;
+      background-color: var(--tt-rich-text-editor-toolbar-background) !important;
   }
-  
+
   .tox:not(.tox-tinymce-inline) .tox-editor-header {
-    margin-top: 1px;
-    box-shadow: 0 0 2px var(--tt-rich-text-editor-toolbar-box-shadow) !important;
+      margin-top: 1px;
+      box-shadow: 0 0 2px var(--tt-rich-text-editor-toolbar-box-shadow) !important;
   }
-  
-  
-  
+
+
+
   /* STYLING: BOTTOM TAG BAR ******************************* */
   .tag-bar {
-    margin-left: -4px;
-    background: var(--btb-background);
-    border-radius: 1em;
-    box-shadow: 0 0 2px var(--btb-box-shadow);
-    z-index: 1;
+      margin-left: -4px;
+      background: var(--btb-background);
+      border-radius: 1em;
+      box-shadow: 0 0 2px var(--btb-box-shadow);
+      z-index: 1;
   }
-  
+
   /* tags -------------------------------------------------- */
   div.tag-bar div.tag-list > span {
-    text-shadow: 0 0 2px var(--btb-tags-text-shadow);
-    background: var(--btb-tags) !important;
-    border: 1px solid var(--btb-tags-border);
-    font-size: 12px !important;
-    -webkit-transition: font-size .1s;
-    transition: font-size .1s;
+      text-shadow: 0 0 2px var(--btb-tags-text-shadow);
+      background: var(--btb-tags) !important;
+      border: 1px solid var(--btb-tags-border);
+      font-size: 12px !important;
+      -webkit-transition: font-size .1s;
+      transition: font-size .1s;
   }
   div.tag-bar div.tag-list > span:hover {
-    font-size: 16px !important;
-    -webkit-transition: font-size .1s;
-    transition: font-size .1s;
+      font-size: 16px !important;
+      -webkit-transition: font-size .1s;
+      transition: font-size .1s;
   }
-  
-  
-  
+
+
+
   /* STYLING: TAG MANAGER MODAL DIALOG ********************* */
   .modal-dialog,
   .modal-dialog button {
-    border-radius: 0.5em 1em;
+      border-radius: 0.5em 1em;
   }
-  
+
   /* tag selector bar -------------------------------------- */
   .css-16hp18y-control,
   .tag-selector > div > div > div > div {
-    border-radius: 1em;
+      border-radius: 1em;
   }
-  
-  
-  
+
+
+
   /* STYLING: OPTIONS PAGE ********************************* */
-  
+
   /* dropdown list & input bar ----------------------------- */
   select, input {
-    color: var(--op-dropdown-list-and-input-text) !important;
-    border-radius: 0.8em !important;
+      color: var(--op-dropdown-list-and-input-text) !important;
+      border-radius: 0.8em !important;
   }
-  
+
   /* plugin card ------------------------------------------- */
   #react-root .sc-fzocqA .sc-fzoPby,
   #react-root .sc-fzppip .sc-fzoPby {
-    border-radius: 0.8em 1.5em;
+      border-radius: 0.8em 1.5em;
   }
   #react-root .sc-fzoPby button {
-    border-radius: 0.5em 1em;
+      border-radius: 0.5em 1em;
   }
-  
+
   /* button group:  back | ok | apply | -------------------- */
   #react-root > div > div > div > div.sc-fzoCCn > button,
   #react-root > div > div > div > div.sc-fzoCCn > div > button  {
-    border-radius: 0.5em 1em;
+      border-radius: 0.5em 1em;
   }
