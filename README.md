@@ -11,29 +11,14 @@ Ohmine Dark Theme is a Joplin CSS theme that aims to provide a better Work-On-Sc
 
 ## Latest Released
 
-v2.1.18 (11-NOV-2021 tested on Joplin v2.5.12)
+OhmineDT-v2.2.5 updates (19-NOV-2021 tested on Joplin v2.5.12)
 
-- New: add styling for spoiler plugin - use [spoiler](#spoiler) like a pro!
-- New: add styling for [custom title block in spoiler](#custom-title-block-custom-element) - for advanced information
-- New: add styling for horizontal line in spoiler
-- New: add styling for [list in spoiler](#unordered-list--ordered-list) - matching the spoiler
-- New: add styling for [span in spoiler](#span) - to define a heading which is not showing in the outline plugin
-- New: add styling for [span in spoiler list](#span)
-- New: add hover effect on the [inline spoiler](#spoiler) - make it a bit fun before you uncover an inline spoiler
-- New: add Eye-protector effect on Mermaid charts - avoid bright light background
-- New: add page break location before all headings when printing - to avoid the heading and content divide into different pages
-- New: add all new CSS styling variables to the `root:` section of `userstyle.css`
-- New: add toggle editor button switcher to `userchrome.css`
-- New: add variable `ctb-title-size` to the `root:` section of `userstyle.css`
-- Fix: Mermaid chart content is hard to read due to the background color
-- Fix: Abstract Content Bar appears in the wrong place in code block
-- Fix: Abstract Content Bar - list and plain text are accidentally appeared in the code block
-- Fix: abbreviation text wrong size in Markdown Editor
-- Fix: html syntax string value color wrong
-- Change: color adjustments
-- Change: rename CSS variable - to keep all the keywords are at the end of variable names, such as `text`, `size`, `background` etc. (e.g. `--span-text-in-list` > `--span-in-list-text`)
-
-[OhmineDT v2.1.18 Printing Sample PDF](https://drive.google.com/file/d/1xSRkQxBqpMQzz7jU_BLgVmCCb1UgvCoT/view?usp=sharing)
+- New: add styling for [Markdown Table Colorize](#markdown-table-colorize) plugin - to create the best markdown table experience!
+- New: add new CSS variables to the `root:` section of both `userchrome.css`
+- Fix: table text color is unclear when using the Markdown Table Colorize plughin
+- Fix: sync button style missing
+- Change: remove notebook navigation button animation
+- Change: mouse hover sync button to trigger animation
 
 <!-- ================================================================================================================================================= Not a Joplin user yet? -->
 
@@ -80,7 +65,9 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 	- [Span](#span)
 		- [How to use](#how-to-use-5)
 	- [Eye-Protector](#eye-protector)
+- PLUGIN STYLES
 	- [Spoiler](#spoiler)
+	- [Markdown Table Colorize](#markdown-table-colorize)
 - MORE SCREENSHOTS
 	- [Notebook Panel](#notebook-panel)
 	- [Text Style](#text-style)
@@ -100,7 +87,7 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 - FAQ
 	- [How to install this theme?](#how-to-install-this-theme)
 	- [How to delete this theme?](#how-to-delete-this-theme)
-	- [How to customize this theme?(Coming Soon...)](#how-to-customize-this-theme)
+<!-- 	- [How to customize this theme?(Coming Soon...)](#how-to-customize-this-theme) -->
 	- [How to install Joplin plugins?](#how-to-install-joplin-plugins)
 	- [How to contribute?](#how-to-contribute)
 		- [Give me a user feedback](#give-me-a-user-feedback)
@@ -454,11 +441,12 @@ Mouse hover on them to check out the original color, it will be getting bright s
 
 [:arrow_up:Back](#table-of-contents)
 
+<!-- ========================================================================================================================================================== PLUGIN STYLES -->
 <!-- ================================================================================================================================================================ Spoiler -->
 
 ## Spoiler
 
-OhmineDT has been styling for the Spoiler plugin, please make sure you are already installed Spoiler plugin to get it work.
+OhmineDT has been styling for the Spoiler plugin, please make sure you are already installed this plugin to get it work.
 
 This is a closed spoiler block:
 
@@ -474,6 +462,51 @@ In addition, I've created 4 more custom styles that you can use within the Spoil
 2. Span in Spoiler List - more details in [Span](#span)
 3. List in Spoiler - more details in [List](#unordered-list--ordered-list)
 4. Custom Title Block in Spoiler - more details in [Custom Title Block](#custom-title-block-custom-element)
+
+[:arrow_up:Back](#table-of-contents)
+
+<!-- ================================================================================================================================================ Markdown Table Colorize -->
+
+## Markdown Table Colorize
+
+OhmineDT has been styling for the Markdown Table Colorize plugin, please make sure you are already installed this plugin to get it work.
+
+Markdown table syntax sometimes can be very messey when too much information within the table. Thanks to the Markdown Table Colorize plugin, I can now create a better style for the markdown table!
+
+After you installed the Markdown Table Colorize plugin, you will see the appearence of markdown table syntax is look like below: 
+
+![markdown_table_colorize_smaple](https://user-images.githubusercontent.com/86870826/142474807-57d5fede-86e3-478c-bb35-7ce990ab15ce.png)
+
+- Separating the independent section for table row
+- Use colored letters as a column mark
+- Support up to 20 columns table
+
+**Use Tips:**
+I would like to share you the steps of how I create a markdown table. And this steps is perfect for using with this plugin style.
+
+First to create the table structure:
+
+```
+||||||
+||||||
+||||||
+```
+
+Then, add format in it:
+
+```
+||||||
+|-|-|-|-|-|
+||||||
+```
+
+Last, add content in it:
+
+```
+|TH|TH|TH|TH|TH|
+|-|-|-|-|-|
+|TD|TD|TD|TD|TD|
+```
 
 [:arrow_up:Back](#table-of-contents)
 
