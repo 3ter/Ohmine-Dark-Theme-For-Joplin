@@ -14,7 +14,7 @@ Ohmine Dark Theme is a Joplin CSS theme that aims to provide a better Work-On-Sc
 OhmineDT-v2.2.5 updates (19-NOV-2021 tested on Joplin v2.5.12)
 
 - New: add styling for [Markdown Table Colorize](#markdown-table-colorize) plugin - to create the best markdown table experience!
-- New: add new CSS variables to the `root:` section of both `userchrome.css`
+- New: add new CSS variables to the `root:` section of `userchrome.css`
 - Fix: table text color is unclear when using the Markdown Table Colorize plugin
 - Fix: sync button style missing
 - Change: remove notebook navigation button animation
