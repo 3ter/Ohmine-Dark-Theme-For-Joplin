@@ -477,7 +477,7 @@ After you installed the Markdown Table Colorize plugin, you will see the appeare
 
 ![markdown_table_colorize_smaple](https://user-images.githubusercontent.com/86870826/142474807-57d5fede-86e3-478c-bb35-7ce990ab15ce.png)
 
-- Separating the independent section for table row
+- Separating table rows to independent sections
 - Use colored letters as a column mark
 - Support up to 20 columns table
 
