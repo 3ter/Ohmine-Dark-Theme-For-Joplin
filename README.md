@@ -87,7 +87,6 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 - FAQ
 	- [How to install this theme?](#how-to-install-this-theme)
 	- [How to delete this theme?](#how-to-delete-this-theme)
-<!-- 	- [How to customize this theme?(Coming Soon...)](#how-to-customize-this-theme) -->
 	- [How to install Joplin plugins?](#how-to-install-joplin-plugins)
 	- [How to contribute?](#how-to-contribute)
 		- [Give me a user feedback](#give-me-a-user-feedback)
