@@ -391,6 +391,7 @@ If you are using span in the spoiler block to create a heading:
 - Please always start an open tag in a new line.
 
 **Sample Code:**
+
 ```
 - If you want to separate a content to describe the list item
 <span>you should use a span tag like this</span>
@@ -471,9 +472,9 @@ In addition, I've created 4 more custom styles that you can use within the Spoil
 
 OhmineDT has been styling for the Markdown Table Colorize plugin, please make sure you are already installed this plugin to get it work.
 
-Markdown table syntax sometimes can be very messey when too much information within the table. Thanks to the Markdown Table Colorize plugin, I can now create a better style for the markdown table!
+Markdown table syntax sometimes can be very messey when too much information within the table. Thanks to the Markdown Table Colorize plugin, I can create a better style for the markdown table now!
 
-After you installed the Markdown Table Colorize plugin, you will see the appearence of markdown table syntax is look like below: 
+After installed the Markdown Table Colorize plugin, you will see the markdown table syntax is look like below:
 
 ![markdown_table_colorize_smaple](https://user-images.githubusercontent.com/86870826/142474807-57d5fede-86e3-478c-bb35-7ce990ab15ce.png)
 
@@ -482,6 +483,7 @@ After you installed the Markdown Table Colorize plugin, you will see the appeare
 - Support up to 20 columns table
 
 **Use Tips:**
+
 I would like to share you the steps of how I create a markdown table. And this steps is perfect for using with this plugin style.
 
 First to create the table structure:
