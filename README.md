@@ -18,7 +18,7 @@ OhmineDT-v2.2.5 updates (19-NOV-2021 tested on Joplin v2.5.12)
 - Fix: table text color is unclear when using the Markdown Table Colorize plugin
 - Fix: sync button style missing
 - Change: remove notebook navigation button animation
-- Change: mouse hover sync button to trigger animation
+- Change: mouse hover sync button to trigger the animation
 
 <!-- ================================================================================================================================================= Not a Joplin user yet? -->
 
@@ -80,7 +80,7 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 	- [Markdown TOC](#markdown-toc)
 - MORE INFORMATION
 	- [Requirements of Ohmine Dark Theme](#requirements-of-ohmine-dark-theme)
-	- [Must Knows About Custom Element](#must-knows-about-custom-element)
+	- [Must Know About Custom Element](#must-know-about-custom-element)
 	- [About Printing](#about-printing)
 	- [Recommended plugins](#recommended-plugins)
 		- [Quick HTML tags (most recommended to use with this theme)](#quick-html-tags-most-recommended-to-use-with-this-theme)
@@ -104,7 +104,7 @@ The design inspiration comes from the below Japanese Sake Ohmine-3-Grain:
 
 
 
-This is a gift from my friend and I was tasting it when I making this theme. I pretty much love the whole design series of Ohmine-3-Grain and this is originally designed by *Stockholm Design Lab*.
+This is a gift from my friend and I was tasting it when I made this theme. I pretty much love the whole design series of Ohmine-3-Grain and this is originally designed by *Stockholm Design Lab*.
 
 <img width="520" alt="ohmine-3-grain-reference_800" src="https://user-images.githubusercontent.com/86870826/134672093-8a9a0405-d9a1-4c7c-9d90-0ac4002c9545.png">
 
@@ -120,7 +120,7 @@ If you are interested to know more about the Ohmine-3-Grain design you may like 
 
 ## Markdown Editor
 
-Markdown Editor is the place where your eyes will always keep focus for a long time when you are writing your Markdown notes. It's means the Markdown Editor is always the key point to protect your eyes.
+Markdown Editor is the place where your eyes will always keep focus for a long time when you are writing your Markdown notes. It means the Markdown Editor is always the key point to protect your eyes.
 
 - Have you ever felt distressed because you still want to write notes when you have blurred vision?
 - Have you ever felt that visual messy because of using Markdown Syntax to create complex notes?
@@ -128,7 +128,7 @@ Markdown Editor is the place where your eyes will always keep focus for a long t
 
 Ohmine Dark Theme is completely designed to solve these problems. 
 
-The key adjustments for the Markdown Editor as below:
+The key adjustments for the Markdown Editor are as below:
 
 - Reduce the color contrast between the main content and the background
 - Darken and reduce fonts for non-essential content
@@ -145,9 +145,9 @@ I'm choosing this background color based on the needs and not based on my person
 
 ## Render Viewer
 
-Render Viewer is the place that you often want to quickly find out the correct information. It' means the Render Viewer need a great content separating structure to let you identify the key information easily.
+Render Viewer is the place where you often want to quickly find out the correct information. It' means the Render Viewer needs a great content separating structure to let you identify the key information easily.
 
-The key adjustments for the Render Viewer as below:
+The key adjustments for the Render Viewer are as below:
 
 - Use soft colors to differentiate content
 - Well-structural heading style
@@ -171,28 +171,28 @@ Ohmine dark theme is using the below font family for both Markdown Editor and Re
 - Arial (Joplin default)
 - Sans-Serif (Joplin default)
 
-Montserrat is the most important part in this theme, I recommended you use it on this theme. I've tested over 40 fonts with sizes from 12 to 15px and Montserrat is the ultimate champion. It providing the best reading experience with 14px.
+Montserrat is the most important part of this theme, I recommended you use it on this theme. I've tested over 40 fonts with sizes from 12 to 15px and Montserrat is the ultimate champion. It provides the best reading experience with 14px.
 
 Montseratt sample:
 
 ![montserrat_font_sample_abg](https://user-images.githubusercontent.com/86870826/134675707-a3c36272-7219-4fba-9079-f4aa65c20d48.png)
 
-Then, the monospace font is using on all Markdown Syntax, such as a Markdown table, Markdown link etc. You'll also see it in the code block and inline code.
+Then, the monospace font is used on all Markdown Syntax, such as a Markdown table, Markdown link, etc. You'll also see it in the code block and inline code.
 
-Let's take a look at the monospace font family:
+Let's take a look at the monospace font-family:
 
 - Cascadia Mono Light
   ([download it for free](https://github.com/microsoft/cascadia-code/releases))
 - Monospace (Joplin default)
 - Microsoft JHengHei Light (for Traditional Chinese comments 繁體中文註釋)
 
-Cascadia Mono Light is one of the best monospace font. It would be a good choice if you don't need the ligature, and it provides clear symbol characters and works great at the 12px font size.
+Cascadia Mono Light is one of the best monospace fonts. It would be a good choice if you don't need the ligature, and it provides clear symbol characters and works great at the 12px font size.
 
 Cascadia Mono Light sample:
 
 ![cascadia_mono_light_font_sample_abg](https://user-images.githubusercontent.com/86870826/134675876-8e6a1593-fbb9-4117-8c91-141a45e1d5dc.png)
 
-If you didn't install the above recommend fonts on your computer, Joplin will pick the default fonts for you.
+If you didn't install the above recommended fonts on your computer, Joplin will pick the default fonts for you.
 
 The settings in `Tools`> `Options`> `Appearance` will no longer work once you installed this theme. You should always edit all the font-related settings through the CSS files. 
 (P.S.  `Tools` > `Options` > ` Appearance` > `Editor maximum width` is excepted)
@@ -204,7 +204,7 @@ The settings in `Tools`> `Options`> `Appearance` will no longer work once you in
 
 ## Sticky Notes (custom element)
 
-Ohmine Dark Theme has 7 custom elements for creating the Sticky Notes: `note` , `tip` , `question` , `explain` , `warning` , `keyword` , `important`. They can help you to building the structure of article and only for personal reference. Normally, you would be removing them from the content once you are complete your article. 
+Ohmine Dark Theme has 7 custom elements for creating the Sticky Notes: `note` , `tip` , `question` , `explain` , `warning` , `keyword` , `important`. They can help you to build the structure of the article and only for personal reference. Normally, you would be removing them from the content once you are complete your article. 
 
 Let’s see what are the Sticky Notes for:
 
@@ -237,7 +237,7 @@ Let’s see what are the Sticky Notes for:
 <!-- ==================================================================================================================================== Custom Title Block (custom element) -->
 
 ## Custom Title Block (custom element)
-Custom Title Block is a public information for readers, it would be suitable for supplementing information which you think is important to readers. 
+Custom Title Block is a piece of public information for readers, it would be suitable for supplementing information that you think is important to readers. 
 
 Let's see what it looks like:
 
@@ -280,7 +280,7 @@ It's looks different in the spoiler block!
 
 ## Art Gallery (custom element)
 
-This art gallery providing 5 custom elements for you:
+This art gallery provides 5 custom elements for you:
 
 | Custom Elements | Columns Limit |       Gallery Size       | Scrolling Trigger (split layout) |
 |:---------------:|:-------------:|:------------------------:|:--------------------------------:|
@@ -290,7 +290,7 @@ This art gallery providing 5 custom elements for you:
 |       ag5       |       5       | W:100% * H:60vh + Scroll |         20 images above          |
 |       ag6       |       6       | W:100% * H:60vh + Scroll |         30 images above          |
 
-(The data is based on the default margin value of editor in split layout.)
+(The data is based on the default margin value of the editor in split layout.)
 
 Below is the sample of the art gallery(ag6) with 48 images: 
 
@@ -302,7 +302,7 @@ Below is the sample of the art gallery(ag6) with 48 images:
 
 1. The custom element name `ag` stands for *Art Gallery*.
 2. The art gallery tag must use *right behind the plain text* .
-3. Do not including any blank line within this part of codes, *blank line will break the format* .
+3. Do not include any blank line within this part of codes, *blank line will break the format* .
 
 **Code Sample:**
  
@@ -348,7 +348,7 @@ It would be helpful when you want to release your eyes from the text for sometim
 
 2 things you should know before use:
 
-1. If there is more than one element in the same line, it would be showing the color depends on their priority.
+1. If there is more than one element in the same line, it would be showing the color depending on their priority.
 2. The only thing you may need to do is to understand those colors' meanings.
 
 [:arrow_up:Back](#table-of-contents)
@@ -366,7 +366,7 @@ Here showing the heading samples:
 Due to the style of headings, something you may need to consider when every time you are going to use the H4 heading: 
 
 1. If the H4 heading is the last level heading of your article, use H4.
-2. If not, use the H5 to replaced the H4 to create a better reading experience.
+2. If not, use the H5 to replace the H4 to create a better reading experience.
 
 [:arrow_up:Back](#table-of-contents)
 
@@ -374,17 +374,17 @@ Due to the style of headings, something you may need to consider when every time
 
 ## Span
 
-There are 4 situations you may want to use the span tag to separating the content:
+There are 4 situations you may want to use the span tag to separate the content:
 
 1. When you want to use an emoji on the H1 heading
-2. When you want to create a heading within the [spoiler block](#spoiler) - It wouldn't be treat as a heading in the Outline plugin
+2. When you want to create a heading within the [spoiler block](#spoiler) - It wouldn't be treated as a heading in the Outline plugin
 3. When you want to split out the side information within a list
 4. When you want to split out the side information within a list which is in the [spoiler block](#spoiler)
 
 ### How to use
 
-If you are using span in the H1 heading or in a list:
-- You can start an open tag in a new line but don't including any blank line between the paragraph content and span content.
+If you are using span in the H1 heading or a list:
+- You can start an open tag in a new line but don't include any blank line between the paragraph content and span content.
 
 If you are using span in the spoiler block to create a heading:
 - Please always start an open tag in a new line.
@@ -446,7 +446,7 @@ Mouse hover on them to check out the original color, it will be getting bright s
 
 ## Spoiler
 
-OhmineDT has been styling for the Spoiler plugin, please make sure you are already installed this plugin to get it work.
+OhmineDT has been styling for the Spoiler plugin, please make sure you have already installed this plugin to get it work.
 
 This is a closed spoiler block:
 
@@ -469,21 +469,21 @@ In addition, I've created 4 more custom styles that you can use within the Spoil
 
 ## Markdown Table Colorize
 
-OhmineDT has been styling for the Markdown Table Colorize plugin, please make sure you are already installed this plugin to get it work.
+OhmineDT has been styling for the Markdown Table Colorize plugin, please make sure you have already installed this plugin to get it work.
 
-Markdown table syntax sometimes can be very messey when too much information within the table. Thanks to the Markdown Table Colorize plugin, I can create a better style for the markdown table now!
+Markdown table syntax sometimes can be very messy when too much information is within the table. Thanks to the Markdown Table Colorize plugin, I can create a better style for the markdown table now!
 
-After installed the Markdown Table Colorize plugin, you will see the markdown table syntax is look like below:
+After installing the Markdown Table Colorize plugin, you will see what the markdown table syntax looks like below:
 
 ![markdown_table_colorize_smaple](https://user-images.githubusercontent.com/86870826/142474807-57d5fede-86e3-478c-bb35-7ce990ab15ce.png)
 
-- Separating table rows to independent sections
+- Separating table rows into independent sections
 - Use colored letters as a column mark
 - Support up to 20 columns table
 
 **Use Tips:**
 
-I would like to share you the steps of how I create a markdown table. And this steps is perfect for using with this plugin style.
+I would like to share with you the steps of how I create a markdown table. And these steps are perfect for use with this plugin style.
 
 First to create the table structure:
 
@@ -501,7 +501,7 @@ Then, add format in it:
 ||||||
 ```
 
-Last, add content in it:
+Last, add content to it:
 
 ```
 |TH|TH|TH|TH|TH|
@@ -530,7 +530,7 @@ A sample in Render Viewer:
 
 ![text_sample_abg](https://user-images.githubusercontent.com/86870826/134675980-53e88bae-76dd-4a77-aaf8-2194242be97b.png)
 
-Color was not always the best choice for indentifying information. Sometimes, circle the keywords just like what you do on a paper is the much better option for less noise. And this style will apply to the emphazise text, strong text, mark text, and the abbrviation text.
+The color was not always the best choice for identifying information. Sometimes, circling the keywords just like what you do on a paper is a much better option for less noise. And this style will apply to the emphasize text, strong text, mark text, and abbreviation text.
 
 A sample in Markdown Editor:
 
@@ -604,7 +604,7 @@ Then, the code block is showing below:
 
 ## Math notation
 
-See how *magical* after added a bit of neon light to your mathematical formulas:
+See how *magical* after adding a bit of neon light to your mathematical formulas:
 
 ![math_notation_sample_abg](https://user-images.githubusercontent.com/86870826/134676276-37e88dd9-7485-44de-aedd-29d55869a12d.png)
 
@@ -636,15 +636,15 @@ For the complete experience of using OhmineDT, please make sure you have done th
 
 <!-- ======================================================================================================================================== Must knows about Custom Element -->
 
-## Must knows about Custom Element
+## Must know about Custom Element
 
-OhmineDT providing some of the features that function by Custom Elements. I absolutely recommend you use it to create a better reading experience, but first you have to consider the below:
+OhmineDT provides some of the features that function by Custom Elements. I absolutely recommend you use it to create a better reading experience, but first, you have to consider the below:
 
 1. Not all Markdown editor software support using Custom Elements.
 2. Custom Elements content will become plain text format when you export your notes to `.md` file or transfer your notes to other software.
-3. Even if other note-taking software is supported to using Custom Element you may need to copy the related codes to that software manually.
+3. Even if other note-taking software is supported using Custom Element you may need to copy the related codes to that software manually.
 
-So, if you are only take notes within Joplin, you don't have to worry about that. Otherwise, you should considering which notes you should use Custom Elements and which doesn't.
+So, if you are only taking notes within Joplin, you don't have to worry about that. Otherwise, you should consider which notes you should use Custom Elements and which don't.
 
 [:arrow_up:Back](#table-of-contents)
 
@@ -652,13 +652,13 @@ So, if you are only take notes within Joplin, you don't have to worry about that
 
 ## About Printing
 
-Here are few things you should know before you print out your article:
+Here are a few things you should know before you print out your article:
 
 1. Sticky notes *will not display on printing*, it's for personal use by default. In case you want to print it out, just open the `userstyle.css` file and you will understand what to do.
 2. Art Gallery will be releasing the overflow limit and listing out all the images but it won't change the number of columns.
 3. A lot of elements are restyled for printing.
-4. By Joplin default, you are not able to select and copy text if you are using the `print` to create a PDF file. If you expect to create a PDF file that allow you to do it, please use the `export`.
-5. By the Spoiler plugin default, Spoiler Block will only appears normally when you use `export`.
+4. By Joplin default, you are not able to select and copy the text if you are using the `print` to create a PDF file. If you expect to create a PDF file that allows you to do it, please use the `export`.
+5. By the Spoiler plugin default, Spoiler Block will only appear normally when you use `export`.
 6. By the Spoiler plugin default, Inline Spoiler will not print out the text.
 
 The printing sample PDF for reference:
@@ -670,18 +670,21 @@ https://drive.google.com/file/d/1xSRkQxBqpMQzz7jU_BLgVmCCb1UgvCoT/view?usp=shari
 
 ## Recommended plugins
 
-Below are some of the best plugins on Joplin, if you never try it before it's worth giving a try.
+Below are some of the best plugins on Joplin, if you have never tried it before it's worth giving a try.
 
-- Quick HTML tags (most recommend)[quick setting up](#quick-html-tags-most-recommended-to-use-with-this-theme)
-- Table Formatter (most recommend)
-- Spoiler (most recommend - OhmineDT has styles for it)
+- Quick HTML tags (most recommend) - Quickly create the custom elements which OhmineDT provides you. [quick setting up](#quick-html-tags-most-recommended-to-use-with-this-theme)
+- Markdown Table Colorize (most recommend) - This plugin helps OhmineDT create the best style of markdown table for you.
+- Spoiler (most recommend) - If Spoiler is useful for you, I would like to tell you that you will get more advanced features when using it with OhmineDT.
+- Turn To Chart
 - Outline
 - Note Tabs
+- Templates
 - Quick Links
 - Rich Markdown
 - Menu items, Shortcuts, Toolbar icons
+- Table Formatter - It's recommended If you didn't install the Markdown Table Colorize.
 
-Check out more plugins on [Joplin Plugins Repository](https://github.com/joplin/plugins#joplin-plugin-repository)
+The above is not all, you can still find out more best plugins based on your personal needs on [Joplin Plugins Repository](https://github.com/joplin/plugins#joplin-plugin-repository)
 
 [:arrow_up:Back](#table-of-contents)
 
@@ -760,7 +763,7 @@ If you are not sure where your files are stored, you can follow the steps below:
 1. Go to `Tools` > `Options` > `Plugins`
 2. Search a plugin name
 3. Click `Install`
-4. After installed all you needs, quit & restart Joplin app
+4. After installing all you need, quit & restart Joplin app
 
 If you want to discover all of the Joplin plugins, you can go visit the [Joplin Plugins Repository](https://github.com/joplin/plugins#joplin-plugin-repository)
 
