@@ -1,0 +1,12 @@
+{
+	"manifest_version": 1,
+	"id": "com.github.ohmine-theme",
+	"app_min_version": "2.2",
+	"version": "1.0.0",
+	"name": "Ohmine Theme",
+	"description": "Ohmine Dark Theme is a Joplin CSS theme that aims to provide a better Work-On-Screen experience for those who want to treat their eyes better.",
+	"author": "3ter",
+	"homepage_url": "https://github.com/3ter/Ohmine-Dark-Theme-For-Joplin",
+	"repository_url": "https://github.com/3ter/Ohmine-Dark-Theme-For-Joplin",
+	"keywords": []
+}
