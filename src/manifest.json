@@ -8,5 +8,10 @@
 	"author": "3ter",
 	"homepage_url": "https://github.com/3ter/Ohmine-Dark-Theme-For-Joplin",
 	"repository_url": "https://github.com/3ter/Ohmine-Dark-Theme-For-Joplin",
-	"keywords": []
+	"keywords": [
+		"theme",
+		"css",
+		"style",
+		"dark"
+	]
 }

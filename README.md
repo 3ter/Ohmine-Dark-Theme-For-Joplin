@@ -718,6 +718,15 @@ After this, you can use this plugin like below:
 
 ## How to install this theme
 
+### Install as a plugin
+
+1. [Install the plugin "Ohmine Theme"](#How-to-install-Joplin-plugins)
+2. Go to `Tools` > `Options` > `Appearance` 
+3. Choose the `Dark` theme and click `Apply` (OhmineDT is better to run with the Joplin built-in dark theme)
+4. \[optional\] Download and install the most recommend fonts for this theme. [Montserrat](https://fonts.google.com/specimen/Montserrat) | [Cascadia](https://github.com/microsoft/cascadia-code/releases)
+
+### Install manually by adding style sheets
+
 If you know where exactly your `userstyle.css` and `userchrome.css` are stored:
 
 1. Make sure you have done the requirements of using the OhmineDT
@@ -735,10 +744,10 @@ If you are not sure where your files are stored, you can follow the steps below:
 5. Choose the `Dark` theme and click `Apply` (OhmineDT is better to run with the Joplin built-in dark theme)
 6. In the `Appearance` page, click `Show Advanced Settings`
 7. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
-9. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
+9. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/src/userstyle.css
 10. And paste on your `userstyle.css`
 11. Back to the `Appearance` page again and click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
-12. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
+12. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/src/userchrome.css
 13. And paste on your `userchrome.css`
 14. Quit & restart Joplin and it's done.
 
@@ -782,28 +791,3 @@ Whatever you like this theme or not, I'll open my mind to accept any of your com
 If you experiencing any bugs or bad issues while using this theme, please create a bug report on [issues page](https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/issues/new/choose) and let me know it.
 
 [:arrow_up:Back](#table-of-contents)
-
-## Joplin Plugin
-
-This is a template to create a new Joplin plugin.
-
-The main two files you will want to look at are:
-
-- `/src/index.ts`, which contains the entry point for the plugin source code.
-- `/src/manifest.json`, which is the plugin manifest. It contains information such as the plugin a name, version, etc.
-
-### Building the plugin
-
-The plugin is built using Webpack, which creates the compiled code in `/dist`. A JPL archive will also be created at the root, which can use to distribute the plugin.
-
-To build the plugin, simply run `npm run dist`.
-
-The project is setup to use TypeScript, although you can change the configuration to use plain JavaScript.
-
-### Updating the plugin framework
-
-To update the plugin framework, run `npm run update`.
-
-In general this command tries to do the right thing - in particular it's going to merge the changes in package.json and .gitignore instead of overwriting. It will also leave "/src" as well as README.md untouched.
-
-The file that may cause problem is "webpack.config.js" because it's going to be overwritten. For that reason, if you want to change it, consider creating a separate JavaScript file and include it in webpack.config.js. That way, when you update, you only have to restore the line that include your file.
