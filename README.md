@@ -15,8 +15,8 @@ OhmineDT-v2.2.10 updates ( 7-DEC-2021 tested on Joplin v2.5.12)
 
 - New: avoid page break inside the TurnToChart table when printing
 - Fix: code block appearing unexpected color bars when specified a language
-- Fix: html syntax background color affects to the code block
-- Change: table row & collumn gap
+- Fix: html syntax background color affects the code block
+- Change: table row & column gap
 - Change: color adjustments
 
 <!-- ================================================================================================================================================= Not a Joplin user yet? -->
