@@ -1,6 +1,6 @@
-/* OhmineDT v2.2.10 | userstyle.css | styling the Render Viewer and Printing Output */
+/* OhmineDT v2.2.15 | userstyle.css | styling the Render Viewer and Printing Output */
 
-/* By usual case, you would only to edit the source code within the root section (line 11 to 333) to fulfill most of your personal needs */
+/* By usual case, you would only to edit the source code within the root section (line 11 to 340) to fulfill most of your personal needs */
 
 /* Please let me know if you found any bad issue when using OhmineDT. */
 /* And sure, you can share any of your ideas with me too! */
@@ -66,7 +66,7 @@
 
   /* PRINT SYNTAX:  code block | inline code | pre --------- */
   --print-syntax-font: "cascadia mono", monospace, "microsoft jhenghei";
-  --print-syntax-font-size: 10px; /*  */
+  --print-syntax-font-size: 10px;
 
   /* print heading ----------------------------------------- */
   --print-note-title-size: 22px; /* It will doing nothing when you are hidden the note title from printing. */
@@ -275,6 +275,8 @@
   --print-list-text: #666666; /* unordered list, order list */
   --print-checklist-text: #666666;
 
+  --print-list-in-spoiler-text: #666666;
+
   /* print table ------------------------------------------- */
   --print-table-th-text: #555555;
   --print-table-td-text: #555555;
@@ -295,7 +297,12 @@
   --print-footnote-border: #888888;
 
   /* print span -------------------------------------------- */
-  --print-span-text-in-list: #777777;
+  --print-span-in-list-text: #777777;
+
+  --print-span-in-spoiler-text: #555555;
+  --print-span-in-spoiler-bolder: #888888;
+
+  --print-span-in-spoiler-list-text: #777777;
 
   /* print math notation ----------------------------------- */
   --print-math-notation-text: #000000;
@@ -322,7 +329,7 @@
   --print-spoiler-block-border: #888888;
 
   --print-spoiler-inline-border: #888888;
-  --print-spoiler-inline-icon: #555555;
+  --print-spoiler-inline-icon: #555555; 
 
   /* print horizontal line --------------------------------- */
   --print-horizontal-line-in-spoiler: #888888;
@@ -1227,7 +1234,6 @@ label.spoiler-inline:hover::before {
   #rendered-md > .spoiler-block > .summary-content ul > li,
   #rendered-md > .spoiler-block > .summary-content ol > li {
     color: var(--print-list-in-spoiler-text);
-    --print-list-in-spoiler-text: #666666;
   }
 
 
@@ -1301,7 +1307,7 @@ label.spoiler-inline:hover::before {
   /* print span in list ------------------------------------ */
   #rendered-md > ul li span,
   #rendered-md > ol li span {
-    color: var(--print-span-text-in-list);
+    color: var(--print-span-in-list-text);
   }
 
   /* print span in spoiler block --------------------------- */
@@ -1311,15 +1317,13 @@ label.spoiler-inline:hover::before {
     padding: 0;
     border-bottom: 1px solid var(--print-span-in-spoiler-bolder);
     border-radius: 0;
-    --print-span-in-spoiler-text: #555555;
-    --print-span-in-spoiler-bolder: #888888;
   }
 
   /* print span in spoiler list ---------------------------- */
   .spoiler-block > .summary-content > ul li span,
   .spoiler-block > .summary-content > ol li span {
     color: var(--print-span-in-spoiler-list-text);
-    --print-span-in-spoiler-list-text: #777777;
+    
   }
 
 
