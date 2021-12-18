@@ -11,13 +11,14 @@ Ohmine Dark Theme is a Joplin CSS theme that aims to provide a better Work-On-Sc
 
 ## Latest Released
 
-OhmineDT-v2.2.15 updates ( 18-DEC-2021 tested on Joplin v2.6.9)
+OhmineDT-v2.2.16 updates ( 18-DEC-2021 tested on Joplin v2.6.9)
 
 - New: add styling to the notelist sorting button
 - Fix: notbook title padding wrong in the sidebar
 - Fix: sync button font size
 - Fix: setting page styles
 - Fix: small adjustments
+- Fix: notebook title wrap text
 
 OhmineDT-v2.2.10 updates ( 7-DEC-2021 tested on Joplin v2.5.12)
 
