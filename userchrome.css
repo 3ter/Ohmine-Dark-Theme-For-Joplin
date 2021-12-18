@@ -1,4 +1,4 @@
-/* OhmineDT v2.2.15 | userchrome.css | styling the Markdown Editor and Joplin UI */
+/* OhmineDT v2.2.16 | userchrome.css | styling the Markdown Editor and Joplin UI */
 
 /* By usual case, you would only to edit the source code within the root section (line 11 to 228) to fulfill most of your personal needs */
 
@@ -850,6 +850,7 @@ div.list-item-container a.list-item {
 .rli-sideBar [class*="list-item-depth"] span.title {
   color: var(--np-notebook-title-text);
   max-width: 80%;
+  line-height: normal !important;
   white-space: normal;
   overflow-wrap: break-word;
 }
