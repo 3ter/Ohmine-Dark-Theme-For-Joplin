@@ -1,8 +1,8 @@
-/* OhmineDT v2.2.5 | userstyle.css | styling the Render Viewer and Printing Output */
+/* OhmineDT v2.2.16 | userstyle.css | styling the Render Viewer and Printing Output */
 
-/* By usual case, you would only to edit the source code within the root section (line 11 to 336) to fulfill most of your personal needs */
+/* By usual case, you would only to edit the source code within the root section (line 11 to 340) to fulfill most of your personal needs */
 
-/* Please let me know if you found any bad issue when using OhmineDT. */ 
+/* Please let me know if you found any bad issue when using OhmineDT. */
 /* And sure, you can share any of your ideas with me too! */
 /* Thank you guys! I hope you are enjoy what's OhmineDT did for you! */
 /* Tell me whatever you want > Joplin Forum: https://discourse.joplinapp.org/t/css-theme-ohmine-dark-theme/21000 */
@@ -10,20 +10,20 @@
 
 :root {
 
-  /* RENDER VIEWER GENERAL ******************************* */
-  
+  /* RENDER VIEWER GENERAL ********************************* */
+
   /* CONTENT:  all elements that other than code block & inline code */
   --content-font: "montserrat", "microsoft jhenghei light", avenir, arial, sans-serif;
   --content-font-size: 14px; /* plus: not including custom title block title */
 
-  /* SYNTAX:  code block | inline code ------------------- */
+  /* SYNTAX:  code block | inline code --------------------- */
   --syntax-font: "cascadia mono light", monospace, "microsoft jhenghei light";
   --syntax-font-size: 12px;
 
-  /* HEADING  -------------------------------------------- */
+  /* HEADING  ---------------------------------------------- */
   --heading-font-weight: 600;
   --heading-line-height: 1.3em;
-  
+
   --heading-margin: 1em 0 0.8em 0;
 
   --h1-heading-size: 2.3em;
@@ -31,44 +31,44 @@
   --h3-heading-size: 1.5em;
   --h4-h5-heading-size: 1.2em;
   --h6-heading-size: 1.1em;
-  
-  /* CODE BLOCK ------------------------------------------ */
+
+  /* CODE BLOCK -------------------------------------------- */
   --code-block-line-height: 1.7em;
 
-  /* SPAN ------------------------------------------------ */
+  /* SPAN -------------------------------------------------- */
   --span-in-spoiler-text-size: 1.1em; /* this is use as a heading within the spoiler block */
 
-  /* CUSTOM TITLE BLOCK ---------------------------------- */
+  /* CUSTOM TITLE BLOCK ------------------------------------ */
   --ctb-title-size: 15px;
 
   --ctb-in-spoiler-block-title-size: 1.1em;
-  
-  /* SWITCHER -------------------------------------------- */
+
+  /* SWITCHER ---------------------------------------------- */
   --h2-heading-rice-icon: inline-block; /* "inline-block;" value change to "none;" to hide the rice icon from h2 heading */
   --eye-protector-filter: brightness(70%); /* "brightness(70%);" value change to "none;" to stop Eye-Protector effect */
   --eye-protector-animation: eye-protector 2s forwards 1; /* "eye-protector 2s forwards 1;" value change to "none;" to stop Eye-Protector hover effect */
-  
-  /* PRINT SWITCHER -------------------------------------- */
+
+  /* PRINT SWITCHER ---------------------------------------- */
   --print-note-title-display: block; /* "block;" value change to "none;" to hide the note title from printing */
-  --print-sticky-notes-display: block; /* "none;" value change to "block;" to show all sticky notes on printing */
+  --print-sticky-notes-display: none; /* "none;" value change to "block;" to show all sticky notes on printing */
   --print-h1-border: none; /* "none;" value change to "1px solid #505050;" to show the h1 border bottom on printing */
   --print-link-href-display: inline; /* "inline;" value change to "none;" to hide link href from printing */
 
 
 
-  /* PRINT GENERAL *************************************** */
+  /* PRINT GENERAL ***************************************** */
 
   /* edit the print general section will only affects on the printing output */
-  
+
   /* PRINT CONTENT:  all elements that other than code block & inline code */
   --print-content-font: "montserrat", "microsoft jhenghei light", avenir, arial, sans-serif;
   --print-content-font-size: 12px;
-  
-  /* PRINT SYNTAX:  code block | inline code | pre ------- */
+
+  /* PRINT SYNTAX:  code block | inline code | pre --------- */
   --print-syntax-font: "cascadia mono", monospace, "microsoft jhenghei";
-  --print-syntax-font-size: 10px; /*  */
-  
-  /* print heading --------------------------------------- */
+  --print-syntax-font-size: 10px;
+
+  /* print heading ----------------------------------------- */
   --print-note-title-size: 22px; /* It will doing nothing when you are hidden the note title from printing. */
   --print-h1-heading-size: 22px;
   --print-h2-heading-size: 20px;
@@ -76,42 +76,42 @@
   --print-h5-heading-size: 15px;
   --print-h6-heading-size: 13px;
 
-  /* print primary text ---------------------------------- */
+  /* print primary text ------------------------------------ */
   --print-primary-text-line-height: 1.45em;
 
-  /* print markdown toc ---------------------------------- */
+  /* print markdown toc ------------------------------------ */
   --print-markdown-toc-title-size: 18px;
-  
-  /* print link ------------------------------------------ */
+
+  /* print link -------------------------------------------- */
   --print-link-text-size: 10px;
 
-  /* print code block ------------------------------------ */
+  /* print code block -------------------------------------- */
   --print-code-block-line-height: 1.4em;
 
-  /* print math notation --------------------------------- */
+  /* print math notation ----------------------------------- */
   --print-math-notation-text-size: 14px;
 
-  /* print custom title block ---------------------------- */
+  /* print custom title block ------------------------------ */
   --print-ctb-title-size: 13px;
-  
-  /* print sticky notes ---------------------------------- */
+
+  /* print sticky notes ------------------------------------ */
   --print-sticky-notes-tags-text-size: 12px;
 
 
 
-  /* ***************************************************** */
-  /*            COLOR CONTROLLER: SECTION START            */
-  /* ***************************************************** */
+  /* ******************************************************* */
+  /*             COLOR CONTROLLER: SECTION START             */
+  /* ******************************************************* */
   /* take control of all color values on both the render viewer & printing within this section: */
-  
-  /* RENDER VIEWER COLOR ********************************* */
+
+  /* RENDER VIEWER COLOR *********************************** */
   --render-viewer-background: #151b1a;
   --primary-text-color: #bdbdbd;
-  
-  /* heading --------------------------------------------- */
+
+  /* heading ----------------------------------------------- */
   --h1-clip-text: linear-gradient(
-    /* This is using the "background:" property with the "background-clip" and "text-fill-color" effect */
-      85deg,
+    /* This is using the "background:" property with the "background-clip" and "text-fill-color" effect */ 
+    85deg,
     #3bfff7,
     #16d0c1,
     #7cffcd,
@@ -131,12 +131,12 @@
   --h5-text: #b1b1b1;
   --h5-border: #b1b1b1;
   --h6-text: #b1b1b1;
-  
-  /* markdown toc -----------------------------------------*/
+
+  /* markdown toc ------------------------------------------ */
   --markdown-toc-title: #b0b0b0;
   --markdown-toc-border: #b0b0b0;
-  
-  /* special text ---------------------------------------- */
+
+  /* special text ------------------------------------------ */
   --mark-text: #000000;
   --mark-text-highlight: #d6b15f;
 
@@ -149,46 +149,46 @@
   --insert-text: #ce8864;
   --strikethrough-text: #776857;
   --abbreviation-text: #54d077;
-  
+
   --math-notation-text: #c5fffc;
   --math-notation-text-shadow: #c5fffc;
-  
-  /* unordered list & ordered list ----------------------- */
+
+  /* unordered list & ordered list ------------------------- */
   --list-text: #51bba8;
 
   --list-in-spoiler-text: #b2e2cb;
 
-  /* checklist ------------------------------------------- */
+  /* checklist --------------------------------------------- */
   --checklist-text: #5bb5a2;
   --checkbox-checked: hue-rotate(-50deg) brightness(140%); /* This is using the "filter:" property */
 
-  /* span ------------------------------------------------ */
-  --span-in-list-text: #808080;
+  /* span -------------------------------------------------- */
+  --span-in-list-text: #848c8a;
 
   --span-in-spoiler-text: #d0cc8b;
   --span-in-spoiler-background: #504f46;
   --span-in-spoiler-list-text: #d0d0d0;
 
-  /* link ------------------------------------------------ */
+  /* link -------------------------------------------------- */
   --link-text: #cdd286;
   --link-resource-icon: #cdd286;
 
-  /* blockquote ------------------------------------------ */
+  /* blockquote -------------------------------------------- */
   --blockquote-text: #a2998f;
   --blockquote-border: #fbce9a;
 
-  /* table ----------------------------------------------- */
+  /* table ------------------------------------------------- */
   --table-th-text: #6cd4b6;
   --table-th-background: #002931;
   --table-td-text: #bdbdbd;
   --table-tr-odd-background: #172425;
   --table-tr-even-background: #1d2b2d;
 
-  /* footnote -------------------------------------------- */
+  /* footnote ---------------------------------------------- */
   --footnote-text: #808080;
   --footnote-border: #8080807a;
 
-  /* code block | inline code ---------------------------- */
+  /* code block | inline code ------------------------------ */
   --code-text: #dedede;
 
   --inline-code-background: #2d2d2d;
@@ -200,7 +200,7 @@
 
   --rich-text-code-block-selected-outline: #002688; /* for rich text editor only */
 
-  /* custom title block ---------------------------------- */
+  /* custom title block ------------------------------------ */
   --ctb-title-text: #93bf74;
   --ctb-background: #212925;
 
@@ -214,7 +214,7 @@
   --sticky-notes-border: #43b991;
   --sticky-notes-box-shadow: #148059;
 
-  /* sticky notes tags ----------------------------------- */
+  /* sticky notes tags ------------------------------------- */
   --note-tag: #0065b3;
   --tip-tag: #b7aa00;
   --question-tag: #5a00b5;
@@ -222,7 +222,7 @@
   --warning-tag: #c30000;
   --keyword-tag: #c10074;
 
-  /* sticky notes - important (standalone) --------------- */
+  /* sticky notes - important (standalone) ----------------- */
   --important-title-text: red;
   --important-title-background: #3c0000;
   --important-title-border: red;
@@ -231,7 +231,7 @@
   --important-border: red;
   --important-box-shadow: red;
 
-  /* spoiler --------------------------------------------- */
+  /* spoiler ----------------------------------------------- */
   --spoiler-block-title-text: #dadada;
   --spoiler-block-title-text-shadow: #000000;
   --spoiler-block-title-background: linear-gradient(to right, #868672, #5f5f42);
@@ -245,62 +245,69 @@
   --spoiler-inline-border: #46792b;
   --spoiler-inline-background: #000000;
 
-  /* horizontal line ------------------------------------- */
+  /* horizontal line --------------------------------------- */
   --horizontal-line-in-spoiler: #46463d;
 
 
 
-  /* PRINT COLOR ***************************************** */
+  /* PRINT COLOR ******************************************* */
   --print-note-title: #888888;
   --print-primary-text: #444444;
-  
-  /* print heading --------------------------------------- */
+
+  /* print heading ----------------------------------------- */
   --print-h1-text: #555555;
   --print-h2-h3-h4-text: #666666;
   --print-h5-h6-text: #777777;
   --print-h5-border: #777777;
 
-  /* print markdown toc ---------------------------------- */
+  /* print markdown toc ------------------------------------ */
   --print-markdown-toc-title: #888888;
-  --print-markdown-toc-border:#888888;
+  --print-markdown-toc-border: #888888;
 
-  /* print special text ---------------------------------- */
+  /* print special text ------------------------------------ */
   --print-special-text: #000000; /* strong, emphasize, strikethrough, insert, abbreviation, mark */
   --print-mark-text-highlight: #666666;
 
-  /* print link ------------------------------------------ */
+  /* print link -------------------------------------------- */
   --print-link: #34a5ff; /* all links */
 
-  /* print list ------------------------------------------ */
+  /* print list -------------------------------------------- */
   --print-list-text: #666666; /* unordered list, order list */
   --print-checklist-text: #666666;
 
-  /* print table ----------------------------------------- */
+  --print-list-in-spoiler-text: #666666;
+
+  /* print table ------------------------------------------- */
   --print-table-th-text: #555555;
   --print-table-td-text: #555555;
 
-  /* print blockquote ------------------------------------ */
+  /* print blockquote -------------------------------------- */
   --print-blockquoute-text: #525252;
   --print-blockquoute-border: #888888;
 
-  /* print code block & inline code & pre ---------------- */
-  --print-code-text: #555555; 
-  --print-code-block-border: #888888; 
-  --print-inline-code-text:#000000;
-  --print-inline-code-border:#888888;
+  /* print code block & inline code & pre ------------------ */
+  --print-code-text: #555555;
+  --print-code-block-border: #888888;
+  --print-inline-code-text: #000000;
+  --print-inline-code-border: #888888;
 
-  /* print footnote -------------------------------------- */
+  /* print footnote ---------------------------------------- */
   --print-footnote-title: #666666;
   --print-footnote-text: #666666;
   --print-footnote-border: #888888;
-  
-  /* print span ------------------------------------------ */
-  --print-span-text-in-list: #777777;
 
-  /* print math notation --------------------------------- */
+  /* print span -------------------------------------------- */
+  --print-span-in-list-text: #777777;
+
+  --print-span-in-spoiler-text: #555555;
+  --print-span-in-spoiler-bolder: #888888;
+
+  --print-span-in-spoiler-list-text: #777777;
+
+  /* print math notation ----------------------------------- */
   --print-math-notation-text: #000000;
-  
-  /* print custom title block ---------------------------- */
+
+  /* print custom title block ------------------------------ */
   --print-ctb-title-text: #666666;
   --print-ctb-text: #555555;
   --print-ctb-border: #888888;
@@ -308,42 +315,40 @@
   --print-ctb-in-spoiler-title-text: #666666;
   --print-ctb-in-spoiler-border: #888888;
 
-  /* print sticky notes ---------------------------------- */
+  /* print sticky notes ------------------------------------ */
   --print-sticky-notes-tags-text: #888888; /* not including sticky notes - Important */
   --print-sticky-notes-text: #555555;
   --print-sticky-notes-border: #888888;
 
-  /* print sticky note - Important ----------------------- */
+  /* print sticky note - Important ------------------------- */
   --print-sticky-note-important-title-text: #ff0000;
 
-  /* print spoiler --------------------------------------- */
+  /* print spoiler ----------------------------------------- */
   --print-spoiler-block-title-text: #666666;
   --print-spoiler-block-text: #555555;
   --print-spoiler-block-border: #888888;
 
   --print-spoiler-inline-border: #888888;
-  --print-spoiler-inline-icon: #555555;
+  --print-spoiler-inline-icon: #555555; 
 
-  /* print horizontal line ------------------------------- */
+  /* print horizontal line --------------------------------- */
   --print-horizontal-line-in-spoiler: #888888;
-  
 
-
-  /* ***************************************************** */
-  /*             COLOR CONTROLLER: SECTION END             */
-  /* ***************************************************** */
+  /* ******************************************************* */
+  /*              COLOR CONTROLLER: SECTION END              */
+  /* ******************************************************* */
 
 }
 
-/* ******************************************************* */
-/*        STYLING: RENDER VIEWER & RICH TEXT EDITOR        */
-/* ******************************************************* */
+/* ********************************************************* */
+/*         STYLING: RENDER VIEWER & RICH TEXT EDITOR         */
+/* ********************************************************* */
 
-/* GENERAL STYLING *************************************** */
+/* GENERAL STYLING ***************************************** */
 #tinymce,
 #joplin-container-content,
 .summary-title,
-.summary-content  {
+.summary-content {
   font-family: var(--content-font);
   font-size: var(--content-font-size);
   color: var(--primary-text-color);
@@ -352,7 +357,7 @@
 
 
 
-/* HEADING *********************************************** */
+/* HEADING ************************************************* */
 #rendered-md > h1,
 #rendered-md > h2,
 #rendered-md > h3,
@@ -415,16 +420,16 @@
 
 
 
-/* PARAGRAPH ********************************************* */
+/* PARAGRAPH *********************************************** */
 #rendered-md p {
   padding-left: 3px;
 }
 
 
 
-/* MARKDOWN TOC ****************************************** */
+/* MARKDOWN TOC ******************************************** */
 #rendered-md .table-of-contents::before {
-  content:"Table Of Contents";
+  content: "Table Of Contents";
   display: block;
   width: auto;
   height: 1em;
@@ -432,24 +437,24 @@
   margin: 0 0 20px 0;
   font-weight: 700;
   font-size: 1.7em;
-  color: var(--markdown-toc-title); 
-  border-top: 1px dashed var(--markdown-toc-border); 
-  border-radius:7px;
+  color: var(--markdown-toc-title);
+  border-top: 1px dashed var(--markdown-toc-border);
+  border-radius: 7px;
 }
 #rendered-md .table-of-contents::after {
-  content:"";
+  content: "";
   display: block;
   width: auto;
   height: 1em;
   border-bottom: 1px dashed var(--markdown-toc-border);
-  border-radius:7px;
+  border-radius: 7px;
 }
 
 
 
-/* SPECIAL TEXT ****************************************** */
+/* SPECIAL TEXT ******************************************** */
 
-/* mark -------------------------------------------------- */
+/* mark ---------------------------------------------------- */
 #rendered-md mark::before,
 #rendered-md mark::after {
   content: "";
@@ -462,7 +467,7 @@
   border-radius: 1em;
 }
 
-/* search ------------------------------------------------ */
+/* search -------------------------------------------------- */
 #rendered-md mark[data-markjs="true"] {
   font-size: 18px;
   color: var(--search-text);
@@ -480,34 +485,34 @@
   background: none;
 }
 
-/* emphasize --------------------------------------------- */
+/* emphasize ----------------------------------------------- */
 #rendered-md em {
   color: var(--emphasize-text);
 }
 
-/* strong ------------------------------------------------ */
+/* strong -------------------------------------------------- */
 #rendered-md strong {
   color: var(--strong-text);
 }
 
-/* strikethrough ----------------------------------------- */
+/* strikethrough ------------------------------------------- */
 #rendered-md s {
   color: var(--strikethrough-text);
 }
 
-/* insert ------------------------------------------------ */
+/* insert -------------------------------------------------- */
 #rendered-md ins {
   color: var(--insert-text);
 }
 
-/* abbreviation ------------------------------------------ */
+/* abbreviation -------------------------------------------- */
 #rendered-md abbr {
   color: var(--abbreviation-text);
   font-weight: 500;
   text-decoration: underline dotted;
 }
 
-/* math notation ----------------------------------------- */
+/* math notation ------------------------------------------- */
 #rendered-md .katex-display {
   color: var(--math-notation-text);
   font-size: 1.5em;
@@ -516,9 +521,9 @@
 
 
 
-/* LIST ************************************************** */
+/* LIST **************************************************** */
 
-/* group:  unordered list | order list | checklist ------- */
+/* group:  unordered list | order list | checklist --------- */
 #rendered-md > ul,
 #rendered-md > ol {
   color: var(--list-text);
@@ -530,7 +535,7 @@
   margin: 2px 0;
 }
 
-/* sublist group:  unordered list | order list ----------- */
+/* sublist group:  unordered list | order list ------------- */
 #rendered-md ul ul,
 #rendered-md ol ol,
 #rendered-md ul > ol,
@@ -538,7 +543,7 @@
   margin: 0 0 0 20px;
 }
 
-/* checklist --------------------------------------------- */
+/* checklist ----------------------------------------------- */
 .joplin-checkbox > .checkbox-wrapper > [class*="checkbox-label-"] {
   color: var(--checklist-text);
 }
@@ -547,7 +552,7 @@
   filter: var(--checkbox-checked);
 }
 
-/* list in spoiler --------------------------------------- */
+/* list in spoiler ----------------------------------------- */
 #rendered-md > .spoiler-block > .summary-content ul > li,
 #rendered-md > .spoiler-block > .summary-content ol > li {
   color: var(--list-in-spoiler-text);
@@ -556,7 +561,7 @@
 
 
 
-/* LINK ************************************************** */
+/* LINK **************************************************** */
 #rendered-md a {
   color: var(--link-text);
 }
@@ -568,7 +573,7 @@
 
 
 
-/* BLOCKQUOTE ******************************************** */
+/* BLOCKQUOTE ********************************************** */
 #rendered-md > blockquote {
   color: var(--blockquote-text);
   padding: 0 0 0 10px;
@@ -579,9 +584,9 @@
 
 
 
-/* SYNTAX ************************************************ */
+/* SYNTAX ************************************************** */
 
-/* syntax font group:  code block | inline code | pre ---- */
+/* syntax font group:  code block | inline code | pre ------ */
 .joplin-editable > pre,
 .joplin-editable > pre > code,
 #rendered-md .inline-code {
@@ -594,9 +599,9 @@
   opacity: 0.9;
 }
 
-/* code block -------------------------------------------- */
+/* code block ---------------------------------------------- */
 .joplin-editable > pre:not(.mermaid) {
-  line-height: var(--code-block-line-height); 
+  line-height: var(--code-block-line-height);
   padding: 10px 12px;
   margin: 20px 0;
   background: var(--code-block-background);
@@ -608,7 +613,7 @@
   overflow-y: scroll;
 }
 
-/* code block scrollbar ---------------------------------- */
+/* code block scrollbar ------------------------------------ */
 .joplin-editable > pre::-webkit-scrollbar {
   height: 20px;
   width: 0px;
@@ -620,19 +625,19 @@
   border-radius: 1em;
 }
 
-/* rich text editor code block selected state ------------ */
-.mce-content-body [contentEditable=false][data-mce-selected] {
+/* rich text editor code block selected state -------------- */
+.mce-content-body [contentEditable="false"][data-mce-selected] {
   outline: 3px solid var(--rich-text-code-block-selected-outline);
 }
 
-/* inline code ------------------------------------------- */
+/* inline code --------------------------------------------- */
 #rendered-md .inline-code {
   background: var(--inline-code-background);
 }
 
 
 
-/* TABLE ************************************************* */
+/* TABLE *************************************************** */
 table {
   width: 100%;
   margin: 25px auto;
@@ -641,9 +646,13 @@ table {
 table > thead > tr > th {
   color: var(--table-th-text);
   background: var(--table-th-background);
+  border-width: 3px;
+  border-color: var(--render-viewer-background);
 }
 table > tbody > tr > td {
   color: var(--table-td-text);
+  border-width: 3px;
+  border-color: var(--render-viewer-background);
 }
 .jop-tinymce table tr:nth-child(even),
 table > tbody > tr:nth-child(even) {
@@ -656,7 +665,7 @@ table > tbody > tr:nth-child(odd) {
 
 
 
-/* FOOTNOTE ********************************************** */
+/* FOOTNOTE ************************************************ */
 #rendered-md .footnotes-sep {
   display: none;
 }
@@ -674,22 +683,22 @@ table > tbody > tr:nth-child(odd) {
 
 
 
-/* SPAN ************************************************** */
+/* SPAN **************************************************** */
 
-/* span in h1 heading ------------------------------------ */
+/* span in h1 heading -------------------------------------- */
 #rendered-md > h1 > span {
   -webkit-background-clip: initial;
   background-clip: initial;
   -webkit-text-fill-color: initial;
 }
 
-/* span in list ------------------------------------------ */
+/* span in list -------------------------------------------- */
 #rendered-md > ul li span,
 #rendered-md > ol li span {
   color: var(--span-in-list-text);
 }
 
-/* span in spoiler block --------------------------------- */
+/* span in spoiler block ----------------------------------- */
 .spoiler-block > .summary-content > p > span {
   display: block;
   padding: 2px 15px;
@@ -700,7 +709,7 @@ table > tbody > tr:nth-child(odd) {
   border-radius: 5px;
 }
 
-/* span in spoiler list ---------------------------------- */
+/* span in spoiler list ------------------------------------ */
 .spoiler-block > .summary-content > ul li span,
 .spoiler-block > .summary-content > ol li span {
   color: var(--span-in-spoiler-list-text);
@@ -708,7 +717,7 @@ table > tbody > tr:nth-child(odd) {
 
 
 
-/* CUSTOM TITLE BLOCK ************************************ */
+/* CUSTOM TITLE BLOCK ************************************** */
 #rendered-md > p > ctb:first-line {
   font-size: var(--ctb-title-size);
   font-weight: 700;
@@ -721,14 +730,13 @@ table > tbody > tr:nth-child(odd) {
   border-radius: 7px 17px;
 }
 
-/* custom title block in spoiler block ------------------- */
+/* custom title block in spoiler block --------------------- */
 .spoiler-block > .summary-content > p > ctb {
   display: block;
   padding: 5px 15px 15px 15px;
   margin: 20px 0 20px -3px;
   background: var(--ctb-in-spoiler-background);
   border-radius: 5px;
-
 }
 .spoiler-block > .summary-content > p > ctb:first-line {
   font-size: var(--ctb-in-spoiler-block-title-size);
@@ -739,7 +747,7 @@ table > tbody > tr:nth-child(odd) {
 
 
 
-/* STICKY NOTES ****************************************** */
+/* STICKY NOTES ******************************************** */
 
 /* sticky notes group:  note | tip | question | explain | warning */
 note::after,
@@ -774,43 +782,43 @@ keyword {
   box-shadow: 1px 1px 4px var(--sticky-notes-box-shadow);
 }
 
-/* note tag ---------------------------------------------- */
+/* note tag ------------------------------------------------ */
 note::after {
   content: "NOTE";
   background: var(--note-tag);
 }
 
-/* tip tag ----------------------------------------------- */
+/* tip tag ------------------------------------------------- */
 tip::after {
   content: "TIP";
   background: var(--tip-tag);
 }
 
-/* question tag ------------------------------------------ */
+/* question tag -------------------------------------------- */
 question::after {
   content: "QUESTION";
   background: var(--question-tag);
 }
 
-/* explain tag ------------------------------------------- */
+/* explain tag --------------------------------------------- */
 explain::after {
   content: "EXPLAIN";
   background: var(--explain-tag);
 }
 
-/* warning tag ------------------------------------------- */
+/* warning tag --------------------------------------------- */
 warning::after {
   content: "WARNING";
   background: var(--warning-tag);
 }
 
-/* keyword tag ------------------------------------------- */
+/* keyword tag --------------------------------------------- */
 keyword::after {
   content: "KEYWORD";
   background: var(--keyword-tag);
 }
 
-/* sticky note - important (standalone) ------------------ */
+/* sticky note - important (standalone) -------------------- */
 important::before {
   content: "IMPORTANT";
   color: var(--important-title-text);
@@ -842,7 +850,7 @@ important {
 
 
 
-/* ART GALLERY ******************************************* */
+/* ART GALLERY ********************************************* */
 ag2,
 ag3,
 ag4,
@@ -881,7 +889,7 @@ ag6 img {
 
 
 
-/* EYE-PROTECTOR ***************************************** */
+/* EYE-PROTECTOR ******************************************* */
 @keyframes eye-protector {
   from {
     filter: brightness(70%);
@@ -901,9 +909,9 @@ ag6 img {
 
 
 
-/* SPOILER *********************************************** */
+/* SPOILER ************************************************* */
 
-/* spoiler block group:  block | title ------------------- */
+/* spoiler block group:  block | title --------------------- */
 .spoiler-block,
 .summary-title {
   font-size: 20px;
@@ -911,16 +919,16 @@ ag6 img {
   background: var(--spoiler-block-title-background);
   border-radius: 7px 17px;
   text-shadow: 0 0 2px var(--spoiler-block-title-text-shadow);
-  border:none;
+  border: none;
 }
 
-/* spoiler block title icon ------------------------------ */
+/* spoiler block title icon -------------------------------- */
 .summary-title::before {
-  position: relative; 
+  position: relative;
   font-size: 18px;
 }
 
-/* spoiler block title ----------------------------------- */
+/* spoiler block title ------------------------------------- */
 .summary-title {
   padding: 8px 15px;
   font-weight: 700;
@@ -930,7 +938,7 @@ ag6 img {
   opacity: 0.9;
 }
 
-/* spoiler block body ------------------------------------ */
+/* spoiler block body -------------------------------------- */
 .summary-content {
   display: block;
   padding: 30px 15px 15px 15px;
@@ -940,12 +948,12 @@ ag6 img {
   text-shadow: 0 0 2px var(--spoiler-block-text-shadow);
 }
 
-/* spoiler inline ---------------------------------------- */
+/* spoiler inline ------------------------------------------ */
 #spoiler-block-body > p > label.spoiler-inline,
 #rendered-md > p > label.spoiler-inline {
   display: inline-block;
   padding: 0 12px 0 8px;
-  line-height:1.4;
+  line-height: 1.4;
   border: 1px solid var(--spoiler-inline-border);
   background: var(--spoiler-inline-background);
   border-radius: 1em;
@@ -964,9 +972,9 @@ label.spoiler-inline:hover::before {
 
 
 
-/* HORIZONTAL LINE **************************************** */
+/* HORIZONTAL LINE ****************************************** */
 
-/* horizontal line in spoiler block ----------------------- */
+/* horizontal line in spoiler block ------------------------- */
 #rendered-md > .spoiler-block > .summary-content > hr {
   margin: 25px auto;
   width: 85%;
@@ -975,14 +983,13 @@ label.spoiler-inline:hover::before {
 
 
 
-/* ******************************************************* */
-/*                    STYLING: PRINT                       */
-/* ******************************************************* */
+/* ********************************************************* */
+/*                     STYLING: PRINT                        */
+/* ********************************************************* */
 @media print {
-  
-  /* "AVOID" PRINTING:  note title | sticky notes | ****** */
-  
-  /* avoid print note title ------------------------------ */
+  /* "AVOID" PRINTING:  note title | sticky notes | ******** */
+
+  /* avoid print note title -------------------------------- */
   .exported-note-title {
     display: var(--print-note-title-display);
     font-size: var(--print-note-title-size);
@@ -990,8 +997,8 @@ label.spoiler-inline:hover::before {
     margin: 0 0 30px 0;
     color: var(--print-note-title);
   }
-  
-  /* avoid print sticky notes ---------------------------- */
+
+  /* avoid print sticky notes ------------------------------ */
   note::after,
   tip::after,
   question::after,
@@ -1011,8 +1018,8 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* AVOID PAGE BREAK ************************************ */
-  /* group:  sticky notes | custom title block | table */
+  /* AVOID PAGE BREAK ************************************** */
+  /* group:  sticky notes | custom title block | table | turn to chart table */
   note,
   tip,
   question,
@@ -1021,7 +1028,9 @@ label.spoiler-inline:hover::before {
   keyword,
   important,
   ctb,
-  #rendered-md table {
+  #rendered-md table,
+  #rendered-md > div > svg,
+  #rendered-md > div > svg ~ div {
     break-inside: avoid;
   }
 
@@ -1033,10 +1042,10 @@ label.spoiler-inline:hover::before {
   #rendered-md > h6 {
     break-after: avoid;
   }
-   
 
 
-  /* RELEASE ART GALLERY OVERFLOW ************************ */
+
+  /* RELEASE ART GALLERY OVERFLOW ************************** */
   ag2,
   ag3,
   ag4,
@@ -1048,16 +1057,16 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* STOP EYE-PROTECTOR EFFECT *************************** */
+  /* STOP EYE-PROTECTOR EFFECT ***************************** */
   #rendered-md img {
     filter: none;
   }
 
 
 
-  /* PRINT ADJUSTMENTS *********************************** */
-  
-  /* PRINT EXACT COLOR *********************************** */
+  /* PRINT ADJUSTMENTS ************************************* */
+
+  /* PRINT EXACT COLOR ************************************* */
   #tinymce,
   #joplin-container-body,
   #rendered-md *,
@@ -1082,7 +1091,7 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* PRINT GENERAL *************************************** */
+  /* PRINT GENERAL ***************************************** */
   #tinymce,
   #joplin-container-body {
     font-family: var(--print-content-font);
@@ -1094,7 +1103,7 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* PRINT HEADING *************************************** */
+  /* PRINT HEADING ***************************************** */
   #rendered-md > h1 {
     font-size: var(--print-h1-heading-size);
     font-weight: 700;
@@ -1138,17 +1147,17 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* PRINT PARAGRAPH ************************************* */
-    #rendered-md > p {
+  /* PRINT PARAGRAPH *************************************** */
+  #rendered-md > p {
     color: var(--print-primary-text);
   }
 
 
 
-  /* PRINT MARKDOWN TOC ********************************** */
+  /* PRINT MARKDOWN TOC ************************************ */
   #rendered-md .table-of-contents::before {
-    color: var(--print-markdown-toc-title); 
-    border-top: 1px dashed var(--print-markdown-toc-border); 
+    color: var(--print-markdown-toc-title);
+    border-top: 1px dashed var(--print-markdown-toc-border);
     border-radius: 7px;
   }
   #rendered-md .table-of-contents::after {
@@ -1161,7 +1170,7 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* PRINT SPECIAL TEXT ********************************** */
+  /* PRINT SPECIAL TEXT ************************************ */
   #rendered-md s,
   #rendered-md em,
   #rendered-md ins,
@@ -1171,7 +1180,7 @@ label.spoiler-inline:hover::before {
     color: var(--print-special-text);
   }
 
-  /* add font weight group:  not including "strong" ------ */
+  /* add font weight group:  not including "strong" -------- */
   #rendered-md s,
   #rendered-md em,
   #rendered-md ins,
@@ -1180,7 +1189,7 @@ label.spoiler-inline:hover::before {
     font-weight: 500;
   }
 
-  /* print mark text border ------------------------------ */
+  /* print mark text border -------------------------------- */
   #rendered-md mark {
     background: none;
     border-top: 1px solid var(--print-mark-text-highlight);
@@ -1190,47 +1199,46 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* PRINT LINK ****************************************** */
+  /* PRINT LINK ******************************************** */
   #rendered-md a,
   #rendered-md .resource-icon {
     color: var(--print-link);
   }
-  /* print link href ------------------------------------- */
+  /* print link href --------------------------------------- */
   #rendered-md a[href]::after {
     font-family: var(--print-syntax-font);
     font-size: var(--print-syntax-font-size);
-    content: " ("attr(href)")";
+    content: " (" attr(href) ")";
     display: var(--print-link-href-display);
   }
 
 
 
-  /* PRINT LIST ****************************************** */
+  /* PRINT LIST ******************************************** */
   #rendered-md ul > li,
   #rendered-md ol > li {
     color: var(--print-list-text);
   }
-  
-  /* print checklist ------------------------------------- */
+
+  /* print checklist --------------------------------------- */
   .joplin-checkbox > .checkbox-wrapper > [class*="checkbox-label-"] {
     color: var(--print-checklist-text);
   }
-  
-  /* print checkbox -------------------------------------- */
+
+  /* print checkbox ---------------------------------------- */
   .joplin-checkbox > .checkbox-wrapper > input[checked="checked"] {
     filter: grayscale(1);
   }
 
-  /* print list is spoiler ------------------------------- */
+  /* print list is spoiler --------------------------------- */
   #rendered-md > .spoiler-block > .summary-content ul > li,
   #rendered-md > .spoiler-block > .summary-content ol > li {
     color: var(--print-list-in-spoiler-text);
-    --print-list-in-spoiler-text: #666666;
   }
 
 
-  
-  /* PRINT TABLE ***************************************** */
+
+  /* PRINT TABLE ******************************************* */
   #rendered-md table {
     margin: 10px auto;
   }
@@ -1245,7 +1253,7 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* PRINT BLOCKQUOTE ************************************ */
+  /* PRINT BLOCKQUOTE ************************************** */
   #rendered-md > blockquote {
     color: var(--print-blockquoute-text);
     border-color: var(--print-blockquoute-border);
@@ -1253,7 +1261,7 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* PRINT CODE BLOCK ************************************ */
+  /* PRINT CODE BLOCK ************************************** */
   #rendered-md .joplin-editable > pre,
   #rendered-md .joplin-editable > pre > code,
   #rendered-md .joplin-editable > pre > code > span {
@@ -1266,7 +1274,7 @@ label.spoiler-inline:hover::before {
     color: var(--print-code-text);
   }
   #rendered-md .joplin-editable > pre {
-    line-height: var(--print-code-block-line-height); 
+    line-height: var(--print-code-block-line-height);
     padding: 10px 20px;
     border-color: var(--print-code-block-border);
     box-shadow: none;
@@ -1274,7 +1282,7 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* PRINT INLINE CODE *********************************** */
+  /* PRINT INLINE CODE ************************************* */
   #rendered-md .inline-code {
     font-size: var(--print-syntax-font-size);
     color: var(--print-inline-code-text);
@@ -1282,47 +1290,45 @@ label.spoiler-inline:hover::before {
   }
 
 
-  
-  /* PRINT FOOTNOTE ************************************** */
+
+  /* PRINT FOOTNOTE **************************************** */
   #rendered-md .footnotes::before {
-    color:var(--print-footnote-title);
-    border-top:3px double var(--print-footnote-border);
+    color: var(--print-footnote-title);
+    border-top: 3px double var(--print-footnote-border);
   }
   #rendered-md > .footnotes > .footnotes-list > .footnote-item {
     color: var(--print-footnote-text);
   }
-  
 
 
-  /* PRINT SPAN ****************************************** */
 
-  /* print span in list ---------------------------------- */
+  /* PRINT SPAN ******************************************** */
+
+  /* print span in list ------------------------------------ */
   #rendered-md > ul li span,
   #rendered-md > ol li span {
-    color: var(--print-span-text-in-list);
+    color: var(--print-span-in-list-text);
   }
-  
-  /* print span in spoiler block ------------------------- */
+
+  /* print span in spoiler block --------------------------- */
   .spoiler-block > .summary-content > p > span {
     font-size: 14px;
     color: var(--print-span-in-spoiler-text);
     padding: 0;
     border-bottom: 1px solid var(--print-span-in-spoiler-bolder);
     border-radius: 0;
-    --print-span-in-spoiler-text: #555555;
-    --print-span-in-spoiler-bolder: #888888;
   }
 
-  /* print span in spoiler list -------------------------- */
+  /* print span in spoiler list ---------------------------- */
   .spoiler-block > .summary-content > ul li span,
   .spoiler-block > .summary-content > ol li span {
     color: var(--print-span-in-spoiler-list-text);
-    --print-span-in-spoiler-list-text: #777777;
+    
   }
 
 
 
-  /* PRINT MATH NOTATION ********************************* */
+  /* PRINT MATH NOTATION *********************************** */
   #rendered-md span.katex-display {
     font-size: var(--print-math-notation-text-size);
     color: var(--print-math-notation-text);
@@ -1330,7 +1336,7 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* PRINT CUSTOM TITLE BLOCK **************************** */
+  /* PRINT CUSTOM TITLE BLOCK ****************************** */
   #rendered-md > p > ctb:first-line {
     font-size: var(--print-ctb-title-size);
     color: var(--print-ctb-title-text);
@@ -1342,7 +1348,7 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* PRINT STICKY NOTES ********************************** */
+  /* PRINT STICKY NOTES ************************************ */
 
   /* sticky note tags group:  not including sticky note - Important */
   note::after,
@@ -1357,13 +1363,13 @@ label.spoiler-inline:hover::before {
     border: 1px solid var(--print-sticky-notes-border);
   }
 
-  /* print sticky note - important tag ------------------- */
+  /* print sticky note - important tag --------------------- */
   important::before {
     color: var(--print-sticky-note-important-title-text);
     border: 1px solid var(--print-sticky-notes-border);
   }
 
-  /* sticky note border and text group: all -------------- */
+  /* sticky note border and text group: all ---------------- */
   note,
   tip,
   question,
@@ -1378,13 +1384,13 @@ label.spoiler-inline:hover::before {
 
 
 
-  /* PRINT SPOILER *************************************** */
+  /* PRINT SPOILER ***************************************** */
   .spoiler-block {
-    padding-top:8px;
+    padding-top: 8px;
     border: 1px solid var(--print-spoiler-block-border);
   }
-  
-  /* print spoiler title --------------------------------- */
+
+  /* print spoiler title ----------------------------------- */
   .summary-title:before {
     content: "";
     display: none;
@@ -1393,8 +1399,8 @@ label.spoiler-inline:hover::before {
     font-size: 17px;
     color: var(--print-spoiler-block-title-text);
   }
-  
-  /* print spoiler body ---------------------------------- */
+
+  /* print spoiler body ------------------------------------ */
   #spoiler-block-body {
     display: block;
     margin: 8px 0;
@@ -1402,8 +1408,8 @@ label.spoiler-inline:hover::before {
     color: var(--print-spoiler-block-text);
     border-top: 1px solid var(--print-spoiler-block-border);
   }
-  
-  /* print spoiler inline -------------------------------- */
+
+  /* print spoiler inline ---------------------------------- */
   #spoiler-block-body > p > label.spoiler-inline,
   #rendered-md > p > label.spoiler-inline {
     border: 1px solid var(--print-spoiler-inline-border);
@@ -1418,25 +1424,24 @@ label.spoiler-inline:hover::before {
     color: unset;
     transition: unset;
   }
-  
-  /* print spoiler input --------------------------------- */
+
+  /* print spoiler input ----------------------------------- */
   .spoiler-block-input,
   input.spoiler-inline {
-    display:none;
+    display: none;
   }
 
-  /* print horizontal line in spoiler -------------------- */
+  /* print horizontal line in spoiler ---------------------- */
   #rendered-md > .spoiler-block > .summary-content > hr {
-  border: 1px solid var(--print-horizontal-line-in-spoiler);
+    border: 1px solid var(--print-horizontal-line-in-spoiler);
   }
 
-  /* custom title block in spoiler block ----------------- */
+  /* custom title block in spoiler block ------------------- */
   .spoiler-block > .summary-content > p > ctb {
-    border: 1px solid var(--print-ctb-in-spoiler-border);  
+    border: 1px solid var(--print-ctb-in-spoiler-border);
   }
 
   .spoiler-block > .summary-content > p > ctb:first-line {
     color: var(--print-ctb-in-spoiler-title-text);
   }
-
 }
