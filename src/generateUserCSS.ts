@@ -12,8 +12,8 @@ export const generateUserCSS = async (settings: ThemeSettings) => {
     let userstyleCSS = await fs.readFile(installDir + '/userstyle_pristine.css', 'utf-8');
 
     if (!isEyeProtector) {
-        userstyleCSS = userstyleCSS.replace(/^--eye-protector-filter:.+;/, '--eye-protector-filter: none;');
-        userstyleCSS = userstyleCSS.replace(/^--eye-protector-animation:.+;/, '--eye-protector-animation: none;');
+        userstyleCSS = userstyleCSS.replace(/^  --eye-protector-filter:.+?;/m, '  --eye-protector-filter: none;');
+        userstyleCSS = userstyleCSS.replace(/^  --eye-protector-animation:.+?;/m, '  --eye-protector-animation: none;');
     }
 
     await fs.writeFile(installDir + '/userstyle.css', userstyleCSS, 'utf8');
