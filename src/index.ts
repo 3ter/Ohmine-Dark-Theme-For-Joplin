@@ -1,4 +1,5 @@
 import joplin from 'api';
+import { ChangeEvent } from 'api/JoplinSettings';
 import { SettingItemType } from 'api/types';
 import { generateUserCSS } from './generateUserCSS';
 
@@ -14,8 +15,8 @@ joplin.plugins.register({
 		const chromeCssFilePath = installDir + '/userchrome.css';
 		const noteCssFilePath = installDir + '/userstyle.css';
 
-		prepareThemeSettings();
-		writeUserCSS();
+		await prepareThemeSettings();
+		await writeUserCSS();
 
 		await (joplin as any).window.loadChromeCssFile(chromeCssFilePath);
 		await (joplin as any).window.loadNoteCssFile(noteCssFilePath);
