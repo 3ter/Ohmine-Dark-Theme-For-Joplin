@@ -48,14 +48,14 @@ Export HTML Sample: [export_html_v3.0.0](https://drive.google.com/file/d/1-129PA
 	- New: abbreviation text description will be appear next to the abbreviation
 	- Fix: some CSS effects missing when export notes to html
 - Joplin UI:
-	- New: Joplin UI- you can now using [shift] + [Mouse wheel] to scroll for check out the overflow text on notebook panel and notelist panel
-	- New: Joplin UI- notebook panel is now supporting up to 15 levels of subdirectories
-	- New: Joplin UI- new style for notelist panel
-	- New: Joplin UI- new style for editor top toolbar
-	- New: Joplin UI- new style for editor bottom tag bar
-	- New: Joplin UI- new style for option page
-	- New: Joplin UI- new style for button hover effect
-	- New: Joplin UI- new sync button style in notebook panel
+	- New: you can now using [shift] + [Mouse wheel] to scroll for check out the overflow text on notebook panel and notelist panel
+	- New: notebook panel is now supporting up to 15 levels of subdirectories
+	- New: new style for notelist panel
+	- New: new style for editor top toolbar
+	- New: new style for editor bottom tag bar
+	- New: new style for option page
+	- New: new style for button hover effect
+	- New: new sync button style in notebook panel
 - Source Code:
 	- Change: rewrite all CSS codes
 	- Change: Footnote Reference Number- moved to the monospace font group
