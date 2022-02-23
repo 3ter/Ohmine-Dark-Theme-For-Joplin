@@ -959,11 +959,11 @@ CSS is providing many different units of size values, but here you might only us
 |vh|Relative to 1% of the height of the viewport(depends on the browser window size)|
 |vw|Relative to 1% of the width of the viewport(depends on the browser window size)|
 
-For reference, you can go to visit this page:[CSS units](https://www.w3schools.com/cssref/css_units.asp) 
+For reference, you can go to visit this page: [CSS units](https://www.w3schools.com/cssref/css_units.asp) 
 
 **COLOR**
 
-CSS also provides many color values, but you may just learn the HEX Color Code and Gradient Color is enough to customize OhmineDT. For reference, you can go to visit this page:[HEX Color](https://www.w3schools.com/colors/colors_hexadecimal.asp)
+CSS also provides many color values, but you may just learn the HEX Color Code and Gradient Color is enough to customize OhmineDT. For reference, you can go to visit this page: [HEX Color](https://www.w3schools.com/colors/colors_hexadecimal.asp) & [Gradient Color](https://www.w3schools.com/colors/colors_gradient.asp)
 
 Overall, when you are customizing the color, then give it the right color value; when you are customizing the size, then give a size value etc... Let's open the CSS file, read the comments, and then edit it, It's that easy!
 
