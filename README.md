@@ -19,7 +19,7 @@ Let's see what's OhmineDT brings you:
 
 
 
-<!-- ======================================================================================================================================================== Latest Released -->
+<!-- ======================================================================================================================================================= Latest Released -->
 
 ## Latest Released
 
@@ -69,28 +69,8 @@ Export HTML Sample: [export_html_v3.0.0](https://drive.google.com/file/d/1-129PA
 	- New: add new switcher to turn on/off the small-caps effect on h1 heading
 	- New: add new switcher to turn on/off the max height limit of code block - default: 60% viewport height
 
-<!-- ================================================================================================================================================= Not a Joplin user yet? -->
 
-## Not a Joplin user yet?
-
-![home-top-img-2x](https://user-images.githubusercontent.com/86870826/135713998-ececa8e9-b79a-4b0f-a95d-ee54ca1271b3.png)
-Joplin is the best note-taking app in the market if you are looking for the below advantages:
-
-- Free & Opensource
-- Multiple text editors (Rich Text and Markdown)
-- End-To-End Encryption to secure your notes
-- Cross platforms app that available on Windows, macOS, Linux, Android, iOS, and terminal.
-- Synchronizing with various services, including Joplin Cloud, Dropbox, OneDrive, Next cloud...
-- Take screenshots and save web pages as note with a Web Clipper browser extension.
-- Customize the app with your own scripts and plugins using the Extension API.
-- Or... ***You love the Ohmine Dark Theme***  :sunglasses::heart:
-- And much more...
-
-It can be covering all your needs in note-taking! Especially the privacy protection!
-
-Visit [Joplin Homepage](https://joplinapp.org/) for more details.
-
-<!-- ====================================================================================================================================================== Table of contents -->
+<!-- ===================================================================================================================================================== Table of contents -->
 
 ## Table of contents
 
@@ -110,7 +90,7 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 		- [How to use](#how-to-use-3)
 	- [Abstract Content Bar](#abstract-content-bar)
 		- [How to use](#how-to-use-4) 
-	- [Customize Headings](#customizable-heading)
+	- [Customizable Heading](#customizable-heading)
 	- [Eye-Protector](#eye-protector)
 - MORE SCREENSHOTS
 	- [Notebook Panel](#notebook-panel)
@@ -136,6 +116,7 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 	- [Must Know About Custom Element](#must-know-about-custom-element)
 	- [About Print & Export](#about-print--export)
 	- [Quick Guide to Customize OhmineDT](#quick-guide-to-customize-ohminedt)
+	- [Not A Joplin User Yet?](#not-a-joplin-user-yet)
 - FAQ
 	- [How to install this theme?](#how-to-install-this-theme)
 	- [How to delete this theme?](#how-to-delete-this-theme)
@@ -145,8 +126,8 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 		- [Give me a user feedback](#give-me-a-user-feedback)
 		- [Report Bugs](#report-bugs)
 
-<!-- ================================================================================================================================================================= DESIGN -->
-<!-- =================================================================================================================================== The Inspiration of Ohmine Dark Theme -->
+<!-- ================================================================================================================================================================ DESIGN -->
+<!-- ================================================================================================================================== The Inspiration of Ohmine Dark Theme -->
 
 ## The Inspiration of Ohmine Dark Theme
 
@@ -167,7 +148,7 @@ If you are interested to know more about the Ohmine-3-Grain design you may like 
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ======================================================================================================================================================== Markdown Editor -->
+<!-- ======================================================================================================================================================= Markdown Editor -->
 
 ## Markdown Editor
 
@@ -194,7 +175,7 @@ I'm choosing this background color not based on my personal favorite. As I tried
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ========================================================================================================================================================== Render Viewer -->
+<!-- ========================================================================================================================================================= Render Viewer -->
 
 ## Render Viewer
 
@@ -212,7 +193,7 @@ The key adjustments for the Render Viewer are as below:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================================================ Font Family -->
+<!-- =========================================================================================================================================================== Font Family -->
 
 ## Font Family
 
@@ -257,8 +238,8 @@ You should always edit all the font-related settings directly in the CSS files.
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =============================================================================================================================================================== FEATURES -->
-<!-- ========================================================================================================================================== Sticky Notes (custom element) -->
+<!-- ============================================================================================================================================================== FEATURES -->
+<!-- ========================================================================================================================================= Sticky Notes (custom element) -->
 
 ## Sticky Notes (custom element)
 
@@ -291,7 +272,7 @@ Let’s see what are the Sticky Notes for:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =========================================================================================================================================== Art Gallery (custom element) -->
+<!-- ========================================================================================================================================== Art Gallery (custom element) -->
 
 ## Art Gallery (custom element)
 
@@ -347,7 +328,7 @@ Below is the sample of the art gallery(ag6) with 48 images:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ==================================================================================================================================== Custom Title Block (custom element) -->
+<!-- =================================================================================================================================== Custom Title Block (custom element) -->
 
 ## Custom Title Block (custom element)
 
@@ -382,7 +363,7 @@ Here to type any of your content
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================================================== Key Point -->
+<!-- ============================================================================================================================================================= Key Point -->
 
 ## Key Point (custom element)
 
@@ -428,7 +409,7 @@ Tips: It would be great to wrok together with the Horizontal Line `***`.
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =================================================================================================================================================== Abstract Content Bar -->
+<!-- ================================================================================================================================================== Abstract Content Bar -->
 
 ## Abstract Content Bar
 
@@ -451,7 +432,7 @@ It would be helpful when you want to release your eyes from the text for sometim
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =================================================================================================================================================== Customizable Heading -->
+<!-- ================================================================================================================================================== Customizable Heading -->
 
 ## Customizable Heading
 
@@ -483,7 +464,7 @@ You can quick customize all of the heading's border through the CSS root section
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ========================================================================================================================================================== Eye-Protector -->
+<!-- ========================================================================================================================================================= Eye-Protector -->
 
 ## Eye-Protector
 
@@ -505,8 +486,8 @@ You can quick customize the eye-protector effects through the CSS root section, 
   
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ======================================================================================================================================================= MORE SCREENSHOTS -->
-<!-- ========================================================================================================================================================= Notebook Panel -->
+<!-- ====================================================================================================================================================== MORE SCREENSHOTS -->
+<!-- ======================================================================================================================================================== Notebook Panel -->
 
 ## Notebook Panel
 
@@ -519,7 +500,7 @@ Since OhmineDT v3.0.0, you can now using `Shift` + `Scroll` to check out the ove
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ==================================================================================================================================================== Special Text Styles -->
+<!-- =================================================================================================================================================== Special Text Styles -->
 
 ## Special Text Styles
 
@@ -554,7 +535,7 @@ See how they look like in the Markdown Editor:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =================================================================================================================================================================== Link -->
+<!-- ================================================================================================================================================================== Link -->
 
 ## Link
 
@@ -563,7 +544,7 @@ See how they look like in the Markdown Editor:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ========================================================================================================================================== Unordered List & Ordered List -->
+<!-- ========================================================================================================================================= Unordered List & Ordered List -->
 
 ## Unordered List & Ordered List
 
@@ -572,7 +553,7 @@ See how they look like in the Markdown Editor:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================================================== Checklist -->
+<!-- ============================================================================================================================================================= Checklist -->
 
 ## Checklist
 
@@ -581,7 +562,7 @@ See how they look like in the Markdown Editor:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================================================= Blockquote -->
+<!-- ============================================================================================================================================================ Blockquote -->
 
 ## Blockquote
 
@@ -590,7 +571,7 @@ See how they look like in the Markdown Editor:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =============================================================================================================================================== Code block & Inline Code -->
+<!-- ============================================================================================================================================== Code block & Inline Code -->
 
 ## Codeblock
 
@@ -599,7 +580,7 @@ See how they look like in the Markdown Editor:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =========================================================================================================================================================== Markdown TOC -->
+<!-- ========================================================================================================================================================== Markdown TOC -->
 
 ## Markdown TOC
 
@@ -613,8 +594,8 @@ Then, you can create the TOC with a very easy markdown syntax `[[toc]]` .
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =============================================================================================================================== COMPLETE EXPERIENCE OF OHMINE DARK THEME -->
-<!-- ===================================================================================================================================================== 1. Joplin Settings -->
+<!-- ============================================================================================================================== COMPLETE EXPERIENCE OF OHMINE DARK THEME -->
+<!-- ==================================================================================================================================================== 1. Joplin Settings -->
 
 ## 1. Joplin Settings
 
@@ -674,7 +655,7 @@ OhmineDT can style everything on the Joplin UI but not plugins, so if you want y
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================ 2. Download & Install All Recommended Fonts -->
+<!-- =========================================================================================================================== 2. Download & Install All Recommended Fonts -->
 
 ## 2. Download & Install All Recommended Fonts
 
@@ -693,7 +674,7 @@ Or, In case you want to download it directly from the official site:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================== 3. Download & Install Recommended Plugins -->
+<!-- ============================================================================================================================= 3. Download & Install Recommended Plugins -->
 
 ## 3. Download & Install All Recommended Plugins
 
@@ -834,7 +815,7 @@ Last, add content to it:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ================================================================================================================================================================ Spoiler -->
+<!-- =============================================================================================================================================================== Spoiler -->
 
 ***
 
@@ -920,9 +901,9 @@ This is a quick guide for CSS beginner, please mention that this is only guiding
 
 OhmineDT put all the hot properties within the `:root` section, you might find them at the top of the source code on both `userstyle.css` and `userchrome.css` documents. Before you try to customize it, you may need to understand some basic concepts of CSS below:
 
-Property - This is a name that tells you what is the property for. 
-Value - Every property should have a value to get it to work.
-Comments - Used to explain the code, and may help when you edit the source code at a later date.
+- Property - This is a name that tells you what is the property for. 
+- Value - Every property should have a value to get it to work.
+- Comments - Used to explain the code, and may help when you edit the source code at a later date.
 
 When you see the property name start with two hyphens in the `:root` section, that is a root property name (or variable name), for example:
 
@@ -978,11 +959,11 @@ CSS is providing many different units of size values, but here you might only us
 |vh|Relative to 1% of the height of the viewport(depends on the browser window size)|
 |vw|Relative to 1% of the width of the viewport(depends on the browser window size)|
 
-For reference, you can go to visit this page:[CSS units](https://www.w3schools.com/cssref/css_units.asp) 
+For reference, you can go to visit this page: [CSS units](https://www.w3schools.com/cssref/css_units.asp) 
 
 **COLOR**
 
-CSS also provides many color values, but you may just learn the HEX Color Code and Gradient Color is enough to customize OhmineDT. For reference, you can go to visit this page:[HEX Color](https://www.w3schools.com/colors/colors_hexadecimal.asp)
+CSS also provides many color values, but you may just learn the HEX Color Code and Gradient Color is enough to customize OhmineDT. For reference, you can go to visit this page: [HEX Color](https://www.w3schools.com/colors/colors_hexadecimal.asp) & [Gradient Color](https://www.w3schools.com/colors/colors_gradient.asp)
 
 Overall, when you are customizing the color, then give it the right color value; when you are customizing the size, then give a size value etc... Let's open the CSS file, read the comments, and then edit it, It's that easy!
 
@@ -996,6 +977,28 @@ P.S. After edit the CSS document, you should quit & restart Joplin.
 
 
 [:arrow_up:Back](#table-of-contents)
+
+<!-- ================================================================================================================================================ Not a Joplin user yet? -->
+
+## Not a Joplin user yet?
+
+![home-top-img-2x](https://user-images.githubusercontent.com/86870826/135713998-ececa8e9-b79a-4b0f-a95d-ee54ca1271b3.png)
+Joplin is the best note-taking app in the market if you are looking for the below advantages:
+
+- Free & Opensource
+- Multiple text editors (Rich Text and Markdown)
+- End-To-End Encryption to secure your notes
+- Cross platforms app that available on Windows, macOS, Linux, Android, iOS, and terminal.
+- Synchronizing with various services, including Joplin Cloud, Dropbox, OneDrive, Next cloud...
+- Take screenshots and save web pages as note with a Web Clipper browser extension.
+- Customize the app with your own scripts and plugins using the Extension API.
+- Or... ***You love the Ohmine Dark Theme***  :sunglasses::heart:
+- And much more...
+
+It can be covering all your needs in note-taking! Especially the privacy protection!
+
+Visit [Joplin Homepage](https://joplinapp.org/) for more details.
+
 
 <!-- =================================================================================================================================================================== FAQ -->
 <!-- ============================================================================================================================================= How to install this theme -->
