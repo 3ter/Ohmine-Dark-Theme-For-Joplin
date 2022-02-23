@@ -1,4 +1,4 @@
-/* OhmineDT v3.0.0 | userstyle.css */
+/* OhmineDT v3.0.10 | userstyle.css */
 /* CSS for: Render Viewer | Rich Text Editor | Print PDF | Export PDF | EXPORT HTML */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -46,12 +46,12 @@
   --switcher-link-break-word: break-all; /* BREAK LINK: "break-all;" | NOT BREAK LINK: "break-word" | to set how a line break present on link text */
   
   --switcher-codeblock-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | max-height for codeblock */
-  --switcher-art-gallery-max-height: 60vh; /* set a max-height limit to art gallery | ON: "60vh;" | OFF: "none;" | max-height for art gallery */
+  --switcher-art-gallery-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | max-height for art gallery */
   
-  --switcher-eye-protector-for-images-filter: brightness(25%); /* ON: "brightness(25%);" | OFF: "none;" | reduce raw brightness for attached image */
+  --switcher-eye-protector-for-images-filter: brightness(75%); /* ON: "brightness(75%);" | OFF: "none;" | reduce raw brightness for attached image */
   --switcher-eye-protector-for-images-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" | OFF: "none;" | the brightness increasing hover effect for attached image */
   
-  --switcher-eye-protector-for-mermaid-filter: brightness(25%); /* ON: "brightness(25%);" | OFF: "none;" | reduce raw brightness for mermaid chart */
+  --switcher-eye-protector-for-mermaid-filter: brightness(75%); /* ON: "brightness(75%);" | OFF: "none;" | reduce raw brightness for mermaid chart */
   --switcher-eye-protector-for-mermaid-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" OFF: "none;" | the brightness increasing hover effect for mermaid chart */
   
   --switcher-custom-title-block-title-symbol-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | The custom title block title symbol */
@@ -87,6 +87,9 @@
   /* render viewer background ------------------------------ */
   --render-viewer-background-color: #151b1a; /* by default, it's also affects to the table border color */
   
+  /* export html background -------------------------------- */
+  --export-html-background-color: #242424;
+
   /* exported note title ----------------------------------- */
   --export-note-title: #bdbdbd ;
 
@@ -177,10 +180,12 @@
 
   /* special text: inline code text ------------------------ */
   --inline-code-text-color: var(--paragraph-text-color);
-  --inline-code-background-color: #2d2d2d;
-  --inline-code-border-color: #ffffff4a;
+  --inline-code-background-color: #232323;
+  --inline-code-border-color: white;
+  --inline-code-text-shadow: black;
 
   /* special text: math notation text ---------------------- */
+  --math-notation-font-size: 1.5em;
   --math-notation-text-color: #c5fffc;
   --math-notation-text-shadow-color: var(--math-notation-text-color);
 
@@ -657,7 +662,7 @@
 
 /* exported html ------------------------------------------- */
 body {
-  background: #242424;
+  background: var(--export-html-background-color);
 }
 .exported-note {
   width: 100%;
@@ -746,7 +751,6 @@ body {
   -webkit-background-clip: initial;
   background-clip: initial;
   -webkit-text-fill-color: initial;
-  font-size: var(--h1-font-size);
 }
 
 /* heading: h2 --------------------------------------------- */
@@ -889,12 +893,13 @@ body {
   color: var(--inline-code-text-color);
   padding: 0 3px;
   background: var(--inline-code-background-color);
-  border: 1px solid --inline-code-border-color;
+  box-shadow: 0 0 1px var(--inline-code-border-color);
+  text-shadow: 1px 1px 2px var(--inline-code-text-shadow);
 }
 
 /* special text: math notation text ------------------------ */
 #rendered-md .katex-display {
-  font-size: 1.5em;
+  font-size: var(--math-notation-font-size);
   color: var(--math-notation-text-color);
   text-shadow: 0 0 2px var(--math-notation-text-shadow-color);
 }
@@ -1133,7 +1138,7 @@ table > tbody > tr:nth-child(odd) {
 /* eye protector: animation -------------------------------- */
 @keyframes eye-protector {
   from {
-    filter: brightness(80%);
+    filter: brightness(75%);
   }
   to {
     filter: brightness(100%);

@@ -1,4 +1,4 @@
-/* OhmineDT v3.0.0 | userchrome.css | 
+/* OhmineDT v3.0.10 | userchrome.css | 
 /* CSS for: Markdown Editor | Joplin UI */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -201,6 +201,9 @@
 
 
   /* PLUGIN: MARKDOWN TABLE COLORIZE *********************** */
+  /* markdown table colorize: caret ------------------------ */
+  --mtc-table-caret-color: #ff0000;
+  
   /* markdown table colorize: table vertical bar ----------- */
   --mtc-table-vertical-bar-color: #5a5a5a;
 
@@ -782,7 +785,10 @@ span[cm-text]:only-child::after {
 
 
 /* PLUGIN: MARKDOWN TABLE COLORIZE ************************* */
+/* markdown table colorize: caret -------------------------- */
 .CodeMirror-lines .CodeMirror-line [class*="cm-tabcolor-col"] {
+  caret-color: var(--mtc-table-caret-color);
+  /* disable text background color from plugin */
   background: none;
 }
 
@@ -991,7 +997,7 @@ i.fas.fa-caret-down {
 /* notebook panel: notebooks items ------------------------- */
 .rli-sideBar .tags .list-item-container,
 .rli-sideBar [class*="list-item-depth"] {
-  margin: 0 3px;
+  margin: 0 2px;
 }
 
 /* notebook panel: notebook item --------------------------- */
@@ -1030,7 +1036,8 @@ div.list-item-container a.list-item {
 
 /* notebook panel: notebook item selected state ------------ */
 .rli-sideBar .tags .list-item-container.selected,
-.rli-sideBar [class*="list-item-depth"].selected {
+.rli-sideBar [class*="list-item-depth"].selected,
+.rli-sideBar [class*="list-item-depth"].dxqFa-D {
   background: var(--np-notebook-item-selected-background-color);
   box-shadow: 0 0 3px var(--np-notebook-item-selected-box-shadow);
 }
@@ -1245,7 +1252,7 @@ div.list-item-container a.list-item {
 
 /* notelist panel: body container -------------------------- */
 .rli-noteList .note-list {
-  padding: 5px 3px 0 3px;
+  padding: 5px 2px 0 2px;
   background: var(--nlp-body-container-background-color);
 }
 
