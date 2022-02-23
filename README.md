@@ -901,9 +901,9 @@ This is a quick guide for CSS beginner, please mention that this is only guiding
 
 OhmineDT put all the hot properties within the `:root` section, you might find them at the top of the source code on both `userstyle.css` and `userchrome.css` documents. Before you try to customize it, you may need to understand some basic concepts of CSS below:
 
-Property - This is a name that tells you what is the property for. 
-Value - Every property should have a value to get it to work.
-Comments - Used to explain the code, and may help when you edit the source code at a later date.
+- Property - This is a name that tells you what is the property for. 
+- Value - Every property should have a value to get it to work.
+- Comments - Used to explain the code, and may help when you edit the source code at a later date.
 
 When you see the property name start with two hyphens in the `:root` section, that is a root property name (or variable name), for example:
 
