@@ -23,7 +23,26 @@ Let's see what's OhmineDT brings you:
 
 ## Latest Released
 
-OhmineDT-v3.0.0 updates ( 22-FEB-2022 tested on Joplin v2.6.10)
+### OhmineDT-v3.0.10 updates ( 23-FEB-2022 tested on Joplin v2.6.10)
+
+- **Render Viewer:** 
+	- Fix: wrong brightness value of eye-protector 
+	- Fix: wrong size of h1 > span
+	- Fix: inline code styles missing
+- **Markdown Editor:**
+	- New: change the caret color to red when using Mardown Table Colorize to create table
+- **Joplin UI:**
+	- Fix: notebook panel items margin gap
+	- Fix: notelist panel items margin gap
+	- Fix: "all notes" button selected status color
+- **Source Code:**
+	- New: add `--math-notation-font-size` to root section
+	- New: add `--inline-code-text-shadow` to root section
+	- New: add `--export-html-background-color` to root section
+
+***
+
+### OhmineDT-v3.0.0 updates ( 22-FEB-2022 tested on Joplin v2.6.10)
 
 Export PDF Sample: [export_pdf_v3.0.0](https://drive.google.com/file/d/1-FsewV7DHMWYfLh9-ZB_wSe44ehcYxWy/view?usp=sharing) (22-FEB-2022)
 
@@ -901,9 +920,9 @@ This is a quick guide for CSS beginner, please mention that this is only guiding
 
 OhmineDT put all the hot properties within the `:root` section, you might find them at the top of the source code on both `userstyle.css` and `userchrome.css` documents. Before you try to customize it, you may need to understand some basic concepts of CSS below:
 
-Property - This is a name that tells you what is the property for. 
-Value - Every property should have a value to get it to work.
-Comments - Used to explain the code, and may help when you edit the source code at a later date.
+- Property - This is a name that tells you what is the property for. 
+- Value - Every property should have a value to get it to work.
+- Comments - Used to explain the code, and may help when you edit the source code at a later date.
 
 When you see the property name start with two hyphens in the `:root` section, that is a root property name (or variable name), for example:
 
@@ -959,11 +978,11 @@ CSS is providing many different units of size values, but here you might only us
 |vh|Relative to 1% of the height of the viewport(depends on the browser window size)|
 |vw|Relative to 1% of the width of the viewport(depends on the browser window size)|
 
-For reference, you can go to visit this page:[CSS units](https://www.w3schools.com/cssref/css_units.asp) 
+For reference, you can go to visit this page: [CSS units](https://www.w3schools.com/cssref/css_units.asp) 
 
 **COLOR**
 
-CSS also provides many color values, but you may just learn the HEX Color Code and Gradient Color is enough to customize OhmineDT. For reference, you can go to visit this page:[HEX Color](https://www.w3schools.com/colors/colors_hexadecimal.asp)
+CSS also provides many color values, but you may just learn the HEX Color Code and Gradient Color is enough to customize OhmineDT. For reference, you can go to visit this page: [HEX Color](https://www.w3schools.com/colors/colors_hexadecimal.asp) & [Gradient Color](https://www.w3schools.com/colors/colors_gradient.asp)
 
 Overall, when you are customizing the color, then give it the right color value; when you are customizing the size, then give a size value etc... Let's open the CSS file, read the comments, and then edit it, It's that easy!
 
