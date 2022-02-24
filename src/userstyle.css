@@ -1,116 +1,121 @@
-/* OhmineDT v2.2.16 | userstyle.css | styling the Render Viewer and Printing Output */
+/* OhmineDT v3.0.0 | userstyle.css */
+/* CSS for: Render Viewer | Rich Text Editor | Print PDF | Export PDF | EXPORT HTML */
 
-/* By usual case, you would only to edit the source code within the root section (line 11 to 340) to fulfill most of your personal needs */
+/* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
 
 /* Please let me know if you found any bad issue when using OhmineDT. */
-/* And sure, you can share any of your ideas with me too! */
 /* Thank you guys! I hope you are enjoy what's OhmineDT did for you! */
 /* Tell me whatever you want > Joplin Forum: https://discourse.joplinapp.org/t/css-theme-ohmine-dark-theme/21000 */
 /* Directly report an issue > Github: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/issues/new/choose */
 
+
+
 :root {
 
-  /* RENDER VIEWER GENERAL ********************************* */
+  /* ******************************************************* */
+  /* !!!!!!!!!         ROOT: SECTION START        !!!!!!!!!! */
+  /* ******************************************************* */
+  /* ******************************************************* */
+  /* ===                    SWITCHER                     === */
+  /* ******************************************************* */
 
-  /* CONTENT:  all elements that other than code block & inline code */
-  --content-font: "montserrat", "microsoft jhenghei light", avenir, arial, sans-serif;
-  --content-font-size: 14px; /* plus: not including custom title block title */
-
-  /* SYNTAX:  code block | inline code --------------------- */
-  --syntax-font: "cascadia mono light", monospace, "microsoft jhenghei light";
-  --syntax-font-size: 12px;
-
-  /* HEADING  ---------------------------------------------- */
-  --heading-font-weight: 600;
-  --heading-line-height: 1.3em;
-
-  --heading-margin: 1em 0 0.8em 0;
-
-  --h1-heading-size: 2.3em;
-  --h2-heading-size: 1.8em;
-  --h3-heading-size: 1.5em;
-  --h4-h5-heading-size: 1.2em;
-  --h6-heading-size: 1.1em;
-
-  /* CODE BLOCK -------------------------------------------- */
-  --code-block-line-height: 1.7em;
-
-  /* SPAN -------------------------------------------------- */
-  --span-in-spoiler-text-size: 1.1em; /* this is use as a heading within the spoiler block */
-
-  /* CUSTOM TITLE BLOCK ------------------------------------ */
-  --ctb-title-size: 15px;
-
-  --ctb-in-spoiler-block-title-size: 1.1em;
-
-  /* SWITCHER ---------------------------------------------- */
-  --h2-heading-rice-icon: inline-block; /* "inline-block;" value change to "none;" to hide the rice icon from h2 heading */
-  --eye-protector-filter: brightness(70%); /* "brightness(70%);" value change to "none;" to stop Eye-Protector effect */
-  --eye-protector-animation: eye-protector 2s forwards 1; /* "eye-protector 2s forwards 1;" value change to "none;" to stop Eye-Protector hover effect */
-
-  /* PRINT SWITCHER ---------------------------------------- */
-  --print-note-title-display: block; /* "block;" value change to "none;" to hide the note title from printing */
-  --print-sticky-notes-display: none; /* "none;" value change to "block;" to show all sticky notes on printing */
-  --print-h1-border: none; /* "none;" value change to "1px solid #505050;" to show the h1 border bottom on printing */
-  --print-link-href-display: inline; /* "inline;" value change to "none;" to hide link href from printing */
+  /* to get the correct effect, please follow the below comments to edit the switchers */
 
 
 
-  /* PRINT GENERAL ***************************************** */
+  /* SWITCHER FOR RENDER VIEWER **************************** */
+  /* change the below css property values to control the style effects on render viewer & rich text editor */
 
-  /* edit the print general section will only affects on the printing output */
+  --switcher-h1-font-variant: small-caps; /* ON: "small-caps;" | OFF: "none;" */
+  --switcher-h1-text-fill-color: transparent; /* ON: "transparent;" | OFF: "none;" | h1 heading gradient color effect */
+  --switcher-h1-border-display: block; /* SHOW: "block;" | HIDE: "none;" | h1 heading border */
 
-  /* PRINT CONTENT:  all elements that other than code block & inline code */
-  --print-content-font: "montserrat", "microsoft jhenghei light", avenir, arial, sans-serif;
-  --print-content-font-size: 12px;
+  --switcher-h2-rice-icon-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | h2 heading rice icon */
 
-  /* PRINT SYNTAX:  code block | inline code | pre --------- */
-  --print-syntax-font: "cascadia mono", monospace, "microsoft jhenghei";
-  --print-syntax-font-size: 10px;
+  --switcher-h2-border-display: block; /* SHOW: "block;" | HIDE: "none;" | h2 heading border */
+  --switcher-h3-border-display: none; /* SHOW: "block;" | HIDE: "none;" | h3 heading border */
+  --switcher-h4-border-display: none; /* SHOW: "block;" | HIDE: "none;" | h4 heading border */
+  --switcher-h5-border-width: 1px; /* SHOW: "1px;" | HIDE: "0;" | h5 heading border */
+  --switcher-h6-border-width: 0; /* SHOW: "1px;" | HIDE: "0;" | h6 heading border */
+  
+  --switcher-paragraph-text-align: justify; /* ON: "justify;" | OFF: "none;" |  */
+  --switcher-list-text-align: none;  /* ON: "justify;" | OFF: "none;" |  */
+  --switcher-footnote-text-align: none;  /* ON: "justify;" | OFF: "none;" |  */
+  
+  --switcher-link-bracket-display: inline; /* SHOW: "inline;" | HIDE: "none;" | automatically add monospace bracket to any link */
+  --switcher-link-break-word: break-all; /* BREAK LINK: "break-all;" | NOT BREAK LINK: "break-word" | to set how a line break present on link text */
+  
+  --switcher-codeblock-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | max-height for codeblock */
+  --switcher-art-gallery-max-height: 60vh; /* set a max-height limit to art gallery | ON: "60vh;" | OFF: "none;" | max-height for art gallery */
+  
+  --switcher-eye-protector-for-images-filter: brightness(25%); /* ON: "brightness(25%);" | OFF: "none;" | reduce raw brightness for attached image */
+  --switcher-eye-protector-for-images-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" | OFF: "none;" | the brightness increasing hover effect for attached image */
+  
+  --switcher-eye-protector-for-mermaid-filter: brightness(25%); /* ON: "brightness(25%);" | OFF: "none;" | reduce raw brightness for mermaid chart */
+  --switcher-eye-protector-for-mermaid-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" OFF: "none;" | the brightness increasing hover effect for mermaid chart */
+  
+  --switcher-custom-title-block-title-symbol-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | The custom title block title symbol */
 
-  /* print heading ----------------------------------------- */
-  --print-note-title-size: 22px; /* It will doing nothing when you are hidden the note title from printing. */
-  --print-h1-heading-size: 22px;
-  --print-h2-heading-size: 20px;
-  --print-h3-h4-heading-size: 17px;
-  --print-h5-heading-size: 15px;
-  --print-h6-heading-size: 13px;
+  /* SWITCHER FOR PRINT & EXPORT TO PDF ******************** */
+  /* change the below css property values to control the style effects of print & export to pdf */
 
-  /* print primary text ------------------------------------ */
-  --print-primary-text-line-height: 1.45em;
-
-  /* print markdown toc ------------------------------------ */
-  --print-markdown-toc-title-size: 18px;
-
-  /* print link -------------------------------------------- */
-  --print-link-text-size: 10px;
-
-  /* print code block -------------------------------------- */
-  --print-code-block-line-height: 1.4em;
-
-  /* print math notation ----------------------------------- */
-  --print-math-notation-text-size: 14px;
-
-  /* print custom title block ------------------------------ */
-  --print-ctb-title-size: 13px;
-
-  /* print sticky notes ------------------------------------ */
-  --print-sticky-notes-tags-text-size: 12px;
-
+  --switcher-print-note-title-display: block; /* SHOW: "block;" | HIDE: "none;" | the notebook title */
+  --switcher-print-sticky-notes-display: block; /* SHOW: "block;" | HIDE: "none;" | the sticky notes */
+  --switcher-print-h1-border-display: block; /* SHOW: "block;" | HIDE: "none;" | the h1 heading border */
+  --switcher-print-link-href-display: inline; /* SHOW: "inline;" | HIDE: "none;" | show the link href after the link text */
+  --switcher-print-markdown-toc-display: block; /* SHOW: "block;" | HIDE: "none;" | the markdown toc section */
+  
 
 
   /* ******************************************************* */
-  /*             COLOR CONTROLLER: SECTION START             */
+  /* ===    STYLING: RENDER VIEWER & RICH TEXT EDITOR    === */
   /* ******************************************************* */
-  /* take control of all color values on both the render viewer & printing within this section: */
 
-  /* RENDER VIEWER COLOR *********************************** */
-  --render-viewer-background: #151b1a;
-  --primary-text-color: #bdbdbd;
+  /* this part would be affects to: render viewer | rich text editor | export html */
 
-  /* heading ----------------------------------------------- */
-  --h1-clip-text: linear-gradient(
-    /* This is using the "background:" property with the "background-clip" and "text-fill-color" effect */ 
+
+
+  /* GENERAL *********************************************** */
+  /* base font group:  all elements that other than monospace font group */
+  --base-font: "montserrat", "microsoft jhenghei light", avenir, arial, sans-serif; /* by default, it's also affects to --print-base-font */
+  --base-font-size: 14px;
+
+  /* monospace font group:  code block | pre | code | footnote ref no. */
+  --monospace-font: "cascadia mono light", monospace, "microsoft jhenghei light"; /* by default, it's also affects to --print-monospace-font */
+  --monospace-font-size: 12px;
+  
+  /* render viewer background ------------------------------ */
+  --render-viewer-background-color: #151b1a; /* by default, it's also affects to the table border color */
+  
+  /* exported note title ----------------------------------- */
+  --export-note-title: #bdbdbd ;
+
+
+  /* paragraph --------------------------------------------- */
+  --paragraph-text-line-height: 1.5em;
+  --paragraph-text-color: #bdbdbd;
+   
+  /* horizontal line --------------------------------------- */
+  --hr-background-image-color: linear-gradient(to right, #30484c 30%, #2a423c 60%);
+  
+  
+  
+  /* HEADING *********************************************** */
+  /* heading group:  h1 to h6 ------------------------------ */
+  --headings-font-weight: 600;
+  --headings-line-height: normal;
+
+  /* heading: font size ------------------------------------ */
+  --h1-font-size: 1.6em;
+  --h2-font-size: 1.5em;
+  --h3-font-size: 1.4em;
+  --h4-font-size: 1.3em;
+  --h5-font-size: 1.2em;
+  --h6-font-size: 1.1em;
+  
+  /* heading: h1 ------------------------------------------- */
+  --h1-text-color: #32e2ac; /* it's only valid when h1 background clip effect has been removed */
+  --h1-clip-text-color: linear-gradient(
     85deg,
     #3bfff7,
     #16d0c1,
@@ -121,881 +126,1477 @@
     #16d0c1,
     #3bfff7
   );
-  --h1-text: #ffffff; /* It will only work when the h1 background-clip effects fails. */
-  --h1-border: #396a5b;
-  --h2-icon: #e2e2e2;
-  --h2-text: #e2e2e2;
-  --h2-border: #949494;
-  --h3-text: #e2e2e2;
-  --h4-text: #e2e2e2;
-  --h5-text: #b1b1b1;
-  --h5-border: #b1b1b1;
-  --h6-text: #b1b1b1;
+  --h1-border-color: linear-gradient(to right, #4a7d6e 30%, #3e4e49 60%);
 
-  /* markdown toc ------------------------------------------ */
-  --markdown-toc-title: #b0b0b0;
-  --markdown-toc-border: #b0b0b0;
+  /* heading: h2 ------------------------------------------- */
+  --h2-text-color: #d2d2d2;
+  --h2-rice-icon-color: var(--h2-text-color); 
+  --h2-border-color: linear-gradient(to right, #dadada 30%, #545454 60%); /* by default, it's also affects to h3 & h4 border color */
 
-  /* special text ------------------------------------------ */
-  --mark-text: #000000;
-  --mark-text-highlight: #d6b15f;
+  /* heading: h3 ------------------------------------------- */
+  --h3-text-color: #d2d2d2;
+  --h3-border-color: var(--h2-border-color);
+  
+  /* heading: h4 ------------------------------------------- */
+  --h4-text-color: #d2d2d2;
+  --h4-border-color: var(--h2-border-color);
 
-  --search-text: #ffff00;
-  --search-text-border: #ffff00;
-  --search-text-background: black;
+  /* heading: h5 ------------------------------------------- */
+  --h5-text-color: #b1b1b1;
+  --h5-border-color: var(--h5-text-color);
 
-  --emphasize-text: #e7c297;
-  --strong-text: #e7c297;
-  --insert-text: #ce8864;
-  --strikethrough-text: #776857;
-  --abbreviation-text: #54d077;
+  /* heading: h6 ------------------------------------------- */
+  --h6-text-color: #b1b1b1;
+  --h6-border-color: var(--h6-text-color);
 
-  --math-notation-text: #c5fffc;
-  --math-notation-text-shadow: #c5fffc;
 
-  /* unordered list & ordered list ------------------------- */
-  --list-text: #51bba8;
+  
+  /* SPECIAL TEXT ****************************************** */
+  /* special text: mark text ------------------------------- */
+  --mark-text-color: #000000;
+  --mark-text-background-color: #d6b15f;
 
-  --list-in-spoiler-text: #b2e2cb;
+  /* special text: search text ----------------------------- */
+  --search-text-color: #f1f173;
+  --search-text-box-shadow: var(--search-text-color);
 
-  /* checklist --------------------------------------------- */
-  --checklist-text: #5bb5a2;
-  --checkbox-checked: hue-rotate(-50deg) brightness(140%); /* This is using the "filter:" property */
+  /* special text: emphasize text -------------------------- */
+  --emphasize-text-color: #e7c297;
 
-  /* span -------------------------------------------------- */
-  --span-in-list-text: #848c8a;
+  /* special text: strong text ----------------------------- */
+  --strong-text-color: #e7c297;
 
-  --span-in-spoiler-text: #d0cc8b;
-  --span-in-spoiler-background: #504f46;
-  --span-in-spoiler-list-text: #d0d0d0;
+  /* special text: strikethrough text ---------------------- */
+  --strikethrough-text-color: #887968;
 
-  /* link -------------------------------------------------- */
-  --link-text: #cdd286;
-  --link-resource-icon: #cdd286;
+  /* special text: insert text ----------------------------- */
+  --insert-text-color: #ce8864;
 
-  /* blockquote -------------------------------------------- */
-  --blockquote-text: #a2998f;
-  --blockquote-border: #fbce9a;
+  /* special text: abbreviation text ----------------------- */
+  --abbreviation-text-color: #54d077;
 
-  /* table ------------------------------------------------- */
-  --table-th-text: #6cd4b6;
-  --table-th-background: #002931;
-  --table-td-text: #bdbdbd;
-  --table-tr-odd-background: #172425;
-  --table-tr-even-background: #1d2b2d;
+  /* special text: inline code text ------------------------ */
+  --inline-code-text-color: var(--paragraph-text-color);
+  --inline-code-background-color: #2d2d2d;
+  --inline-code-border-color: #ffffff4a;
 
-  /* footnote ---------------------------------------------- */
-  --footnote-text: #808080;
-  --footnote-border: #8080807a;
+  /* special text: math notation text ---------------------- */
+  --math-notation-text-color: #c5fffc;
+  --math-notation-text-shadow-color: var(--math-notation-text-color);
 
-  /* code block | inline code ------------------------------ */
-  --code-text: #dedede;
 
-  --inline-code-background: #2d2d2d;
+  
+  /* LINK ************************************************** */
+  --link-text-color: #cdd286;
+  --link-resource-icon-color: var(--link-text-color);
+  
+  
+  
+  /* LIST ************************************************** */
+  /* list text group: unordered list | ordered list | checklist */
+  --list-text-color: #51bba8;
+  
+  /* list: checkbox ---------------------------------------- */
+  --checkbox-color-filter: hue-rotate(320deg) brightness(125%); /* it's using the filter property to change the checkbox color */
+  
+  /* list: list > span ------------------------------------- */
+  --list-span-text-color: #bdbdbd;
+  
+  
 
-  --code-block-background: #141819;
-  --code-block-border: #80f0ff;
-  --code-block-box-shadow: #a2f1e3;
-  --code-block-scrollbar: #3c3c3c;
+  /* TABLE ************************************************* */
+  /* table: table header ----------------------------------- */
+  --table-th-text-color: #6cd4b6;
+  --table-th-background-color: #002931;
+  --table-th-border-color: var(--render-viewer-background-color);
 
-  --rich-text-code-block-selected-outline: #002688; /* for rich text editor only */
+  /* table: table data ------------------------------------- */
+  --table-td-text-color: #bdbdbd;
+  --table-td-border-color: var(--render-viewer-background-color);
 
-  /* custom title block ------------------------------------ */
-  --ctb-title-text: #93bf74;
-  --ctb-background: #212925;
+  /* table: table row -------------------------------------- */
+  --table-tr-odd-background-color: #172425;
+  --table-tr-even-background-color: #1d2b2d;
+  
+  
+  
+  /* BLOCKQUOTE ******************************************** */
+  --blockquote-text-color: #a2998f;
+  --blockquote-border-color: #b39674;
+  
+  
+  
+  /* CODEBLOCK ********************************************* */
+  /* codeblock: container ---------------------------------- */
+  --codeblock-background-color: #141819;
+  --codeblock-border-color: #80f0ff;
+  --codeblock-box-shadow-color: var(--codeblock-border-color);
 
-  --ctb-in-spoiler-block-title-text: #afac7e;
-  --ctb-in-spoiler-background: #1d1d1c;
+  /* codeblock: text --------------------------------------- */
+  --codeblock-text-color: #bdbdbd;
 
-  /* sticky notes group:  note | tip | question | explain | warning */
-  --sticky-notes-background: linear-gradient(120deg, #0c0c0c, #232323, #0c0c0c);
-  --sticky-notes-text: #eaeaea;
-  --sticky-notes-tags-text-shadow: #000000;
-  --sticky-notes-border: #43b991;
-  --sticky-notes-box-shadow: #148059;
+  /* codeblock: scrollbar ---------------------------------- */
+  --codeblock-scrollbar-background-color: radial-gradient(#192525 40%, #2a4344 70%, #88b7b3 100%);
+  --codeblock-scrollbar-background-color-hover: radial-gradient(#273838 40%, #558688 70%, #b4ece8 100%);
 
-  /* sticky notes tags ------------------------------------- */
-  --note-tag: #0065b3;
-  --tip-tag: #b7aa00;
-  --question-tag: #5a00b5;
-  --explain-tag: #00bf88;
-  --warning-tag: #c30000;
-  --keyword-tag: #c10074;
+  /* codeblock: selected status on rich text editor -------- */
+  --codeblock-selected-outline-color: #002688;
+ 
 
-  /* sticky notes - important (standalone) ----------------- */
-  --important-title-text: red;
-  --important-title-background: #3c0000;
-  --important-title-border: red;
-  --important-text: #e8c399;
-  --important-background: #edad0b0d;
-  --important-border: red;
-  --important-box-shadow: red;
 
-  /* spoiler ----------------------------------------------- */
-  --spoiler-block-title-text: #dadada;
-  --spoiler-block-title-text-shadow: #000000;
-  --spoiler-block-title-background: linear-gradient(to right, #868672, #5f5f42);
-
-  --spoiler-block-text: #d0d0d0;
-  --spoiler-block-text-shadow: #000000;
-  --spoiler-block-background: #252523;
-
-  --spoiler-inline-icon: #9ace01;
-  --spoiler-inline-icon-hover: #ff0047;
-  --spoiler-inline-border: #46792b;
-  --spoiler-inline-background: #000000;
-
-  /* horizontal line --------------------------------------- */
-  --horizontal-line-in-spoiler: #46463d;
+  /* MARKDOWN TOC ****************************************** */
+  --mt-title-text-color: #b0b0b0;
+  --mt-border-color: var(--mt-title-text-color);
 
 
 
-  /* PRINT COLOR ******************************************* */
-  --print-note-title: #888888;
-  --print-primary-text: #444444;
+  /* FOOTNOTE ********************************************** */
+  /* footnote: title --------------------------------------- */
+  --footnote-title-font-size: 15px; 
+  --footnote-title-text-color: #dedede;
+  --footnote-title-border-color: #585858;
 
-  /* print heading ----------------------------------------- */
-  --print-h1-text: #555555;
-  --print-h2-h3-h4-text: #666666;
-  --print-h5-h6-text: #777777;
-  --print-h5-border: #777777;
+  /* footnote: list ---------------------------------------- */
+  --footnote-list-text-color: #888888;
+  --footnote-list-token-color: var(--footnote-list-text-color);
 
-  /* print markdown toc ------------------------------------ */
-  --print-markdown-toc-title: #888888;
-  --print-markdown-toc-border: #888888;
 
-  /* print special text ------------------------------------ */
-  --print-special-text: #000000; /* strong, emphasize, strikethrough, insert, abbreviation, mark */
-  --print-mark-text-highlight: #666666;
 
-  /* print link -------------------------------------------- */
-  --print-link: #34a5ff; /* all links */
+  /* CUSTOM ELEMENT: ART GALLERY *************************** */
+  --ag-background-color: #07100b;
+  --ag-box-shadow: #94db94;
 
-  /* print list -------------------------------------------- */
-  --print-list-text: #666666; /* unordered list, order list */
-  --print-checklist-text: #666666;
 
-  --print-list-in-spoiler-text: #666666;
 
-  /* print table ------------------------------------------- */
-  --print-table-th-text: #555555;
-  --print-table-td-text: #555555;
+  /* CUSTOM ELEMENT: STICKY NOTES ************************** */
+  /* sticky notes body group:  not including the stick note - "Important" */
+  --sn-text-color: #eaeaea; 
+  --sn-background-color: linear-gradient(120deg, #191919, #232323, #191919);
+  --sn-border-color: #43b991;
+  --sn-box-shadow: #148059;
 
-  /* print blockquote -------------------------------------- */
-  --print-blockquoute-text: #525252;
-  --print-blockquoute-border: #888888;
+  /* sticky notes tags group: not including the stick note - "Important" */
+  --sn-tags-text-shadow-color: #000000;
+  
+  /* sticky notes: note ------------------------------------ */
+  --sn-note-tag-background-color: #0065b3;
 
-  /* print code block & inline code & pre ------------------ */
-  --print-code-text: #555555;
-  --print-code-block-border: #888888;
-  --print-inline-code-text: #000000;
-  --print-inline-code-border: #888888;
+  /* sticky notes: tip ------------------------------------- */
+  --sn-tip-tag-background-color: #b7aa00;
 
-  /* print footnote ---------------------------------------- */
-  --print-footnote-title: #666666;
-  --print-footnote-text: #666666;
-  --print-footnote-border: #888888;
+  /* sticky notes: question -------------------------------- */
+  --sn-question-tag-background-color: #5a00b5;
 
-  /* print span -------------------------------------------- */
-  --print-span-in-list-text: #777777;
+  /* sticky notes: explain --------------------------------- */
+  --sn-explain-tag-background-color: #00bf88;
 
-  --print-span-in-spoiler-text: #555555;
-  --print-span-in-spoiler-bolder: #888888;
+  /* sticky notes: warning --------------------------------- */
+  --sn-warning-tag-background-color: #c30000;
 
-  --print-span-in-spoiler-list-text: #777777;
+  /* sticky notes: keyword --------------------------------- */
+  --sn-keyword-tag-background-color: #c10074;
+  
+  /* sticky notes: important - body ------------------------ */
+  --sn-important-text-color: #e8c399;
+  --sn-important-background-color: #edad0b0d;
+  --sn-important-border-color: red; /* by default, it's also affects to --sn-important-tag-border-color */
+  --sn-important-box-shadow: red; 
+  
+  /* sticky notes: important - tag ------------------------- */
+  --sn-important-tag-text-color: red;
+  --sn-important-tag-background-color: #3c0000;
+  --sn-important-tag-border-color: var(--sn-important-border-color);
+  
+  
+  
+  /* CUSTOM ELEMENT: CUSTOM TITLE BLOCK ******************** */
+  /* custom title block: container ------------------------- */
+  --ctb-background-color: #212925;
 
-  /* print math notation ----------------------------------- */
-  --print-math-notation-text: #000000;
+  /* custom title block: title ------------------------------*/
+  --ctb-title-text-font-size: 15px;
+  --ctb-title-symbol-color: radial-gradient( #a1e251fc 30%, #16f72833 50%);
+  --ctb-title-text-color: #93bf74;
 
-  /* print custom title block ------------------------------ */
-  --print-ctb-title-text: #666666;
-  --print-ctb-text: #555555;
-  --print-ctb-border: #888888;
 
-  --print-ctb-in-spoiler-title-text: #666666;
-  --print-ctb-in-spoiler-border: #888888;
 
-  /* print sticky notes ------------------------------------ */
-  --print-sticky-notes-tags-text: #888888; /* not including sticky notes - Important */
-  --print-sticky-notes-text: #555555;
-  --print-sticky-notes-border: #888888;
+  /* CUSTOM ELEMENT: KEY POINT ***************************** */
+  --kp-text-color: #76dccf;
+  --kp-border-color: #76dccf78;
+  
+  
+  
+  /* PLUGIN: TURNTOCHART *********************************** */
+  --ttc-text-color: var(--paragraph-text-color);
 
-  /* print sticky note - Important ------------------------- */
-  --print-sticky-note-important-title-text: #ff0000;
 
-  /* print spoiler ----------------------------------------- */
-  --print-spoiler-block-title-text: #666666;
-  --print-spoiler-block-text: #555555;
-  --print-spoiler-block-border: #888888;
 
-  --print-spoiler-inline-border: #888888;
-  --print-spoiler-inline-icon: #555555; 
+  /* PLUGIN: SPOILER - SPOILER BLOCK *********************** */
+  /* spoiler block: title -----------------------------------*/
+  --sb-title-icon-size: 18px;
+  --sb-title-font-size: 20px;
+  --sb-title-background-color: linear-gradient(to right, #868672, #5f5f42);
+  --sb-title-text-color: #dadada;
+  --sb-title-text-shadow: #000000;
+
+  /* spoiler block: body ------------------------------------*/
+  --sb-body-text-color: #d0d0d0;
+  --sb-body-background-color: #252523;
+  --sb-body-text-shadow: #000000;
+
+  /* spoiler block: horizontal line ------------------------ */
+  --sb-hr-background-color: linear-gradient(to right, #333333, #7e8062, #333333);
+  
+  /* spoiler block: list ----------------------------------- */
+  --sb-list-text-color: #9adebe;
+  
+  /* spoiler block: span ----------------------------------- */
+  --sb-span-text-color: #cccab0;
+  --sb-span-background-color: #504f46;
+  
+  /* spoiler block: list > span ---------------------------- */
+  --sb-list-span-text-color: #d0d0d0;
+  
+  /* spoiler block: custom title block --------------------- */
+  --sb-ctb-title-text-color: #afac7e;
+  --sb-ctb-background-color: #1d1d1c;
+  
+  
+  
+  /* PLUGIN: SPOILER - SPOILER INLINE ********************** */
+  /* spoiler inline: body ---------------------------------- */
+  --si-border-color: #46792b;
+  --si-background-color: #000000;
+
+  /* spoiler inline: symbol -------------------------------- */
+  --si-symbol-color: #9ace01;
+  --si-symbol-color-hover: #ff0047;
+
+
+
+  /* ******************************************************* */
+  /* ===         STYLING: PRINT & EXPORT TO PDF          === */
+  /* ******************************************************* */
+
+  /* this part would be affects to: print pdf | export pdf */
+
+
+
+  /* GENERAL *********************************************** */
+  /* print base font:  all elements that other than the print monospace font group */
+  --print-base-font: var(--base-font);
+  --print-base-font-size: 12px;
+
+  /* print monospace font:  codeblock | pre | code | inline code */
+  --print-monospace-font: var(--monospace-font);
+  --print-monospace-font-size: 10px;
+
+  /* print background -------------------------------------- */
+  --print-background-color: white;
+
+  /* print note title -------------------------------------- */
+  --print-note-title-font-size: 22px;
+  --print-note-title-text-color: #606060;
+  
+  /* print paragraph --------------------------------------- */
+  --print-paragraph-text-color: #595959;
 
   /* print horizontal line --------------------------------- */
-  --print-horizontal-line-in-spoiler: #888888;
+  --print-hr-background-color: linear-gradient(to right, #71a0a9 30%, #b3e6ea 60%);
 
-  /* ******************************************************* */
-  /*              COLOR CONTROLLER: SECTION END              */
-  /* ******************************************************* */
+
+
+  /* PRINT HEADING ***************************************** */
+  --print-h1-font-size: 1.8em;
+  --print-h2-font-size: 1.6em;
+  --print-h3-font-size: 1.4em;
+  --print-h4-font-size: 1.3em;
+  --print-h5-font-size: 1.2em;
+  --print-h6-font-size: 1.1em;
+
+  /* print heading: h1 ------------------------------------- */
+  --print-h1-text-color: #000; /* it's only work when the --switcher-h1-text-fill-color effect is off */
+  --print-h1-background-clip-text-color: var(--h1-clip-text-color);
+  --print-h1-border-background-color:  linear-gradient(to right, #3faba6 30%, #8dc1b2 60%);
+
+  /* print heading: h2 ------------------------------------- */
+  --print-h2-text-color: #202020;
+  --print-h2-rice-icon-color: var(--print-h2-text-color);
+  --print-h2-border-color: linear-gradient(to right, #545454 30%, #d4d4d4 60%);
+
+  /* print heading: h3 ------------------------------------- */
+  --print-h3-text-color: #2d2d2d;
+  --print-h3-border-color: var(--print-h2-border-color);
+
+  /* print heading: h4 ------------------------------------- */
+  --print-h4-text-color: #3a3a3a;
+  --print-h4-border-color: var(--print-h2-border-color);
+
+  /* print heading: h5 ------------------------------------- */
+  --print-h5-text-color: #3a3a3a;
+  --print-h5-border-color: var(--print-h5-text-color);
+
+  /* print heading: h6 ------------------------------------- */
+  --print-h6-text-color: #474747;
+  --print-h6-border-color: var(--print-h6-text-color);
+
+
+
+  /* PRINT SPECIAL TEXT ************************************ */
+  /* print special text: mark text ------------------------- */
+  --print-mark-text-color: #000;
+  --print-mark-text-background-color: #d6b15f;
+
+  /* print special text: emphasize text -------------------- */
+  --print-emphasize-text-color: #e69a41;
+
+  /* print special text: strong text ----------------------- */
+  --print-strong-text-color: #e69a41;
+
+  /* print special text: strikethrough text ---------------- */
+  --print-strikethrough-text-color: #925e24;
+
+  /* print special text: insert text ----------------------- */
+  --print-insert-text-color: #c7843a;
+
+  /* print special text: abbreviation text ----------------- */
+  --print-abbreviation-text-color: #54d077;
+  
+  /* print special text: inline code text ------------------ */
+  --inline-code-text-font-size: 95%;
+  --print-inline-code-text-color: #595959;
+  --print-inline-code-border-color: #000;
+
+  /* print special text: math notation text ---------------- */
+  --print-math-notation-font-size: 1.6em;
+  --print-math-notation-text-color: #555;
+
+
+
+  /* PRINT LINK ******************************************** */
+  /* print link: text -------------------------------------- */
+  --print-link-text-color: #58bdf9; /* by default, it will also affects to --print-mt-list-token-color */
+  
+  /* print link: href -------------------------------------- */
+  --print-link-href-font-size: 10px;
+
+
+
+  /* PRINT LIST ******************************************** */
+  /* print list text group: unordered list | ordered list | checklist */
+  --print-list-text-color: #51bba8;
+  
+  /* print list: span -------------------------------------- */
+  --print-list-span-text-color: #595959;
+
+
+
+  /* PRINT TABLE ******************************************* */
+  /* print table: table header ----------------------------- */
+  --print-table-th-text-color: var(--print-paragraph-text-color);
+  --print-table-th-background-color: #3ae6d6;
+
+  /* print table: table data ------------------------------- */
+  --print-table-td-text-color: var(--print-table-th-text-color);
+  --print-table-td-border-color: rgb(255, 255, 255);
+  
+  /* print table: table row -------------------------------- */
+  --print-table-tr-even-background-color: #e0e0e0;
+  --print-table-tr-odd-background-color: #fff;
+
+
+
+  /* PRINT BLOCKQUOTE ************************************** */
+  --print-blockquote-text-color: #ab7b46;
+  --print-blockquote-border-color: #e8c093;
+
+
+
+  /* PRINT CODEBLOCK *************************************** */
+  --print-codeblock-text-line-height: 1.5em;
+  --print-codeblock-text-color: #474747;
+  --print-codeblock-border-color: #000;
+
+
+
+  /* PRINT MARKDOWN TOC ************************************ */
+  --print-mt-title-text-color: #606060;
+  --print-mt-border-color: var(--print-mt-title-text-color);
+  --print-mt-list-token-color: var(--print-link-text-color);
+
+
+
+  /* PRINT FOOTNOTE **************************************** */
+  /* print footnote: title --------------------------------- */
+  --print-footnote-title-text-color: #3a3a3a;
+  --print-footnote-title-border-color: #999;
+  
+  /* print footnote: text ---------------------------------- */
+  --print-footnote-text-color: #666; /* [TODO]: list token and list text split */
+
+
+
+  /* PRINT CUSTOM ELEMENT: STICKY NOTES ******************** */
+  /* sticky notes body group: not including sticky notes - important - */
+  --print-sn-text-color: var(--print-paragraph-text-color);
+  --print-sn-border-color: #999;
+  
+  /* sticky notes tags group: not including sticky notes - important */
+  --print-sn-tags-font-size: 1em;
+  --print-sn-tags-text-color: #fff;
+
+  /* print sticky notes: important ------------------------- */
+  --print-sn-important-tag-font-size: 1.1em;
+  --print-sn-important-text-color: var(--print-paragraph-text-color);
+
+
+
+  /* PRINT CUSTOM ELEMENT: CUSTOM TITLE BLOCK ************** */
+  --print-ctb-title-font-size: 1.2em;
+  --print-ctb-title-text-color: #777;
+  --print-ctb-title-symbol-color: radial-gradient(#888888 34%, #aaaaaa7a 60%);
+  --print-ctb-border-color: #999;
+  
+
+
+  /* PRINT CUSTOM ELEMENT: KEY POINT *********************** */
+  --print-kp-text-color: #2cceb9;
+  --print-kp-border-color: #2cceb978;
+
+
+  
+  /* PRINT PLUGIN: TURNTOCHART ***************************** */
+  --print-ttc-text-color: #595959;
+  
+  
+  
+  /* PRINT PLUGIN: SPOILER - SPOILER BLOCK ***************** */
+  /* print spoiler block: container ------------------------ */
+  --print-sb-border-color: #999;
+  
+  /* print spoiler block: title ---------------------------- */
+  --print-sb-title-font-size: 16px;
+  --print-sb-title-text-color: #606060;
+  --print-sb-title-border-color: var(--print-sb-border-color);
+  
+  /* print spoiler block: body ----------------------------- */
+  --print-sb-body-text-color: var(--print-paragraph-text-color);
+
+  /* print spoiler block: horizontal line ------------------ */
+  --print-sb-hr-background-color: linear-gradient(to right, #ccc, #666, #ccc);
+
+  /* print spoiler block: list ----------------------------- */
+  --print-sb-list-text-color: #2da76b;
+
+  /* print spoiler block: span ----------------------------- */
+  --print-sb-span-font-size: 1.2em;
+  --print-sb-span-text-color: #706c2b;
+  --print-sb-span-border-color: #999;
+
+  /* print spoiler block: list > span ---------------------- */
+  --print-sb-list-span-text-color: #474747;
+  
+  /* print spoiler block: custom title block --------------- */
+  --print-sb-ctb-title-font-size: 1.2em;
+  --print-sb-ctb-border-color: #999;
+  --print-sb-ctb-title-text-color: #afac7e;
+
+
+
+  /* PRINT PLUGIN: SPOILER - SPOILER INLINE **************** */
+  --print-si-border-color: #999;
+  --print-si-question-mark-color: #9ace01;
 
 }
 
 /* ********************************************************* */
-/*         STYLING: RENDER VIEWER & RICH TEXT EDITOR         */
+/* !!!!!!!!!           ROOT: SECTION END          !!!!!!!!!! */
+/* ********************************************************* */
+/* ********************************************************* */
+/* !!!!!!!!!    MAIN SOURCE CODE: SECTION START   !!!!!!!!!! */
 /* ********************************************************* */
 
-/* GENERAL STYLING ***************************************** */
+
+
+/* ********************************************************* */
+/* ===    STYLING: RENDER VIEWER & RICH TEXT EDITOR      === */
+/* ********************************************************* */
+
+/* this part would be affects to: render viewer | rich text editor | export html */
+
+
+
+/* GENERAL ************************************************* */
+/* base font group:  all elements that other than monospace font group */
+#rendered-md,
 #tinymce,
+#joplin-container-body,
 #joplin-container-content,
-.summary-title,
-.summary-content {
-  font-family: var(--content-font);
-  font-size: var(--content-font-size);
-  color: var(--primary-text-color);
-  background: var(--render-viewer-background);
+#spoiler-block-title {
+  font-family: var(--base-font) !important;
+  font-size: var(--base-font-size);
+}
+
+/* monospace font group:  code block | pre | code | footnote ref no. */
+#rendered-md > .joplin-editable > pre:not(.mermaid),
+#rendered-md > .joplin-editable > pre > code,
+#rendered-md .inline-code,
+[id*="fnref"] {
+  font-family: var(--monospace-font) !important;
+  font-size: var(--monospace-font-size);
+}
+
+/* render viewer background -------------------------------- */
+#rendered-md,
+#tinymce,
+#joplin-container-body,
+#joplin-container-content,
+.exported-note {
+  background: var(--render-viewer-background-color);
+}
+
+/* exported html ------------------------------------------- */
+body {
+  background: #242424;
+}
+.exported-note {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* rich text editor side padding --------------------------- */
+#tinymce > #rendered-md {
+  padding: 0 10px;
+}
+
+/* exported note title ------------------------------------- */
+.exported-note-title {
+  color: var(--export-note-title);
+}
+
+/* paragraph ----------------------------------------------- */
+#rendered-md > p {
+  padding: 0;
+  margin: 20px 0 20px 3px;
+}
+#rendered-md > p,
+note,
+tip,
+explain,
+question,
+warning,
+keyword {
+  text-align: var(--switcher-paragraph-text-align);
+  line-height: var(--paragraph-text-line-height);
+  color: var(--paragraph-text-color);
+}
+body {
+  color: var(--paragraph-text-color);
+}
+
+/* horizontal line ----------------------------------------- */
+#rendered-md > hr {
+  border: 0;
+  width: auto;
+  height: 1px;
+  margin: 20px 0;
+  background-image: var(--hr-background-image-color);
 }
 
 
 
 /* HEADING ************************************************* */
+/* headings group: h1 to h6 -------------------------------- */
 #rendered-md > h1,
 #rendered-md > h2,
 #rendered-md > h3,
 #rendered-md > h4,
 #rendered-md > h5,
 #rendered-md > h6 {
-  font-weight: var(--heading-font-weight);
-  line-height: var(--heading-line-height);
+  text-align: initial;
   padding: 0;
-  margin: var(--heading-margin);
+  margin: 30px 0;
+  font-weight: var(--headings-font-weight);
+  line-height: var(--headings-line-height);
 }
 
+/* heading: h1 --------------------------------------------- */
 #rendered-md > h1 {
-  font-variant: small-caps;
-  font-size: var(--h1-heading-size);
-  color: var(--h1-text);
-  background: var(--h1-clip-text);
+  font-variant: var(--switcher-h1-font-variant);
+  font-size: var(--h1-font-size);
+  color: var(--h1-text-color);
+  border: 0;
+  background: var(--h1-clip-text-color);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-bottom: 1px solid var(--h1-border);
+  -webkit-text-fill-color: var(--switcher-h1-text-fill-color);
+}
+/* heading: h1 custom border ------------------------------- */
+#rendered-md > h1::after {
+  content: "";
+  display: var(--switcher-h1-border-display);
+  width: 100%;
+  height: 1px;
+  margin: 1px 0;
+  background-image: var(--h1-border-color);
+}
+/* heading: h1 > span -------------------------------------- */
+#rendered-md > h1 > span { /* span in H1 heading: to avoiding the background-clip effect */
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: initial;
+  font-size: var(--h1-font-size);
 }
 
-#rendered-md > h2::before {
-  /* the rice icon of h2 heading */
-  content: "";
-  display: var(--h2-heading-rice-icon);
-  width: 0.7em;
-  height: 0.8em;
-  margin: 0 8px 0 0;
-  background: var(--h2-icon);
-  border-radius: 0.9em 2.9em 1.1em 3em;
-}
+/* heading: h2 --------------------------------------------- */
 #rendered-md > h2 {
-  font-size: var(--h2-heading-size);
-  color: var(--h2-text);
-  border-bottom: 1px solid var(--h2-border);
+  font-size: var(--h2-font-size);
+  color: var(--h2-text-color);
 }
-
-#rendered-md > h3 {
-  font-size: var(--h3-heading-size);
-  color: var(--h3-text);
-}
-
-#rendered-md > h4 {
-  font-size: var(--h4-h5-heading-size);
-  color: var(--h4-text);
-}
-
-#rendered-md > h5 {
-  font-size: var(--h4-h5-heading-size);
-  color: var(--h5-text);
-  border-bottom: 1px dotted var(--h5-border);
-}
-
-#rendered-md > h6 {
-  font-size: var(--h6-heading-size);
-  color: var(--h6-text);
-}
-
-
-
-/* PARAGRAPH *********************************************** */
-#rendered-md p {
-  padding-left: 3px;
-}
-
-
-
-/* MARKDOWN TOC ******************************************** */
-#rendered-md .table-of-contents::before {
-  content: "Table Of Contents";
-  display: block;
-  width: auto;
-  height: 1em;
-  padding: 20px 0 5px 15px;
-  margin: 0 0 20px 0;
-  font-weight: 700;
-  font-size: 1.7em;
-  color: var(--markdown-toc-title);
-  border-top: 1px dashed var(--markdown-toc-border);
-  border-radius: 7px;
-}
-#rendered-md .table-of-contents::after {
+/* heading: h2 rice icon ----------------------------------- */
+#rendered-md > h2::before {
   content: "";
-  display: block;
-  width: auto;
-  height: 1em;
-  border-bottom: 1px dashed var(--markdown-toc-border);
-  border-radius: 7px;
+  display: var(--switcher-h2-rice-icon-display);
+  width: 0.85em;
+  height: 0.8em;
+  margin: 0 5px 0 0;
+  background: var(--h2-rice-icon-color);
+  border-radius: 25% 66% 27% 70%;
 }
+/* heading: h2 custom border ------------------------------- */
+#rendered-md > h2::after {
+  content: "";
+  display: var(--switcher-h2-border-display);
+  width: 100%;
+  height: 1px;
+  margin: 2px 0;
+  background-image: var(--h2-border-color);
+}
+
+/* heading: h3 --------------------------------------------- */
+#rendered-md > h3 {
+  font-size: var(--h3-font-size);
+  color: var(--h3-text-color);
+}
+/* heading: h3 custom border ------------------------------- */
+#rendered-md > h3::after {
+  content: "";
+  display: var(--switcher-h3-border-display);
+  width: 100%;
+  height: 1px;
+  margin: 2px 0;
+  background-image: var(--h3-border-color);
+}
+
+/* heading: h4 --------------------------------------------- */
+#rendered-md > h4 {
+  font-size: var(--h4-font-size);
+  color: var(--h4-text-color);
+}
+/* heading: h4 custom border ------------------------------- */
+#rendered-md > h4::after {
+  content: "";
+  display: var(--switcher-h4-border-display);
+  width: 100%;
+  height: 1px;
+  margin: 2px 0;
+  background-image: var(--h4-border-color);
+}
+
+/* heading: h5 --------------------------------------------- */
+#rendered-md > h5 {
+  font-size: var(--h5-font-size);
+  color: var(--h5-text-color);
+  border-bottom: var(--switcher-h5-border-width) dotted var(--h5-border-color);
+}
+
+/* heading: h6 --------------------------------------------- */
+#rendered-md > h6 {
+  font-size: var(--h6-font-size);
+  color: var(--h6-text-color);
+  border-bottom: var(--switcher-h6-border-width) dotted var(--h6-border-color);
+}
+
 
 
 
 /* SPECIAL TEXT ******************************************** */
-
-/* mark ---------------------------------------------------- */
-#rendered-md mark::before,
-#rendered-md mark::after {
-  content: "";
-  display: inline-block;
-  width: 5px;
-}
+/* special text: mark text --------------------------------- */
 #rendered-md mark {
-  color: var(--mark-text);
-  background: var(--mark-text-highlight);
+  padding: 0 6px;
+  color: var(--mark-text-color);
+  background: var(--mark-text-background-color);
   border-radius: 1em;
 }
 
-/* search -------------------------------------------------- */
+/* special text: search text ------------------------------- */
 #rendered-md mark[data-markjs="true"] {
-  font-size: 18px;
-  color: var(--search-text);
-  background: var(--search-text-background);
-  border: 2px dotted var(--search-text-border);
-}
-#rendered-md h1 > mark[data-markjs="true"],
-#rendered-md h2 > mark[data-markjs="true"],
-#rendered-md h3 > mark[data-markjs="true"],
-#rendered-md h4 > mark[data-markjs="true"],
-#rendered-md h5 > mark[data-markjs="true"],
-#rendered-md h6 > mark[data-markjs="true"] {
-  font-size: 1em;
-  -webkit-text-fill-color: var(--search-text-border);
+  font-size: 1.1em;
+  padding: 2px 6px;
+  margin: 0 3px;
+  color: var(--search-text-color);
+  box-shadow: 0 0 3px var(--search-text-box-shadow);
   background: none;
 }
+#rendered-md > h1 > mark[data-markjs="true"],
+#rendered-md > h2 > mark[data-markjs="true"],
+#rendered-md > h3 > mark[data-markjs="true"],
+#rendered-md > h4 > mark[data-markjs="true"],
+#rendered-md > h5 > mark[data-markjs="true"],
+#rendered-md > h6 > mark[data-markjs="true"] {
+  font-size: inherit;
+  -webkit-text-fill-color: var(--search-text-color);
+}
+#rendered-md mark > mark[data-markjs="true"],
+#rendered-md code.inline-code > mark[data-markjs="true"],
+#rendered-md .spoiler-inline > mark[data-markjs="true"] {
+  background: var(--render-viewer-background-color);
+  box-shadow: 0 0 4px var(--search-text-box-shadow);
+}
 
-/* emphasize ----------------------------------------------- */
+/* special text: emphasize text ---------------------------- */
 #rendered-md em {
-  color: var(--emphasize-text);
+  color: var(--emphasize-text-color);
 }
 
-/* strong -------------------------------------------------- */
+/* special text: strong text ------------------------------- */
 #rendered-md strong {
-  color: var(--strong-text);
+  color: var(--strong-text-color);
+  font-weight: 700;
 }
 
-/* strikethrough ------------------------------------------- */
+/* special text: strikethrough text ------------------------ */
 #rendered-md s {
-  color: var(--strikethrough-text);
+  color: var(--strikethrough-text-color);
 }
 
-/* insert -------------------------------------------------- */
+/* special text: insert text ------------------------------- */
 #rendered-md ins {
-  color: var(--insert-text);
+  color: var(--insert-text-color);
 }
 
-/* abbreviation -------------------------------------------- */
+/* special text: abbreviation text ------------------------- */
 #rendered-md abbr {
-  color: var(--abbreviation-text);
   font-weight: 500;
   text-decoration: underline dotted;
+  color: var(--abbreviation-text-color);
 }
 
-/* math notation ------------------------------------------- */
+/* special text: inline code text -------------------------- */
+#rendered-md .inline-code,
+.mce-content-body code {
+  color: var(--inline-code-text-color);
+  padding: 0 3px;
+  background: var(--inline-code-background-color);
+  border: 1px solid --inline-code-border-color;
+}
+
+/* special text: math notation text ------------------------ */
 #rendered-md .katex-display {
-  color: var(--math-notation-text);
   font-size: 1.5em;
-  text-shadow: 0 0 3px var(--math-notation-text-shadow);
-}
-
-
-
-/* LIST **************************************************** */
-
-/* group:  unordered list | order list | checklist --------- */
-#rendered-md > ul,
-#rendered-md > ol {
-  color: var(--list-text);
-  margin: 20px 0 20px 25px;
-}
-
-#rendered-md ul > li,
-#rendered-md ol > li {
-  margin: 2px 0;
-}
-
-/* sublist group:  unordered list | order list ------------- */
-#rendered-md ul ul,
-#rendered-md ol ol,
-#rendered-md ul > ol,
-#rendered-md ol > ul {
-  margin: 0 0 0 20px;
-}
-
-/* checklist ----------------------------------------------- */
-.joplin-checkbox > .checkbox-wrapper > [class*="checkbox-label-"] {
-  color: var(--checklist-text);
-}
-/* checkbox */
-.joplin-checkbox > .checkbox-wrapper > input[checked="checked"] {
-  filter: var(--checkbox-checked);
-}
-
-/* list in spoiler ----------------------------------------- */
-#rendered-md > .spoiler-block > .summary-content ul > li,
-#rendered-md > .spoiler-block > .summary-content ol > li {
-  color: var(--list-in-spoiler-text);
-  margin: 0px;
+  color: var(--math-notation-text-color);
+  text-shadow: 0 0 2px var(--math-notation-text-shadow-color);
 }
 
 
 
 /* LINK **************************************************** */
 #rendered-md a {
-  color: var(--link-text);
+  word-break: var(--switcher-link-break-word);
+  margin: 0 3px;
+  color: var(--link-text-color);
 }
-/* link resource icon */
+/* link: bracket ------------------------------------------- */
+#rendered-md a::before,
+#rendered-md a::after {
+  display: var(--switcher-link-bracket-display);
+  font-family: var(--monospace-font);
+}
+#rendered-md a::before {
+  content: "(";
+}
+#rendered-md a::after {
+  content: ")";
+}
+#rendered-md .table-of-contents a::before,
+#rendered-md .table-of-contents a::after,
+#rendered-md [id*="fnref"]::before,
+#rendered-md [id*="fnref"]::after {
+  display: none;
+}
+/* link: resource icon ------------------------------------- */
 #rendered-md .resource-icon {
-  font-size: 12px;
-  background: var(--link-resource-icon);
+  margin: 0 6px 0 3px;
+  font-size: 10px;
+  background: var(--link-resource-icon-color);
+}
+
+
+
+/* LIST **************************************************** */
+/* list text group: unordered list | ordered list | checklist */
+#rendered-md li,
+#rendered-md li > p {
+  margin: 2px 0;
+  color: var(--list-text-color);
+}
+#rendered-md li:not(id^="fn") {
+  text-align: var(--switcher-list-text-align);
+}
+
+/* list margin group: unordered list | order list ---------- */
+#rendered-md ul,
+#rendered-md ol {
+  margin: 20px 0 20px 25px;
+}
+/* sublist margin group:  unordered list | order list ------ */
+#rendered-md ul ul,
+#rendered-md ol ol,
+#rendered-md ul ol,
+#rendered-md ol ul {
+  margin: 0 0 0 18px;
+}
+
+/* list: checkbox ------------------------------------------ */
+#rendered-md input[id*="md-checkbox-"] {
+  filter: var(--checkbox-color-filter);
+}
+
+/* list: list > span --------------------------------------- */
+#rendered-md > ul li span,
+#rendered-md > ol li span {
+  color: var(--list-span-text-color);
+}
+
+
+
+/* TABLE *************************************************** */
+/* table: container ---------------------------------------- */
+#rendered-md > table {
+  width: 100%;
+  margin: 30px auto;
+}
+/* table: table header ------------------------------------- */
+#rendered-md > table > thead > tr > th {
+  color: var(--table-th-text-color);
+  border: 3px solid var(--table-th-border-color);
+  background: var(--table-th-background-color);
+}
+/* table: table data --------------------------------------- */
+#rendered-md > table > tbody > tr > td {
+  color: var(--table-td-text-color);
+  border: 3px solid var(--table-td-border-color);
+}
+/* table: table row ---------------------------------------- */
+.jop-tinymce table tr:nth-child(even),
+table > tbody > tr:nth-child(even) {
+  background-color: var(--table-tr-odd-background-color);
+}
+.jop-tinymce table tr:nth-child(odd),
+table > tbody > tr:nth-child(odd) {
+  background-color: var(--table-tr-even-background-color);
 }
 
 
 
 /* BLOCKQUOTE ********************************************** */
 #rendered-md > blockquote {
-  color: var(--blockquote-text);
-  padding: 0 0 0 10px;
-  margin: 0 0 0 5px;
-  border-left: 5px dotted var(--blockquote-border);
-  opacity: 0.8;
+  padding: 5px 0 5px 10px;
+  margin: 25px 0px 25px 5px;
+  border-left: 5px dotted var(--blockquote-border-color);
+  opacity: 1;
+}
+#rendered-md > blockquote > p {
+  margin: 0;
+  color: var(--blockquote-text-color);
 }
 
 
 
-/* SYNTAX ************************************************** */
-
-/* syntax font group:  code block | inline code | pre ------ */
-.joplin-editable > pre,
-.joplin-editable > pre > code,
-#rendered-md .inline-code {
-  font-family: var(--syntax-font);
-  font-size: var(--syntax-font-size);
-  color: var(--code-text);
-}
-
-.joplin-editable > pre > code {
-  opacity: 0.9;
-}
-
-/* code block ---------------------------------------------- */
-.joplin-editable > pre:not(.mermaid) {
-  line-height: var(--code-block-line-height);
-  padding: 10px 12px;
-  margin: 20px 0;
-  background: var(--code-block-background);
+/* CODEBLOCK *********************************************** */
+/* codeblock: container ------------------------------------ */
+#rendered-md > .joplin-editable > pre:not(.mermaid) {
+  padding: 10px 15px;
+  margin: 30px 0;
   border-width: 0 2px;
-  border-style: ridge;
-  border-color: var(--code-block-border);
+  border-style: dotted;
+  border-color: var(--codeblock-border-color);
+  max-height: var(--switcher-codeblock-max-height);
   border-radius: 8px;
-  box-shadow: 0 0 3px var(--code-block-box-shadow);
-  overflow-y: scroll;
+  background: var(--codeblock-background-color);
+  box-shadow: 0 0 3px var(--codeblock-box-shadow-color);
+}
+/* codeblock: text ----------------------------------------- */
+#rendered-md > .joplin-editable > pre:not(.mermaid) > code {
+  color: var(--codeblock-text-color) !important;
 }
 
-/* code block scrollbar ------------------------------------ */
-.joplin-editable > pre::-webkit-scrollbar {
-  height: 20px;
-  width: 0px;
+/* codeblock: scrollbar ------------------------------------ */
+#rendered-md > .joplin-editable > pre::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
 }
-.joplin-editable > pre::-webkit-scrollbar-thumb {
-  background: var(--code-block-scrollbar);
-  background-clip: content-box;
+#rendered-md > .joplin-editable > pre::-webkit-scrollbar-thumb {
   border: 5px solid transparent;
   border-radius: 1em;
+  background: var(--codeblock-scrollbar-background-color);
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
 }
-
-/* rich text editor code block selected state -------------- */
+#rendered-md > .joplin-editable > pre::-webkit-scrollbar-thumb:hover {
+  border: 5px solid transparent;
+  border-radius: 1em;
+  background: var(--codeblock-scrollbar-background-color-hover);
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+}
+/* codeblock: selected status on rich text editor ---------- */
 .mce-content-body [contentEditable="false"][data-mce-selected] {
-  outline: 3px solid var(--rich-text-code-block-selected-outline);
-}
-
-/* inline code --------------------------------------------- */
-#rendered-md .inline-code {
-  background: var(--inline-code-background);
+  outline: 3px solid var(--codeblock-selected-outline-color);
 }
 
 
 
-/* TABLE *************************************************** */
-table {
+/* MARKDOWN TOC ******************************************** */
+.table-of-contents::before,
+.table-of-contents::after {
+  display: block;
+  width: auto;
+  height: 1em;
+  border-radius: 7px;
+}
+.table-of-contents::before {
+  content: "Table Of Contents";
+  padding: 20px 0 5px 15px;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  font-size: 1.7em;
+  color: var(--mt-title-text-color);
+  border-top: 1px dashed var(--mt-border-color);
+}
+.table-of-contents::after {
+  content: "";
+  border-bottom: 1px dashed var(--mt-border-color);
+}
+.table-of-contents li::marker {
+  color: var(--link-text-color);
+}
+
+
+
+/* MERMAID CHART ******************************************* */
+#rendered-md .mermaid {
   width: 100%;
-  margin: 25px auto;
-}
-
-table > thead > tr > th {
-  color: var(--table-th-text);
-  background: var(--table-th-background);
-  border-width: 3px;
-  border-color: var(--render-viewer-background);
-}
-table > tbody > tr > td {
-  color: var(--table-td-text);
-  border-width: 3px;
-  border-color: var(--render-viewer-background);
-}
-.jop-tinymce table tr:nth-child(even),
-table > tbody > tr:nth-child(even) {
-  background-color: var(--table-tr-even-background);
-}
-.jop-tinymce table tr:nth-child(odd),
-table > tbody > tr:nth-child(odd) {
-  background-color: var(--table-tr-odd-background);
 }
 
 
 
 /* FOOTNOTE ************************************************ */
+/* footnote: disable original border ----------------------- */
 #rendered-md .footnotes-sep {
   display: none;
 }
+/* footnote: reference number ------------------------------ */
+[id*="fnref"] {
+  position: relative;
+  bottom: -3px;
+}
+/* footnote: title ----------------------------------------- */
 #rendered-md .footnotes::before {
   content: "Footnotes";
   display: inline-block;
   width: 100%;
-  margin-top: 2em;
-  padding-top: 0.5em;
-  border-top: 3px double var(--footnote-border);
-}
-#rendered-md .footnote-item {
-  color: var(--footnote-text);
-}
-
-
-
-/* SPAN **************************************************** */
-
-/* span in h1 heading -------------------------------------- */
-#rendered-md > h1 > span {
-  -webkit-background-clip: initial;
-  background-clip: initial;
-  -webkit-text-fill-color: initial;
-}
-
-/* span in list -------------------------------------------- */
-#rendered-md > ul li span,
-#rendered-md > ol li span {
-  color: var(--span-in-list-text);
-}
-
-/* span in spoiler block ----------------------------------- */
-.spoiler-block > .summary-content > p > span {
-  display: block;
-  padding: 2px 15px;
-  font-size: var(--span-in-spoiler-text-size);
-  font-weight: 700;
-  color: var(--span-in-spoiler-text);
-  background: var(--span-in-spoiler-background);
-  border-radius: 5px;
-}
-
-/* span in spoiler list ------------------------------------ */
-.spoiler-block > .summary-content > ul li span,
-.spoiler-block > .summary-content > ol li span {
-  color: var(--span-in-spoiler-list-text);
-}
-
-
-
-/* CUSTOM TITLE BLOCK ************************************** */
-#rendered-md > p > ctb:first-line {
-  font-size: var(--ctb-title-size);
-  font-weight: 700;
-  color: var(--ctb-title-text);
-}
-#rendered-md > p > ctb {
-  display: block;
-  padding: 10px 20px;
-  background: var(--ctb-background);
-  border-radius: 7px 17px;
-}
-
-/* custom title block in spoiler block --------------------- */
-.spoiler-block > .summary-content > p > ctb {
-  display: block;
-  padding: 5px 15px 15px 15px;
-  margin: 20px 0 20px -3px;
-  background: var(--ctb-in-spoiler-background);
-  border-radius: 5px;
-}
-.spoiler-block > .summary-content > p > ctb:first-line {
-  font-size: var(--ctb-in-spoiler-block-title-size);
-  font-weight: 800;
-  line-height: 40px;
-  color: var(--ctb-in-spoiler-block-title-text);
-}
-
-
-
-/* STICKY NOTES ******************************************** */
-
-/* sticky notes group:  note | tip | question | explain | warning */
-note::after,
-tip::after,
-question::after,
-explain::after,
-warning::after,
-keyword::after {
-  font-weight: 700;
-  display: table;
-  width: 100;
-  padding: 0 10px 0;
-  margin: 8px 10px 0 0;
-  text-shadow: 1px 1px 3px var(--sticky-notes-tags-text-shadow);
-  border-radius: 4px 10px;
-}
-note,
-tip,
-question,
-explain,
-warning,
-keyword {
-  color: var(--sticky-notes-text);
-  display: block;
-  padding: 10px 20px;
-  margin: 15px 0;
-  background: var(--sticky-notes-background);
-  border-width: 0px 2px;
-  border-style: solid;
-  border-color: var(--sticky-notes-border);
-  border-radius: 7px 17px;
-  box-shadow: 1px 1px 4px var(--sticky-notes-box-shadow);
-}
-
-/* note tag ------------------------------------------------ */
-note::after {
-  content: "NOTE";
-  background: var(--note-tag);
-}
-
-/* tip tag ------------------------------------------------- */
-tip::after {
-  content: "TIP";
-  background: var(--tip-tag);
-}
-
-/* question tag -------------------------------------------- */
-question::after {
-  content: "QUESTION";
-  background: var(--question-tag);
-}
-
-/* explain tag --------------------------------------------- */
-explain::after {
-  content: "EXPLAIN";
-  background: var(--explain-tag);
-}
-
-/* warning tag --------------------------------------------- */
-warning::after {
-  content: "WARNING";
-  background: var(--warning-tag);
-}
-
-/* keyword tag --------------------------------------------- */
-keyword::after {
-  content: "KEYWORD";
-  background: var(--keyword-tag);
-}
-
-/* sticky note - important (standalone) -------------------- */
-important::before {
-  content: "IMPORTANT";
-  color: var(--important-title-text);
-  font-weight: 700;
-  text-align: center;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0px 0 10px 0;
-  background: var(--important-title-background);
-  border-width: 1px 0 1px 0;
-  border-style: solid;
-  border-color: var(--important-title-border);
-  border-radius: 8px;
-}
-important {
+  padding-top: 10px;
+  margin-top: 20px;
   font-weight: 500;
-  color: var(--important-text);
-  display: block;
-  padding: 1em;
-  margin: 1em 2em;
-  background: var(--important-background);
-  border-width: 0px 2px;
-  border-style: solid;
-  border-color: var(--important-border);
-  border-radius: 7px 17px;
-  box-shadow: 0 0 5px var(--important-box-shadow);
+  font-size: var(--footnote-title-font-size);
+  color: var(--footnote-title-text-color);
+  border-top: 3px double var(--footnote-title-border-color);
+}
+/* footnote: list text ------------------------------------- */
+#rendered-md .footnote-item > p {
+  color: var(--footnote-list-text-color);
+}
+#rendered-md .footnotes  {
+  text-align: var(--switcher-footnote-text-align);
+}
+
+/* footnote: list token ------------------------------------ */
+#rendered-md .footnote-item {
+  color: var(--footnote-list-token-color);
 }
 
 
 
-/* ART GALLERY ********************************************* */
+/* EYE PROTECTOR ******************************************* */
+/* eye protector: animation -------------------------------- */
+@keyframes eye-protector {
+  from {
+    filter: brightness(80%);
+  }
+  to {
+    filter: brightness(100%);
+  }
+}
+/* eye protector: for attached images ---------------------- */
+img {
+  filter: var(--switcher-eye-protector-for-images-filter);
+}
+img:hover {
+  animation: var(--switcher-eye-protector-for-images-animation);
+}
+/* eye protector: for mermaid chart ------------------------ */
+.mermaid {
+  filter: var(--switcher-eye-protector-for-mermaid-filter);
+}
+.mermaid:hover {
+  animation: var(--switcher-eye-protector-for-mermaid-animation);
+}
+
+
+
+/* CUSTOM ELEMENT: ART GALLERY ***************************** */
 ag2,
 ag3,
 ag4,
 ag5,
-ag6 {
+ag6,
+ag7,
+ag8,
+ag9,
+ag10,
+ag11,
+ag12 {
   display: inline-flex;
   flex-wrap: wrap;
-  max-height: 60vh;
   margin: 25px 0;
+  padding: 20px;
   align-items: center;
-  justify-content: center;
+  max-height: var(--switcher-art-gallery-max-height);
+  border-radius: 7px;
+  background: var(--ag-background-color); 
+  box-shadow: 0 0 3px var(--ag-box-shadow); 
   overflow-y: scroll;
 }
 ag2 img,
 ag3 img,
 ag4 img,
 ag5 img,
-ag6 img {
-  padding: 5px;
+ag6 img,
+ag7 img,
+ag8 img,
+ag9 img,
+ag10 img,
+ag11 img,
+ag12 img {
+  padding: 6px;
 }
 ag2 img {
-  max-width: calc(100% / 2.1);
+  max-width: calc(100% / 2 - 12px);
 }
 ag3 img {
-  max-width: calc(100% / 3.2);
+  max-width: calc(100% / 3 - 12px);
 }
 ag4 img {
-  max-width: calc(100% / 4.4);
+  max-width: calc(100% / 4 - 12px);
 }
 ag5 img {
-  max-width: calc(100% / 5.6);
+  max-width: calc(100% / 5 - 12px);
 }
 ag6 img {
-  max-width: calc(100% / 6.8);
+  max-width: calc(100% / 6 - 12px);
+}
+ag7 img {
+  max-width: calc(100% / 7 - 12px);
+}
+ag8 img {
+  max-width: calc(100% / 8 - 12px);
+}
+ag9 img {
+  max-width: calc(100% / 9 - 12px);
+}
+ag10 img {
+  max-width: calc(100% / 10 - 12px);
+}
+ag11 img {
+  max-width: calc(100% / 11 - 12px);
+}
+ag12 img {
+  max-width: calc(100% / 12 - 12px);
 }
 
 
 
-/* EYE-PROTECTOR ******************************************* */
-@keyframes eye-protector {
-  from {
-    filter: brightness(70%);
-  }
-  to {
-    filter: brightness(100%);
-  }
-}
-#rendered-md img,
-#rendered-md .mermaid {
-  filter: var(--eye-protector-filter);
-}
-#rendered-md img:hover,
-#rendered-md .mermaid:hover {
-  animation: var(--eye-protector-animation);
-}
-
-
-
-/* SPOILER ************************************************* */
-
-/* spoiler block group:  block | title --------------------- */
-.spoiler-block,
-.summary-title {
-  font-size: 20px;
-  color: var(--spoiler-block-title-text);
-  background: var(--spoiler-block-title-background);
-  border-radius: 7px 17px;
-  text-shadow: 0 0 2px var(--spoiler-block-title-text-shadow);
-  border: none;
+/* CUSTOM ELEMENT: STICK NOTES ***************************** */
+/* sticky notes body group:  not including the stick note - "Important" */
+note,
+tip,
+question,
+explain,
+warning,
+keyword {
+  display: block;
+  padding: 0 20px 10px 20px;
+  white-space: break-spaces;
+  margin: 15px 0;
+  color: var(--sn-text-color);
+  border-width: 0px 2px;
+  border-style: solid;
+  border-color: var(--sn-border-color);
+  border-radius: 6px 15px;
+  background: var(--sn-background-color);
+  box-shadow: 0px 0px 4px var(--sn-box-shadow);
 }
 
-/* spoiler block title icon -------------------------------- */
-.summary-title::before {
+/* sticky notes tags group: not including the stick note - "Important" */
+note::after,
+tip::after,
+question::after,
+explain::after,
+warning::after,
+keyword::after {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 10px 0;
+  margin: 8px 0 0 0;
+  font-weight: 700;
+  border-radius: 4px 10px;
+  text-shadow: 1px 1px 4px var(--sn-tags-text-shadow-color);
+}
+
+/* sticky notes: note tag ---------------------------------- */
+note::after {
+  content: "NOTE";
+  background: var(--sn-note-tag-background-color);
+}
+
+/* sticky notes: tip tag ----------------------------------- */
+tip::after {
+  content: "TIP";
+  background: var(--sn-tip-tag-background-color);
+}
+
+/* sticky notes: question tag ------------------------------ */
+question::after {
+  content: "QUESTION";
+  background: var(--sn-question-tag-background-color);
+}
+
+/* sticky notes: explain tag ------------------------------- */
+explain::after {
+  content: "EXPLAIN";
+  background: var(--sn-explain-tag-background-color);
+}
+
+/* sticky notes: warning tag ------------------------------- */
+warning::after {
+  content: "WARNING";
+  background: var(--sn-warning-tag-background-color);
+}
+
+/* sticky notes: keyword tag ------------------------------- */
+keyword::after {
+  content: "KEYWORD";
+  background: var(--sn-keyword-tag-background-color);
+}
+
+/* sticky notes: important - body -------------------------- */
+important {
+  display: block;
+  padding: 1em;
+  margin: 20px 10%;
+  font-weight: 500;
+  color: var(--sn-important-text-color);
+  border-width: 0px 2px;
+  border-style: solid;
+  border-color: var(--sn-important-border-color);
+  border-radius: 6px 15px;
+  background: var(--sn-important-background-color);
+  box-shadow: 0 0 3px var(--sn-important-box-shadow);
+}
+/* sticky notes: important - tag --------------------------- */
+important::before {
+  content: "IMPORTANT";
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0px 0 10px 0;
+  font-weight: 700;
+  text-align: center;
+  color: var(--sn-important-tag-text-color);
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: var(--sn-important-tag-border-color);
+  border-radius: 8px;
+  background: var(--sn-important-tag-background-color);
+}
+
+
+
+/* CUSTOM ELEMENT: CUSTOM TITLE BLOCK ********************** */
+/* custom title block: container --------------------------- */
+#rendered-md > p > ctb {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 6px 15px;
+  background: var(--ctb-background-color);
+}
+/* custom title block: title --------------------------------*/
+#rendered-md > p > ctb:first-line {
+  font-weight: 700;
+  font-size: var(--ctb-title-text-font-size);
+  color: var(--ctb-title-text-color);
+}
+#rendered-md > p > ctb::before {
   position: relative;
-  font-size: 18px;
+  bottom: -1px;
+  content: "";
+  display: var(--switcher-custom-title-block-title-symbol-display);
+  margin: 0 6px 0 0;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--ctb-title-symbol-color);
 }
 
-/* spoiler block title ------------------------------------- */
-.summary-title {
+
+
+/* CUSTOM ELEMENT: KEY POINT ******************************* */
+#rendered-md > p > kp {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.3em;
+  margin: 0 5px 0 0;
+  color: var(--kp-text-color);
+  border-radius: 4px;
+}
+#rendered-md > p > kp::before,
+#rendered-md > p > kp::after {
+  position: relative;
+  top: 2px;
+  content: "";
+  display: inline-block;
+  height: 1em;
+  border-style: solid;
+  border-color: var(--kp-border-color); 
+  border-radius: 4px;
+}
+#rendered-md > p > kp::before {
+  padding: 0 0 0 5px;
+  border-width: 0 0 0 2px;
+}
+#rendered-md > p > kp::after {
+  padding: 0 5px 0 0;
+  border-width: 0 2px 0 0;
+}
+
+
+
+/* PLUGIN: SPOILER | SPOILER BLOCK ************************* */
+/* spoiler block: title ------------------------------------ */
+#rendered-md .spoiler-block,
+#rendered-md .summary-title {
+  border: none;
+  border-radius: 6px 15px;
+  background: var(--sb-title-background-color);
+}
+#rendered-md .summary-title::before {
+  font-size: var(--sb-title-icon-size);
+}
+#rendered-md .summary-title {
   padding: 8px 15px;
   font-weight: 700;
+  font-size: var(--sb-title-font-size);
+  color: var(--sb-title-text-color);
+  text-shadow: 0 0 2px var(--sb-title-text-shadow);
 }
-.summary-title:hover {
+#rendered-md .summary-title:hover {
   filter: brightness(113%);
   opacity: 0.9;
 }
-
-/* spoiler block body -------------------------------------- */
+#tinymce #spoiler-block-title {
+  display: block;
+}
+#tinymce .spoiler-block-input {
+  display: none;
+}
+/* spoiler block: body ------------------------------------- */
 .summary-content {
   display: block;
-  padding: 30px 15px 15px 15px;
-  color: var(--spoiler-block-text);
-  background: var(--spoiler-block-background);
-  border-radius: 0 0 7px 17px;
-  text-shadow: 0 0 2px var(--spoiler-block-text-shadow);
+  padding: 5px 15px 15px 15px;
+  color: var(--sb-body-text-color);
+  border-radius: 0 0 6px 15px;
+  background: var(--sb-body-background-color);
+  text-shadow: 0 0 2px var(--sb-body-text-shadow);
 }
 
-/* spoiler inline ------------------------------------------ */
+/* spoiler block: horizontal line -------------------------- */
+#rendered-md .spoiler-block > .summary-content > hr {
+  border: 0;
+  height: 1px;
+  margin: 20px auto;
+  background-image: var(--sb-hr-background-color);
+}
+
+/* spoiler block: list ------------------------------------- */
+#rendered-md .spoiler-block > .summary-content ul > li,
+#rendered-md .spoiler-block > .summary-content ol > li {
+  margin: 0px;
+  color: var(--sb-list-text-color);
+}
+
+/* spoiler block: span ------------------------------------- */
+#rendered-md .spoiler-block > .summary-content > p > span {
+  position: relative;
+  left: -15px;
+  display: block;
+  padding: 2px 15px;
+  margin: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 105%;
+  color: var(--sb-span-text-color);
+  background: var(--sb-span-background-color);
+}
+
+/* spoiler block: list > span ------------------------------ */
+#rendered-md .spoiler-block > .summary-content > ul li span,
+#rendered-md .spoiler-block > .summary-content > ol li span {
+  color: var(--sb-list-span-text-color);
+}
+
+/* spoiler block: custom title block ----------------------- */
+#rendered-md .spoiler-block > .summary-content > p > ctb {
+  display: block;
+  padding: 5px 15px 15px 15px;
+  margin: 20px 0 20px -3px;
+  background: var(--sb-ctb-background-color);
+  border-radius: 5px;
+}
+#rendered-md .spoiler-block > .summary-content > p > ctb:first-line {
+  font-size: 1.1em;
+  font-weight: 800;
+  line-height: 40px;
+  color: var(--sb-ctb-title-text-color);
+}
+
+
+
+/* PLUGIN: SPOILER | SPOILER INLINE ************************ */
+/* spoiler inline: body ------------------------------------ */
 #spoiler-block-body > p > label.spoiler-inline,
 #rendered-md > p > label.spoiler-inline {
   display: inline-block;
   padding: 0 12px 0 8px;
-  line-height: 1.4;
-  border: 1px solid var(--spoiler-inline-border);
-  background: var(--spoiler-inline-background);
+  margin: 0 3px;
+  line-height: 135%;
+  border: 1px solid var(--si-border-color);
   border-radius: 1em;
+  background: var(--si-background-color);
 }
-label.spoiler-inline::before {
+/* spoiler inline: symbol ---------------------------------- */
+#rendered-md label.spoiler-inline::before {
   content: "(?)";
-  font-family: var(--syntax-font);
+  font-family: var(--monospace-font);
   font-weight: 600;
   margin-right: 6px;
-  color: var(--spoiler-inline-icon);
+  color: var(--si-symbol-color);
 }
-label.spoiler-inline:hover::before {
-  color: var(--spoiler-inline-icon-hover);
+#rendered-md label.spoiler-inline:hover::before {
+  color: var(--si-symbol-color-hover);
   transition: color 2.5s;
 }
-
-
-
-/* HORIZONTAL LINE ****************************************** */
-
-/* horizontal line in spoiler block ------------------------- */
-#rendered-md > .spoiler-block > .summary-content > hr {
-  margin: 25px auto;
-  width: 85%;
-  border-bottom: 2px solid var(--horizontal-line-in-spoiler);
+#tinymce input.spoiler-inline {
+  display: none;
 }
 
 
 
 /* ********************************************************* */
-/*                     STYLING: PRINT                        */
+/* ===          STYLING: PRINT & EXPORT TO PDF           === */
 /* ********************************************************* */
-@media print {
-  /* "AVOID" PRINTING:  note title | sticky notes | ******** */
 
-  /* avoid print note title -------------------------------- */
-  .exported-note-title {
-    display: var(--print-note-title-display);
-    font-size: var(--print-note-title-size);
-    padding: 0 0 10px 0;
-    margin: 0 0 30px 0;
-    color: var(--print-note-title);
+/* this part would be affects to: print pdf | export pdf */
+
+
+
+@media print {
+
+  /* PRINT READY ******************************************* */
+  /* print ready: print exact color ------------------------ */
+  #rendered-md * {
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  /* print ready: print pdf  */
+  .exported-note {
+    width: auto;
+    max-width: unset;
+  }
+
+  /* print ready: disable background & text shadow --------- */
+  .exported-note,
+  #tinymce,
+  #rendered-md,
+  #rendered-md > table > thead > tr > th,
+  #rendered-md > table > tbody > tr,
+  #rendered-md > table > thead > tr:nth-child(odd),
+  .jop-tinymce table,
+  #rendered-md .katex-display,
+  note,
+  tip,
+  explain,
+  question,
+  warning,
+  keyword,
+  important,
+  #rendered-md > p > ctb,
+  #rendered-md > .joplin-editable > pre:not(.mermaid),
+  #rendered-md .inline-code,
+  #rendered-md .spoiler-block label.spoiler-inline,
+  #rendered-md .spoiler-block *,
+  #rendered-md .spoiler-block,
+  ag2,
+  ag3,
+  ag4,
+  ag5,
+  ag6,
+  ag7,
+  ag8,
+  ag9,
+  ag10,
+  ag11,
+  ag12 {
+    background: none;
+    text-shadow: none;
+  }
+
+  /* print ready: avoid page break ------------------------- */
+  /* avoid-break-inside group:  sticky notes | custom title block | table | turn to chart table */
+  note,
+  tip,
+  question,
+  explain,
+  warning,
+  keyword,
+  important,
+  ctb,
+  svg,
+  img,
+  .mermaid  {
+    break-inside: avoid !important;
+  }
+  /* avoid-break-after group: h1 to h6 heading ------------- */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  kp {
+    break-before: auto !important;
   }
 
   /* avoid print sticky notes ------------------------------ */
@@ -1013,435 +1614,527 @@ label.spoiler-inline:hover::before {
   warning,
   keyword,
   important {
-    display: var(--print-sticky-notes-display);
+    display: var(--switcher-print-sticky-notes-display);
   }
 
+  /* print ready: release overflow scroll ------------------ */
+  /* overflow-y group: art gallery | codeblock ------------- */
+  ag2,
+  ag3,
+  ag4,
+  ag5,
+  ag6,
+  ag7,
+  ag8,
+  ag9,
+  ag10,
+  ag11,
+  ag12,
+  #rendered-md > .joplin-editable > pre:not(.mermaid) {
+    max-height: none;
+    overflow-y: unset;
+    box-shadow: none;
+  }
+
+  /* print ready: disable eye protector effect ------------- */
+  #rendered-md img,
+  #rendered-md .mermaid {
+    filter: none;
+  }
+  #rendered-md img:hover,
+  #rendered-md .mermaid:hover {
+    animation: none;
+  }
+  
 
 
-  /* AVOID PAGE BREAK ************************************** */
-  /* group:  sticky notes | custom title block | table | turn to chart table */
+  /* PRINT GENERAL ***************************************** */
+  /* print base font:  all elements that other than monospace font group */
+  #rendered-md,
+  #tinymce,
+  #joplin-container-body,
+  #joplin-container-content,
+  #spoiler-block-title,
+  #rendered-md > table > thead > tr > th,
+  #rendered-md > table > tbody > tr > td {
+    font-family: var(--print-base-font) !important;
+    font-size: var(--print-base-font-size);
+  }
+
+  /* print monospace font:  codeblock | pre | code | inline code */
+  #rendered-md > .joplin-editable > pre:not(.mermaid),
+  #rendered-md > .joplin-editable > pre > code,
+  #rendered-md .inline-code,
+  [id*="fnref"],
+  #rendered-md a[href]::after {
+    font-family: var(--print-monospace-font) !important;
+    font-size: var(--print-monospace-font-size);
+  }
+  
+  /* print background -------------------------------------- */
+  body,
+  #rendered-md,
+  #tinymce,
+  #joplin-container-body,
+  #joplin-container-content {
+    background: var(--print-background-color);
+  }
+
+  /* print note title -------------------------------------- */
+  .exported-note-title {
+    display: var(--switcher-print-note-title-display);
+    padding: 0 0 10px 0;
+    margin: 0 0 30px 0;
+    font-size: var(--print-note-title-font-size);
+    color: var(--print-note-title-text-color);
+  }
+
+  /* print paragraph --------------------------------------- */
+  #rendered-md p,
   note,
   tip,
-  question,
   explain,
+  question,
   warning,
-  keyword,
-  important,
-  ctb,
-  #rendered-md table,
-  #rendered-md > div > svg,
-  #rendered-md > div > svg ~ div {
-    break-inside: avoid;
+  keyword {
+    margin: 15px 0 15px 5px;
+    color: var(--print-paragraph-text-color);
+  }
+  #rendered-md div {
+    color: var(--print-paragraph-text-color);
   }
 
+  /* print horizontal line --------------------------------- */
+  #rendered-md > hr {
+    background-image: var(--print-hr-background-color);
+  }
+
+
+
+  /* PRINT HEADING ***************************************** */
+  /* print headings group: h1 to h6 ------------------------ */
   #rendered-md > h1,
   #rendered-md > h2,
   #rendered-md > h3,
   #rendered-md > h4,
   #rendered-md > h5,
   #rendered-md > h6 {
-    break-after: avoid;
+    margin: 10px 0;
+    font-weight: var(--headings-font-weight);
   }
 
-
-
-  /* RELEASE ART GALLERY OVERFLOW ************************** */
-  ag2,
-  ag3,
-  ag4,
-  ag5,
-  ag6 {
-    max-height: none;
-    overflow-y: unset;
-  }
-
-
-
-  /* STOP EYE-PROTECTOR EFFECT ***************************** */
-  #rendered-md img {
-    filter: none;
-  }
-
-
-
-  /* PRINT ADJUSTMENTS ************************************* */
-
-  /* PRINT EXACT COLOR ************************************* */
-  #tinymce,
-  #joplin-container-body,
-  #rendered-md *,
-  #rendered-md > h1,
-  #rendered-md table th,
-  #rendered-md .inline-code,
-  note::after,
-  tip::after,
-  question::after,
-  explain::after,
-  warning::after,
-  keyword::after,
-  important::before,
-  #rendered-md .joplin-editable > pre,
-  #rendered-md .joplin-editable > pre > code,
-  #rendered-md .inline-code,
-  #rendered-md ctb.jop-noMdConv {
-    -webkit-print-color-adjust: exact;
-    background: none;
-    text-shadow: none;
-  }
-
-
-
-  /* PRINT GENERAL ***************************************** */
-  #tinymce,
-  #joplin-container-body {
-    font-family: var(--print-content-font);
-  }
-  body * {
-    font-size: var(--print-content-font-size);
-    line-height: var(--print-primary-text-line-height);
-  }
-
-
-
-  /* PRINT HEADING ***************************************** */
+  /* print heading: h1 ------------------------------------- */
   #rendered-md > h1 {
-    font-size: var(--print-h1-heading-size);
-    font-weight: 700;
-    color: var(--print-h1-text);
-    -webkit-background-clip: initial;
-    background-clip: initial;
-    -webkit-text-fill-color: initial;
-    border-bottom: var(--print-h1-border);
+    font-size: var(--print-h1-font-size);
+    color: var(--print-h1-text-color);
+    background: var(--print-h1-background-clip-text-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  /* print heading: h1 custom border ----------------------- */
+  #rendered-md > h1::after {
+    display: var(--switcher-print-h1-border-display);
+    background-image: var(--print-h1-border-background-color);
+  }
+  #rendered-md > h1 > span {
+    font-size: var(--print-h1-font-size);
   }
 
-  #rendered-md > h2::before {
-    background: var(--print-h2-h3-h4-text);
-  }
+  /* print heading: h2 ------------------------------------- */
   #rendered-md > h2 {
-    font-size: var(--print-h2-heading-size);
-    color: var(--print-h2-h3-h4-text);
-    border-width: 0 0 0.5px 0;
-    border-color: var(--print-h2-h3-h4-text);
+    font-size: var(--print-h2-font-size);
+    color: var(--print-h2-text-color);
+  }
+  /* print heading: h2 rice icon --------------------------- */
+  #rendered-md > h2::before {
+    background: var(--print-h2-rice-icon-color);
+  }
+  /* print heading: h2 custom border ----------------------- */
+  #rendered-md > h2::after {
+    background-image: var(--print-h2-border-color);
   }
 
+  /* print heading: h3 ------------------------------------- */
   #rendered-md > h3 {
-    font-size: var(--print-h3-h4-heading-size);
-    color: var(--print-h2-h3-h4-text);
+    font-size: var(--print-h3-font-size);
+    color: var(--print-h3-text-color);
+  }
+  /* print heading: h3 custom border ----------------------- */
+  #rendered-md > h3::after {
+    background-image: var(--print-h3-border-color);
   }
 
+  /* print heading: h4 ------------------------------------- */
   #rendered-md > h4 {
-    font-size: var(--print-h3-h4-heading-size);
-    color: var(--print-h2-h3-h4-text);
+    font-size: var(--print-h4-font-size);
+    color: var(--print-h4-text-color);
+  }
+  /* print heading: h4 custom border ----------------------- */
+  #rendered-md > h4::after {
+    background-image: var(--print-h4-border-color);
   }
 
+  /* print heading: h5 ------------------------------------- */
   #rendered-md > h5 {
-    font-size: var(--print-h5-heading-size);
-    color: var(--print-h5-h6-text);
-    border-color: var(--print-h5-border);
+    font-size: var(--print-h5-font-size);
+    color: var(--print-h5-text-color);
+    border-bottom: 1px dotted var(--print-h5-text-color);
   }
 
+  /* print heading: h6 ------------------------------------- */
   #rendered-md > h6 {
-    font-size: var(--print-h6-heading-size);
-    color: var(--print-h5-h6-text);
-  }
-
-
-
-  /* PRINT PARAGRAPH *************************************** */
-  #rendered-md > p {
-    color: var(--print-primary-text);
-  }
-
-
-
-  /* PRINT MARKDOWN TOC ************************************ */
-  #rendered-md .table-of-contents::before {
-    color: var(--print-markdown-toc-title);
-    border-top: 1px dashed var(--print-markdown-toc-border);
-    border-radius: 7px;
-  }
-  #rendered-md .table-of-contents::after {
-    border-bottom: 1px dashed var(--print-markdown-toc-border);
-  }
-  /* hide link href form markdown toc */
-  #rendered-md .table-of-contents a[href]::after {
-    display: none;
+    font-size: var(--print-h6-font-size);
+    color: var(--print-h6-text-color);
+    border-bottom: 1px dotted var(--print-h6-text-color);
   }
 
 
 
   /* PRINT SPECIAL TEXT ************************************ */
-  #rendered-md s,
-  #rendered-md em,
-  #rendered-md ins,
-  #rendered-md strong,
-  #rendered-md abbr,
+  /* print special text: mark text ------------------------- */
   #rendered-md mark {
-    color: var(--print-special-text);
+    color: var(--print-mark-text-color);
+    background: var(--print-mark-text-background-color);
   }
 
-  /* add font weight group:  not including "strong" -------- */
-  #rendered-md s,
-  #rendered-md em,
-  #rendered-md ins,
-  #rendered-md abbr,
-  #rendered-md mark {
-    font-weight: 500;
+  /* print special text: emphasize text -------------------- */
+  #rendered-md em {
+    color: var(--print-emphasize-text-color);
   }
 
-  /* print mark text border -------------------------------- */
-  #rendered-md mark {
-    background: none;
-    border-top: 1px solid var(--print-mark-text-highlight);
-    border-bottom: 1px solid var(--print-mark-text-highlight);
-    border-radius: 4px;
+  /* print special text: strong text ----------------------- */
+  #rendered-md strong {
+    color: var(--print-strong-text-color);
+  }
+
+  /* print special text: strikethrough text ---------------- */
+  #rendered-md s {
+    color: var(--print-strikethrough-text-color);
+  }
+
+  /* print special text: insert text ----------------------- */
+  #rendered-md ins {
+    color: var(--print-insert-text-color);
+  }
+
+  /* print special text: abbreviation text ----------------- */
+  #rendered-md abbr {
+    color: var(--print-abbreviation-text-color);
+  }
+
+  /* abbreviation text title ------------------------------- */
+  #rendered-md abbr::after {
+    content: "(" attr(Title)")";
+    display: inline-block;
+    padding: 0 0 0 3px;
+  }
+
+  /* print special text: inline code text ------------------ */
+  #rendered-md .inline-code, .mce-content-body code {
+    font-size: var(--inline-code-text-font-size);
+    color: var(--print-inline-code-text-color);
+    border-width: 1px 2px;
+    border-style: solid;
+    border-color: var(--print-inline-code-border-color);
+  }
+
+  /* print special text: math notation text ---------------- */
+  #rendered-md .katex-display {
+    font-size: var(--print-math-notation-font-size);
+    color: var(--print-math-notation-text-color);
   }
 
 
 
   /* PRINT LINK ******************************************** */
+  /* print link: text -------------------------------------- */
   #rendered-md a,
   #rendered-md .resource-icon {
-    color: var(--print-link);
+    color: var(--print-link-text-color);
   }
-  /* print link href --------------------------------------- */
-  #rendered-md a[href]::after {
-    font-family: var(--print-syntax-font);
-    font-size: var(--print-syntax-font-size);
+  #rendered-md a::before {
+    display:none;
+  }
+  /* print link: href -------------------------------------- */
+  #rendered-md a:not([id*="fnref"]):not(.footnote-backref):not([download])[href]::after {
     content: " (" attr(href) ")";
-    display: var(--print-link-href-display);
+    display: var(--switcher-print-link-href-display);
+    filter: opacity(0.7) contrast(70%);
   }
 
 
 
   /* PRINT LIST ******************************************** */
-  #rendered-md ul > li,
-  #rendered-md ol > li {
-    color: var(--print-list-text);
+  /* print list text group: unordered list | ordered list | checklist */
+  #rendered-md li {
+    line-height: 1.5em;
+    color: var(--print-list-text-color);
   }
 
-  /* print checklist --------------------------------------- */
-  .joplin-checkbox > .checkbox-wrapper > [class*="checkbox-label-"] {
-    color: var(--print-checklist-text);
-  }
-
-  /* print checkbox ---------------------------------------- */
-  .joplin-checkbox > .checkbox-wrapper > input[checked="checked"] {
-    filter: grayscale(1);
-  }
-
-  /* print list is spoiler --------------------------------- */
-  #rendered-md > .spoiler-block > .summary-content ul > li,
-  #rendered-md > .spoiler-block > .summary-content ol > li {
-    color: var(--print-list-in-spoiler-text);
+  /* print list: span -------------------------------------- */
+  #rendered-md > ul li span,
+  #rendered-md > ol li span {
+    color: var(--print-list-span-text-color);
   }
 
 
 
   /* PRINT TABLE ******************************************* */
-  #rendered-md table {
-    margin: 10px auto;
+  /* print table header ------------------------------------ */
+  #rendered-md > table > thead > tr > th {
+    color: var(--print-table-th-text-color);
+    border: 1px solid var(--print-table-border-color);
+    background: var(--print-table-th-background-color);
   }
-
-  #rendered-md table th {
-    color: var(--print-table-th-text);
+  /* print table data -------------------------------------- */
+  #rendered-md > table > tbody > tr > td {
+    color: var(--print-table-td-text-color);
+    border: 1px solid var(--print-table-td-border-color);
   }
-
-  #rendered-md table td {
-    color: var(--print-table-td-text);
+  /* print table row --------------------------------------- */
+  .jop-tinymce table tr:nth-child(even),
+  #rendered-md > table > tbody > tr:nth-child(even) {
+    background-color: var(--print-table-tr-even-background-color);
+  }
+  .jop-tinymce table tr:nth-child(odd),
+  #rendered-md > table > tbody > tr:nth-child(odd) {
+    background-color: var(--print-table-tr-odd-background-color);
   }
 
 
 
   /* PRINT BLOCKQUOTE ************************************** */
   #rendered-md > blockquote {
-    color: var(--print-blockquoute-text);
-    border-color: var(--print-blockquoute-border);
+    border-color: var(--print-blockquote-border-color);
+  }
+  #rendered-md > blockquote > p {
+    color: var(--print-blockquote-text-color);
   }
 
 
 
-  /* PRINT CODE BLOCK ************************************** */
-  #rendered-md .joplin-editable > pre,
-  #rendered-md .joplin-editable > pre > code,
-  #rendered-md .joplin-editable > pre > code > span {
-    font-family: var(--print-syntax-font);
-    font-size: var(--print-syntax-font-size);
+  /* PRINT CODEBLOCK *************************************** */
+  #rendered-md > .joplin-editable > pre:not(.mermaid) > code {
+    color: var(--print-codeblock-text-color) !important;
   }
-  #rendered-md .joplin-editable > pre,
-  #rendered-md .joplin-editable > pre > code,
-  #rendered-md .inline-code {
-    color: var(--print-code-text);
-  }
-  #rendered-md .joplin-editable > pre {
-    line-height: var(--print-code-block-line-height);
-    padding: 10px 20px;
-    border-color: var(--print-code-block-border);
+  #rendered-md > .joplin-editable > pre:not(.mermaid) {
+    line-height: var(--print-codeblock-text-line-height);
+    border-color: var(--print-codeblock-border-color);
     box-shadow: none;
   }
+  #rendered-md > .joplin-editable > pre:not(.mermaid) {
+    margin: 10px 0;
+  }
 
 
 
-  /* PRINT INLINE CODE ************************************* */
-  #rendered-md .inline-code {
-    font-size: var(--print-syntax-font-size);
-    color: var(--print-inline-code-text);
-    border-color: var(--print-inline-code-border);
+  /* PRINT MARKDOWN TOC ************************************ */
+  #rendered-md .table-of-contents {
+    display: var(--switcher-print-markdown-toc-display);
+  }
+  #rendered-md .table-of-contents::before {
+    color: var(--print-mt-title-text-color);
+    border-top: 1px dashed var(--print-mt-border-color);
+  }
+  #rendered-md .table-of-contents::after {
+    position: relative;
+    bottom: 10px;
+    border-bottom: 1px dashed var(--print-mt-border-color);
+  }
+  /* hide link href form markdown toc ---------------------- */
+  #rendered-md .table-of-contents [href]::after {
+    display: none !important;
+  }
+  /* markdown toc list token ------------------------------- */
+  #rendered-md > .table-of-contents > ul li::marker {
+    color: var(--print-mt-list-token-color);
   }
 
 
 
   /* PRINT FOOTNOTE **************************************** */
-  #rendered-md .footnotes::before {
-    color: var(--print-footnote-title);
-    border-top: 3px double var(--print-footnote-border);
+  /* print footnote: title --------------------------------- */
+  #rendered-md > .footnotes::before {
+    font-weight: 600;
+    color: var(--print-footnote-title-text-color);
+    border-top: 4px double var(--print-footnote-title-border-color);
   }
-  #rendered-md > .footnotes > .footnotes-list > .footnote-item {
-    color: var(--print-footnote-text);
+  #rendered-md > .footnotes,
+  #rendered-md .footnote-item,
+  #rendered-md .footnote-item::marker {
+    color: var(--print-footnote-text-color);
   }
-
-
-
-  /* PRINT SPAN ******************************************** */
-
-  /* print span in list ------------------------------------ */
-  #rendered-md > ul li span,
-  #rendered-md > ol li span {
-    color: var(--print-span-in-list-text);
-  }
-
-  /* print span in spoiler block --------------------------- */
-  .spoiler-block > .summary-content > p > span {
-    font-size: 14px;
-    color: var(--print-span-in-spoiler-text);
-    padding: 0;
-    border-bottom: 1px solid var(--print-span-in-spoiler-bolder);
-    border-radius: 0;
-  }
-
-  /* print span in spoiler list ---------------------------- */
-  .spoiler-block > .summary-content > ul li span,
-  .spoiler-block > .summary-content > ol li span {
-    color: var(--print-span-in-spoiler-list-text);
-    
+  /* print footnote: text ---------------------------------- */
+  #rendered-md > .footnotes > .footnotes-list > .footnote-item > p {
+    margin: 0;
   }
 
 
 
-  /* PRINT MATH NOTATION *********************************** */
-  #rendered-md span.katex-display {
-    font-size: var(--print-math-notation-text-size);
-    color: var(--print-math-notation-text);
-  }
-
-
-
-  /* PRINT CUSTOM TITLE BLOCK ****************************** */
-  #rendered-md > p > ctb:first-line {
-    font-size: var(--print-ctb-title-size);
-    color: var(--print-ctb-title-text);
-  }
-  #rendered-md > p > ctb {
-    color: var(--print-ctb-text);
-    border: 1px solid var(--print-ctb-border);
-  }
-
-
-
-  /* PRINT STICKY NOTES ************************************ */
-
-  /* sticky note tags group:  not including sticky note - Important */
-  note::after,
-  tip::after,
-  question::after,
-  explain::after,
-  warning::after,
-  keyword::after {
-    font-size: var(--print-sticky-notes-tags-text-size);
-    width: fit-content;
-    color: var(--print-sticky-notes-tags-text);
-    border: 1px solid var(--print-sticky-notes-border);
-  }
-
-  /* print sticky note - important tag --------------------- */
-  important::before {
-    color: var(--print-sticky-note-important-title-text);
-    border: 1px solid var(--print-sticky-notes-border);
-  }
-
-  /* sticky note border and text group: all ---------------- */
+  /* PRINT CUSTOM ELEMENT: STICKY NOTES ******************** */
+  /* sticky notes body group: not including sticky notes - important - */
   note,
   tip,
-  question,
   explain,
+  question,
   warning,
-  keyword,
-  important {
-    color: var(--print-sticky-notes-text);
-    border: 1px solid var(--print-sticky-notes-border);
+  keyword {
+    color: var(--print-sn-text-color);
+    border-color: var(--print-sn-border-color);
+    border-width: 1px 3px;
     box-shadow: none;
   }
+  /* sticky notes tags group: not including sticky notes - important */
+  note::after,
+  tip::after,
+  explain::after,
+  question::after,
+  warning::after,
+  keyword::after {
+    font-size: var(--print-sn-tags-font-size);
+    color: var(--print-sn-tags-text-color);
+    border-radius: 4px 9px;
+    text-shadow: none;
+  }
+  /* sticky notes: important ------------------------------- */
+  important {
+    color: var(--print-sn-important-text-color);
+    border-width: 1px 3px;
+    box-shadow: none;
+  }
+  /* sticky notes: important - tag ------------------------- */
+  important::before {
+    font-size: 100%;
+    background: none;
+  }
+  
 
 
-
-  /* PRINT SPOILER ***************************************** */
-  .spoiler-block {
-    padding-top: 8px;
-    border: 1px solid var(--print-spoiler-block-border);
+  /* PRINT CUSTOM ELEMENT: CUSTOM TITLE BLOCK ************** */
+  #rendered-md > p > ctb {
+    border: 1px solid var(--print-ctb-border-color);
+  }
+  #rendered-md > p > ctb:first-line {
+    font-size: var(--print-ctb-title-font-size);
+    color: var(--print-ctb-title-text-color);
+  }
+  #rendered-md > p > ctb::before {
+    background: var(--print-ctb-title-symbol-color);
   }
 
-  /* print spoiler title ----------------------------------- */
-  .summary-title:before {
-    content: "";
-    display: none;
+
+
+  /* PRINT CUSTOM ELEMENT: KEY POINT *********************** */
+  #rendered-md > p > kp {
+    color: var(--print-kp-text-color);
   }
-  #spoiler-block-title {
-    font-size: 17px;
-    color: var(--print-spoiler-block-title-text);
+  #rendered-md > p > kp::before,
+  #rendered-md > p > kp::after {
+    border-color: var(--print-kp-border-color);
   }
 
-  /* print spoiler body ------------------------------------ */
-  #spoiler-block-body {
-    display: block;
-    margin: 8px 0;
-    animation: none;
-    color: var(--print-spoiler-block-text);
-    border-top: 1px solid var(--print-spoiler-block-border);
+
+
+  /* PRINT PLUGIN: TurnToChart ***************************** */
+  #rendered-md svg {
+    color: var(--print-ttc-text-color);
   }
 
-  /* print spoiler inline ---------------------------------- */
-  #spoiler-block-body > p > label.spoiler-inline,
-  #rendered-md > p > label.spoiler-inline {
-    border: 1px solid var(--print-spoiler-inline-border);
+
+
+  /* PRINT SPOILER BLOCK *********************************** */
+  /* print spoiler block: container ------------------------ */
+  #rendered-md > .spoiler-block {
+    border: 1px solid var(--print-sb-border-color);
+  }
+  /* print spoiler block: title ---------------------------- */
+  #rendered-md > .spoiler-block > .summary-title {
+    font-size: var(--print-sb-title-font-size);
+    color: var(--print-sb-title-text-color);
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: var(--print-sb-title-border-color);
+    border-radius: 0;
+  }
+  #rendered-md > .spoiler-block > .summary-title:hover {
+    filter: none;
+    opacity: 1;
+  }
+  /* print spoiler block: body ----------------------------- */
+  #rendered-md > .spoiler-block > .summary-content {
+    color: var(--print-sb-body-text-color);
+  }
+  
+  /* print spoiler block: horizontal line ------------------ */
+  #rendered-md > .spoiler-block > .summary-content > hr {
+    margin: 20px auto;
+    border: 0;
+    height: 1px;
+    background-image: var(--print-sb-hr-background-color);
+  }
+  
+  /* print spoiler block: list ----------------------------- */
+  #rendered-md > .spoiler-block > .summary-content ul > li,
+  #rendered-md > .spoiler-block > .summary-content ol > li {
+    color: var(--print-sb-list-text-color);
+  }
+
+  /* print spoiler block: span ----------------------------- */
+  #rendered-md > .spoiler-block > .summary-content > p > span {
+    position: relative;
+    left: -18px;
+    font-weight: 800;
+    font-size: var(--print-sb-span-font-size); 
+    color: var(--print-sb-span-text-color);
+    line-height: normal;
+    border-width: 0 0 1px;
+    border-style: dotted;
+    border-color: var(--print-sb-span-border-color);
+    background: none;
+  }
+  
+  /* print spoiler block: list > span ---------------------- */
+  #rendered-md > .spoiler-block > .summary-content > ul li span,
+  #rendered-md > .spoiler-block > .summary-content > ol li span {
+    color: var(--print-sb-list-span-text-color);
+  }
+
+  /* print spoiler block: custom title block --------------- */
+  #rendered-md > .spoiler-block > .summary-content > p > ctb {
+    margin: 15px 0 15px -3px;
+    border: 1px solid var(--print-sb-ctb-border-color);
+    border-width: 1px 3px;
+    border-radius: 5px;
+    background: none;
+  }
+  #rendered-md > .spoiler-block > .summary-content > p > ctb:first-line {
+    font-size: var(--print-sb-ctb-title-font-size);
+    font-weight: 800;
+    line-height: 25px;
+    color: var(--print-sb-ctb-title-text-color);
+  }
+
+
+
+  /* PRINT PLUGIN: SPOILER - SPOILER INLINE ***************** */
+  #rendered-md #spoiler-block-body > p > label.spoiler-inline,
+  #rendered-md p > label.spoiler-inline {
+    border: 1px solid var(--print-si-border-color);
     background: none;
   }
   label.spoiler-inline::before {
-    content: "(?)";
-    font-family: var(--print-syntax-font);
-    color: var(--print-spoiler-inline-icon);
+    color: var(--print-si-symbol-color);
   }
   label.spoiler-inline:hover::before {
-    color: unset;
-    transition: unset;
+    color: var(--print-si-symbol-color);
+    transition: none;
   }
-
-  /* print spoiler input ----------------------------------- */
-  .spoiler-block-input,
-  input.spoiler-inline {
+  #tinymce input.spoiler-inline {
     display: none;
   }
-
-  /* print horizontal line in spoiler ---------------------- */
-  #rendered-md > .spoiler-block > .summary-content > hr {
-    border: 1px solid var(--print-horizontal-line-in-spoiler);
-  }
-
-  /* custom title block in spoiler block ------------------- */
-  .spoiler-block > .summary-content > p > ctb {
-    border: 1px solid var(--print-ctb-in-spoiler-border);
-  }
-
-  .spoiler-block > .summary-content > p > ctb:first-line {
-    color: var(--print-ctb-in-spoiler-title-text);
-  }
 }
+
+/* ********************************************************* */
+/* !!!!!!!!!     MAIN SOURCE CODE: SECTION END    !!!!!!!!!! */
+/* ********************************************************* */
