@@ -30,7 +30,7 @@ Export PDF Sample: [export_pdf_v3.1.28](https://drive.google.com/file/d/1TltcC2I
 Export HTML Sample: [export_html file_v3.1.28](https://drive.google.com/file/d/1xmFYSE-ttIEBRpfOb6APpdhtVib2mTuF/view?usp=sharing) (26-FEB-2022)
 
 - **Render Viewer:** 
-	- New: new floating styles for Markdown TOC
+	- New: new floating styles for [Markdown TOC](#markdown-toc)
 - **Joplin UI:**
 	- Fix: bottom tag bar styles missing
 - **Print/Export PDF:**
