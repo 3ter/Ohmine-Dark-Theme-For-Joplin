@@ -1,4 +1,4 @@
-/* OhmineDT v3.0.10 | userchrome.css | 
+/* OhmineDT v3.1.28 | userchrome.css | 
 /* CSS for: Markdown Editor | Joplin UI */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -359,8 +359,8 @@
 
   /* EDITOR BOTTOM TAG BAR ********************************* */
   /* editor bottom tag bar: container ---------------------- */
-  --btb-background-color:#191919;
-  --btb-box-shadow: grey;
+  --ebtb-background-color:#191919;
+  --ebtb-box-shadow: grey;
   
   /* editor bottom tag bar: tag ---------------------------- */
   --ebtb-tag-background-color: #4e3f1c;
@@ -1399,17 +1399,17 @@ div.joplin-tinymce > div:nth-child(2) {
 
 
 
-/* BOTTOM TAG BAR ****************************************** */
-.rli-editor > div > div > div > .tag-bar {
+/* EDITOR BOTTOM TAG BAR *********************************** */
+.rli-editor .tag-bar {
   margin-left: -4px;
-  background: var(--btb-background-color);
+  background: var(--ebtb-background-color);
   border-radius: 7px;
-  box-shadow: 0 0 2px var(--btb-box-shadow);
+  box-shadow: 0 0 2px var(--ebtb-box-shadow);
   z-index: 1;
 }
 
-/* bottom tag bar: tags ------------------------------------ */
-.tag-bar > div > .tag-list > span {
+/* editor bottom tag bar: tags ----------------------------- */
+.tag-bar > div > .tag-list > button {
   text-shadow: 0 0 2px var(--ebtb-tag-text-shadow);
   background: var(--ebtb-tag-background-color) !important;
   border: 1px solid var(--ebtb-tag-border-color);
@@ -1419,8 +1419,8 @@ div.joplin-tinymce > div:nth-child(2) {
 }
 
 /* tags hover effect --------------------------------------- */
-.tag-bar > div > .tag-list > span:hover {
-  font-size: 17px !important;
+.tag-bar > div > .tag-list > button:hover {
+  font-size: 18px !important;
   color: var(--ebtb-tag-text-hover) !important;
   -webkit-transition: font-size 0.1s;
   transition: font-size 0.1s, color 0.1s;

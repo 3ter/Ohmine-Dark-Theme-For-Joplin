@@ -1,4 +1,4 @@
-/* OhmineDT v3.0.10 | userstyle.css */
+/* OhmineDT v3.1.28 | userstyle.css */
 /* CSS for: Render Viewer | Rich Text Editor | Print PDF | Export PDF | EXPORT HTML */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -250,8 +250,12 @@
 
 
   /* MARKDOWN TOC ****************************************** */
-  --mt-title-text-color: #b0b0b0;
-  --mt-border-color: var(--mt-title-text-color);
+  --mt-title-text-color: #333;
+  --mt-title-background-color: #a77600;
+  --mt-title-box-shadow: #fffda0;
+  --mt-title-text-color-hover: #eee;
+  --mt-title-background-color-hover: #00b37c;
+  --mt-title-box-shadow-hover: #4cff00;
 
 
 
@@ -525,8 +529,10 @@
 
 
   /* PRINT MARKDOWN TOC ************************************ */
+  --print-mt-title-font-size: 18px;
   --print-mt-title-text-color: #606060;
   --print-mt-border-color: var(--print-mt-title-text-color);
+  --print-mt-link-text-color: var(--print-link-text-color);
   --print-mt-list-token-color: var(--print-link-text-color);
 
 
@@ -558,8 +564,8 @@
 
   /* PRINT CUSTOM ELEMENT: CUSTOM TITLE BLOCK ************** */
   --print-ctb-title-font-size: 1.2em;
-  --print-ctb-title-text-color: #777;
-  --print-ctb-title-symbol-color: radial-gradient(#888888 34%, #aaaaaa7a 60%);
+  --print-ctb-title-text-color: #93c281;
+  --print-ctb-title-symbol-color: radial-gradient(#93c281 34%, #93c281b8 60%);
   --print-ctb-border-color: #999;
   
 
@@ -889,7 +895,7 @@ body {
 
 /* special text: inline code text -------------------------- */
 #rendered-md .inline-code,
-.mce-content-body code {
+.mce-content-body code:not(.joplin-editable > pre > code) {
   color: var(--inline-code-text-color);
   padding: 0 3px;
   background: var(--inline-code-background-color);
@@ -914,14 +920,18 @@ body {
 }
 /* link: bracket ------------------------------------------- */
 #rendered-md a::before,
-#rendered-md a::after {
+#rendered-md .footnote-backref::before,
+#rendered-md a::after,
+#rendered-md .footnote-backref::after {
   display: var(--switcher-link-bracket-display);
   font-family: var(--monospace-font);
 }
-#rendered-md a::before {
+#rendered-md a::before,
+#rendered-md .footnote-backref::before {
   content: "(";
 }
-#rendered-md a::after {
+#rendered-md a::after,
+#rendered-md .footnote-backref::after {
   content: ")";
 }
 #rendered-md .table-of-contents a::before,
@@ -1064,28 +1074,73 @@ table > tbody > tr:nth-child(odd) {
 
 
 /* MARKDOWN TOC ******************************************** */
-.table-of-contents::before,
-.table-of-contents::after {
-  display: block;
-  width: auto;
-  height: 1em;
-  border-radius: 7px;
-}
-.table-of-contents::before {
+/* markdown toc: title ------------------------------------- */
+#rendered-md > .table-of-contents::before,
+#rendered-md > .table-of-contents:hover::before {
   content: "Table Of Contents";
-  padding: 20px 0 5px 15px;
-  margin: 0 0 20px 0;
+  text-align: center;
+  line-height: 1.9em;
   font-weight: 700;
-  font-size: 1.7em;
   color: var(--mt-title-text-color);
-  border-top: 1px dashed var(--mt-border-color);
+  background: var(--mt-title-background-color);
+  box-shadow: 0 0 1px var(--mt-title-box-shadow);
+  transition: color 0.3s, background 0.3s, box-shadow 0.3s;
 }
-.table-of-contents::after {
-  content: "";
-  border-bottom: 1px dashed var(--mt-border-color);
+/* markdown toc: title hover ------------------------------- */
+#rendered-md > .table-of-contents:hover::before {
+  color: var(--mt-title-text-color-hover);
+  background: var(--mt-title-background-color-hover);
+  box-shadow: 0 0 3px var(--mt-title-box-shadow-hover);
+  transition: color 0.3s, background 0.3s, box-shadow 0.3s;
 }
-.table-of-contents li::marker {
-  color: var(--link-text-color);
+
+/* markdwon toc: body -------------------------------------- */
+#rendered-md > .table-of-contents,
+#rendered-md > .table-of-contents:hover,
+#rendered-md > .table-of-contents::before,
+#rendered-md > .table-of-contents:hover::before {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding: 1px 6px;
+  margin: 8px 10px;
+  width: 133px;
+  height: 25px;
+  border-radius: 7px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+/* markdown toc: body hover -------------------------------- */
+@keyframes toc-hover {
+  from {height: 0px;}
+  to {height: 100%;}
+}
+#rendered-md > .table-of-contents:hover {
+  padding: 20px 20px 40px 5px;
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  max-height: 40vh;
+  background: #191919;
+  border-width: 3px 0;
+  border-style: solid;
+  border-color: #00b37c;
+  white-space: normal;
+  overflow: scroll;
+  animation: toc-hover 0.5s forwards 1;
+}
+
+/* markdown toc: list -------------------------------------- */
+#rendered-md .table-of-contents ul {
+  border-left: 1px solid #333;
+  padding: 0px;
+  margin: 0 0 0 8px;
+}
+#rendered-md .table-of-contents li {
+  list-style-type: none;
+  padding-left: 8px;
 }
 
 
@@ -1639,6 +1694,8 @@ important::before {
     max-height: none;
     overflow-y: unset;
     box-shadow: none;
+    margin: 10px 0;
+    padding: 0;
   }
 
   /* print ready: disable eye protector effect ------------- */
@@ -1666,12 +1723,14 @@ important::before {
     font-size: var(--print-base-font-size);
   }
 
-  /* print monospace font:  codeblock | pre | code | inline code */
+  /* print monospace font:  codeblock | pre | code | inline code | link bracket */
   #rendered-md > .joplin-editable > pre:not(.mermaid),
   #rendered-md > .joplin-editable > pre > code,
   #rendered-md .inline-code,
   [id*="fnref"],
-  #rendered-md a[href]::after {
+  #rendered-md a[href]::after,
+  #rendered-md .footnote-backref::before,
+  #rendered-md .footnote-backref::after {
     font-family: var(--print-monospace-font) !important;
     font-size: var(--print-monospace-font-size);
   }
@@ -1741,9 +1800,6 @@ important::before {
   #rendered-md > h1::after {
     display: var(--switcher-print-h1-border-display);
     background-image: var(--print-h1-border-background-color);
-  }
-  #rendered-md > h1 > span {
-    font-size: var(--print-h1-font-size);
   }
 
   /* print heading: h2 ------------------------------------- */
@@ -1858,7 +1914,7 @@ important::before {
   #rendered-md .resource-icon {
     color: var(--print-link-text-color);
   }
-  #rendered-md a::before {
+  #rendered-md a:not(.footnote-backref)::before {
     display:none;
   }
   /* print link: href -------------------------------------- */
@@ -1929,31 +1985,99 @@ important::before {
     box-shadow: none;
   }
   #rendered-md > .joplin-editable > pre:not(.mermaid) {
-    margin: 10px 0;
+    padding: 10px 15px;
+    margin: 25px 0;
   }
 
 
 
   /* PRINT MARKDOWN TOC ************************************ */
-  #rendered-md .table-of-contents {
-    display: var(--switcher-print-markdown-toc-display);
-  }
-  #rendered-md .table-of-contents::before {
+  /* print markdown toc: title ----------------------------- */
+  #rendered-md > .table-of-contents::before,
+  #rendered-md > .table-of-contents:hover::before {
+    content: "Table Of Contents";
+    text-align: left;
+    line-height: 1.9em;
+    font-weight: 700;
+    padding: 13px 0 0 15px !important;
+    font-size: var(--print-mt-title-font-size);
     color: var(--print-mt-title-text-color);
+    background: none;
+    box-shadow: none;
+    transition: none;
     border-top: 1px dashed var(--print-mt-border-color);
   }
-  #rendered-md .table-of-contents::after {
-    position: relative;
-    bottom: 10px;
+  #rendered-md > .table-of-contents::after {
+    content: "";
+    display: block;
+    height: 20px;
+    border-radius: 7px;
     border-bottom: 1px dashed var(--print-mt-border-color);
   }
-  /* hide link href form markdown toc ---------------------- */
-  #rendered-md .table-of-contents [href]::after {
-    display: none !important;
+  /* print markdown toc: title hover ----------------------- */
+  #rendered-md > .table-of-contents:hover::before {
+    color: none;
+    background: none;
+    box-shadow: none;
+    transition: none;
   }
-  /* markdown toc list token ------------------------------- */
+
+  /* print markdwon toc: body ------------------------------ */
+  /* group:  body & title ---------------------------------- */
+  #rendered-md > .table-of-contents,
+  #rendered-md > .table-of-contents:hover,
+  #rendered-md > .table-of-contents::before,
+  #rendered-md > .table-of-contents:hover::before {
+    position: static;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+    overflow: visible;
+    z-index: 100;
+  }
+  /* print markdown toc: body hover ------------------------ */
+  #rendered-md > .table-of-contents:hover {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    background: none;
+    border-width: none;
+    border-style: none;
+    border-color: none;
+    white-space: none;
+    overflow: none;
+    animation: none;
+  }
+
+  /* print markdown toc: list ------------------------------ */
+  #rendered-md > .table-of-contents ul:first-child {
+    padding: 10px 0 0 25px;
+  }
+  #rendered-md > .table-of-contents ul {
+    border-left: none;
+    padding: 0;
+    margin: 0 0 0 8px;
+  }
+  #rendered-md > .table-of-contents li {
+    list-style-type: inherit;
+    padding-left: 0px;
+  }
+  /* print markdown toc: list token ------------------------ */
   #rendered-md > .table-of-contents > ul li::marker {
     color: var(--print-mt-list-token-color);
+  }
+  /* print markdown toc: link ------------------------------ */
+  #rendered-md > .table-of-contents li > a {
+    color: var(--print-mt-link-text-color);
+  }
+  /* hide link href */
+  #rendered-md > .table-of-contents [href]::after {
+    display: none !important;
   }
 
 
@@ -2052,6 +2176,7 @@ important::before {
   /* print spoiler block: container ------------------------ */
   #rendered-md > .spoiler-block {
     border: 1px solid var(--print-sb-border-color);
+    margin: 25px 0;
   }
   /* print spoiler block: title ---------------------------- */
   #rendered-md > .spoiler-block > .summary-title {
@@ -2138,6 +2263,7 @@ important::before {
   #tinymce input.spoiler-inline {
     display: none;
   }
+  
 }
 
 /* ********************************************************* */
