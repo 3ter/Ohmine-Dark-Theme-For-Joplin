@@ -23,6 +23,39 @@ Let's see what's OhmineDT brings you:
 
 ## Latest Released
 
+### OhmineDT-v3.1.28 updates ( 26-FEB-2022 tested on Joplin v2.7.13)
+
+Export PDF Sample: [export_pdf_v3.1.28](https://drive.google.com/file/d/1TltcC2I-Aspd-jQBe8IgfNe1P1p70VHW/view?usp=sharing) (26-FEB-2022)
+
+Export HTML Sample: [export_html file_v3.1.28](https://drive.google.com/file/d/1xmFYSE-ttIEBRpfOb6APpdhtVib2mTuF/view?usp=sharing) (26-FEB-2022)
+
+- **Render Viewer:** 
+	- New: new floating styles for Markdown TOC
+- **Joplin UI:**
+	- Fix: bottom tag bar styles missing
+- **Print/Export PDF:**
+	- Fix: code block unexpected text shadow
+	- Fix code block margin & padding
+	- Fix: footnote styles missing
+	- Fix: wrong size of h1 > span
+	- Fix: custom title block title color change
+	- Fix: spoiler block margin
+- **Source Code- userstyle.css:**
+	- Change: renamed `--export-note-title` as `--export-note-title-text-color`
+	- Change: removed `--mt-border-color`
+	- Change: add link bracket to the monospace font group
+	- New: add `--mt-title-background-color`
+	- New: add `--mt-title-box-shadow`
+	- New: add `--mt-title-text-color-hover`
+	- New: add `--mt-title-background-color-hover`
+	- New: add `--mt-title-box-shadow-hover`
+	- New: add `--print-mt-link-text-color`
+	- New: add `--print-mt-title-font-size`
+- **Source Code- userchrome.css:**
+	- Fix: 2 wrong variable names
+
+***
+
 ### OhmineDT-v3.0.10 updates ( 23-FEB-2022 tested on Joplin v2.6.10)
 
 - **Render Viewer:** 
@@ -39,55 +72,6 @@ Let's see what's OhmineDT brings you:
 	- New: add `--math-notation-font-size` to root section
 	- New: add `--inline-code-text-shadow` to root section
 	- New: add `--export-html-background-color` to root section
-
-***
-
-### OhmineDT-v3.0.0 updates ( 22-FEB-2022 tested on Joplin v2.6.10)
-
-Export PDF Sample: [export_pdf_v3.0.0](https://drive.google.com/file/d/1-FsewV7DHMWYfLh9-ZB_wSe44ehcYxWy/view?usp=sharing) (22-FEB-2022)
-
-Export HTML Sample: [export_html_v3.0.0](https://drive.google.com/file/d/1-129PAkl0mJLVG9SuZKDetdzaBaa0Z7Y/view?usp=sharing) (22-FEB-2022)
-
-- Render Viewer:
-	- New: add new custom element: [Key Point](#key-point-custom-element)
-	- New: Art Gallery is now supporting up to 12 columns
-	- New: new horizontal line style
-	- New: new heading border style
-	- New: new codeblock style
-	- New: new style for Spoiler plugin: spoiler block > span
-	- New: new style for search text
-	- Fix: Markdown TOC- list token colors wrong
-- Markdown Editor:
- 	- New: new style for all special text
- 	- New: new style for Markdown Table Colorize plugin
- 	- Fix: Abstract Content Bar- text in square brackets is considered a link
-- Rich Text Editor:
-	- Fix: Rich Text Editor- the top toolbar style is broken
-- Print & Export
-	- New: abbreviation text description will be appear next to the abbreviation
-	- Fix: some CSS effects missing when export notes to html
-- Joplin UI:
-	- New: you can now using [shift] + [Mouse wheel] to scroll for check out the overflow text on notebook panel and notelist panel
-	- New: notebook panel is now supporting up to 15 levels of subdirectories
-	- New: new style for notelist panel
-	- New: new style for editor top toolbar
-	- New: new style for editor bottom tag bar
-	- New: new style for option page
-	- New: new style for button hover effect
-	- New: new sync button style in notebook panel
-- Source Code:
-	- Change: rewrite all CSS codes
-	- Change: Footnote Reference Number- moved to the monospace font group
-	- Change: inline code is now moved to the special text group
-	- Change: eye-protector is separated into two switchers "Mermaid Charts" and "Images" - You can now turn off only one of them
-	- Change: Print / Export PDF- restyle all elements
-	- New: add new switcher to show/hide border line of all headings 
-	- New: add new switcher to show/hide the bracket of the link
-	- New: add new switcher to turn on/off the notebook item overflow limit 
-	- New: add new switcher to turn on/off the justify effect of paragraph / list / footnote content
-	- New: add new switcher to turn on/off the small-caps effect on h1 heading
-	- New: add new switcher to turn on/off the max height limit of code block - default: 60% viewport height
-
 
 <!-- ===================================================================================================================================================== Table of contents -->
 
@@ -603,8 +587,7 @@ See how they look like in the Markdown Editor:
 
 ## Markdown TOC
 
-![MarkdownToc_batch](https://user-images.githubusercontent.com/86870826/154985685-146c43db-8f0a-4384-a699-4acccbea5565.png)
-
+![MarkdownToc_batch](https://user-images.githubusercontent.com/86870826/155838207-0f21c18a-0a48-4d4d-8b0f-f8f9f413c84a.png)
 
 To use markdown TOC, you should enable the the extension first: 
 `Tools` > `Options` > `Markdown` > `Enable table of contents extension (wysiwyg: no)`
@@ -904,9 +887,9 @@ Here are a few things you should know before you **Print** or **Export** a note 
 7. By the TurnToChart plugin default, the chart will only appear normal when you use `export`.
 
 
-Export PDF Sample: [export_pdf_v3.0.0](https://drive.google.com/file/d/1-FsewV7DHMWYfLh9-ZB_wSe44ehcYxWy/view?usp=sharing) (22-FEB-2022)
+Export PDF Sample: [export_pdf_v3.1.28](https://drive.google.com/file/d/1TltcC2I-Aspd-jQBe8IgfNe1P1p70VHW/view?usp=sharing) (26-FEB-2022)
 
-Export HTML Sample: [export_html_v3.0.0](https://drive.google.com/file/d/1-129PAkl0mJLVG9SuZKDetdzaBaa0Z7Y/view?usp=sharing) (22-FEB-2022)
+Export HTML Sample: [export_html file_v3.1.28](https://drive.google.com/file/d/1xmFYSE-ttIEBRpfOb6APpdhtVib2mTuF/view?usp=sharing) (26-FEB-2022)
 
 
 [:arrow_up:Back](#table-of-contents)
