@@ -1,4 +1,4 @@
-/* OhmineDT v3.1.28 | userchrome.css | 
+/* OhmineDT v3.1.40 | userchrome.css | 
 /* CSS for: Markdown Editor | Joplin UI */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -47,11 +47,11 @@
 
   /* GENERAL *********************************************** */
   /* base font:  heading | paragraph | blockquote | list | footnote | sticky notes | custom title block | emphasize | strong | insert | strikethrough | mark | search */
-  --base-font: "montserrat", "microsoft Jhenghei light", avenir, arial, sans-serif;
+  --base-font: "montserrat", "chiron sans hk pro extralight", avenir, arial, sans-serif;
   --base-font-size: 14px;
 
   /* monospace font:  table | anchor text link | file path link | code block | inline code | katex | html */
-  --monospace-font: "cascadia mono light", monospace, "microsoft jhenghei light";
+  --monospace-font: "cascadia mono light", monospace, "chiron sans hk pro extralight";
   --monospace-font-size: 12px;
   --monospace-font-line-height: normal;
 
@@ -137,7 +137,7 @@
   /* inline code text -------------------------------------- */
   --inline-code-text-color: #bdbdbd;
   --inline-code-text-background-color: #232323;
-  --inline-code-text-border-color: white;
+  --inline-code-text-border-color: #585858;
   --inline-code-text-shadow: black;
 
 
@@ -271,13 +271,15 @@
   
   /* notebook panel: notebook item ------------------------- */
   --np-notebook-item-text-color: #e2e2e2;
-  --np-notebook-item-border-color: #ffffff14;
+  --np-notebook-item-border-color: #393939;
+  --np-notebook-item-scrollbar-color: #00ffd5;
 
   /* notebook panel: notebook item selected state ---------- */
   --np-notebook-item-selected-background-color: linear-gradient(60deg, #002f24, #00926a);
   --np-notebook-item-selected-box-shadow: #72fdbd;
   
   /* notebook panel: note count label ---------------------- */
+  --np-note-count-label-text-color: #ffffff;
   --np-note-count-label-background-color: #1d2927;
   --np-note-count-label-box-shadow: white;
 
@@ -304,6 +306,7 @@
   --nlp-header-box-shadow: #beffdf;
   
   /* notelist panel: header search bar --------------------- */
+  --nlp-header-search-bar-placeholder-text-color: #888;
   --nlp-header-search-bar-background-color: #191919;
   --nlp-header-search-bar-box-shadow: #c1c1c1;
   --nlp-header-search-bar-box-shadow-hover: white;
@@ -323,6 +326,8 @@
   --nlp-body-container-background-color: #191919;
 
   /* notelist panel: note list item ------------------------ */
+  --nlp-list-item-text-color: var(--np-notebook-item-text-color);
+  --nlp-list-item-border-color: var(--np-notebook-item-border-color);
   --nlp-note-list-item-background-color: #74370166;
   --nlp-note-list-item-selected-background-color: linear-gradient(60deg, #002f24, #00926a);
   --nlp-note-list-item-selected-box-shadow: #72fdbd;
@@ -349,7 +354,8 @@
   /* editor top toolbar: button ---------------------------- */
   --ett-button-background-color-hover: #22584d;
   --ett-button-box-shadow-hover: white;
-  --ett-button-text-color-hover: #83e2ca;
+  --ett-button-icon-color-hover: #83e2ca;
+  --ett-button-icon-color: var(--nlp-header-button-icon-color);
 
   /* editor top toolbar: rich text editor toolbar container  */
   --ett-rich-text-editor-toolbar-background: #172723;
@@ -588,8 +594,8 @@
 /* inline code text ---------------------------------------- */
 .CodeMirror-lines .CodeMirror-line .cm-comment.cm-jn-inline-code {
   color: var(--inline-code-text-color) !important;
+  border: 1px solid var(--inline-code-text-border-color) !important;
   background: var(--inline-code-text-background-color) !important;
-  box-shadow: 0 0 1px var(--inline-code-text-border-color) !important;
   text-shadow: 1px 1px 2px var(--inline-code-text-shadow);
 }
 
@@ -977,13 +983,14 @@ span[cm-text]:only-child::after {
 }
 
 /* notebook panel: hiding the "All Notes" button ----------- */
-.all-notes {
+.sidebar .all-notes {
   display: var(--switcher-jui-all-note-button-display) !important;
 }
 
 /* notebook panel: directory icon -------------------------- */
 i.fas.fa-caret-down,
 i.fas.fa-caret-right {
+  padding: 0 0 7px 0;
   text-shadow: 0 0 5px var(--np-directory-icon-shadow);
   opacity: 1 !important;
 }
@@ -994,55 +1001,58 @@ i.fas.fa-caret-down {
   color: var(--np-directory-icon-opened-color);
 }
 
-/* notebook panel: notebooks items ------------------------- */
-.rli-sideBar .tags .list-item-container,
-.rli-sideBar [class*="list-item-depth"] {
+/* notebook panel: body container -------------------------- */
+.rli-sideBar .list-item-container,
+.rli-noteList .tags .list-item-container {
+  width: calc(100% - 4px);
+  height: auto;
   margin: 0 2px;
+  padding: 6px 0 0 0;
 }
 
 /* notebook panel: notebook item --------------------------- */
-div.list-item-container a.list-item {
-  display: flex;
-  flex-direction: row;
-  padding: 4px 0;
-  margin: 1px auto;
-  max-width: 90%;
-  min-height: 25px;
+.list-item-container .list-item {
+  display: grid;
+  grid-template-columns: auto 40px;
+  gap: 0;
+  padding: 0 0 6px 0;
+  width: inherit;
   border-bottom: 2px dotted var(--np-notebook-item-border-color);
 }
-.rli-sideBar [class*="list-item-depth"] span.title {
+.list-item-container .list-item > .title {
+  width: 100%;
   color: var(--np-notebook-item-text-color);
-  max-width: 80%;
   line-height: normal !important;
+  font-size: 13px;
   white-space: var(--switcher-jui-notebook-panel-notebook-item-warp);
-  overflow: scroll;
+  overflow-y: scroll;
 }
-.rli-sideBar [class*="list-item-depth"] span.title::-webkit-scrollbar {
-    display: none;
-    height: 1px !important;
+.list-item-container .list-item > .title::-webkit-scrollbar {
+  height: 1px;
+}
+.list-item-container .list-item > .title::-webkit-scrollbar-thumb {
+  background: var(--np-notebook-item-scrollbar-color);
 }
 
-/* notebook panel: notebooks item hover state -------------- */
-.rli-sideBar .tags .list-item-container,
-.rli-sideBar [class*="list-item-depth"],
-.rli-sideBar [class*="list-item-depth"]:hover {
-  height: fit-content;
-  border-radius: 5px 10px !important;
-}
+/* notebook panel: notebooks item hover -------------------- */
 .rli-sideBar .tags .list-item-container:hover,
-.rli-sideBar [class*="list-item-depth"]:hover {
+.rli-sideBar .list-item-container:hover {
+  width: calc(100% - 4px);
+  border-radius: 4px 10px !important;
+  background: #013f7466;
   filter: hue-rotate(180deg);
 }
 
-/* notebook panel: notebook item selected state ------------ */
+/* notebook panel: notebook item selected ------------------ */
 .rli-sideBar .tags .list-item-container.selected,
-.rli-sideBar [class*="list-item-depth"].selected,
-.rli-sideBar [class*="list-item-depth"].dxqFa-D {
+.rli-sideBar [class*="list-item-depth"].selected {
+  width: calc(100% - 4px);
+  border-radius: 4px 10px !important;
   background: var(--np-notebook-item-selected-background-color);
   box-shadow: 0 0 3px var(--np-notebook-item-selected-box-shadow);
 }
 
-/* notebook panel: notebook title indentation -------------- */
+/* notebook panel: notebook item indentation --------------- */
 .rli-sideBar .list-item-depth-0 {
   padding-left: 11px;
 }
@@ -1093,16 +1103,16 @@ div.list-item-container a.list-item {
 }
 
 /* notebook panel: note count label ------------------------ */
-.note-count-label.ihcmBd {
-  padding-left: 0;
-}
 .ihcmBd.note-count-label {
-  display: flex;
+  position: sticky;
+  right: 6px;
   font-size: 10px;
   margin: 0 0 0 auto;
-  padding: 0 6px;
+  padding: 1px 6px;
+  font-weight: 700;
+  color: var(--np-note-count-label-text-color);
   background: var(--np-note-count-label-background-color);
-  border-radius: 8px;
+  border-radius: 200px;
   box-shadow: 0 0 2px var(--np-note-count-label-box-shadow);
   opacity: 1 !important;
 }
@@ -1184,6 +1194,9 @@ div.list-item-container a.list-item {
   box-shadow: 0 0 2px var(--nlp-header-search-bar-box-shadow);
   border-radius: 4px 8px !important;
 }
+.rli-noteList .search-bar > div > input::placeholder {
+  color: var(--nlp-header-search-bar-placeholder-text-color);
+}
 
 /* notelist panel: header search bar hover ----------------- */
 .rli-noteList .search-bar > div > input:hover,
@@ -1201,23 +1214,20 @@ div.list-item-container a.list-item {
   border-radius: 4px 8px;
 }
 
-/* button group hover effect ------------------------------- */
+/* notelist panel: header button hover --------------------- */
 .rli-noteList button:not(.search-bar > div > input ~ button):hover {
   background: var(--nlp-header-button-background-color-hover);
   box-shadow: 0 0 4px var(--nlp-header-button-box-shadow-hover);
   transition: background 0.5s, box-shadow 0.7s;
 }
-
 /* sort order field button --------------------------------- */
 .rli-noteList > div > div > div > div > .sort-order-field-button {
   border-radius: 4px 0 0 4px;
 }
-
 /* sort order reverse button ------------------------------- */
 .rli-noteList > div > div > div > div > .sort-order-reverse-button {
   border-radius: 0 4px 4px 0;
 }
-
 /* button icon group:  search | cancel | sort field | sort reverse | todo | note */
 .icon-search::before,
 .fa-font::before,
@@ -1227,8 +1237,7 @@ div.list-item-container a.list-item {
 .fa-times::before {
   color: var(--nlp-header-button-icon-color);
 }
-
-/* button icon group hover effect -------------------------- */
+/* button icon group hover --------------------------------- */
 .rli-noteList .search-bar > div > button:hover > .icon-search::before,
 .rli-noteList button:hover > .fa-font::before,
 .rli-noteList button:hover > .fa-long-arrow-alt-down::before,
@@ -1238,12 +1247,10 @@ div.list-item-container a.list-item {
   color: var(--nlp-header-button-icon-color-hover);
   transition: color 0.5s;
 }
-
 /* note button icon ---------------------------------------- */
 .rli-noteList .icon-note::before {
   font-size: 22px;
 }
-
 /* icon group: sort field | sort reverse ------------------- */
 .rli-noteList .fa-long-arrow-alt-down,
 .rli-noteList .fa-font {
@@ -1252,7 +1259,8 @@ div.list-item-container a.list-item {
 
 /* notelist panel: body container -------------------------- */
 .rli-noteList .note-list {
-  padding: 5px 2px 0 2px;
+  width: auto;
+  padding: 5px 3px 7px 3px;
   background: var(--nlp-body-container-background-color);
 }
 
@@ -1263,22 +1271,29 @@ div.list-item-container a.list-item {
   border-radius: 3px 13px;
 }
 .rli-noteList .note-list .note-list-item::before {
-  margin-left: -10px !important;
+  margin-left: -6px;
 }
 .rli-noteList .note-list .note-list-item a {
-  padding-left: 7px !important;
-  overflow: scroll !important;
+  padding-left: 9px !important;
 }
 .rli-noteList .note-list .note-list-item a::-webkit-scrollbar {
   display: none;
 }
 
-/* disable joplin official note list item hover effect ----- */
-.cGoJUI:hover {
-  background-color: none;
+.rli-noteList .item-list.note-list ::before {
+  border-bottom: 2px dotted var(--nlp-list-item-border-color);
+  opacity: 0.8;
+}
+.rli-noteList .note-list .note-list-item a > span {
+  color: var(--nlp-list-item-text-color);
 }
 
-/* note list item hover effect ----------------------------- */
+/* disable joplin official note list item hover ------------ */
+.cGoJUI:hover {
+  background-color: unset;
+}
+
+/* note list item hover ------------------------------------ */
 .rli-noteList .note-list .note-list-item:hover {
   background-color: var(--nlp-note-list-item-background-color);
 }
@@ -1354,7 +1369,10 @@ span.updated-time-label {
 .editor-toolbar > div > a {
   border-radius: 4px 8px;
 }
-
+.editor-toolbar > div > a > i,
+.editor-toolbar > div > a > span {
+  color: var(--ett-button-icon-color);
+}
 /* button hover effect ------------------------------------- */
 .editor-toolbar > div > a:hover {
   background: var(--ett-button-background-color-hover);
@@ -1363,7 +1381,7 @@ span.updated-time-label {
 }
 .editor-toolbar > div > a:hover > span,
 .editor-toolbar > div > a:hover > i {
-  color: var(--ett-button-text-color-hover);
+  color: var(--ett-button-icon-color-hover);
   transition: color .2s;
 }
 

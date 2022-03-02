@@ -1,4 +1,4 @@
-/* OhmineDT v3.1.28 | userstyle.css */
+/* OhmineDT v3.1.40 | userstyle.css */
 /* CSS for: Render Viewer | Rich Text Editor | Print PDF | Export PDF | EXPORT HTML */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -77,11 +77,11 @@
 
   /* GENERAL *********************************************** */
   /* base font group:  all elements that other than monospace font group */
-  --base-font: "montserrat", "microsoft jhenghei light", avenir, arial, sans-serif; /* by default, it's also affects to --print-base-font */
+  --base-font: "montserrat", "chiron sans hk pro extralight", avenir, arial, sans-serif; /* by default, it's also affects to --print-base-font */
   --base-font-size: 14px;
 
   /* monospace font group:  code block | pre | code | footnote ref no. */
-  --monospace-font: "cascadia mono light", monospace, "microsoft jhenghei light"; /* by default, it's also affects to --print-monospace-font */
+  --monospace-font: "cascadia mono light", monospace, "chiron sans hk pro extralight"; /* by default, it's also affects to --print-monospace-font */
   --monospace-font-size: 12px;
   
   /* render viewer background ------------------------------ */
@@ -1079,8 +1079,9 @@ table > tbody > tr:nth-child(odd) {
 #rendered-md > .table-of-contents:hover::before {
   content: "Table Of Contents";
   text-align: center;
-  line-height: 1.9em;
+  line-height: 15px;
   font-weight: 700;
+  font-size: 13px;
   color: var(--mt-title-text-color);
   background: var(--mt-title-background-color);
   box-shadow: 0 0 1px var(--mt-title-box-shadow);
@@ -1094,20 +1095,20 @@ table > tbody > tr:nth-child(odd) {
   transition: color 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
-/* markdwon toc: body -------------------------------------- */
+/* markdown toc: body -------------------------------------- */
 #rendered-md > .table-of-contents,
 #rendered-md > .table-of-contents:hover,
 #rendered-md > .table-of-contents::before,
 #rendered-md > .table-of-contents:hover::before {
   position: fixed;
-  bottom: 0;
+  bottom: -8px;
   left: 0;
   display: block;
   padding: 1px 6px;
   margin: 8px 10px;
   width: 133px;
-  height: 25px;
-  border-radius: 7px;
+  height: 15px;
+  border-radius: 7px 7px 0 0;
   overflow: hidden;
   z-index: 100;
 }
@@ -2022,7 +2023,7 @@ important::before {
     transition: none;
   }
 
-  /* print markdwon toc: body ------------------------------ */
+  /* print markdown toc: body ------------------------------ */
   /* group:  body & title ---------------------------------- */
   #rendered-md > .table-of-contents,
   #rendered-md > .table-of-contents:hover,

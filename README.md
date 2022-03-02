@@ -23,6 +23,27 @@ Let's see what's OhmineDT brings you:
 
 ## Latest Released
 
+### OhmineDT-v3.1.40 updates ( 2-MAR-2022 tested on Joplin v2.7.13)
+
+- **Render Viewer:**
+    - Improve: Reduce the size of the Markdown TOC button 
+- **Joplin UI:**
+    - New: add a horizontal scrollbar for overflow text on each notebook item
+    - Fix: note count label overlaping the notebook item text
+    - Change: removed overflow scroll effect from notelist panel - there is a problem I can't fix at the moment
+- **Font:**
+    - Change: new font for both Simplified and Traditional Chinese - Chiron HK Pro ExtraLight
+- **Source Code: userchrome.css:**
+    - Change: renamed 1 variable
+    - New: add `--np-notebook-item-scrollbar-color`
+    - New: add `--np-note-count-label-text-color`
+    - New: add `--nlp-list-item-text-color`
+    - New: add `--nlp-list-item-border-color`
+    - New: add `--nlp-header-search-bar-placeholder-text-color`
+    - New: add `--ett-button-icon-color`
+
+***
+
 ### OhmineDT-v3.1.28 updates ( 26-FEB-2022 tested on Joplin v2.7.13)
 
 Export PDF Sample: [export_pdf_v3.1.28](https://drive.google.com/file/d/1TltcC2I-Aspd-jQBe8IgfNe1P1p70VHW/view?usp=sharing) (26-FEB-2022)
@@ -53,25 +74,6 @@ Export HTML Sample: [export_html file_v3.1.28](https://drive.google.com/file/d/1
 	- New: add `--print-mt-title-font-size`
 - **Source Code- userchrome.css:**
 	- Fix: 2 wrong variable names
-
-***
-
-### OhmineDT-v3.0.10 updates ( 23-FEB-2022 tested on Joplin v2.6.10)
-
-- **Render Viewer:** 
-	- Fix: wrong brightness value of eye-protector 
-	- Fix: wrong size of h1 > span
-	- Fix: inline code styles missing
-- **Markdown Editor:**
-	- New: change the caret color to red when using Mardown Table Colorize to create table
-- **Joplin UI:**
-	- Fix: notebook panel items margin gap
-	- Fix: notelist panel items margin gap
-	- Fix: "all notes" button selected status color
-- **Source Code:**
-	- New: add `--math-notation-font-size` to root section
-	- New: add `--inline-code-text-shadow` to root section
-	- New: add `--export-html-background-color` to root section
 
 <!-- ===================================================================================================================================================== Table of contents -->
 
@@ -665,6 +667,7 @@ OhmineDT has been spending almost a week searching and testing fonts before publ
 
 - Montserrat - It's for the Non-Monospace font family
 - Cascadia Mono - It's for the Monospace font family
+- Chiron Sans HK Pro - for both Traditional and Simplified Chinese
 
 They are all included in the Github repository package, you can clone this repository to get it, but you may need to install them to your computer manually.
 
@@ -672,6 +675,7 @@ Or, In case you want to download it directly from the official site:
 
 - [Google Fonts: Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserrat)
 - [Github Repository/Microsoft/Cascadia-Code: Cascadia Mono](https://github.com/microsoft/cascadia-code/releases)
+- [chiron-fonts/chiron-sans-hk-pro](https://github.com/chiron-fonts/chiron-sans-hk-pro)
 
 
 [:arrow_up:Back](#table-of-contents)
@@ -682,9 +686,7 @@ Or, In case you want to download it directly from the official site:
 
 OhmineDT has some additional CSS codes that are written for some useful plugins. So, I would recommend you download the below plugins if you think they are good for you.
 
-If you want to skip the introduction of each plugin and install them quickly please follow the below one-flow steps.
-
-One flow to install and set all recommended plugins:
+To quickly install and setting all the plugins, please follow the below one-flow steps:
 
 1. Open Joplin
 2. Go to `tools` > `Options` > `Plugins`
@@ -708,7 +710,7 @@ One flow to install and set all recommended plugins:
 20. Paste the text into the input bar
 21. Click `OK`
 
-Then, you can still check out below to read about how those plugins work with OhmineDT.
+Then, you can still check out below to know more about how those plugins work with OhmineDT.
 
 [:arrow_up:Back](#table-of-contents)
 
@@ -716,7 +718,7 @@ Then, you can still check out below to read about how those plugins work with Oh
 
 ### Rich Markdown
 
-This plugin has provided several great features. OhmineDT is relying on this plugin to style the Special Text because Joplin didn't give the CSS classes to specify them. So, it might cause some styles missing from OhmineDT if you didn't install this plugin. 
+This plugin has provided several great features. OhmineDT is relying on this plugin to style the Special Text and Abstract Content Bar because Joplin didn't give the CSS classes to specify those elements. So, it might cause some styles missing from OhmineDT while you didn't install this plugin. 
 
 Quick setting up:
 
