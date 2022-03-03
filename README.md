@@ -108,16 +108,16 @@ Export HTML Sample: [export_html file_v3.1.28](https://drive.google.com/file/d/1
 	- [Blockquote](#blockquote)
 	- [Codeblock](#codeblock)
 - MUST KNOW ABOUT OHMINE DARK THEME
-    - [Change Your Joplin Settings Before Using OhmineDT](#change-your-joplin-settings-before-using-ohminedt)
-    	- [Appearance](#appearance)
-    	- [Markdown](#markdown)
-    	- [Other Plugins](#other-plugins)
-    - [OhmineDT Picks The Best Reading Fonts For You](#ohminedt-picks-the-best-reading-fonts-for-you)
-    - [These Plugins Are Important to OhmineDT](#these-plugins-are-important-to-ohminedt)
-        - [Rich Markdown](#rich-markdown)
-    	- [Quick HTML Tags](#quick-html-tags)
-    	- [Markdown Table Colorize](#markdown-table-colorize)
-    	- [Spoiler](#spoiler)
+    	- [Change Your Joplin Settings Before Using OhmineDT](#change-your-joplin-settings-before-using-ohminedt)
+    		- [Appearance](#appearance)
+    		- [Markdown](#markdown)
+    		- [Other Plugins](#other-plugins)
+    	- [OhmineDT Picks The Best Reading Fonts For You](#ohminedt-picks-the-best-reading-fonts-for-you)
+    	- [These Plugins Are Important to OhmineDT](#these-plugins-are-important-to-ohminedt)
+       		- [Rich Markdown](#rich-markdown)
+    		- [Quick HTML Tags](#quick-html-tags)
+    		- [Markdown Table Colorize](#markdown-table-colorize)
+    		- [Spoiler](#spoiler)
   	- [Think Before Using The Custom Elements](#think-before-using-the-custom-elements)
 - MORE INFORMATION
 	- [About Print & Export](#about-print--export)
@@ -479,7 +479,7 @@ You can quick customize all of the heading's border through the CSS root section
 
 Joplin provides us a great built-in Markdown TOC feature which let you create the TOC by typing a simple command `[[toc]]` within your notes. OhmineDT has restyle it and made it floating at the bottom left of the Render Viewer.
 
-![MarkdownToc_batch](https://user-images.githubusercontent.com/86870826/155838207-0f21c18a-0a48-4d4d-8b0f-f8f9f413c84a.png)
+![MarkdownToc_batch](https://user-images.githubusercontent.com/86870826/156605359-ce769aa2-e297-474a-83a2-6ad8e9fb1b74.png)
 
 The Markdown TOC feature is disable by Joplin default. To use the Markdown TOC, you should enable the the extension manually. For more information, please click: [Change Your Joplin Settings Before Using OhmineDT](#change-your-joplin-settings-before-using-ohminedt)
 
