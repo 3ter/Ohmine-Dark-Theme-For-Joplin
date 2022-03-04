@@ -666,7 +666,7 @@ Or, In case you want to download it directly from the official page:
 
 - [Google Fonts: Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserrat)
 - [Github Repository/Microsoft/Cascadia-Code: Cascadia Mono](https://github.com/microsoft/cascadia-code/releases)
-- [chiron-fonts/chiron-sans-hk-pro](https://github.com/chiron-fonts/chiron-sans-hk-pro)
+- [Github Repository/chiron-fonts: Chiron Sans HK Pro](https://github.com/chiron-fonts/chiron-sans-hk-pro)
 
 
 [:arrow_up:Back](#table-of-contents)
