@@ -1,4 +1,4 @@
-/* OhmineDT v3.1.40 | userchrome.css | 
+/* OhmineDT v3.1.41 | userchrome.css | 
 /* CSS for: Markdown Editor | Joplin UI */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -1012,9 +1012,7 @@ i.fas.fa-caret-down {
 
 /* notebook panel: notebook item --------------------------- */
 .list-item-container .list-item {
-  display: grid;
-  grid-template-columns: auto 40px;
-  gap: 0;
+  display: flex;
   padding: 0 0 6px 0;
   width: inherit;
   border-bottom: 2px dotted var(--np-notebook-item-border-color);
@@ -1107,7 +1105,7 @@ i.fas.fa-caret-down {
   position: sticky;
   right: 6px;
   font-size: 10px;
-  margin: 0 0 0 auto;
+  margin: auto 0 auto 15px;
   padding: 1px 6px;
   font-weight: 700;
   color: var(--np-note-count-label-text-color);

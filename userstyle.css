@@ -1,4 +1,4 @@
-/* OhmineDT v3.1.40 | userstyle.css */
+/* OhmineDT v3.1.41 | userstyle.css */
 /* CSS for: Render Viewer | Rich Text Editor | Print PDF | Export PDF | EXPORT HTML */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -26,27 +26,27 @@
   /* SWITCHER FOR RENDER VIEWER **************************** */
   /* change the below css property values to control the style effects on render viewer & rich text editor */
 
-  --switcher-h1-font-variant: small-caps; /* ON: "small-caps;" | OFF: "none;" */
-  --switcher-h1-text-fill-color: transparent; /* ON: "transparent;" | OFF: "none;" | h1 heading gradient color effect */
-  --switcher-h1-border-display: block; /* SHOW: "block;" | HIDE: "none;" | h1 heading border */
+  --switcher-h1-font-variant: small-caps; /* ON: "small-caps;" | OFF: "none;" | to set small-caps effect for h1 heading */
+  --switcher-h1-text-fill-color: transparent; /* ON: "transparent;" | OFF: "none;" | show/hide h1 heading gradient color effect */
+  --switcher-h1-border-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide h1 heading border */
 
-  --switcher-h2-rice-icon-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | h2 heading rice icon */
+  --switcher-h2-rice-icon-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | show/hide h2 heading rice icon */
 
-  --switcher-h2-border-display: block; /* SHOW: "block;" | HIDE: "none;" | h2 heading border */
-  --switcher-h3-border-display: none; /* SHOW: "block;" | HIDE: "none;" | h3 heading border */
-  --switcher-h4-border-display: none; /* SHOW: "block;" | HIDE: "none;" | h4 heading border */
-  --switcher-h5-border-width: 1px; /* SHOW: "1px;" | HIDE: "0;" | h5 heading border */
-  --switcher-h6-border-width: 0; /* SHOW: "1px;" | HIDE: "0;" | h6 heading border */
+  --switcher-h2-border-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide h2 heading border */
+  --switcher-h3-border-display: none; /* SHOW: "block;" | HIDE: "none;" | show/hide h3 heading border */
+  --switcher-h4-border-display: none; /* SHOW: "block;" | HIDE: "none;" | show/hide h4 heading border */
+  --switcher-h5-border-width: 1px; /* SHOW: "1px;" | HIDE: "0;" | show/hide h5 heading border */
+  --switcher-h6-border-width: 0; /* SHOW: "1px;" | HIDE: "0;" | show/hide h6 heading border */
   
-  --switcher-paragraph-text-align: justify; /* ON: "justify;" | OFF: "none;" |  */
-  --switcher-list-text-align: none;  /* ON: "justify;" | OFF: "none;" |  */
-  --switcher-footnote-text-align: none;  /* ON: "justify;" | OFF: "none;" |  */
+  --switcher-paragraph-text-align: justify; /* ON: "justify;" | OFF: "none;" | to justify the text of simple paragraph content*/
+  --switcher-list-text-align: none;  /* ON: "justify;" | OFF: "none;" | to justify the text of list */
+  --switcher-footnote-text-align: none;  /* ON: "justify;" | OFF: "none;" | to justify the text of footnote content */
   
-  --switcher-link-bracket-display: inline; /* SHOW: "inline;" | HIDE: "none;" | automatically add monospace bracket to any link */
+  --switcher-link-bracket-display: inline; /* ON: "inline;" | OFF: "none;" | automatically add monospace bracket to link */
   --switcher-link-break-word: break-all; /* BREAK LINK: "break-all;" | NOT BREAK LINK: "break-word" | to set how a line break present on link text */
   
-  --switcher-codeblock-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | max-height for codeblock */
-  --switcher-art-gallery-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | max-height for art gallery */
+  --switcher-codeblock-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | to set the max-height limit of codeblock */
+  --switcher-art-gallery-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | to set the max-height limit of art gallery */
   
   --switcher-eye-protector-for-images-filter: brightness(75%); /* ON: "brightness(75%);" | OFF: "none;" | reduce raw brightness for attached image */
   --switcher-eye-protector-for-images-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" | OFF: "none;" | the brightness increasing hover effect for attached image */
@@ -54,16 +54,16 @@
   --switcher-eye-protector-for-mermaid-filter: brightness(75%); /* ON: "brightness(75%);" | OFF: "none;" | reduce raw brightness for mermaid chart */
   --switcher-eye-protector-for-mermaid-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" OFF: "none;" | the brightness increasing hover effect for mermaid chart */
   
-  --switcher-custom-title-block-title-symbol-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | The custom title block title symbol */
+  --switcher-custom-title-block-title-symbol-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | show/hide the custom title block title symbol */
 
   /* SWITCHER FOR PRINT & EXPORT TO PDF ******************** */
   /* change the below css property values to control the style effects of print & export to pdf */
 
-  --switcher-print-note-title-display: block; /* SHOW: "block;" | HIDE: "none;" | the notebook title */
-  --switcher-print-sticky-notes-display: block; /* SHOW: "block;" | HIDE: "none;" | the sticky notes */
-  --switcher-print-h1-border-display: block; /* SHOW: "block;" | HIDE: "none;" | the h1 heading border */
-  --switcher-print-link-href-display: inline; /* SHOW: "inline;" | HIDE: "none;" | show the link href after the link text */
-  --switcher-print-markdown-toc-display: block; /* SHOW: "block;" | HIDE: "none;" | the markdown toc section */
+  --switcher-print-note-title-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide the notebook title from the PDF */
+  --switcher-print-sticky-notes-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide the sticky notes from the PDF */
+  --switcher-print-h1-border-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide the h1 heading border from the PDF */
+  --switcher-print-link-href-display: inline; /* SHOW: "inline;" | HIDE: "none;" | show/hide the link href after the link text from the PDF */
+  --switcher-print-markdown-toc-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide the markdown toc from the PDF */
   
 
 
