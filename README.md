@@ -24,6 +24,11 @@ Let's see what's OhmineDT brings you:
 
 ## Latest Released
 
+### OhmineDT-v3.1.41 updates ( 5-MAR-2022 tested on Joplin v2.7.13)
+
+- **Joplin UI:**
+	- Fix: notebook item visual broken when adding an emoji
+
 ### OhmineDT-v3.1.40 updates ( 2-MAR-2022 tested on Joplin v2.7.13)
 
 - **Render Viewer:**
