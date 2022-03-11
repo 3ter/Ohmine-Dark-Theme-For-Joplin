@@ -1,4 +1,2 @@
-dist/
-node_modules/
-publish/
-yarn-error.log
+update.md
+.vscode

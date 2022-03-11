@@ -1,4 +1,4 @@
-/* OhmineDT v3.1.28 | userstyle.css */
+/* OhmineDT v3.1.41 | userstyle.css */
 /* CSS for: Render Viewer | Rich Text Editor | Print PDF | Export PDF | EXPORT HTML */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -26,27 +26,27 @@
   /* SWITCHER FOR RENDER VIEWER **************************** */
   /* change the below css property values to control the style effects on render viewer & rich text editor */
 
-  --switcher-h1-font-variant: small-caps; /* ON: "small-caps;" | OFF: "none;" */
-  --switcher-h1-text-fill-color: transparent; /* ON: "transparent;" | OFF: "none;" | h1 heading gradient color effect */
-  --switcher-h1-border-display: block; /* SHOW: "block;" | HIDE: "none;" | h1 heading border */
+  --switcher-h1-font-variant: small-caps; /* ON: "small-caps;" | OFF: "none;" | to set small-caps effect for h1 heading */
+  --switcher-h1-text-fill-color: transparent; /* ON: "transparent;" | OFF: "none;" | show/hide h1 heading gradient color effect */
+  --switcher-h1-border-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide h1 heading border */
 
-  --switcher-h2-rice-icon-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | h2 heading rice icon */
+  --switcher-h2-rice-icon-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | show/hide h2 heading rice icon */
 
-  --switcher-h2-border-display: block; /* SHOW: "block;" | HIDE: "none;" | h2 heading border */
-  --switcher-h3-border-display: none; /* SHOW: "block;" | HIDE: "none;" | h3 heading border */
-  --switcher-h4-border-display: none; /* SHOW: "block;" | HIDE: "none;" | h4 heading border */
-  --switcher-h5-border-width: 1px; /* SHOW: "1px;" | HIDE: "0;" | h5 heading border */
-  --switcher-h6-border-width: 0; /* SHOW: "1px;" | HIDE: "0;" | h6 heading border */
+  --switcher-h2-border-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide h2 heading border */
+  --switcher-h3-border-display: none; /* SHOW: "block;" | HIDE: "none;" | show/hide h3 heading border */
+  --switcher-h4-border-display: none; /* SHOW: "block;" | HIDE: "none;" | show/hide h4 heading border */
+  --switcher-h5-border-width: 1px; /* SHOW: "1px;" | HIDE: "0;" | show/hide h5 heading border */
+  --switcher-h6-border-width: 0; /* SHOW: "1px;" | HIDE: "0;" | show/hide h6 heading border */
   
-  --switcher-paragraph-text-align: justify; /* ON: "justify;" | OFF: "none;" |  */
-  --switcher-list-text-align: none;  /* ON: "justify;" | OFF: "none;" |  */
-  --switcher-footnote-text-align: none;  /* ON: "justify;" | OFF: "none;" |  */
+  --switcher-paragraph-text-align: justify; /* ON: "justify;" | OFF: "none;" | to justify the text of simple paragraph content*/
+  --switcher-list-text-align: none;  /* ON: "justify;" | OFF: "none;" | to justify the text of list */
+  --switcher-footnote-text-align: none;  /* ON: "justify;" | OFF: "none;" | to justify the text of footnote content */
   
-  --switcher-link-bracket-display: inline; /* SHOW: "inline;" | HIDE: "none;" | automatically add monospace bracket to any link */
+  --switcher-link-bracket-display: inline; /* ON: "inline;" | OFF: "none;" | automatically add monospace bracket to link */
   --switcher-link-break-word: break-all; /* BREAK LINK: "break-all;" | NOT BREAK LINK: "break-word" | to set how a line break present on link text */
   
-  --switcher-codeblock-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | max-height for codeblock */
-  --switcher-art-gallery-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | max-height for art gallery */
+  --switcher-codeblock-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | to set the max-height limit of codeblock */
+  --switcher-art-gallery-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | to set the max-height limit of art gallery */
   
   --switcher-eye-protector-for-images-filter: brightness(75%); /* ON: "brightness(75%);" | OFF: "none;" | reduce raw brightness for attached image */
   --switcher-eye-protector-for-images-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" | OFF: "none;" | the brightness increasing hover effect for attached image */
@@ -54,16 +54,16 @@
   --switcher-eye-protector-for-mermaid-filter: brightness(75%); /* ON: "brightness(75%);" | OFF: "none;" | reduce raw brightness for mermaid chart */
   --switcher-eye-protector-for-mermaid-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" OFF: "none;" | the brightness increasing hover effect for mermaid chart */
   
-  --switcher-custom-title-block-title-symbol-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | The custom title block title symbol */
+  --switcher-custom-title-block-title-symbol-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | show/hide the custom title block title symbol */
 
   /* SWITCHER FOR PRINT & EXPORT TO PDF ******************** */
   /* change the below css property values to control the style effects of print & export to pdf */
 
-  --switcher-print-note-title-display: block; /* SHOW: "block;" | HIDE: "none;" | the notebook title */
-  --switcher-print-sticky-notes-display: block; /* SHOW: "block;" | HIDE: "none;" | the sticky notes */
-  --switcher-print-h1-border-display: block; /* SHOW: "block;" | HIDE: "none;" | the h1 heading border */
-  --switcher-print-link-href-display: inline; /* SHOW: "inline;" | HIDE: "none;" | show the link href after the link text */
-  --switcher-print-markdown-toc-display: block; /* SHOW: "block;" | HIDE: "none;" | the markdown toc section */
+  --switcher-print-note-title-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide the notebook title from the PDF */
+  --switcher-print-sticky-notes-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide the sticky notes from the PDF */
+  --switcher-print-h1-border-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide the h1 heading border from the PDF */
+  --switcher-print-link-href-display: inline; /* SHOW: "inline;" | HIDE: "none;" | show/hide the link href after the link text from the PDF */
+  --switcher-print-markdown-toc-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide the markdown toc from the PDF */
   
 
 
@@ -77,11 +77,11 @@
 
   /* GENERAL *********************************************** */
   /* base font group:  all elements that other than monospace font group */
-  --base-font: "montserrat", "microsoft jhenghei light", avenir, arial, sans-serif; /* by default, it's also affects to --print-base-font */
+  --base-font: "montserrat", "chiron sans hk pro extralight", avenir, arial, sans-serif; /* by default, it's also affects to --print-base-font */
   --base-font-size: 14px;
 
   /* monospace font group:  code block | pre | code | footnote ref no. */
-  --monospace-font: "cascadia mono light", monospace, "microsoft jhenghei light"; /* by default, it's also affects to --print-monospace-font */
+  --monospace-font: "cascadia mono light", monospace, "chiron sans hk pro extralight"; /* by default, it's also affects to --print-monospace-font */
   --monospace-font-size: 12px;
   
   /* render viewer background ------------------------------ */
@@ -1079,8 +1079,9 @@ table > tbody > tr:nth-child(odd) {
 #rendered-md > .table-of-contents:hover::before {
   content: "Table Of Contents";
   text-align: center;
-  line-height: 1.9em;
+  line-height: 15px;
   font-weight: 700;
+  font-size: 13px;
   color: var(--mt-title-text-color);
   background: var(--mt-title-background-color);
   box-shadow: 0 0 1px var(--mt-title-box-shadow);
@@ -1094,20 +1095,20 @@ table > tbody > tr:nth-child(odd) {
   transition: color 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
-/* markdwon toc: body -------------------------------------- */
+/* markdown toc: body -------------------------------------- */
 #rendered-md > .table-of-contents,
 #rendered-md > .table-of-contents:hover,
 #rendered-md > .table-of-contents::before,
 #rendered-md > .table-of-contents:hover::before {
   position: fixed;
-  bottom: 0;
+  bottom: -8px;
   left: 0;
   display: block;
   padding: 1px 6px;
   margin: 8px 10px;
   width: 133px;
-  height: 25px;
-  border-radius: 7px;
+  height: 15px;
+  border-radius: 7px 7px 0 0;
   overflow: hidden;
   z-index: 100;
 }
@@ -2022,7 +2023,7 @@ important::before {
     transition: none;
   }
 
-  /* print markdwon toc: body ------------------------------ */
+  /* print markdown toc: body ------------------------------ */
   /* group:  body & title ---------------------------------- */
   #rendered-md > .table-of-contents,
   #rendered-md > .table-of-contents:hover,
