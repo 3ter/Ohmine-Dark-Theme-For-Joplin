@@ -989,19 +989,16 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 2. Go to `tools` > `Options` >`Appearance` > `Theme`
 3. Choose `Dark`
 4. Click `Apply`
-<<<<<<< HEAD
 5. In the same page, click `Show Advanced Settings`
-=======
-5. In the same page, ckick `Show Advanced Settings`
->>>>>>> 3a26b4f372058dc1e4921b95c50b17e121123659
-6. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
-7. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
-8. Paste my codes on your `userstyle.css`
-9. Back to the `Appearance` page again
-10. Click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
-11. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
-12. Paste on your `userchrome.css`
-13. Quit & restart Joplin and it's done.
+6. In the same page, ckick `Show Advanced Settings`
+7. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
+8. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
+9. Paste my codes on your `userstyle.css`
+10. Back to the `Appearance` page again
+11. Click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
+12. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
+13. Paste on your `userchrome.css`
+14. Quit & restart Joplin and it's done.
 
 
 [:arrow_up:Back](#table-of-contents)
