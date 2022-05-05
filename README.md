@@ -5,12 +5,12 @@ OhmineDT is a Joplin external CSS theme and and aims to provide you a better Mar
 Let's see what's OhmineDT brings you:
 
 - 20 useful custom elements to improve your Joplin note-taking experience
-- 33 useful switchers for quick customizing the theme
+- 35 useful switchers for quick customizing the theme
 - No more messy markdown table syntax
 - Well paragraph separation layout brings you the best screen reading experience
-- Split out the Non-Monospace and Monospace fonts for identifying the main content
+- Split out the Non-Monospace and Monospace fonts for easily identifying the main content.
 - Eye-protector to protect your eyes from bright colors
-- Including additional styles for some of the helpful plugins
+- Including additional styles for helpful plugins
 - Well formatting of exported PDF and HTML
 - A magical background color #151b1a that make you quickly jump into a deep focus state
 - Easy to customize whatever elements and colors of Joplin
@@ -24,62 +24,40 @@ Let's see what's OhmineDT brings you:
 
 ## Latest Released
 
-### OhmineDT-v3.1.41 updates - IMPORTANT FIX( 5-MAR-2022 tested on Joplin v2.7.13)
-
-- **Joplin UI:**
-	- Fix: notebook item visual broken when adding an emoji
-
-### OhmineDT-v3.1.40 updates ( 2-MAR-2022 tested on Joplin v2.7.13)
+### OhmineDT-v3.1.61 updates ( 5-May-2022 tested on Joplin v2.7.15)
 
 - **Render Viewer:**
-    - Improve: Reduce the size of the Markdown TOC button 
+    - Fix: The chinese font family was not applied to the table.
+    
+- **Markdown Editor:**
+    - Change: Abstract Content Bar - list, blockquote, and table, color changed.
+    - New: add background color to horizontal line markdown syntax.
+    - Fix: Abstract Content Bar - blockquote didn't showing on the color bar.
+    
 - **Joplin UI:**
-    - New: add a horizontal scrollbar for overflow text on each notebook item
-    - Fix: note count label overlapping the notebook item text
-    - Change: removed overflow scroll effect from notelist panel - there is a problem I can't fix at the moment
-- **Font:**
-    - Change: new font for both Simplified and Traditional Chinese - Chiron HK Pro ExtraLight
+    - Improve: tag manager modal dialog styles.
+    
 - **Source Code: userchrome.css:**
-    - Change: renamed 1 variable
-    - New: add `--np-notebook-item-scrollbar-color`
-    - New: add `--np-note-count-label-text-color`
-    - New: add `--nlp-list-item-text-color`
-    - New: add `--nlp-list-item-border-color`
-    - New: add `--nlp-header-search-bar-placeholder-text-color`
-    - New: add `--ett-button-icon-color`
+    - Change: renamed 1 switcher.
+    - Change: renamed 7 variables.
+    - Change: removed 1 invalid variable `--codeblock-text-color`.
+    - New: add `--switcher-mde-horizontal-line-background-color` for turn on/off the background color of horizontal line markdown syntax.
+    - New: add `--hr-background-color`.
+    - New: add `--hr-text-color`.
+    - New: add custom code section to the bottom.
+    - Fix: the value of `--np-notebook-item-text-color:` and `--np-notebook-item-border-color:` are affects to the notelist panel unexpectedly.
+    - Improve: edit unclear comments.
+    
+- **Source Code: userstyle.css:**
+    - Change: renamed 1 variable.
+    - New: add `--switcher-markdown-toc-position-left` You can now position the Markdown TOC button to the left/right.
+    - New: add `--mt-body-background-color-hover`.
+    - New: add `--mt-body-border-color-hover`.
+    - New: add `--mt-list-border-color`.
+    - New: add custom code section to the bottom.
+    - Improve: edit unclear comments.
 
-***
 
-### OhmineDT-v3.1.28 updates ( 26-FEB-2022 tested on Joplin v2.7.13)
-
-Export PDF Sample: [export_pdf_v3.1.28](https://drive.google.com/file/d/1TltcC2I-Aspd-jQBe8IgfNe1P1p70VHW/view?usp=sharing) (26-FEB-2022)
-
-Export HTML Sample: [export_html file_v3.1.28](https://drive.google.com/file/d/1xmFYSE-ttIEBRpfOb6APpdhtVib2mTuF/view?usp=sharing) (26-FEB-2022)
-
-- **Render Viewer:** 
-	- New: new floating styles for [Markdown TOC](#markdown-toc)
-- **Joplin UI:**
-	- Fix: bottom tag bar styles missing
-- **Print/Export PDF:**
-	- Fix: code block unexpected text shadow
-	- Fix code block margin & padding
-	- Fix: footnote styles missing
-	- Fix: wrong size of h1 > span
-	- Fix: custom title block title color change
-	- Fix: spoiler block margin
-- **Source Code- userstyle.css:**
-	- Change: renamed `--export-note-title` as `--export-note-title-text-color`
-	- Change: removed `--mt-border-color`
-	- Change: add link bracket to the monospace font group
-	- New: add `--mt-title-background-color`
-	- New: add `--mt-title-box-shadow`
-	- New: add `--mt-title-text-color-hover`
-	- New: add `--mt-title-background-color-hover`
-	- New: add `--mt-title-box-shadow-hover`
-	- New: add `--print-mt-link-text-color`
-	- New: add `--print-mt-title-font-size`
-- **Source Code- userchrome.css:**
-	- Fix: 2 wrong variable names
 
 <!-- ===================================================================================================================================================== Table of contents -->
 
@@ -439,7 +417,7 @@ It would be helpful when you want to release your eyes from the text for sometim
 1. The only thing you may need to do is to understand those colors' meanings.
 2. If there is more than one element in the same line, it would be showing the color depending on their priority.
 
-![AbstractContentBar_Priority_batch](https://user-images.githubusercontent.com/86870826/154923901-ba876236-7e53-47f9-aee0-c2741b5d8362.png)
+![AbstractContentBar_Priority_batch2](https://user-images.githubusercontent.com/86870826/166906072-2b6daa1c-4ac3-494c-8bef-0ec10b180b42.png)
 
 (bigger number means higher priority)
 
@@ -464,16 +442,16 @@ You can quick customize all of the heading's border through the CSS root section
 
 |Root Property|Value(ON)|Value(Off)|Description|
 |-|-|-|-|
-|--switcher-h1-font-variant: |small-caps;  |none;|h1 heading font variant small-caps effect|
-|--switcher-h1-text-fill-color: |transparent; |none; | h1 heading gradient color text effect|
-|--switcher-h1-border-display: |block; |none; | h1 heading border: show / hide|
-|--switcher-h2-rice-icon-display: |inline-block; |none; | h2 heading rice icon: show / hide|
-|--switcher-h2-border-display: |block; |none; | h2 heading border: show / hide|
-|--switcher-h3-border-display: |block; |none; | h3 heading border: show / hide|
-|--switcher-h4-border-display: |block; |none; | h4 heading border: show / hide|
-|--switcher-h5-border-width: |1px; |0; | h5 heading border: show / hide|
-|--switcher-h6-border-width: |1px; |0; | h6 heading border: show / hide|
-|--switcher-mde-h1-font-variant: |small-caps; |none;|h1 heading font varian small-caps effect on Markdown editor|
+|--switcher-h1-font-variant: |small-caps;  |none;|turn on/off the small-caps effect of h1 heading|
+|--switcher-h1-text-fill-color: |transparent; |none; | turn on/off heading gradient color effect|
+|--switcher-h1-border-display: |block; |none; | show/hide h1 heading border|
+|--switcher-h2-rice-icon-display: |inline-block; |none; | show/hide h2 heading rice icon|
+|--switcher-h2-border-display: |block; |none; | show/hide h2 heading border|
+|--switcher-h3-border-display: |block; |none; | show/hide h3 heading border|
+|--switcher-h4-border-display: |block; |none; | show/hide h4 heading border|
+|--switcher-h5-border-width: |1px; |0; | show/hide h5 heading border|
+|--switcher-h6-border-width: |1px; |0; | show/hide h6 heading border|
+|--switcher-mde-h1-font-variant: |small-caps; |none;|turn on/off the small-caps effect of h1 heading on Markdown editor|
  
 
 [:arrow_up:Back](#table-of-contents)
@@ -505,10 +483,10 @@ You can quick customize the eye-protector effects through the CSS root section, 
 
 |Root Property|Value(ON)|Value(Off)|Description|
 |-|-|-|-|
-|--switcher-eye-protector-for-images-filter:|brightness(25%);|none;|reduce raw brightness for attached image|
-|--switcher-eye-protector-for-images-animation:|eye-protector 1.5s forwards 1;|none;|the brightness increasing hover effect for attached image|
-|--switcher-eye-protector-for-mermaid-filter:|brightness(25%);|none;|reduce raw brightness for mermaid chart|
-|--switcher-eye-protector-for-mermaid-animation:|eye-protector 1.5s forwards 1;|none;|the brightness increasing hover effect for mermaid chart|
+|--switcher-eye-protector-for-images-filter:|brightness(25%);|none;|turn on/off the reduce raw brightness effect on attached image|
+|--switcher-eye-protector-for-images-animation:|eye-protector 1.5s forwards 1;|none;|turn on/off the brightness increasing hover effect on attached image|
+|--switcher-eye-protector-for-mermaid-filter:|brightness(25%);|none;|turn on/off the reduce raw brightness effect on mermaid chart|
+|--switcher-eye-protector-for-mermaid-animation:|eye-protector 1.5s forwards 1;|none;|turn on/off the brightness increasing hover effect on mermaid chart|
 
   
 [:arrow_up:Back](#table-of-contents)
@@ -873,11 +851,11 @@ Here are a few things you should know before you **Print** or **Export** a note 
 
 |Root Property|Value(ON)|Value(OFF)|Description|
 |-|-|-|-|
-|--switcher-print-note-title-display:|block; | none; | show / hide the notebook title |
-|--switcher-print-sticky-notes-display:|block; | none; | show / hide the sticky notes |
-|--switcher-print-h1-border-display:|block; | none; | show / hide the h1 heading border |
-|--switcher-print-link-href-display:|inline; | none; | show / hide the link href after the link text |
-|--switcher-print-markdown-toc-display:|block; | none; | show / hide the markdown toc section|
+|--switcher-print-note-title-display:|block; | none; | show/hide the notebook title |
+|--switcher-print-sticky-notes-display:|block; | none; | show/hide the sticky notes |
+|--switcher-print-h1-border-display:|block; | none; | show/hide the h1 heading border |
+|--switcher-print-link-href-display:|inline; | none; | show/hide the link href after the link text |
+|--switcher-print-markdown-toc-display:|block; | none; | show/hide the markdown toc|
   
 2. *Art Gallery* and *Code Block* are default to releasing the overflow limit, and listing out all the content.
 3. Various elements are *standalone* restyled for print/export PDF.
@@ -1007,50 +985,21 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 
 ## How to install this theme?
 
-### Install as a plugin
-
-1. [Install the plugin "Ohmine Theme"](#How-to-install-Joplin-plugins)
-2. Go to `Tools` > `Options` > `Appearance` 
-3. Choose the `Dark` theme and click `Apply` (OhmineDT is better to run with the Joplin built-in dark theme)
-4. \[optional\] Download and install the most recommend fonts for this theme. [Montserrat](https://fonts.google.com/specimen/Montserrat) | [Cascadia](https://github.com/microsoft/cascadia-code/releases)
-
-### Install manually by adding style sheets
-
-If you know where exactly your `userstyle.css` and `userchrome.css` are stored:
-
-1. Clone my codes: Go to the top of this page and click there `Code` button, then click `Download ZIP`
-2. Open the `Ohmine-Dark-Theme-For-Joplin-main.zip`
-3. Copy the files: `userstyle.css` and `userchrome.css`
-4. Paste them to your `/.config/joplin-desktop`
-5. Quit & restart Joplin
-
-In case, you can't find the `joplin-desktop` folder, you can follow the steps below:
-
 1. Open Joplin
-2. Go to `Tools` > `Options` > `Appearance` 
-3. Click `Show Advanced Settings`
-4. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
-5. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
-6. Paste my codes on your `userstyle.css`
-7. Back to the `Appearance` page again
-8. Click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
-9. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
-10. Paste on your `userchrome.css`
-11. Quit & restart Joplin and it's done.
-
-1. Make sure you are already installed Joplin on your computer. [Download Joplin](https://joplinapp.org/download/)
-2. Download and install the most recommend fonts for this theme. [Montserrat](https://fonts.google.com/specimen/Montserrat) | [Cascadia](https://github.com/microsoft/cascadia-code/releases)
-3. Open Joplin
-4. Go to `Tools` > `Options` > `Appearance` 
-5. Choose the `Dark` theme and click `Apply` (OhmineDT is better to run with the Joplin built-in dark theme)
-6. In the `Appearance` page, click `Show Advanced Settings`
+2. Go to `tools` > `Options` >`Appearance` > `Theme`
+3. Choose `Dark`
+4. Click `Apply`
+5. In the same page, click `Show Advanced Settings`
+6. In the same page, ckick `Show Advanced Settings`
 7. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
-9. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/src/userstyle.css
-10. And paste on your `userstyle.css`
-11. Back to the `Appearance` page again and click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
-12. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/src/userchrome.css
-13. And paste on your `userchrome.css`
+8. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
+9. Paste my codes on your `userstyle.css`
+10. Back to the `Appearance` page again
+11. Click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
+12. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
+13. Paste on your `userchrome.css`
 14. Quit & restart Joplin and it's done.
+
 
 [:arrow_up:Back](#table-of-contents)
 
