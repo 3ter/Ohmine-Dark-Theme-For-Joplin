@@ -417,7 +417,7 @@ It would be helpful when you want to release your eyes from the text for sometim
 1. The only thing you may need to do is to understand those colors' meanings.
 2. If there is more than one element in the same line, it would be showing the color depending on their priority.
 
-![AbstractContentBar_Priority_batch](https://user-images.githubusercontent.com/86870826/154923901-ba876236-7e53-47f9-aee0-c2741b5d8362.png)
+![AbstractContentBar_Priority_batch2](https://user-images.githubusercontent.com/86870826/166906072-2b6daa1c-4ac3-494c-8bef-0ec10b180b42.png)
 
 (bigger number means higher priority)
 
