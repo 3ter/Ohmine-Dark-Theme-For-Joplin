@@ -1,10 +1,13 @@
-/* OhmineDT v3.1.41 | userstyle.css */
+/* OhmineDT v3.1.61 | userstyle.css */
 /* CSS for: Render Viewer | Rich Text Editor | Print PDF | Export PDF | EXPORT HTML */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
+/* Please add your custom code to the bottom of this document if needed. */
 
-/* Please let me know if you found any bad issue when using OhmineDT. */
-/* Thank you guys! I hope you are enjoy what's OhmineDT did for you! */
+/* OhmineDT will stay compatible with the latest stable versions of Joplin. */
+/* OhmineDT's updates information: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#latest-released */
+
+/* Thank you, guys! I hope you enjoy what's OhmineDT did for you! */
 /* Tell me whatever you want > Joplin Forum: https://discourse.joplinapp.org/t/css-theme-ohmine-dark-theme/21000 */
 /* Directly report an issue > Github: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/issues/new/choose */
 
@@ -26,8 +29,8 @@
   /* SWITCHER FOR RENDER VIEWER **************************** */
   /* change the below css property values to control the style effects on render viewer & rich text editor */
 
-  --switcher-h1-font-variant: small-caps; /* ON: "small-caps;" | OFF: "none;" | to set small-caps effect for h1 heading */
-  --switcher-h1-text-fill-color: transparent; /* ON: "transparent;" | OFF: "none;" | show/hide h1 heading gradient color effect */
+  --switcher-h1-font-variant: small-caps; /* ON: "small-caps;" | OFF: "none;" | turn on/off the small-caps effect of h1 heading */
+  --switcher-h1-text-fill-color: transparent; /* ON: "transparent;" | OFF: "none;" | turn on/off heading gradient color effect */
   --switcher-h1-border-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide h1 heading border */
 
   --switcher-h2-rice-icon-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | show/hide h2 heading rice icon */
@@ -38,23 +41,27 @@
   --switcher-h5-border-width: 1px; /* SHOW: "1px;" | HIDE: "0;" | show/hide h5 heading border */
   --switcher-h6-border-width: 0; /* SHOW: "1px;" | HIDE: "0;" | show/hide h6 heading border */
   
-  --switcher-paragraph-text-align: justify; /* ON: "justify;" | OFF: "none;" | to justify the text of simple paragraph content*/
-  --switcher-list-text-align: none;  /* ON: "justify;" | OFF: "none;" | to justify the text of list */
-  --switcher-footnote-text-align: none;  /* ON: "justify;" | OFF: "none;" | to justify the text of footnote content */
+  --switcher-paragraph-text-align: justify; /* ON: "justify;" | OFF: "none;" | turn on/off the justify text effect of paragraph content*/
+  --switcher-list-text-align: none;  /* ON: "justify;" | OFF: "none;" | turn on/off the justify text effect of list */
+  --switcher-footnote-text-align: none;  /* ON: "justify;" | OFF: "none;" | turn on/off the justify text effect of footnote content */
   
-  --switcher-link-bracket-display: inline; /* ON: "inline;" | OFF: "none;" | automatically add monospace bracket to link */
-  --switcher-link-break-word: break-all; /* BREAK LINK: "break-all;" | NOT BREAK LINK: "break-word" | to set how a line break present on link text */
+  --switcher-link-bracket-display: inline; /* ON: "inline;" | OFF: "none;" | turn on/off the effect of automatically adding the monospace bracket to links */
+  --switcher-link-break-word: break-all; /* ON: "break-all;" | OFF: "break-word" | turn on/off the to set how a line break present on the link text */
   
-  --switcher-codeblock-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | to set the max-height limit of codeblock */
-  --switcher-art-gallery-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | to set the max-height limit of art gallery */
+  --switcher-markdown-toc-position-left: 0; /* ON: "0;" | OFF: none | turn on/off to position the markdown TOC button to the left/right */
+
+  --switcher-codeblock-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | turn on/off the max-height limit of codeblock */
+  --switcher-art-gallery-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | turn on/off the max-height limit of art gallery */
   
-  --switcher-eye-protector-for-images-filter: brightness(75%); /* ON: "brightness(75%);" | OFF: "none;" | reduce raw brightness for attached image */
-  --switcher-eye-protector-for-images-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" | OFF: "none;" | the brightness increasing hover effect for attached image */
+  --switcher-eye-protector-for-images-filter: brightness(75%); /* ON: "brightness(75%);" | OFF: "none;" | turn on/off the reduce raw brightness effect on attached image */
+  --switcher-eye-protector-for-images-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" | OFF: "none;" | turn on/off the brightness increasing hover effect on attached image */
   
-  --switcher-eye-protector-for-mermaid-filter: brightness(75%); /* ON: "brightness(75%);" | OFF: "none;" | reduce raw brightness for mermaid chart */
-  --switcher-eye-protector-for-mermaid-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" OFF: "none;" | the brightness increasing hover effect for mermaid chart */
+  --switcher-eye-protector-for-mermaid-filter: brightness(75%); /* ON: "brightness(75%);" | OFF: "none;" | turn on/off the reduce raw brightness effect on mermaid chart */
+  --switcher-eye-protector-for-mermaid-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" OFF: "none;" | turn on/off the brightness increasing hover effect on mermaid chart */
   
   --switcher-custom-title-block-title-symbol-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | show/hide the custom title block title symbol */
+
+
 
   /* SWITCHER FOR PRINT & EXPORT TO PDF ******************** */
   /* change the below css property values to control the style effects of print & export to pdf */
@@ -88,10 +95,10 @@
   --render-viewer-background-color: #151b1a; /* by default, it's also affects to the table border color */
   
   /* export html background -------------------------------- */
-  --export-html-background-color: #242424;
+  --export-html-background-color: #242424; /* there would be generated a side margin when exporting to html, and this color is for that margin */
 
   /* exported note title ----------------------------------- */
-  --export-note-title: #bdbdbd ;
+  --export-note-title: #bdbdbd;
 
 
   /* paragraph --------------------------------------------- */
@@ -245,7 +252,7 @@
   --codeblock-scrollbar-background-color-hover: radial-gradient(#273838 40%, #558688 70%, #b4ece8 100%);
 
   /* codeblock: selected status on rich text editor -------- */
-  --codeblock-selected-outline-color: #002688;
+  --codeblock-outline-color-selected: #002688;
  
 
 
@@ -256,6 +263,9 @@
   --mt-title-text-color-hover: #eee;
   --mt-title-background-color-hover: #00b37c;
   --mt-title-box-shadow-hover: #4cff00;
+  --mt-body-background-color-hover: #191919;
+  --mt-body-border-color-hover: #00b37c;
+  --mt-list-border-color: #333333;
 
 
 
@@ -643,7 +653,8 @@
 #tinymce,
 #joplin-container-body,
 #joplin-container-content,
-#spoiler-block-title {
+#spoiler-block-title
+#rendered-md > table > * {
   font-family: var(--base-font) !important;
   font-size: var(--base-font-size);
 }
@@ -1038,7 +1049,7 @@ table > tbody > tr:nth-child(odd) {
   border-style: dotted;
   border-color: var(--codeblock-border-color);
   max-height: var(--switcher-codeblock-max-height);
-  border-radius: 8px;
+  border-radius: 7px;
   background: var(--codeblock-background-color);
   box-shadow: 0 0 3px var(--codeblock-box-shadow-color);
 }
@@ -1068,7 +1079,7 @@ table > tbody > tr:nth-child(odd) {
 }
 /* codeblock: selected status on rich text editor ---------- */
 .mce-content-body [contentEditable="false"][data-mce-selected] {
-  outline: 3px solid var(--codeblock-selected-outline-color);
+  outline: 3px solid var(--codeblock-outline-color-selected);
 }
 
 
@@ -1102,7 +1113,8 @@ table > tbody > tr:nth-child(odd) {
 #rendered-md > .table-of-contents:hover::before {
   position: fixed;
   bottom: -8px;
-  left: 0;
+  left: var(--switcher-markdown-toc-position-left);
+  right: 0;
   display: block;
   padding: 1px 6px;
   margin: 8px 10px;
@@ -1124,10 +1136,10 @@ table > tbody > tr:nth-child(odd) {
   height: auto;
   max-width: 350px;
   max-height: 40vh;
-  background: #191919;
+  background: var(--mt-body-background-color-hover);
   border-width: 3px 0;
   border-style: solid;
-  border-color: #00b37c;
+  border-color: var(--mt-body-border-color-hover);
   white-space: normal;
   overflow: scroll;
   animation: toc-hover 0.5s forwards 1;
@@ -1135,10 +1147,11 @@ table > tbody > tr:nth-child(odd) {
 
 /* markdown toc: list -------------------------------------- */
 #rendered-md .table-of-contents ul {
-  border-left: 1px solid #333;
+  border-left: 1px solid var(--mt-list-border-color);
   padding: 0px;
   margin: 0 0 0 8px;
 }
+
 #rendered-md .table-of-contents li {
   list-style-type: none;
   padding-left: 8px;
@@ -2270,3 +2283,7 @@ important::before {
 /* ********************************************************* */
 /* !!!!!!!!!     MAIN SOURCE CODE: SECTION END    !!!!!!!!!! */
 /* ********************************************************* */
+/* ********************************************************* */
+/* vvvvvvvvv             CUSTOM CODE              vvvvvvvvvv */
+/* ********************************************************* */
+/* Add your custom code below here to avoid confusing with OhmineDT's code. */

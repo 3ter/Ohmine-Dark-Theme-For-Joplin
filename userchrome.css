@@ -1,10 +1,13 @@
-/* OhmineDT v3.1.41 | userchrome.css | 
+/* OhmineDT v3.1.61 | userchrome.css | 
 /* CSS for: Markdown Editor | Joplin UI */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
+/* Please add your custom code to the bottom of this document if needed. */
 
-/* Please let me know if you found any bad issue when using OhmineDT. */
-/* Thank you guys! I hope you are enjoy what's OhmineDT did for you! */
+/* OhmineDT will stay compatible with the latest stable versions of Joplin. */
+/* OhmineDT's updates information: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#latest-released */
+
+/* Thank you, guys! I hope you enjoy what's OhmineDT did for you! */
 /* Tell me whatever you want > Joplin Forum: https://discourse.joplinapp.org/t/css-theme-ohmine-dark-theme/21000 */
 /* Directly report an issue > Github: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/issues/new/choose */
 
@@ -25,18 +28,22 @@
 
   /* SWITCHER FOR MARKDOWN EDITOR ************************** */
   /* change the below css property values to control the style effects on Markdown Editor */
-  --switcher-mde-abstract-content-bar-display: block; /* SHOW: "block;" | HIDE: "none;" | the abstract content bar */
-  --switcher-mde-abstract-content-bar-blank-line-display: none; /* SHOW: "block;" | HIDE: "none;" | abstract content bar showing the blank lines */
-  --switcher-mde-headings-text-shadow: 0 0 2px; /* SHOW: "0 0 2px;" | HIDE: "none;" | the text shadow of headings */
-  --switcher-mde-h1-font-variant: small-caps; /* ON: "small-caps;" | OFF: "none;" | */
+
+  --switcher-mde-abstract-content-bar-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide the abstract content bar */
+  --switcher-mde-abstract-content-bar-blank-line-display: none; /* SHOW: "block;" | HIDE: "none;" | show/hide the blank lines on abstract content bar */
+  --switcher-mde-headings-text-shadow: 0 0 2px; /* SHOW: "0 0 2px;" | HIDE: "none;" | show/hide the text shadow of headings */
+  --switcher-mde-h1-font-variant: small-caps; /* ON: "small-caps;" | OFF: "none;" | turn on/off the small-caps effect of h1 heading */
+  --switcher-mde-horizontal-line-background-color: var(--hr-background-color); /* ON: "var(--hr-background-color);" | OFF: "none;" | turn on/off the background color of horizontal line markdown syntax */
 
 
 
   /* SWITCHER JOPLIN UI ************************************ */
   /* change the below css property values to control the Joplin UI layout */
-  --switcher-jui-all-note-button-display: flex; /* SHOW: "flex;" | HIDE: "none;" | the top left all notes button */
-  --switcher-jui-rich-text-editor-switch-button-display: flex; /* SHOW: "flex;" | HIDE: "none;" | the top right toggle button */
-  --switcher-jui-notebook-panel-notebook-item-warp: normal; /* WARP: "normal;" | SCROLL: "none;" | mouse hover on the notebook name and then [SHIFT] + [MOUSE WHEEL] for scroll */
+  
+  --switcher-jui-all-note-button-display: flex; /* SHOW: "flex;" | HIDE: "none;" | show/hide the top left all notes button */
+  --switcher-jui-rich-text-editor-switch-button-display: flex; /* SHOW: "flex;" | HIDE: "none;" | show/hide the top right editor toggle button */
+  --switcher-jui-notebook-panel-notebook-item-wrap: normal; /* ON: "normal;" | OFF: "none;" | turn on/off wrap text effect of the notebook names in notebook panel (mouse hover + [SHIFT] + [MOUSE WHEEL] for scroll) */
+
 
 
   /* ******************************************************* */
@@ -64,6 +71,9 @@
   /* paragraph --------------------------------------------- */
   --markdown-editor-text-color: #bdbdbd;
 
+  /* horizontal line --------------------------------------- */
+  --hr-background-color: #17423e;
+  --hr-text-color: #777777;
 
 
   /* HEADINGS ********************************************** */
@@ -102,9 +112,9 @@
 
 
   /* SPECIAL TEXT ****************************************** */
-  /* special text group:  mark | search | emphasize | abbreviation | strong | insert | strikethrough | inline code text */
+  /* special text group:  mark | emphasize | abbreviation | strong | insert | strikethrough */
   --special-text-color: #73b99d;
-  --special-text-border-color: var(--special-text-color); 
+  --special-text-border-color: var(--special-text-color);
 
   /* mark text --------------------------------------------- */
   --mark-text-color: var(--special-text-color);
@@ -112,7 +122,7 @@
 
   /* search text ------------------------------------------- */
   --search-text-color: #f1f173;
-  --search-text-selected-border-color: var(--search-text-color);
+  --search-text-border-color-selected: var(--search-text-color);
   --search-text-box-shadow: var(--search-text-color);
   /* search text - scrollbar search marker ------------------*/
   --search-text-scrollbar-marker-background-color: var(--search-text-color);
@@ -177,17 +187,16 @@
 
 
   /* CODEBLOCK ********************************************* */
-  --codeblock-text-color: #bdbdbd;
-  --codeblock-background-color: #101413;
+  --codeblock-background-color: #191919;
 
 
 
   /* ABSTRACT CONTENT BAR ********************************** */
   --acb-plain-text: #383838;
   --acb-heading: #ffffff6e;
-  --acb-blockquote: #985e00;
-  --acb-list: #ab2da4;
-  --acb-table: #3cffd7b3;
+  --acb-list: #51bba8;
+  --acb-blockquote: #a97945;
+  --acb-table: #575384;
   --acb-image: #045d00;
   --acb-footnote: #5a5800;
   --acb-link: #cdd286;
@@ -195,8 +204,8 @@
   --acb-html-tag: #ff0063;
   --acb-katex: #5aa5fb;
   --acb-checklist: #5d00ff;
-  --acb-codeblock: var(--codeblock-background-color); /* keep it same as code block background */
-  --acb-blank-line: var(--markdown-editor-background-color); /* keep it same as markdown editor background */
+  --acb-codeblock: var(--codeblock-background-color);
+  --acb-blank-line: var(--markdown-editor-background-color);
 
 
 
@@ -262,7 +271,7 @@
   
   /* notebook panel: header -------------------------------- */
   /* header text group:  notebook icon | text | plus icon -- */
-  --np-header-text-color: white; 
+  --np-header-text-color: white;
   
   /* notebook panel: directory icon ------------------------ */
   --np-directory-icon-closed-color: #f6ff67;
@@ -275,8 +284,8 @@
   --np-notebook-item-scrollbar-color: #00ffd5;
 
   /* notebook panel: notebook item selected state ---------- */
-  --np-notebook-item-selected-background-color: linear-gradient(60deg, #002f24, #00926a);
-  --np-notebook-item-selected-box-shadow: #72fdbd;
+  --np-notebook-item-background-color-selected: linear-gradient(60deg, #002f24, #00926a);
+  --np-notebook-item-box-shadow-selected: #72fdbd;
   
   /* notebook panel: note count label ---------------------- */
   --np-note-count-label-text-color: #ffffff;
@@ -329,9 +338,9 @@
   --nlp-list-item-text-color: var(--np-notebook-item-text-color);
   --nlp-list-item-border-color: var(--np-notebook-item-border-color);
   --nlp-note-list-item-background-color: #74370166;
-  --nlp-note-list-item-selected-background-color: linear-gradient(60deg, #002f24, #00926a);
-  --nlp-note-list-item-selected-box-shadow: #72fdbd;
-  --nlp-note-list-item-selected-filter-hover: hue-rotate(180deg);
+  --nlp-note-list-item-background-color-selected: linear-gradient(60deg, #002f24, #00926a);
+  --nlp-note-list-item-box-shadow-selected: #72fdbd;
+  --nlp-note-list-item-filter-hover-selected: hue-rotate(180deg);
 
 
 
@@ -358,8 +367,8 @@
   --ett-button-icon-color: var(--nlp-header-button-icon-color);
 
   /* editor top toolbar: rich text editor toolbar container  */
-  --ett-rich-text-editor-toolbar-background: #172723;
-  --ett-rich-text-editor-toolbar-box-shadow: #beffdf;
+  --ett-rich-text-editor-toolbar-background: var(--ett-background-color);
+  --ett-rich-text-editor-toolbar-box-shadow: var(--ett-box-shadow);
   
   
 
@@ -378,10 +387,10 @@
 
   /* OPTIONS PAGE ****************************************** */
   /* option page: menu ------------------------------------- */
-  --op-menu-background-color: #151b1a;
   --op-menu-text-color: white;
-  --op-menu-selected-background-color: #009e84;
+  --op-menu-background-color: #151b1a;
   --op-menu-background-color-hover: #009e847a;
+  --op-menu-background-color-selected: #009e84;
 
   /* option page: content ---------------------------------- */
   --op-content-background-color: #3b403f;
@@ -461,11 +470,24 @@
 }
 
 /* paragraph ----------------------------------------------- */
-.CodeMirror-line span[role="presentation"]:only-child {
+.CodeMirror-line span[role="presentation"]:only-child,
+.CodeMirror-line .cm-comment.cm-jn-monospace {
   color: var(--markdown-editor-text-color);
 }
 .CodeMirror-lines {
   padding: 0 5px 0 0 !important;
+}
+
+/* horizontal line ----------------------------------------- */
+.CodeMirror-line.cm-rm-hr > span,
+.CodeMirror-line.cm-rm-hr {
+  display: inline-block;
+  width: 100%;
+  background: var(--hr-background-color);
+  background: var(--switcher-mde-horizontal-line-background-color);
+}
+.CodeMirror-lines .CodeMirror-line .cm-hr {
+  color: var(--hr-text-color);
 }
 
 
@@ -557,7 +579,7 @@
   opacity: 1;
 }
 .CodeMirror-lines .CodeMirror-line .cm-search-marker-selected {
-  border: 3px solid var(--search-text-selected-border-color);
+  border: 3px solid var(--search-text-border-color-selected);
 }
 /* search text - scrollbar search marker ------------------- */
 .cm-search-marker-scrollbar {
@@ -662,9 +684,7 @@
 }
 
 /* code block text ----------------------------------------- */
-.CodeMirror-line > span > .cm-comment:not(.cm-jn-inline-code) {
-  color: var(--codeblock-text-color);
-}
+
 .cm-jn-code-block > span {
   filter: grayscale(0.1);
 }
@@ -710,15 +730,15 @@ span[cm-text]:only-child::after {
   z-index: 2;
 }
 
-/* blockquote ---------------------------------------------- */
-.cm-quote::after {
-  background: var(--acb-blockquote);
-  z-index: 3;
-}
-
 /* ordered list & unordered list --------------------------- */
 .cm-rm-list-token::after {
   background: var(--acb-list);
+  z-index: 3;
+}
+
+/* blockquote ---------------------------------------------- */
+.cm-quote::after {
+  background: var(--acb-blockquote);
   z-index: 4;
 }
 
@@ -794,7 +814,7 @@ span[cm-text]:only-child::after {
 /* markdown table colorize: caret -------------------------- */
 .CodeMirror-lines .CodeMirror-line [class*="cm-tabcolor-col"] {
   caret-color: var(--mtc-table-caret-color);
-  /* disable text background color from plugin */
+  /* disable original text background color */
   background: none;
 }
 
@@ -845,8 +865,8 @@ span[cm-text]:only-child::after {
   transition: filter 0.3s;
 }
 
-/* markdown table colorize: table column mark -----------  */
-/* table column mark group ------------------------------- */
+/* markdown table colorize: table column mark -------------- */
+/* table column mark group --------------------------------- */
 [class*="cm-tabcolor-col"].cm-tabcolor-pipe::after {
   content: "";
   position: initial;
@@ -966,6 +986,8 @@ span[cm-text]:only-child::after {
 /*                     STYLING: JOPLIN UI                    */
 /* ********************************************************* */
 
+
+
 /* NOTEBOOK PANEL ****************************************** */
 /* notebook panel: container ------------------------------- */
 .sidebar {
@@ -982,7 +1004,7 @@ span[cm-text]:only-child::after {
   color: var(--np-header-text-color) !important;
 }
 
-/* notebook panel: hiding the "All Notes" button ----------- */
+/* notebook panel: the "All Notes" button ------------------ */
 .sidebar .all-notes {
   display: var(--switcher-jui-all-note-button-display) !important;
 }
@@ -1022,7 +1044,7 @@ i.fas.fa-caret-down {
   color: var(--np-notebook-item-text-color);
   line-height: normal !important;
   font-size: 13px;
-  white-space: var(--switcher-jui-notebook-panel-notebook-item-warp);
+  white-space: var(--switcher-jui-notebook-panel-notebook-item-wrap);
   overflow-y: scroll;
 }
 .list-item-container .list-item > .title::-webkit-scrollbar {
@@ -1046,8 +1068,8 @@ i.fas.fa-caret-down {
 .rli-sideBar [class*="list-item-depth"].selected {
   width: calc(100% - 4px);
   border-radius: 4px 10px !important;
-  background: var(--np-notebook-item-selected-background-color);
-  box-shadow: 0 0 3px var(--np-notebook-item-selected-box-shadow);
+  background: var(--np-notebook-item-background-color-selected);
+  box-shadow: 0 0 3px var(--np-notebook-item-box-shadow-selected);
 }
 
 /* notebook panel: notebook item indentation --------------- */
@@ -1296,13 +1318,13 @@ i.fas.fa-caret-down {
   background-color: var(--nlp-note-list-item-background-color);
 }
 .rli-noteList .note-list .selected.note-list-item:hover {
-  filter: var(--nlp-note-list-item-selected-filter-hover);
+  filter: var(--nlp-note-list-item-filter-hover-selected);
 }
 
 /* note list item selected state --------------------------- */
 .rli-noteList .note-list .selected.note-list-item {
-  background: var(--nlp-note-list-item-selected-background-color);
-  box-shadow: 0 0 3px var(--nlp-note-list-item-selected-box-shadow);
+  background: var(--nlp-note-list-item-background-color-selected);
+  box-shadow: 0 0 3px var(--nlp-note-list-item-box-shadow-selected);
 }
 
 
@@ -1342,12 +1364,12 @@ span.updated-time-label {
   border-radius: 4px 11px !important;
 }
 
-/* notebook navigation button text ------------------------- */
+/* editor header: notebook navigation button text ---------- */
 .rli-editor > div > div > div > div > button > span {
   color: var(--eh-notebook-navigation-button-text-color) !important;
 }
 
-/* notebook navigation button hover ------------------------ */
+/* editor header: notebook navigation button hover --------- */
 .rli-editor > div > div > div > div > button:hover {
   filter: var(--eh-notebook-navigation-button-hover);
 }
@@ -1434,7 +1456,7 @@ div.joplin-tinymce > div:nth-child(2) {
   transition: font-size 0.1s;
 }
 
-/* tags hover effect --------------------------------------- */
+/* editor bottom tag bar: tags hover effect ---------------- */
 .tag-bar > div > .tag-list > button:hover {
   font-size: 18px !important;
   color: var(--ebtb-tag-text-hover) !important;
@@ -1447,23 +1469,28 @@ div.joplin-tinymce > div:nth-child(2) {
 /* TAG MANAGER MODAL DIALOG ******************************** */
 .modal-dialog {
   border-radius: 4px 12px;
-  background: #191919 !important;
+  background: var(--markdown-editor-background-color) !important;
   box-shadow: 0 0 3px white !important;
 }
 
-/* modal dialog button ------------------------------------- */
+/* modal dialog: button ------------------------------------ */
 .modal-layer > .modal-dialog > div > button {
   display: inline-block;
   width: 100px;
-  border-radius: 4px 12px;
+  border-radius: 4px 8px;
+}
+.modal-layer > .modal-dialog > div > button:hover {
+  filter: brightness(130%);
+  transition: filter 0.5s;
 }
 
-/* tag selector bar ---------------------------------------- */
-.css-16hp18y-control,
+/* modal dialog: tag selector bar -------------------------- */
+.css-16hp18y-control {
+  border-radius: 8px;
+}
 .tag-selector > div > div > div > div {
-  border-radius: 7px;
+  border-radius: 3px 6px;
 }
-
 
 
 /* OPTIONS PAGE ******************************************** */
@@ -1476,7 +1503,7 @@ div.joplin-tinymce > div:nth-child(2) {
   color: var(--op-menu-text-color) !important;
 }
 .kpFtJJ {
-  background: var(--op-menu-selected-background-color) !important;
+  background: var(--op-menu-background-color-selected) !important;
 }
 .config-screen > div > a:hover {
   background: var(--op-menu-background-color-hover) !important;
@@ -1556,3 +1583,7 @@ button.sc-AxirZ.sc-Axmtr.fuPMcZ.sc-fzozJi.dfRkax {
 /* ********************************************************* */
 /* !!!!!!!!!     MAIN SOURCE CODE: SECTION END    !!!!!!!!!! */
 /* ********************************************************* */
+/* ********************************************************* */
+/* vvvvvvvvv             CUSTOM CODE              vvvvvvvvvv */
+/* ********************************************************* */
+/* Add your custom code below here to avoid confusing with OhmineDT's code. */
