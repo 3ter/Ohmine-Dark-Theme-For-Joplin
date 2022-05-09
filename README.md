@@ -211,7 +211,7 @@ The key adjustments for the Render Viewer are as below:
 Ohmine dark theme is using the below font family for both Markdown Editor and Render Viewer:
 
 - Montserrat
-- Microsoft JHengHei Light (for Traditional Chinese 繁體中文)
+- Chiron Sans HK Pro (for Simplified & Traditional Chinese  簡、繁體中文)
 - Avenir (Joplin default)
 - Arial (Joplin default)
 - Sans-Serif (Joplin default)
@@ -228,7 +228,7 @@ Let's take a look at the monospace font family:
 
 - Cascadia Mono Light
 - Monospace (Joplin default)
-- Microsoft JHengHei Light (for Traditional Chinese)
+- Chiron Sans HK Pro (for Simplified & Traditional Chinese  簡、繁體中文)
 
 Cascadia Mono is one of the best monospace fonts. It would be a good choice if you don't need the ligature, and it provides clear symbol characters and works great at the 12px font size.
 
