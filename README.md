@@ -623,7 +623,7 @@ Related Switchers:
 
 ## Change Your Joplin Settings Before Using OhmineDT
 
-OhmineDT has been styling lots of Joplin elements, and all of them are helpful to you. Some of the effects are highly rely on  some of the Joplin built-in settings to get work, so you may need to follow the below guides to get 100% of what OhmineDT brings to you!
+OhmineDT has been styling lots of Joplin elements, and all of them are helpful to you. Some of the effects are highly rely on the Joplin built-in settings to get work, so you may need to follow the below guides to get 100% of what OhmineDT brings to you!
 
 
 ### Appearance
@@ -692,7 +692,7 @@ Or, In case you want to download it directly from the official page:
 
 ## These Plugins Are Important to OhmineDT
 
-OhmineDT has some additional CSS codes that are written for some useful plugins. So, I would recommend you download the below plugins!
+OhmineDT has additional CSS codes that are written for some useful plugins. So, I would recommend you download the below plugins!
 
 To quickly install and setting all the plugins, please follow the below one-flow steps:
 
@@ -700,13 +700,13 @@ To quickly install and setting all the plugins, please follow the below one-flow
 2. Go to `tools` > `Options` > `Plugins`
 3. Search the plugin by inputting the word `rich`
 4. Click `Install` on the `Rich Markdown`
-5. Search the plugin by inputting the word `html`
-6. Click `install` on the `Quick HTML Tags`
-7. Search the plugin by inputting the word `color`
-8. Click `install` on the `Markdown Table: Colorize`
-9. Search the plugin by inputting the word `spoiler`
-10. Click `install` which is on the `Spoiler`
-11. Search the plugin by inputting the word `turn`
+5. Search the word `html`
+6. Click `install` the `Quick HTML Tags`
+7. Search the word `color`
+8. Click `install` the `Markdown Table: Colorize`
+9. Search the word `spoiler`
+10. Click `install` the `Spoiler`
+11. Search the word `turn`
 12. Click `install` on the `TurnToChart`
 13. Quit and restart Joplin
 14. Go to `Tools` , `Options`, `Rich Markdown`
@@ -726,7 +726,7 @@ Then, you can still check out below to know more about how those plugins work wi
 
 ### Rich Markdown
 
-This plugin has provided several great features. OhmineDT is relying on this plugin to style the Special Text and Abstract Content Bar because Joplin didn't give the CSS classes to specify those elements. So, it might cause some styles missing from OhmineDT while you didn't install this plugin, or you didn't enable the setting. 
+This plugin has provided several great features. OhmineDT is relying on this plugin to style the Special Text and Abstract Content Bar because Joplin didn't give the CSS classes to specify those elements. So, it might cause some styles missing from OhmineDT while you didn't install this plugin, or you didn't enable the settings. 
 
 Quick setting up:
 
