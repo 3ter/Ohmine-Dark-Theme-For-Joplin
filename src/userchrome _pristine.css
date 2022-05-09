@@ -1,4 +1,4 @@
-/* OhmineDT v3.1.61 | userchrome.css | 
+/* OhmineDT v3.1.75 | userchrome.css | 
 /* CSS for: Markdown Editor | Joplin UI */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -33,7 +33,7 @@
   --switcher-mde-abstract-content-bar-blank-line-display: none; /* SHOW: "block;" | HIDE: "none;" | show/hide the blank lines on abstract content bar */
   --switcher-mde-headings-text-shadow: 0 0 2px; /* SHOW: "0 0 2px;" | HIDE: "none;" | show/hide the text shadow of headings */
   --switcher-mde-h1-font-variant: small-caps; /* ON: "small-caps;" | OFF: "none;" | turn on/off the small-caps effect of h1 heading */
-  --switcher-mde-horizontal-line-background-color: var(--hr-background-color); /* ON: "var(--hr-background-color);" | OFF: "none;" | turn on/off the background color of horizontal line markdown syntax */
+  --switcher-mde-horizontal-line-background-color: var(--hr-background-gradient); /* ON: "var(--hr-background-gradient);" | OFF: "none;" | turn on/off the background color of horizontal line markdown syntax */
 
 
 
@@ -72,8 +72,14 @@
   --markdown-editor-text-color: #bdbdbd;
 
   /* horizontal line --------------------------------------- */
-  --hr-background-color: #17423e;
+  --hr-background-color: #3a3930;
   --hr-text-color: #777777;
+  --hr-background-gradient: linear-gradient( /* edit this value might cause the `--switcher-mde-horizontal-line-background-color` not working */
+                              to bottom, 
+                              var(--markdown-editor-background-color) 30%,
+                              var(--hr-background-color) 53%,
+                              var(--markdown-editor-background-color) 75%
+                            );
 
 
   /* HEADINGS ********************************************** */
@@ -261,6 +267,11 @@
   /* ******************************************************* */
   /* ===               STYLING: JOPLIN UI                === */
   /* ******************************************************* */
+
+
+
+  /* GENERAL *********************************************** */
+  --general-body-background-color: #191919;
 
 
 
@@ -483,7 +494,7 @@
 .CodeMirror-line.cm-rm-hr {
   display: inline-block;
   width: 100%;
-  background: var(--hr-background-color);
+  background: var(--hr-background-gradient);
   background: var(--switcher-mde-horizontal-line-background-color);
 }
 .CodeMirror-lines .CodeMirror-line .cm-hr {
@@ -988,6 +999,11 @@ span[cm-text]:only-child::after {
 
 
 
+/* GENERAL ************************************************* */
+body {
+  background: var(--general-body-background-color);
+}
+
 /* NOTEBOOK PANEL ****************************************** */
 /* notebook panel: container ------------------------------- */
 .sidebar {
@@ -1424,6 +1440,9 @@ div.joplin-tinymce div.tox div.tox-toolbar__primary {
 .tox-editor-container .tox-editor-header .tox-toolbar__primary {
   margin-left: -11px !important;
 }
+.tox-editor-container .tox-editor-header .tox-toolbar-overlord {
+  margin-right: 6px !important;
+}
 
 div.joplin-tinymce > div:nth-child(1) {
   margin-left: -11px !important;
@@ -1443,7 +1462,7 @@ div.joplin-tinymce > div:nth-child(2) {
   background: var(--ebtb-background-color);
   border-radius: 7px;
   box-shadow: 0 0 2px var(--ebtb-box-shadow);
-  z-index: 1;
+  z-index: 100;
 }
 
 /* editor bottom tag bar: tags ----------------------------- */

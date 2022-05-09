@@ -20,23 +20,46 @@ Let's see what's OhmineDT brings you:
 
 
 
-<!-- ======================================================================================================================================================= Latest Released -->
+<!-- ============================================================================================================================================= Latest Released -->
 
 ## Latest Released
+
+### OhmineDT-v3.1.75 updates ( 9-May-2022 tested on Joplin v2.7.15)
+
+- **Render Viewer:**
+    - New: add hover effects on Markdown TOC's links.
+    - Improve: enlarged the click area of Markdown TOC's links.
+    - Improve: codeblock background color changed. 
+- **Markdown Editor:**
+    - Improve: hroizontal line markdown syntax style.
+- **Rich Text Editor:**
+    - Fix: editor top toolbar visual broken.
+- **Print/Export PDF:**
+    - Fix: unexpected border on the table.
+- **Joplin UI:**
+    - Fix: white background splash once when startup.
+    - Fix: bottom tag bar visual broken.
+- **Source Code: userchrome.css:**
+    - Change: renamed 1 switcher-related value.
+    - New: add `general-body-background-color`
+    - New: add `--hr-background-gradient`
+- **Source Code: userstyle.css:**
+    - New: add new switcher `--switcher-markdown-toc-link-text-wrap` for the wrap text effect of the markdown toc link text.
+    - New: add `--mt-link-text-color-hover`
+    - New: add `--mt-link-background-color-hover`
+
+***
 
 ### OhmineDT-v3.1.61 updates ( 5-May-2022 tested on Joplin v2.7.15)
 
 - **Render Viewer:**
     - Fix: The chinese font family was not applied to the table.
-    
 - **Markdown Editor:**
     - Change: Abstract Content Bar - list, blockquote, and table, color changed.
     - New: add background color to horizontal line markdown syntax.
     - Fix: Abstract Content Bar - blockquote didn't showing on the color bar.
-    
 - **Joplin UI:**
     - Improve: tag manager modal dialog styles.
-    
 - **Source Code: userchrome.css:**
     - Change: renamed 1 switcher.
     - Change: renamed 7 variables.
@@ -47,7 +70,6 @@ Let's see what's OhmineDT brings you:
     - New: add custom code section to the bottom.
     - Fix: the value of `--np-notebook-item-text-color:` and `--np-notebook-item-border-color:` are affects to the notelist panel unexpectedly.
     - Improve: edit unclear comments.
-    
 - **Source Code: userstyle.css:**
     - Change: renamed 1 variable.
     - New: add `--switcher-markdown-toc-position-left` You can now position the Markdown TOC button to the left/right.
@@ -57,9 +79,9 @@ Let's see what's OhmineDT brings you:
     - New: add custom code section to the bottom.
     - Improve: edit unclear comments.
 
+***
 
-
-<!-- ===================================================================================================================================================== Table of contents -->
+<!-- =========================================================================================================================================== Table of contents -->
 
 ## Table of contents
 
@@ -115,8 +137,8 @@ Let's see what's OhmineDT brings you:
 		- [Give me a user feedback](#give-me-a-user-feedback)
 		- [Report Bugs](#report-bugs)
 
-<!-- ================================================================================================================================================================ DESIGN -->
-<!-- ================================================================================================================================== The Inspiration of Ohmine Dark Theme -->
+<!-- ====================================================================================================================================================== DESIGN -->
+<!-- ======================================================================================================================== The Inspiration of Ohmine Dark Theme -->
 
 ## The Inspiration of Ohmine Dark Theme
 
@@ -137,7 +159,7 @@ If you are interested to know more about the Ohmine-3-Grain design you may like 
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ======================================================================================================================================================= Markdown Editor -->
+<!-- ============================================================================================================================================= Markdown Editor -->
 
 ## Markdown Editor
 
@@ -164,7 +186,7 @@ I'm choosing this background color not based on my personal favorite. As I tried
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ========================================================================================================================================================= Render Viewer -->
+<!-- =============================================================================================================================================== Render Viewer -->
 
 ## Render Viewer
 
@@ -182,14 +204,14 @@ The key adjustments for the Render Viewer are as below:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =========================================================================================================================================================== Font Family -->
+<!-- ================================================================================================================================================= Font Family -->
 
 ## Font Family
 
 Ohmine dark theme is using the below font family for both Markdown Editor and Render Viewer:
 
 - Montserrat
-- Microsoft JHengHei Light (for Traditional Chinese 繁體中文)
+- Chiron Sans HK Pro (for Simplified & Traditional Chinese  簡、繁體中文)
 - Avenir (Joplin default)
 - Arial (Joplin default)
 - Sans-Serif (Joplin default)
@@ -206,7 +228,7 @@ Let's take a look at the monospace font family:
 
 - Cascadia Mono Light
 - Monospace (Joplin default)
-- Microsoft JHengHei Light (for Traditional Chinese)
+- Chiron Sans HK Pro (for Simplified & Traditional Chinese  簡、繁體中文)
 
 Cascadia Mono is one of the best monospace fonts. It would be a good choice if you don't need the ligature, and it provides clear symbol characters and works great at the 12px font size.
 
@@ -227,8 +249,8 @@ You should always edit all the font-related settings directly in the CSS files.
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================================================== FEATURES -->
-<!-- ========================================================================================================================================= Sticky Notes (custom element) -->
+<!-- ==================================================================================================================================================== FEATURES -->
+<!-- =============================================================================================================================== Sticky Notes (custom element) -->
 
 ## Sticky Notes (custom element)
 
@@ -267,7 +289,7 @@ Sticky Notes switchers for reference:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ========================================================================================================================================== Art Gallery (custom element) -->
+<!-- ================================================================================================================================ Art Gallery (custom element) -->
 
 ## Art Gallery (custom element)
 
@@ -323,7 +345,7 @@ Below is the sample of the art gallery(ag6) with 48 images:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =================================================================================================================================== Custom Title Block (custom element) -->
+<!-- ========================================================================================================================= Custom Title Block (custom element) -->
 
 ## Custom Title Block (custom element)
 
@@ -358,7 +380,7 @@ Here to type any of your content
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================================================= Key Point -->
+<!-- =================================================================================================================================================== Key Point -->
 
 ## Key Point (custom element)
 
@@ -402,7 +424,7 @@ Tips: It would be great to wrok together with the Horizontal Line `***`.
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ================================================================================================================================================== Abstract Content Bar -->
+<!-- ======================================================================================================================================== Abstract Content Bar -->
 
 ## Abstract Content Bar
 
@@ -424,7 +446,7 @@ It would be helpful when you want to release your eyes from the text for sometim
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ================================================================================================================================================== Customizable Heading -->
+<!-- ======================================================================================================================================== Customizable Heading -->
 
 ## Customizable Heading
 
@@ -456,7 +478,7 @@ You can quick customize all of the heading's border through the CSS root section
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ========================================================================================================================================================== Markdown TOC -->
+<!-- ================================================================================================================================================ Markdown TOC -->
 
 ## Floating Markdown TOC
 
@@ -464,12 +486,18 @@ Joplin provides us a great built-in Markdown TOC feature which let you create th
 
 ![MarkdownToc_batch](https://user-images.githubusercontent.com/86870826/156605359-ce769aa2-e297-474a-83a2-6ad8e9fb1b74.png)
 
-The Markdown TOC feature is disable by Joplin default. To use the Markdown TOC, you should enable the the extension manually. For more information, please click: [Change Your Joplin Settings Before Using OhmineDT](#change-your-joplin-settings-before-using-ohminedt)
+The Markdown TOC feature is disable by Joplin default. To use the Markdown TOC, you should enable the the extension manually.
 
+Related Switchers:
+
+|Root Property|Value(ON)|Value(Off)|Description|
+|-|-|-|-|
+|--switcher-markdown-toc-position-left: | 0;  | none;| turn on/off to position the markdown TOC button to the left/right |
+|--switcher-markdown-toc-link-text-wrap: | normal; | nowrap; | turn on/off the wrap text of the Markdown TOC link text |
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ========================================================================================================================================================= Eye-Protector -->
+<!-- =============================================================================================================================================== Eye-Protector -->
 
 ## Eye-Protector
 
@@ -491,25 +519,25 @@ You can quick customize the eye-protector effects through the CSS root section, 
   
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ====================================================================================================================================================== MORE SCREENSHOTS -->
-<!-- ======================================================================================================================================================== Notebook Panel -->
+<!-- ============================================================================================================================================ MORE SCREENSHOTS -->
+<!-- ============================================================================================================================================== Notebook Panel -->
 
 ## Notebook Panel
 
 The CSS styling of Ohmine Dark Theme will only support up to 15 levels of subdirectories when Joplin didn't limit it to you. And sure, you can edit my CSS to fit your needs.
 
-Since OhmineDT v3.0.0, you can now using `Shift` + `Scroll` to check out the overflow text from notebook panel or notelist panel.
+Since OhmineDT v3.0.0, you can now using `Shift` + `Scroll` to check out the overflow text from notebook panel.
 
 ![OhmineDarkThemeForJoplin_batch2](https://user-images.githubusercontent.com/86870826/154982521-3ea4f9c0-4d60-4915-8d3a-555126cbb7dd.png)
 
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =================================================================================================================================================== Special Text Styles -->
+<!-- ========================================================================================================================================= Special Text Styles -->
 
 ## Special Text Styles
 
-Joplin didn't provide enough CSS classes for styling the special text in Markdown Editor, so the styling of this part is relying on another plugin to get complete. That means you must download and install the plugin named Rich Markdown to get the style works. (Read: Complete Experience Of Ohmine Dark Theme)
+Joplin didn't provide enough CSS classes for styling the special text in Markdown Editor, so the styling of this part is relying on another plugin to get complete. That means you must download and install the plugin named Rich Markdown to get the style works.
 
 Special Text is including the below: 
 
@@ -540,16 +568,22 @@ See how they look like in the Markdown Editor:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ================================================================================================================================================================== Link -->
+<!-- ======================================================================================================================================================== Link -->
 
 ## Link
 
 ![Link Footnote_batch](https://user-images.githubusercontent.com/86870826/154984206-e9a60b8d-7ff9-446e-8711-d3a80963b70d.png)
 
+Related Switchers:
+
+|Root Property|Value(ON)|Value(Off)|Description|
+|-|-|-|-|
+|--switcher-link-bracket-display:| inline; | none; | turn on/off the effect of automatically adding the monospace bracket to links |
+|--switcher-link-break-word: | break-all; | break word; | turn on/off to set how a line break present on the link text |
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ========================================================================================================================================= Unordered List & Ordered List -->
+<!-- =============================================================================================================================== Unordered List & Ordered List -->
 
 ## Unordered List & Ordered List
 
@@ -558,7 +592,7 @@ See how they look like in the Markdown Editor:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================================================= Checklist -->
+<!-- =================================================================================================================================================== Checklist -->
 
 ## Checklist
 
@@ -567,7 +601,7 @@ See how they look like in the Markdown Editor:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================================================ Blockquote -->
+<!-- ================================================================================================================================================== Blockquote -->
 
 ## Blockquote
 
@@ -576,7 +610,7 @@ See how they look like in the Markdown Editor:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================================== Code block & Inline Code -->
+<!-- ==================================================================================================================================== Code block & Inline Code -->
 
 ## Codeblock
 
@@ -585,11 +619,11 @@ See how they look like in the Markdown Editor:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ===================================================================================================================== Change Your Joplin Settings Before Using OhmineDT -->
+<!-- =========================================================================================================== Change Your Joplin Settings Before Using OhmineDT -->
 
 ## Change Your Joplin Settings Before Using OhmineDT
 
-OhmineDT has been styling lots of Joplin elements, and all of them are helpful to you. Some of the effects are highly rely on  some of the Joplin built-in settings to get work, so you may need to follow the below guides to get 100% of what OhmineDT brings to you!
+OhmineDT has been styling lots of Joplin elements, and all of them are helpful to you. Some of the effects are highly rely on the Joplin built-in settings to get work, so you may need to follow the below guides to get 100% of what OhmineDT brings to you!
 
 
 ### Appearance
@@ -633,7 +667,7 @@ OhmineDT can be styling everything on the Joplin UI but not within the plugins, 
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =========================================================================================================================== OhmineDT Picks The Best Reading Fonts For You -->
+<!-- =============================================================================================================== OhmineDT Picks The Best Reading Fonts For You -->
 
 ## OhmineDT Picks The Best Reading Fonts For You
 
@@ -654,11 +688,11 @@ Or, In case you want to download it directly from the official page:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================= These Plugins Are Important to OhmineDT -->
+<!-- ===================================================================================================================== These Plugins Are Important to OhmineDT -->
 
 ## These Plugins Are Important to OhmineDT
 
-OhmineDT has some additional CSS codes that are written for some useful plugins. So, I would recommend you download the below plugins!
+OhmineDT has additional CSS codes that are written for some useful plugins. So, I would recommend you download the below plugins!
 
 To quickly install and setting all the plugins, please follow the below one-flow steps:
 
@@ -666,13 +700,13 @@ To quickly install and setting all the plugins, please follow the below one-flow
 2. Go to `tools` > `Options` > `Plugins`
 3. Search the plugin by inputting the word `rich`
 4. Click `Install` on the `Rich Markdown`
-5. Search the plugin by inputting the word `html`
-6. Click `install` on the `Quick HTML Tags`
-7. Search the plugin by inputting the word `color`
-8. Click `install` on the `Markdown Table: Colorize`
-9. Search the plugin by inputting the word `spoiler`
-10. Click `install` which is on the `Spoiler`
-11. Search the plugin by inputting the word `turn`
+5. Search the word `html`
+6. Click `install` the `Quick HTML Tags`
+7. Search the word `color`
+8. Click `install` the `Markdown Table: Colorize`
+9. Search the word `spoiler`
+10. Click `install` the `Spoiler`
+11. Search the word `turn`
 12. Click `install` on the `TurnToChart`
 13. Quit and restart Joplin
 14. Go to `Tools` , `Options`, `Rich Markdown`
@@ -692,7 +726,7 @@ Then, you can still check out below to know more about how those plugins work wi
 
 ### Rich Markdown
 
-This plugin has provided several great features. OhmineDT is relying on this plugin to style the Special Text and Abstract Content Bar because Joplin didn't give the CSS classes to specify those elements. So, it might cause some styles missing from OhmineDT while you didn't install this plugin, or you didn't enable the setting. 
+This plugin has provided several great features. OhmineDT is relying on this plugin to style the Special Text and Abstract Content Bar because Joplin didn't give the CSS classes to specify those elements. So, it might cause some styles missing from OhmineDT while you didn't install this plugin, or you didn't enable the settings. 
 
 Quick setting up:
 
@@ -738,7 +772,7 @@ Please mention that the `<ag>` is not a complete custom element name. You should
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =============================================================================================================================================== Markdown Table Colorize -->
+<!-- ===================================================================================================================================== Markdown Table Colorize -->
 
 ***
 
@@ -795,7 +829,7 @@ Quick setting up:
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- =============================================================================================================================================================== Spoiler -->
+<!-- ===================================================================================================================================================== Spoiler -->
 
 ***
 
@@ -825,7 +859,7 @@ In addition, OhmineDT has been created 4 more custom styles that you can use wit
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ================================================================================================================================ Think Before Using The Custom Elements -->
+<!-- ====================================================================================================================== Think Before Using The Custom Elements -->
 
 ## Think Before Using The Custom Elements
 
@@ -840,8 +874,8 @@ So, if you are only taking notes within Joplin, you don't have to worry about th
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ====================================================================================================================================================== MORE INFORMATION -->
-<!-- ======================================================================================================================================================== About Printing -->
+<!-- ============================================================================================================================================ MORE INFORMATION -->
+<!-- ============================================================================================================================================== About Printing -->
 
 ## About Print & Export
 
@@ -873,11 +907,11 @@ Export HTML Sample: [export_html file_v3.1.28](https://drive.google.com/file/d/1
 [:arrow_up:Back](#table-of-contents)
 
 
-<!-- ===================================================================================================================================== Quick Guide To Customize OhmineDT -->
+<!-- =========================================================================================================================== Quick Guide To Customize OhmineDT -->
 
 ## Quick Guide To Customize OhmineDT
 
-This is a quick guide for CSS beginner, please mention that this is only guiding you to edit OhmineDT and not a complete CSS tutorial.
+This is a quick guide for CSS beginners, please mention that this is only guiding you to edit OhmineDT and not a complete CSS tutorial.
 
 OhmineDT put all the hot properties within the `:root` section, you might find them at the top of the source code on both `userstyle.css` and `userchrome.css` documents. Before you try to customize it, you may need to understand some basic concepts of CSS below:
 
@@ -923,6 +957,14 @@ And the comments are always describe the declaration which is *under* or *in fro
 }
 ```
 
+Additionally, you may see a declaration like below:
+
+```
+--h3-border-color: var(--h2-border-color);
+```
+
+It means the `--h3-border-color` is equal to `--h2-border-color`.
+
 Finally, when you are going to customize this theme, all you have to do is to ***give the property a right value***. And due to that, you have to learn about how to do this.
 
 There are two kinds of values you may use in the OhmineDT:
@@ -958,7 +1000,7 @@ P.S. After edit the CSS document, you should quit & restart Joplin.
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ===================================================================================================================================================== Why Using Joplin? -->
+<!-- =========================================================================================================================================== Why Using Joplin? -->
 
 ## Why Using Joplin?
 
@@ -980,8 +1022,8 @@ It can be covering all your needs in note-taking! Especially the privacy protect
 Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 
 
-<!-- =================================================================================================================================================================== FAQ -->
-<!-- ============================================================================================================================================= How to install this theme -->
+<!-- ========================================================================================================================================================= FAQ -->
+<!-- =================================================================================================================================== How to install this theme -->
 
 ## How to install this theme?
 
@@ -990,20 +1032,19 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 3. Choose `Dark`
 4. Click `Apply`
 5. In the same page, click `Show Advanced Settings`
-6. In the same page, ckick `Show Advanced Settings`
-7. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
-8. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
-9. Paste my codes on your `userstyle.css`
-10. Back to the `Appearance` page again
-11. Click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
-12. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
-13. Paste on your `userchrome.css`
-14. Quit & restart Joplin and it's done.
+6. Click `Custom stylesheet for rendered Markdown` , it will open a `userstyle.css`
+7. Copy my `userstyle.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userstyle.css
+8. Paste my codes on your `userstyle.css`
+9. Back to the `Appearance` page again
+10. Click `Custom stylesheet for Joplin-wide app styles` . it will open a `userchrome.css`
+11. Copy my `userchrome.css` codes on this page: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/blob/main/userchrome.css
+12. Paste on your `userchrome.css`
+13. Quit & restart Joplin and it's done.
 
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================================== How to delete this theme -->
+<!-- ==================================================================================================================================== How to delete this theme -->
 
 ## How to delete this theme?
 
@@ -1016,7 +1057,7 @@ Visit [Joplin Homepage](https://joplinapp.org/) for more details.
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ========================================================================================================================================= How to install Joplin plugins -->
+<!-- =============================================================================================================================== How to install Joplin plugins -->
 
 ## How to install Joplin plugins?
 
@@ -1029,13 +1070,13 @@ If you want to discover all of the Joplin plugins, you can go visit the [Joplin 
 
 [:arrow_up:Back](#table-of-contents)
 
-<!-- ============================================================================================================================ Will this theme develop as a Joplin plugin -->
+<!-- ================================================================================================================== Will this theme develop as a Joplin plugin -->
 
 ## Will this theme develop as a Joplin plugin?
 
 The answer is "DEFINITELY YES!" And the `OhmineDT v3.0.0` updates is the first step to doing this.
 
-<!-- ===================================================================================================================================================== How to contribute -->
+<!-- =========================================================================================================================================== How to contribute -->
 
 ## How to contribute
 
