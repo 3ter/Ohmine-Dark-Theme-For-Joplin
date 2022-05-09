@@ -526,7 +526,7 @@ You can quick customize the eye-protector effects through the CSS root section, 
 
 The CSS styling of Ohmine Dark Theme will only support up to 15 levels of subdirectories when Joplin didn't limit it to you. And sure, you can edit my CSS to fit your needs.
 
-Since OhmineDT v3.0.0, you can now using `Shift` + `Scroll` to check out the overflow text from notebook panel or notelist panel.
+Since OhmineDT v3.0.0, you can now using `Shift` + `Scroll` to check out the overflow text from notebook panel.
 
 ![OhmineDarkThemeForJoplin_batch2](https://user-images.githubusercontent.com/86870826/154982521-3ea4f9c0-4d60-4915-8d3a-555126cbb7dd.png)
 
