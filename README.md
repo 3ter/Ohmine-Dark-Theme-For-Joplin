@@ -24,19 +24,42 @@ Let's see what's OhmineDT brings you:
 
 ## Latest Released
 
+### OhmineDT-v3.1.75 updates ( 9-May-2022 tested on Joplin v2.7.15)
+
+- **Render Viewer:**
+    - New: add hover effects on Markdown TOC's links.
+    - Improve: enlarged the click area of Markdown TOC's links.
+    - Improve: codeblock background color changed. 
+- **Markdown Editor:**
+    - Improve: hroizontal line markdown syntax style.
+- **Rich Text Editor:**
+    - Fix: editor top toolbar visual broken.
+- **Print/Export PDF:**
+    - Fix: unexpected border on the table.
+- **Joplin UI:**
+    - Fix: white background splash once when startup.
+    - Fix: bottom tag bar visual broken.
+- **Source Code: userchrome.css:**
+    - Change: renamed 1 switcher-related value.
+    - New: add `general-body-background-color`
+    - New: add `--hr-background-gradient`
+- **Source Code: userstyle.css:**
+    - New: add new switcher `--switcher-markdown-toc-link-text-wrap` for the wrap text effect of the markdown toc link text.
+    - New: add `--mt-link-text-color-hover`
+    - New: add `--mt-link-background-color-hover`
+
+***
+
 ### OhmineDT-v3.1.61 updates ( 5-May-2022 tested on Joplin v2.7.15)
 
 - **Render Viewer:**
     - Fix: The chinese font family was not applied to the table.
-    
 - **Markdown Editor:**
     - Change: Abstract Content Bar - list, blockquote, and table, color changed.
     - New: add background color to horizontal line markdown syntax.
     - Fix: Abstract Content Bar - blockquote didn't showing on the color bar.
-    
 - **Joplin UI:**
     - Improve: tag manager modal dialog styles.
-    
 - **Source Code: userchrome.css:**
     - Change: renamed 1 switcher.
     - Change: renamed 7 variables.
@@ -47,7 +70,6 @@ Let's see what's OhmineDT brings you:
     - New: add custom code section to the bottom.
     - Fix: the value of `--np-notebook-item-text-color:` and `--np-notebook-item-border-color:` are affects to the notelist panel unexpectedly.
     - Improve: edit unclear comments.
-    
 - **Source Code: userstyle.css:**
     - Change: renamed 1 variable.
     - New: add `--switcher-markdown-toc-position-left` You can now position the Markdown TOC button to the left/right.
@@ -57,7 +79,7 @@ Let's see what's OhmineDT brings you:
     - New: add custom code section to the bottom.
     - Improve: edit unclear comments.
 
-
+***
 
 <!-- =========================================================================================================================================== Table of contents -->
 
@@ -466,6 +488,12 @@ Joplin provides us a great built-in Markdown TOC feature which let you create th
 
 The Markdown TOC feature is disable by Joplin default. To use the Markdown TOC, you should enable the the extension manually. For more information, please click: [Change Your Joplin Settings Before Using OhmineDT](#change-your-joplin-settings-before-using-ohminedt)
 
+Related Switchers:
+
+|Root Property|Value(ON)|Value(Off)|Description|
+|-|-|-|-|
+|--switcher-markdown-toc-position-left: | 0;  | none;| turn on/off to position the markdown TOC button to the left/right |
+|--switcher-markdown-toc-link-text-wrap: | normal; | nowrap; | turn on/off the wrap text of the Markdown TOC link text |
 
 [:arrow_up:Back](#table-of-contents)
 
@@ -546,6 +574,12 @@ See how they look like in the Markdown Editor:
 
 ![Link Footnote_batch](https://user-images.githubusercontent.com/86870826/154984206-e9a60b8d-7ff9-446e-8711-d3a80963b70d.png)
 
+Related Switchers:
+
+|Root Property|Value(ON)|Value(Off)|Description|
+|-|-|-|-|
+|--switcher-link-bracket-display:| inline; | none; | turn on/off the effect of automatically adding the monospace bracket to links |
+|--switcher-link-break-word: | break-all; | break word; | turn on/off to set how a line break present on the link text |
 
 [:arrow_up:Back](#table-of-contents)
 
