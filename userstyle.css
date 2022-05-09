@@ -1,4 +1,4 @@
-/* OhmineDT v3.1.61 | userstyle.css */
+/* OhmineDT v3.1.75 | userstyle.css */
 /* CSS for: Render Viewer | Rich Text Editor | Print PDF | Export PDF | EXPORT HTML */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -46,9 +46,10 @@
   --switcher-footnote-text-align: none;  /* ON: "justify;" | OFF: "none;" | turn on/off the justify text effect of footnote content */
   
   --switcher-link-bracket-display: inline; /* ON: "inline;" | OFF: "none;" | turn on/off the effect of automatically adding the monospace bracket to links */
-  --switcher-link-break-word: break-all; /* ON: "break-all;" | OFF: "break-word" | turn on/off the to set how a line break present on the link text */
+  --switcher-link-break-word: break-all; /* ON: "break-all;" | OFF: "break-word" | turn on/off to set how a line break present on the link text */
   
   --switcher-markdown-toc-position-left: 0; /* ON: "0;" | OFF: none | turn on/off to position the markdown TOC button to the left/right */
+  --switcher-markdown-toc-link-text-wrap: normal; /* ON: "normal;" | OFF: "nowrap;" | turn on/off the wrap text of the Markdown TOC link text */
 
   --switcher-codeblock-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | turn on/off the max-height limit of codeblock */
   --switcher-art-gallery-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | turn on/off the max-height limit of art gallery */
@@ -240,7 +241,7 @@
   
   /* CODEBLOCK ********************************************* */
   /* codeblock: container ---------------------------------- */
-  --codeblock-background-color: #141819;
+  --codeblock-background-color: #191919;
   --codeblock-border-color: #80f0ff;
   --codeblock-box-shadow-color: var(--codeblock-border-color);
 
@@ -257,15 +258,20 @@
 
 
   /* MARKDOWN TOC ****************************************** */
+  /* markdown toc: title ----------------------------------- */
   --mt-title-text-color: #333;
   --mt-title-background-color: #a77600;
   --mt-title-box-shadow: #fffda0;
   --mt-title-text-color-hover: #eee;
   --mt-title-background-color-hover: #00b37c;
   --mt-title-box-shadow-hover: #4cff00;
+
+  /* markdown toc: body ------------------------------------ */
   --mt-body-background-color-hover: #191919;
   --mt-body-border-color-hover: #00b37c;
   --mt-list-border-color: #333333;
+  --mt-link-text-color-hover: #d2d2d2;
+  --mt-link-background-color-hover: #272727;
 
 
 
@@ -926,8 +932,10 @@ body {
 /* LINK **************************************************** */
 #rendered-md a {
   word-break: var(--switcher-link-break-word);
-  margin: 0 3px;
   color: var(--link-text-color);
+}
+#rendered-md a:not(.table-of-contents a) {
+  margin: 0 3px;
 }
 /* link: bracket ------------------------------------------- */
 #rendered-md a::before,
@@ -1103,7 +1111,6 @@ table > tbody > tr:nth-child(odd) {
   color: var(--mt-title-text-color-hover);
   background: var(--mt-title-background-color-hover);
   box-shadow: 0 0 3px var(--mt-title-box-shadow-hover);
-  transition: color 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
 /* markdown toc: body -------------------------------------- */
@@ -1140,7 +1147,7 @@ table > tbody > tr:nth-child(odd) {
   border-width: 3px 0;
   border-style: solid;
   border-color: var(--mt-body-border-color-hover);
-  white-space: normal;
+  white-space:  var(--switcher-markdown-toc-link-text-wrap);
   overflow: scroll;
   animation: toc-hover 0.5s forwards 1;
 }
@@ -1148,13 +1155,26 @@ table > tbody > tr:nth-child(odd) {
 /* markdown toc: list -------------------------------------- */
 #rendered-md .table-of-contents ul {
   border-left: 1px solid var(--mt-list-border-color);
-  padding: 0px;
+  padding: 0;
   margin: 0 0 0 8px;
 }
 
 #rendered-md .table-of-contents li {
   list-style-type: none;
   padding-left: 8px;
+}
+
+/* markdown toc: link -------------------------------------- */
+#rendered-md .table-of-contents li a {
+  display: inline-block;
+  width: 100%;
+  transition: color .1s, background .2s, margin 0.1s;
+}
+#rendered-md .table-of-contents li a:hover {
+  margin-left: -5px;
+  color: var(--mt-link-text-color-hover);
+  background: var(--mt-link-background-color-hover);
+  transition: background .1s;
 }
 
 
@@ -1957,7 +1977,8 @@ important::before {
 
   /* PRINT TABLE ******************************************* */
   /* print table header ------------------------------------ */
-  #rendered-md > table > thead > tr > th {
+  #rendered-md > table > thead > tr > th,
+  #rendered-md > table {
     color: var(--print-table-th-text-color);
     border: 1px solid var(--print-table-border-color);
     background: var(--print-table-th-background-color);
@@ -2087,7 +2108,13 @@ important::before {
   }
   /* print markdown toc: link ------------------------------ */
   #rendered-md > .table-of-contents li > a {
+    width: unset;
     color: var(--print-mt-link-text-color);
+  }
+  #rendered-md .table-of-contents li > a:hover {
+    margin-left: 0;
+    color: var(--print-mt-link-text-color);
+    background: none;
   }
   /* hide link href */
   #rendered-md > .table-of-contents [href]::after {
