@@ -486,7 +486,7 @@ Joplin provides us a great built-in Markdown TOC feature which let you create th
 
 ![MarkdownToc_batch](https://user-images.githubusercontent.com/86870826/156605359-ce769aa2-e297-474a-83a2-6ad8e9fb1b74.png)
 
-The Markdown TOC feature is disable by Joplin default. To use the Markdown TOC, you should enable the the extension manually. For more information, please click: [Change Your Joplin Settings Before Using OhmineDT](#change-your-joplin-settings-before-using-ohminedt)
+The Markdown TOC feature is disable by Joplin default. To use the Markdown TOC, you should enable the the extension manually.
 
 Related Switchers:
 
@@ -537,7 +537,7 @@ Since OhmineDT v3.0.0, you can now using `Shift` + `Scroll` to check out the ove
 
 ## Special Text Styles
 
-Joplin didn't provide enough CSS classes for styling the special text in Markdown Editor, so the styling of this part is relying on another plugin to get complete. That means you must download and install the plugin named Rich Markdown to get the style works. (Read: Complete Experience Of Ohmine Dark Theme)
+Joplin didn't provide enough CSS classes for styling the special text in Markdown Editor, so the styling of this part is relying on another plugin to get complete. That means you must download and install the plugin named Rich Markdown to get the style works.
 
 Special Text is including the below: 
 
