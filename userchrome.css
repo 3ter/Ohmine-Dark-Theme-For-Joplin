@@ -1,4 +1,4 @@
-/* OhmineDT v3.1.75 | userchrome.css | 
+/* OhmineDT v3.1.84 | userchrome.css | 
 /* CSS for: Markdown Editor | Joplin UI */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -33,7 +33,7 @@
   --switcher-mde-abstract-content-bar-blank-line-display: none; /* SHOW: "block;" | HIDE: "none;" | show/hide the blank lines on abstract content bar */
   --switcher-mde-headings-text-shadow: 0 0 2px; /* SHOW: "0 0 2px;" | HIDE: "none;" | show/hide the text shadow of headings */
   --switcher-mde-h1-font-variant: small-caps; /* ON: "small-caps;" | OFF: "none;" | turn on/off the small-caps effect of h1 heading */
-  --switcher-mde-horizontal-line-background-color: var(--hr-background-gradient); /* ON: "var(--hr-background-gradient);" | OFF: "none;" | turn on/off the background color of horizontal line markdown syntax */
+  --switcher-mde-horizontal-line-background-color: none; /* ON: "var(--hr-background-gradient);" | OFF: "none;" | turn on/off the background color of horizontal line markdown syntax */
 
 
 
@@ -462,6 +462,7 @@
 .CodeMirror-lines .CodeMirror-line [class|="cm-katex"],
 .CodeMirror-lines .CodeMirror-line [class|="cm-katex"] ~ .cm-variable-2,
 .CodeMirror-lines .CodeMirror-line .cm-bracket ~ .cm-variable-2,
+.CodeMirror-lines .CodeMirror-line .cm-link-text.cm-em ~ *,
 .CodeMirror-lines .CodeMirror-line .cm-jn-monospace {
   font-family: var(--monospace-font) !important;
   font-size: var(--monospace-font-size);
@@ -470,7 +471,8 @@
 
 /* bigger monospace font:  file path link text | anchor link text | abbreviation text */
 .CodeMirror-lines .CodeMirror-line .cm-rm-link,
-.CodeMirror-lines .CodeMirror-line .cm-em.cm-link-text {
+.CodeMirror-lines .CodeMirror-line .cm-em.cm-link-text,
+.CodeMirror-lines .CodeMirror-line .cm-link-text.cm-em ~ * {
   font-size: var(--bigger-monospace-font-size);
 }
 
@@ -559,10 +561,9 @@
 
 /* SPECIAL TEXT ******************************************** */
 /* special text group:  mark | search | emphasize | abbreviation | strong | insert | strikethrough | inline code text */
-.CodeMirror-lines .CodeMirror-line .cm-rm-highlight,
-.CodeMirror-lines .CodeMirror-line .cm-em:not(.cm-image-alt-text),
-.CodeMirror-lines .CodeMirror-line .cm-strong,
-.CodeMirror-lines .CodeMirror-line .cm-strikethrough,
+/* .CodeMirror-lines .CodeMirror-line .cm-rm-highlight, */
+.CodeMirror-lines .CodeMirror-line .cm-link-text.cm-em,
+.CodeMirror-lines .CodeMirror-line .cm-link-text.cm-em ~ *,
 .CodeMirror-lines .CodeMirror-line .cm-rm-ins {
   color: var(--special-text-color);
   border-width: 0 0 1px 0;
@@ -575,7 +576,7 @@
 /* mark text ----------------------------------------------- */
 .CodeMirror-lines .CodeMirror-line .cm-rm-highlight {
   color: var(--mark-text-color);
-  border-color: var(--mark-text-border-color);
+  background: #0d4a32;
 }
 
 /* search text --------------------------------------------- */
@@ -615,12 +616,15 @@
 /* strikethrough text -------------------------------------- */
 .CodeMirror-lines .CodeMirror-line .cm-strikethrough {
   color: var(--strikethrough-text-color) !important;
-  border-color: var(--strikethrough-text-border-color) !important;
+  border-color: none !important;
+  text-decoration: line-through !important;
 }
 
 /* insert text --------------------------------------------- */
 .CodeMirror-lines .CodeMirror-line .cm-rm-ins {
   color: var(--insert-text-color) !important;
+  border-width: 0 0 1px 0;
+  border-style: solid; 
   border-color: var(--insert-text-border-color) !important;
 }
 
@@ -1139,7 +1143,7 @@ i.fas.fa-caret-down {
 }
 
 /* notebook panel: note count label ------------------------ */
-.ihcmBd.note-count-label {
+.rli-sideBar .note-count-label {
   position: sticky;
   right: 6px;
   font-size: 10px;
@@ -1154,7 +1158,7 @@ i.fas.fa-caret-down {
 }
 
 /* notebook panel: synchronize information text ------------ */
-.sc-fzoxKX {
+.rli-sideBar > div:last-child > div > div {
   color: var(--np-sync-info-text-color) !important;
 }
 
