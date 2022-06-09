@@ -24,60 +24,24 @@ Let's see what's OhmineDT brings you:
 
 ## Latest Released
 
-### OhmineDT-v3.1.75 updates ( 9-May-2022 tested on Joplin v2.7.15)
+### OhmineDT-v3.1.84 updates (  8-JUN-2022 tested on Joplin v2.8.8)
 
-- **Render Viewer:**
-    - New: add hover effects on Markdown TOC's links.
-    - Improve: enlarged the click area of Markdown TOC's links.
-    - Improve: codeblock background color changed. 
 - **Markdown Editor:**
-    - Improve: hroizontal line markdown syntax style.
-- **Rich Text Editor:**
-    - Fix: editor top toolbar visual broken.
-- **Print/Export PDF:**
-    - Fix: unexpected border on the table.
+    - Change: remove underline for strong, emphasize, and mark text
+    - Change: give back the line-throught effect for strikethrough text
+    - Change: give back the solid underline for insert text
+    - Change: give back the background color to mark text
+    - Change: abbreviation description using monospace font
+
 - **Joplin UI:**
-    - Fix: white background splash once when startup.
-    - Fix: bottom tag bar visual broken.
+    - Fix: notebook panel > note count label visual broken
+    - Fix: notebook panel > sync information text color missing
+
 - **Source Code: userchrome.css:**
-    - Change: renamed 1 switcher-related value.
-    - New: add `general-body-background-color`
-    - New: add `--hr-background-gradient`
+    - Change: `--switcher-mde-horizontal-line-background-color` set default to turn off.
+
 - **Source Code: userstyle.css:**
-    - New: add new switcher `--switcher-markdown-toc-link-text-wrap` for the wrap text effect of the markdown toc link text.
-    - New: add `--mt-link-text-color-hover`
-    - New: add `--mt-link-background-color-hover`
-
-***
-
-### OhmineDT-v3.1.61 updates ( 5-May-2022 tested on Joplin v2.7.15)
-
-- **Render Viewer:**
-    - Fix: The chinese font family was not applied to the table.
-- **Markdown Editor:**
-    - Change: Abstract Content Bar - list, blockquote, and table, color changed.
-    - New: add background color to horizontal line markdown syntax.
-    - Fix: Abstract Content Bar - blockquote didn't showing on the color bar.
-- **Joplin UI:**
-    - Improve: tag manager modal dialog styles.
-- **Source Code: userchrome.css:**
-    - Change: renamed 1 switcher.
-    - Change: renamed 7 variables.
-    - Change: removed 1 invalid variable `--codeblock-text-color`.
-    - New: add `--switcher-mde-horizontal-line-background-color` for turn on/off the background color of horizontal line markdown syntax.
-    - New: add `--hr-background-color`.
-    - New: add `--hr-text-color`.
-    - New: add custom code section to the bottom.
-    - Fix: the value of `--np-notebook-item-text-color:` and `--np-notebook-item-border-color:` are affects to the notelist panel unexpectedly.
-    - Improve: edit unclear comments.
-- **Source Code: userstyle.css:**
-    - Change: renamed 1 variable.
-    - New: add `--switcher-markdown-toc-position-left` You can now position the Markdown TOC button to the left/right.
-    - New: add `--mt-body-background-color-hover`.
-    - New: add `--mt-body-border-color-hover`.
-    - New: add `--mt-list-border-color`.
-    - New: add custom code section to the bottom.
-    - Improve: edit unclear comments.
+    - Change: `--switcher-link-bracket-display` default to turn off. 
 
 ***
 
