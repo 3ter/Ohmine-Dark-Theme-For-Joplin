@@ -1,4 +1,4 @@
-/* OhmineDT v3.1.75 | userstyle.css */
+/* OhmineDT v3.1.84 | userstyle.css */
 /* CSS for: Render Viewer | Rich Text Editor | Print PDF | Export PDF | EXPORT HTML */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -45,7 +45,7 @@
   --switcher-list-text-align: none;  /* ON: "justify;" | OFF: "none;" | turn on/off the justify text effect of list */
   --switcher-footnote-text-align: none;  /* ON: "justify;" | OFF: "none;" | turn on/off the justify text effect of footnote content */
   
-  --switcher-link-bracket-display: inline; /* ON: "inline;" | OFF: "none;" | turn on/off the effect of automatically adding the monospace bracket to links */
+  --switcher-link-bracket-display: none; /* ON: "inline;" | OFF: "none;" | turn on/off the effect of automatically adding the monospace bracket to links */
   --switcher-link-break-word: break-all; /* ON: "break-all;" | OFF: "break-word" | turn on/off to set how a line break present on the link text */
   
   --switcher-markdown-toc-position-left: 0; /* ON: "0;" | OFF: none | turn on/off to position the markdown TOC button to the left/right */
