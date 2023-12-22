@@ -1,582 +1,662 @@
-/* OhmineDT v2.2.16 | userchrome.css | styling the Markdown Editor and Joplin UI */
+/* OhmineDT v3.1.87 | userchrome.css |
+/* CSS for: Markdown Editor | Joplin UI */
 
-/* By usual case, you would only to edit the source code within the root section (line 11 to 228) to fulfill most of your personal needs */
+/* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
+/* Please add your custom code to the bottom of this document if needed. */
 
-/* Please let me know if you found any bad issue when using OhmineDT. */
-/* And sure, you can share any of your ideas with me too! */
-/* Thank you guys! I hope you are enjoy what's OhmineDT did for you! */
+/* OhmineDT will stay compatible with the latest stable versions of Joplin. */
+/* OhmineDT's updates information: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin#latest-released */
+
+/* Thank you, guys! I hope you enjoy what's OhmineDT did for you! */
 /* Tell me whatever you want > Joplin Forum: https://discourse.joplinapp.org/t/css-theme-ohmine-dark-theme/21000 */
 /* Directly report an issue > Github: https://github.com/Nacandev/Ohmine-Dark-Theme-For-Joplin/issues/new/choose */
 
+
+
 :root {
 
-  /* GENERAL STYLING *************************************** */
+  /* ******************************************************* */
+  /* !!!!!!!!!         ROOT: SECTION START        !!!!!!!!!! */
+  /* ******************************************************* */
+  /* ******************************************************* */
+  /* ===                    SWITCHER                     === */
+  /* ******************************************************* */
 
-  /* CONTENT:  heading | paragraph | blockquote | list | footnote | sticky notes | custom title block | emphasize | strong | insert | strikethrough | mark | search */
-  --content-font: "montserrat", "microsoft Jhenghei light", avenir, arial, sans-serif;
-  --content-font-size: 14px;
+  /* to get the correct effect, please follow the below comments to edit the switchers */
 
-  /* SYNTAX:  table | anchor text link | file path link | code block | inline code | katex | html */
-  --syntax-font: "cascadia mono light", monospace, "microsoft jhenghei light";
-  --syntax-font-size: 12px;
 
-  /* BIGGER SYNTAX:  simple link | anchor text | abbreviation text */
-  --bigger-syntax-font-size: 14px;
 
-  /* HEADING SIZE ------------------------------------------ */
-  --heading-font-weight: 500;
-  --heading-line-height: 1em;
+  /* SWITCHER FOR MARKDOWN EDITOR ************************** */
+  /* change the below css property values to control the style effects on Markdown Editor */
 
-  --h1-heading-size: 2.3em;
-  --h2-heading-size: 1.8em;
-  --h3-heading-size: 1.5em;
-  --h4-h5-heading-size: 1.2em;
-  --h6-heading-size: 1.1em;
+  --switcher-mde-abstract-content-bar-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide the abstract content bar */
+  --switcher-mde-abstract-content-bar-blank-line-display: none; /* SHOW: "block;" | HIDE: "none;" | show/hide the blank lines on abstract content bar */
+  --switcher-mde-headings-text-shadow: 0 0 2px; /* SHOW: "0 0 2px;" | HIDE: "none;" | show/hide the text shadow of headings */
+  --switcher-mde-h1-font-variant: small-caps; /* ON: "small-caps;" | OFF: "none;" | turn on/off the small-caps effect of h1 heading */
+  --switcher-mde-horizontal-line-background-color: none; /* ON: "var(--hr-background-gradient);" | OFF: "none;" | turn on/off the background color of horizontal line markdown syntax */
 
-  /* SWITCHER ---------------------------------------------- */
-  --all-note-button: flex; /* "flex;" value change to "none;" to hide the "All Notes" button */
-  --abstract-content-bar: block; /* "block;" value change to "none;" to hide the Abstract Content Bar */
-  --abstract-content-bar-blank-line: none; /* "none;" value change to "block;" to show blank line on the Abstract Content Bar */
-  --rich-text-editor-switch-btn: flex; /* "flex;" value change to "none;" to hide the rich text editor switch button form the main toolbar */
+
+
+  /* SWITCHER JOPLIN UI ************************************ */
+  /* change the below css property values to control the Joplin UI layout */
+
+  --switcher-jui-all-note-button-display: flex; /* SHOW: "flex;" | HIDE: "none;" | show/hide the top left all notes button */
+  --switcher-jui-rich-text-editor-switch-button-display: flex; /* SHOW: "flex;" | HIDE: "none;" | show/hide the top right editor toggle button */
+  --switcher-jui-notebook-panel-notebook-item-wrap: normal; /* ON: "normal;" | OFF: "none;" | turn on/off wrap text effect of the notebook names in notebook panel (mouse hover + [SHIFT] + [MOUSE WHEEL] for scroll) */
 
 
 
   /* ******************************************************* */
-  /*             COLOR CONTROLLER: SECTION START             */
+  /* ===            STYLING: MARKDOWN EDITOR             === */
   /* ******************************************************* */
 
-  /* MARKDOWN EDITOR *************************************** */
-  --root-background: #151b1a;
-  --primary-text-color: #bdbdbd;
 
-  /* headings ---------------------------------------------- */
-  --heading-text: #cacaca;
-  --heading-text-shadow: #bfbfbf;
 
-  /* special text ------------------------------------------ */
-  --special-text-border: #565656; /* group:  mark | search | emphasize | strong | abbreviation */
+  /* GENERAL *********************************************** */
+  /* base font:  heading | paragraph | blockquote | list | footnote | sticky notes | custom title block | emphasize | strong | insert | strikethrough | mark | search */
+  --base-font: "montserrat", "chiron sans hk pro extralight", avenir, arial, sans-serif;
+  --base-font-size: 14px;
 
-  --mark-text: #dedede; /* group:  mark | search */
-  --mark-text-background: none; /* group:  mark | search */
+  /* monospace font:  table | anchor text link | file path link | code block | inline code | katex | html */
+  --monospace-font: "cascadia mono light", monospace, "chiron sans hk pro extralight";
+  --monospace-font-size: 12px;
+  --monospace-font-line-height: normal;
 
-  --search-text-selected: #ffff00;
-  --search-text-selected-border: #ffff00;
-  --search-marker-scrollbar: #ffff00;
+  /* bigger monospace font:  file path link text | anchor link text | abbreviation text */
+  --bigger-monospace-font-size: 14px;
 
-  --emphasize-text: #bdbdbd; /* group:  emphasize | abbreviation */
-  --strong-text: #bdbdbd;
-  --insert-text: #b1a291;
-  --strikethrough-text: #b1a291;
+  /* markdown editor --------------------------------------- */
+  --markdown-editor-background-color: #151b1a;
 
-  /* syntax tags ------------------------------------------- */
-  --syntax-tag: #a0a0a0;
-  --syntax-tag-background: #2f0008;
+  /* paragraph --------------------------------------------- */
+  --markdown-editor-text-color: #bdbdbd;
 
-  --syntax-string: #a0a0a0;
-  --syntax-string-background: #0b2d00;
+  /* horizontal line --------------------------------------- */
+  --hr-background-color: #3a3930;
+  --hr-text-color: #777777;
+  --hr-background-gradient: linear-gradient( /* edit this value might cause the `--switcher-mde-horizontal-line-background-color` not working */
+                              to bottom,
+                              var(--markdown-editor-background-color) 30%,
+                              var(--hr-background-color) 53%,
+                              var(--markdown-editor-background-color) 75%
+                            );
 
-  --syntax-attribute: #a0a0a0;
-  --syntax-attribute-background: #36005a;
 
-  /* plugin: markdown table colorize ----------------------- */
-  --mtc-table-vertical-bar: #5a5a5a;
-  --mtc-table-text: #bdbdbd;
+  /* HEADINGS ********************************************** */
+  /* headings group: h1 to h6 ------------------------------ */
+  --headings-font-weight: 500;
+  --headings-line-height: 1em;
+  --headings-text-color: #cacaca;
+  --headings-text-shadow: #cacaca;
 
-  --mtc-table-row-separate-text: #949494;
-  --mtc-table-row-separate-background: #1b1b1b;
-  --mtc-table-row-separate-shadow: #c5c5c5;
-  --mtc-table-row-separate-hover: brightness(160%);
+  /* headings font size ------------------------------------ */
+  --h1-font-size: 1.6em;
+  --h2-font-size: 1.5em;
+  --h3-font-size: 1.4em;
+  --h4-font-size: 1.3em;
+  --h5-font-size: 1.2em;
+  --h6-font-size: 1.1em;
 
-  --mtc-table-column-mark-background: black;
-  --mtc-table-column-mark-hover: brightness(170%);
+  /* headings color ---------------------------------------- */
+  /* by default, they are all equal to the --headings-text-color */
+  --h1-text-color: var(--headings-text-color);
+  --h2-text-color: var(--headings-text-color);
+  --h3-text-color: var(--headings-text-color);
+  --h4-text-color: var(--headings-text-color);
+  --h5-text-color: var(--headings-text-color);
+  --h6-text-color: var(--headings-text-color);
 
-  --mtc-table-column-mark-border: #4c4c4c; /* only for column 10 to 19 */
+  /* headings text shadow ---------------------------------- */
+  /* by default, they are all equal to the --headings-text-shadow */
+  --h1-text-shadow: var(--headings-text-shadow);
+  --h2-text-shadow: var(--headings-text-shadow);
+  --h3-text-shadow: var(--headings-text-shadow);
+  --h4-text-shadow: var(--headings-text-shadow);
+  --h5-text-shadow: var(--headings-text-shadow);
+  --h6-text-shadow: var(--headings-text-shadow);
 
-  --mtc-table-col0-mark: #ff8080cc;
-  --mtc-table-col1-mark: #fff980cc;
-  --mtc-table-col2-mark: #80fff7cc;
-  --mtc-table-col3-mark: #9080ffcc;
-  --mtc-table-col4-mark: #ff80fdcc;
-  --mtc-table-col5-mark: #a3ffa5cc;
-  --mtc-table-col6-mark: #ff9500cc;
-  --mtc-table-col7-mark: #2eff62cc;
-  --mtc-table-col8-mark: #579dffcc;
-  --mtc-table-col9-mark: #ff00cc;
-  --mtc-table-col10-mark: #ff8080cc;
-  --mtc-table-col11-mark: #fff980cc;
-  --mtc-table-col12-mark: #80fff7cc;
-  --mtc-table-col13-mark: #9080ffcc;
-  --mtc-table-col14-mark: #ff80fdcc;
-  --mtc-table-col15-mark: #a3ffa5cc;
-  --mtc-table-col16-mark: #ff9500cc;
-  --mtc-table-col17-mark: #2eff62cc;
-  --mtc-table-col18-mark: #579dffcc;
-  --mtc-table-col19-mark: #ff00cc;
 
-  /* list -------------------------------------------------- */
-  --list-text: #a5a5a5;
-  --list-token: #a5a5a5;
 
-  /* link -------------------------------------------------- */
-  --link-text: #9a9a7e;
+  /* SPECIAL TEXT ****************************************** */
+  /* special text group:  mark | emphasize | abbreviation | strong | insert | strikethrough */
+  --special-text-color: #73b99d;
+  --special-text-border-color: var(--special-text-color);
 
-  /* blockquote -------------------------------------------- */
-  --blockquote-text: #808080;
+  /* mark text --------------------------------------------- */
+  --mark-text-color: var(--special-text-color);
+  --mark-text-border-color: var(--mark-text-color);
 
-  /* code block & inline code -------------------------------*/
-  --inline-code-text: #bdbdbd;
-  --inline-code-border: #383838;
+  /* search text ------------------------------------------- */
+  --search-text-color: #f1f173;
+  --search-text-border-color-selected: var(--search-text-color);
+  --search-text-box-shadow: var(--search-text-color);
+  /* search text - scrollbar search marker ------------------*/
+  --search-text-scrollbar-marker-background-color: var(--search-text-color);
 
-  --code-block-text: #bdbdbd;
-  --code-block-background: #101413;
+  /* text group:  emphasize | abbreviation ----------------- */
+  /* joplin didn't provide an independent abbreviation text css class on markdown editor */
+  --emphasize-text-color: var(--special-text-color);
+  --emphasize-text-border-color: var(--emphasize-text-color);
 
-  /* abstract content bar ---------------------------------- */
+  /* strong text ------------------------------------------- */
+  --strong-text-color: var(--special-text-color);
+  --strong-text-border-color: var(--strong-text-color);
+
+  /* insert text ------------------------------------------- */
+  --insert-text-color: var(--special-text-color);
+  --insert-text-border-color: var(--insert-text-color);
+
+  /* strikethrough text ------------------------------------ */
+  --strikethrough-text-color: var(--special-text-color);
+  --strikethrough-text-border-color: var(--strikethrough-text-color);
+
+  /* inline code text -------------------------------------- */
+  --inline-code-text-color: #bdbdbd;
+  --inline-code-text-background-color: #232323;
+  --inline-code-text-border-color: #585858;
+  --inline-code-text-shadow: black;
+
+
+
+  /* SYNTAX ************************************************ */
+  /* syntax group: tag | string | attribute ---------------- */
+  --syntax-text-color: #a0a0a0;
+
+  /* syntax tag -------------------------------------------- */
+  --syntax-tag-text-color: var(--syntax-text-color);
+  --syntax-tag-background-color: #2f0008;
+
+  /* syntax string ----------------------------------------- */
+  --syntax-string-text-color: var(--syntax-text-color);
+  --syntax-string-background-color: #0b2d00;
+
+  /* syntax attribute -------------------------------------- */
+  --syntax-attribute-text-color: var(--syntax-text-color);
+  --syntax-attribute-background-color: #36005a;
+
+
+
+  /* LINK ************************************************** */
+  --link-text-color: #9a9a7e;
+
+
+
+  /* LIST ************************************************** */
+  --list-text-color: #a5a5a5;
+  --list-token-color: var(--list-text-color);
+
+
+
+  /* BLOCKQUOTE ******************************************** */
+  --blockquote-text-color: #808080;
+
+
+
+  /* CODEBLOCK ********************************************* */
+  --codeblock-background-color: #191919;
+
+
+
+  /* ABSTRACT CONTENT BAR ********************************** */
   --acb-plain-text: #383838;
-  --acb-headings: #ffffff6e;
-  --acb-block-quote: #985e00;
-  --acb-list: #ab2da4;
-  --acb-table: #3cffd7b3;
+  --acb-heading: #ffffff6e;
+  --acb-list: #51bba8;
+  --acb-blockquote: #a97945;
+  --acb-table: #575384;
   --acb-image: #045d00;
   --acb-footnote: #5a5800;
-  --acb-links: #cdd286;
+  --acb-link: #cdd286;
   --acb-abbreviation: #00c538;
-  --acb-html-tags: #ff0063;
-  --acb-math-notation: #5aa5fb;
+  --acb-html-tag: #ff0063;
+  --acb-katex: #5aa5fb;
   --acb-checklist: #5d00ff;
-  --acb-code-block: var(--code-block-background); /* same as code block background */
-  --acb-blank-line: var(--root-background); /* same as root background */
+  --acb-codeblock: var(--codeblock-background-color);
+  --acb-blank-line: var(--markdown-editor-background-color);
 
 
 
-  /* JOPLIN UI ********************************************* */
+  /* PLUGIN: MARKDOWN TABLE COLORIZE *********************** */
+  /* markdown table colorize: caret ------------------------ */
+  --mtc-table-caret-color: #ff0000;
 
-  /* notebook panel ---------------------------------------- */
-  --np-background: #191919;
+  /* markdown table colorize: table vertical bar ----------- */
+  --mtc-table-vertical-bar-color: #5a5a5a;
+
+  /* markdown table colorize: table text ------------------- */
+  --mtc-table-text-color: #bdbdbd;
+
+  /* markdown table colorize: table separate group: header | row */
+  --mtc-table-separate-text-color: #bdbdbd;
+  --mtc-table-separate-text-shadow: black;
+
+  /* markdown table colorize: table separate header -------- */
+  --mtc-table-separate-header-background-color: linear-gradient(to right, #696969 10%, #2d2d2d 40%);
+
+  /* markdown table colorize: table separate row ----------- */
+  --mtc-table-separate-row-background-color: linear-gradient(to right, #424242 10%, #242424 40%);
+
+  /* markdown table colorize: table column mark -----------  */
+  /* table column mark group ------------------------------- */
+  --mtc-table-column-mark-background-color: black;
+  --mtc-table-column-mark-border-color: #4c4c4c; /* only for column 10 to 19 */
+
+  /* standalone table column mark -------------------------- */
+  --mtc-table-col0-mark-color: #ff8080cc;
+  --mtc-table-col1-mark-color: #fff980cc;
+  --mtc-table-col2-mark-color: #80fff7cc;
+  --mtc-table-col3-mark-color: #9080ffcc;
+  --mtc-table-col4-mark-color: #ff80fdcc;
+  --mtc-table-col5-mark-color: #a3ffa5cc;
+  --mtc-table-col6-mark-color: #ff9500cc;
+  --mtc-table-col7-mark-color: #2eff62cc;
+  --mtc-table-col8-mark-color: #579dffcc;
+  --mtc-table-col9-mark-color: #ff00cc;
+  --mtc-table-col10-mark-color: var(--mtc-table-col0-mark-color);
+  --mtc-table-col11-mark-color: var(--mtc-table-col1-mark-color);
+  --mtc-table-col12-mark-color: var(--mtc-table-col2-mark-color);
+  --mtc-table-col13-mark-color: var(--mtc-table-col3-mark-color);
+  --mtc-table-col14-mark-color: var(--mtc-table-col4-mark-color);
+  --mtc-table-col15-mark-color: var(--mtc-table-col5-mark-color);
+  --mtc-table-col16-mark-color: var(--mtc-table-col6-mark-color);
+  --mtc-table-col17-mark-color: var(--mtc-table-col7-mark-color);
+  --mtc-table-col18-mark-color: var(--mtc-table-col8-mark-color);
+  --mtc-table-col19-mark-color: var(--mtc-table-col9-mark-color);
+
+
+
+  /* ******************************************************* */
+  /* ===               STYLING: JOPLIN UI                === */
+  /* ******************************************************* */
+
+
+
+  /* GENERAL *********************************************** */
+  --general-body-background-color: #191919;
+
+
+
+  /* NOTEBOOK PANEL **************************************** */
+  /* notebook panel: container ----------------------------- */
+  --np-background-color: #191919;
   --np-box-shadow: #33524a;
 
-  --np-header: white; /* group:  notebook icon | text | plus icon */
+  /* notebook panel: header -------------------------------- */
+  /* header text group:  notebook icon | text | plus icon -- */
+  --np-header-text-color: white;
 
-  --np-directory-icon-close: #f6ff67;
-  --np-directory-icon-open: #71ffc4;
-  --np-directory-icon-shadow: #dedede;
+  /* notebook panel: directory icon ------------------------ */
+  --np-directory-icon-closed-color: #f6ff67;
+  --np-directory-icon-opened-color: #71ffc4;
+  --np-directory-icon-shadow: white;
 
-  --np-notebook-hover: hue-rotate(180deg);
+  /* notebook panel: notebook item ------------------------- */
+  --np-notebook-item-text-color: #e2e2e2;
+  --np-notebook-item-border-color: #393939;
+  --np-notebook-item-scrollbar-color: #00ffd5;
 
-  --np-notebook-selected: linear-gradient(60deg, #002f24, #00926a);
-  --np-notebook-selected-box-shadow: #72fdbd;
+  /* notebook panel: notebook item selected state ---------- */
+  --np-notebook-item-background-color-selected: linear-gradient(60deg, #002f24, #00926a);
+  --np-notebook-item-box-shadow-selected: #72fdbd;
 
-  --np-notebook-title-text: #e2e2e2;
-  --np-notebook-title-border: #ffffff14;
+  /* notebook panel: note count label ---------------------- */
+  --np-note-count-label-text-color: #ffffff;
+  --np-note-count-label-background-color: #1d2927;
+  --np-note-count-label-box-shadow: white;
 
-  --np-note-count-label-background: #4affff24;
-  --np-note-count-label-border: #ffffff1f;
+  /* notebook panel: synchronize information text ---------- */
+  --np-sync-info-text-color: #02ffd0;
 
-  --np-sync-info-text: #02ffd0;
-  --np-sync-button: #313131;
-  --np-sync-btn-hover: brightness(150%); /* "filter:" */
+  /* notebook panel: synchronize button -------------------- */
+  --np-sync-button-background-color: #191919;
+  --np-sync-button-box-shadow: #5a826e;
+  --np-sync-button-background-color-hover: #151f19;
+  --np-sync-button-box-shadow-hover: #beffdf;
+  --np-sync-button-text-color: #b1b1b1;
+  --np-sync-button-text-color-hover: #ddffef;
+  --np-sync-button-icon-shadow-hover: #7dffa6;
 
-  --np-turbo-sync-icon-lightspeed-hover: #00ffe6;
 
-  /* note list panel --------------------------------------- */
+
+  /* NOTELIST PANEL **************************************** */
+  /* notelist panel: container ----------------------------- */
   --nlp-box-shadow: #33524a;
 
-  --nlp-header: #191919;
+  /* notelist panel: header container ---------------------- */
+  --nlp-header-background-color: #172723;
+  --nlp-header-box-shadow: #beffdf;
 
-  --nlp-btn-icons: #f5f5f5; /* icon group:  search | cancel | new todo | new note */
-  --nlp-btns: #00926a; /* button group:  new todo | new note */
-  --nlp-btns-hover: hue-rotate(180deg); /* button group:  new todo | new note */
+  /* notelist panel: header search bar --------------------- */
+  --nlp-header-search-bar-placeholder-text-color: #888;
+  --nlp-header-search-bar-background-color: #191919;
+  --nlp-header-search-bar-box-shadow: #c1c1c1;
+  --nlp-header-search-bar-box-shadow-hover: white;
 
-  --nlp-body: #191919;
+  /* notelist panel: header button ------------------------- */
+  /* button group: sort field | sort reverse | todo | note --- */
+  --nlp-header-button-background-color: #191919;
+  --nlp-header-button-box-shadow: #c1c1c1;
+  --nlp-header-button-background-color-hover: #22584d;
+  --nlp-header-button-box-shadow-hover: white;
 
-  --nlp-note-selected: linear-gradient(60deg, #002f24, #00926a);
-  --nlp-note-selected-box-shadow: #72fdbd;
-  --nlp-note-hover: hue-rotate(180deg);
-  --nlp-note-hover2: #15283c;
+  /* button icon group:  search | cancel | sort field | sort reverse | todo | note */
+  --nlp-header-button-icon-color: #b1b1b1;
+  --nlp-header-button-icon-color-hover: #83e2ca;
 
-  /* editor header ----------------------------------------- */
-  --eh-background: #151b1a;
-  --eh-note-title-input-bar: #151b1a;
-  --eh-right-side-toolbar: #151b1a;
+  /* notelist panel: body container ------------------------ */
+  --nlp-body-container-background-color: #191919;
 
-  --eh-notebook-navigation-button: #00926a;
-  --eh-notebook-navigation-button-hover: hue-rotate(180deg); /* "filter:" */
+  /* notelist panel: note list item ------------------------ */
+  --nlp-list-item-text-color: var(--np-notebook-item-text-color);
+  --nlp-list-item-border-color: var(--np-notebook-item-border-color);
+  --nlp-note-list-item-background-color: #74370166;
+  --nlp-note-list-item-background-color-selected: linear-gradient(60deg, #002f24, #00926a);
+  --nlp-note-list-item-box-shadow-selected: #72fdbd;
+  --nlp-note-list-item-filter-hover-selected: hue-rotate(180deg);
 
-  --eh-notebook-icon: white; /* top left notebook icon and tag-related nav button icon */
 
-  /* top toolbar ------------------------------------------- */
-  --tt-editor-toolbar: #191919;
-  --tt-editor-toolbar-box-shadow: #33524a;
 
-  --tt-rich-text-editor-toolbar-background: #191919;
-  --tt-rich-text-editor-toolbar-box-shadow: #33504a;
+  /* EDITOR HEADER ***************************************** */
+  /* editor header: container ------------------------------ */
+  --eh-background-color: #151b1a;
 
-  /* bottom tag bar ---------------------------------------- */
-  --btb-background: #191919;
-  --btb-box-shadow: #33524a;
+  /* editor header: notebook navigation button ------------- */
+  --eh-notebook-navigation-button-text-color: white;
+  --eh-notebook-navigation-button-background-color: #089c74;
+  --eh-notebook-navigation-button-hover: hue-rotate(180deg);
 
-  --btb-tags: #4affff24;
-  --btb-tags-border: #ffffff1f;
-  --btb-tags-text-shadow: black;
 
-  /* option page ------------------------------------------- */
-  --op-dropdown-list-and-input-text: #bdbdbd;
 
-  /* ******************************************************* */
-  /*              COLOR CONTROLLER: SECTION END              */
-  /* ******************************************************* */
+  /* EDITOR TOP TOOLBAR ************************************ */
+  /* editor top toolbar: container ------------------------- */
+  --ett-background-color: #172723;
+  --ett-box-shadow: #beffdf;
+
+  /* editor top toolbar: button ---------------------------- */
+  --ett-button-background-color-hover: #22584d;
+  --ett-button-box-shadow-hover: white;
+  --ett-button-icon-color-hover: #83e2ca;
+  --ett-button-icon-color: var(--nlp-header-button-icon-color);
+
+  /* editor top toolbar: rich text editor toolbar container  */
+  --ett-rich-text-editor-toolbar-background: var(--ett-background-color);
+  --ett-rich-text-editor-toolbar-box-shadow: var(--ett-box-shadow);
+
+
+
+  /* EDITOR BOTTOM TAG BAR ********************************* */
+  /* editor bottom tag bar: container ---------------------- */
+  --ebtb-background-color:#191919;
+  --ebtb-box-shadow: grey;
+
+  /* editor bottom tag bar: tag ---------------------------- */
+  --ebtb-tag-background-color: #4e3f1c;
+  --ebtb-tag-border-color: #ffffff1f;
+  --ebtb-tag-text-shadow: black;
+  --ebtb-tag-text-hover: white;
+
+
+
+  /* OPTIONS PAGE ****************************************** */
+  /* option page: menu ------------------------------------- */
+  --op-menu-text-color: white;
+  --op-menu-background-color: #151b1a;
+  --op-menu-background-color-hover: #009e847a;
+  --op-menu-background-color-selected: #009e84;
+
+  /* option page: content ---------------------------------- */
+  --op-content-background-color: #3b403f;
+  --op-input-text-color: #bdbdbd;
+  --op-dropdown-list-text-color: #bdbdbd;
+  --op-checkbox-checked-filter: hue-rotate(320deg);
+  --op-label-font-size: 14px;
+  --op-button-background-color: #151b1a;
+  --op-button-text-color: #6bbbae;
+  --op-table-container-background-color: #151b1a;
+  --op-table-border-color: #444;
+  --op-table-keyboard-shortcut-background-color: #565656;
+
+  /* option page: plugin ----------------------------------- */
+  --op-plugin-card-background-color: #292929;
+  --op-plugin-card-box-shadow: #151b1a;
+  --op-plugin-switcher-filter: hue-rotate(300deg);
+  --op-plugin-update-button-background-color: #1c3f46;
+  --op-plugin-update-button-box-shadow: #68ffb4;
+
+
+
+/* ********************************************************* */
+/* !!!!!!!!!           ROOT: SECTION END          !!!!!!!!!! */
+/* ********************************************************* */
 
 }
 
+/* ********************************************************* */
+/* !!!!!!!!!    MAIN SOURCE CODE: SECTION START   !!!!!!!!!! */
+/* ********************************************************* */
 /* ********************************************************* */
 /*                  STYLING: MARKDOWN EDITOR                 */
 /* ********************************************************* */
 
-/* GENERAL STYLING ***************************************** */
 
-/* markdown editor background ------------------------------ */
+
+/* GENERAL ************************************************* */
+/* base font:  heading | paragraph | blockquote | list | footnote | sticky notes | custom title block | emphasize | strong | insert | strikethrough | mark | search */
+.CodeMirror-lines .CodeMirror-line * {
+  font-family: var(--base-font) !important;
+  font-size: var(--base-font-size);
+}
+
+/* monospace font:  table | anchor text link | file path link | code block | inline code | katex | html */
+.CodeMirror-lines .CodeMirror-line .cm-url.cm-rm-link,
+.CodeMirror-lines .CodeMirror-line .cm-hr,
+.CodeMirror-lines .CodeMirror-line .cm-tag,
+.CodeMirror-lines .CodeMirror-line .cm-string,
+.CodeMirror-lines .CodeMirror-line .cm-attribute,
+.CodeMirror-lines .CodeMirror-line .cm-image,
+.CodeMirror-lines .CodeMirror-line .cm-atom,
+.CodeMirror-lines .CodeMirror-line .cm-number,
+.CodeMirror-lines .CodeMirror-line .cm-bracket,
+.CodeMirror-lines .CodeMirror-line .cm-rm-link.cm-rm-image,
+.CodeMirror-lines .CodeMirror-line .cm-string.cm-rm-link,
+.CodeMirror-lines .CodeMirror-line .cm-link-text,
+.CodeMirror-lines .CodeMirror-line [class|="cm-katex"],
+.CodeMirror-lines .CodeMirror-line [class|="cm-katex"] ~ .cm-variable-2,
+.CodeMirror-lines .CodeMirror-line .cm-bracket ~ .cm-variable-2,
+.CodeMirror-lines .CodeMirror-line .cm-link-text.cm-em ~ *,
+.CodeMirror-lines .CodeMirror-line .cm-jn-monospace {
+  font-family: var(--monospace-font) !important;
+  font-size: var(--monospace-font-size);
+  line-height: var(--monospace-font-line-height);
+}
+
+/* bigger monospace font:  file path link text | anchor link text | abbreviation text */
+.CodeMirror-lines .CodeMirror-line .cm-rm-link,
+.CodeMirror-lines .CodeMirror-line .cm-em.cm-link-text,
+.CodeMirror-lines .CodeMirror-line .cm-link-text.cm-em ~ * {
+  font-size: var(--bigger-monospace-font-size);
+}
+
+/* markdown editor ----------------------------------------- */
 .resizableLayoutItem.rli-root,
 .codeMirrorEditor {
-  background-color: var(--root-background) !important;
+  background-color: var(--markdown-editor-background-color) !important;
 }
 
-/* content font -------------------------------------------- */
-.codeMirrorEditor > .CodeMirror .CodeMirror-line *,
-.codeMirrorEditor > .CodeMirror .cm-overlay.cm-rm-list-token {
-  font-family: var(--content-font) !important;
-  font-size: var(--content-font-size);
+/* paragraph ----------------------------------------------- */
+.CodeMirror-line span[role="presentation"]:only-child,
+.CodeMirror-line .cm-comment.cm-jn-monospace {
+  color: var(--markdown-editor-text-color);
 }
-.CodeMirror-line span[role="presentation"]:only-child {
-  color: var(--primary-text-color);
-}
-
-/* syntax font --------------------------------------------- */
-.codeMirrorEditor > .CodeMirror .cm-url.cm-rm-link,
-.codeMirrorEditor > .CodeMirror .cm-hr,
-.codeMirrorEditor > .CodeMirror .cm-tag,
-.codeMirrorEditor > .CodeMirror .cm-string,
-.codeMirrorEditor > .CodeMirror .cm-attribute,
-.codeMirrorEditor > .CodeMirror .cm-image,
-.codeMirrorEditor > .CodeMirror .cm-atom,
-.codeMirrorEditor > .CodeMirror .cm-number,
-.codeMirrorEditor > .CodeMirror .cm-bracket,
-.codeMirrorEditor > .CodeMirror .cm-rm-link.cm-rm-image,
-.codeMirrorEditor > .CodeMirror .cm-rm-link,
-.codeMirrorEditor > .CodeMirror .cm-link-text,
-.codeMirrorEditor > .CodeMirror [class|="cm-katex"],
-.codeMirrorEditor > .CodeMirror [class|="cm-katex"] ~ .cm-variable-2,
-.codeMirrorEditor > .CodeMirror .cm-bracket ~ .cm-variable-2,
-.codeMirrorEditor > .CodeMirror .CodeMirror-line .cm-jn-monospace {
-  font-family: var(--syntax-font) !important;
-  font-size: var(--syntax-font-size);
-  line-height: normal;
+.CodeMirror-lines {
+  padding: 0 5px 0 0 !important;
 }
 
-/* bigger syntax font -------------------------------------- */
-.codeMirrorEditor > .CodeMirror .cm-rm-link,
-.codeMirrorEditor > .CodeMirror .cm-em.cm-link-text {
-  font-size: var(--bigger-syntax-font-size);
+/* horizontal line ----------------------------------------- */
+.CodeMirror-line.cm-rm-hr > span,
+.CodeMirror-line.cm-rm-hr {
+  display: inline-block;
+  width: 100%;
+  background: var(--hr-background-gradient);
+  background: var(--switcher-mde-horizontal-line-background-color);
+}
+.CodeMirror-lines .CodeMirror-line .cm-hr {
+  color: var(--hr-text-color);
 }
 
 
 
-/* HEADING ************************************************* */
-.CodeMirror .CodeMirror-line .cm-header {
-  color: var(--heading-text);
-  text-shadow: 0 0 3px var(--heading-text-shadow);
-}
-
+/* HEADINGS ************************************************ */
+/* headings group: h1 to h6 -------------------------------- */
 .CodeMirror-line .cm-header {
-  font-weight: var(--heading-font-weight);
-  line-height: var(--heading-line-height);
+  font-weight: var(--headings-font-weight);
+  line-height: var(--headings-line-height);
+  color: var(--headings-text-color);
+  text-shadow: var(--switcher-mde-headings-text-shadow) var(--headings-text-shadow);
 }
 
+/* h1 ------------------------------------------------------ */
 .CodeMirror-line .cm-header.cm-header-1 {
-  font-size: var(--h1-heading-size);
-  font-variant: small-caps;
+  font-size: var(--h1-font-size);
+  font-variant: var(--switcher-mde-h1-font-variant);
+  color: var(--h1-text-color);
+  text-shadow: var(--switcher-mde-headings-text-shadow) var(--h1-text-shadow);
 }
 
+/* h2 ------------------------------------------------------ */
 .CodeMirror-line .cm-header.cm-header-2 {
-  font-size: var(--h2-heading-size);
+  font-size: var(--h2-font-size);
+  color: var(--h2-text-color);
+  text-shadow: var(--switcher-mde-headings-text-shadow) var(--h2-text-shadow);
 }
 
+/* h3 ------------------------------------------------------ */
 .CodeMirror-line .cm-header.cm-header-3 {
-  font-size: var(--h3-heading-size);
+  font-size: var(--h3-font-size);
+  color: var(--h3-text-color);
+  text-shadow: var(--switcher-mde-headings-text-shadow) var(--h3-text-shadow);
 }
 
-.CodeMirror-line .cm-header.cm-header-4,
+/* h4 ------------------------------------------------------ */
+.CodeMirror-line .cm-header.cm-header-4 {
+  font-size: var(--h4-font-size);
+  color: var(--h4-text-color);
+  text-shadow: var(--switcher-mde-headings-text-shadow) var(--h4-text-shadow);
+}
+
+/* h5 ------------------------------------------------------ */
 .CodeMirror-line .cm-header.cm-header-5 {
-  font-size: var(--h4-h5-heading-size);
+  font-size: var(--h5-font-size);
+  color: var(--h5-text-color);
+  text-shadow: var(--switcher-mde-headings-text-shadow) var(--h5-text-shadow);
 }
 
+/* h6 ------------------------------------------------------ */
 .CodeMirror-line .cm-header.cm-header-6 {
-  font-size: var(--h6-heading-size);
+  font-size: var(--h6-font-size);
+  color: var(--h6-text-color);
+  text-shadow: var(--switcher-mde-headings-text-shadow) var(--h6-text-shadow);
 }
 
 
 
 /* SPECIAL TEXT ******************************************** */
-
-/* group:  mark | search | emphasize | strong | abbreviation */
-.cm-search-marker,
-.cm-em:not(.cm-image-alt-text),
-.cm-strong {
-  border: 1px solid var(--special-text-border) !important;
-  border-radius: 1em;
-  padding: 0 8px;
+/* special text group:  mark | search | emphasize | abbreviation | strong | insert | strikethrough | inline code text */
+/* .CodeMirror-lines .CodeMirror-line .cm-rm-highlight, */
+.CodeMirror-lines .CodeMirror-line .cm-link-text.cm-em,
+.CodeMirror-lines .CodeMirror-line .cm-link-text.cm-em ~ *,
+.CodeMirror-lines .CodeMirror-line .cm-rm-ins {
+  color: var(--special-text-color);
+  border-width: 0 0 1px 0;
+  border-style: dotted;
+  border-color: var(--special-text-border-color);
+  background: none;
+  text-decoration: none;
 }
 
-/* group:  mark | search ----------------------------------- */
-.cm-overlay.cm-search-marker {
-  color: var(--mark-text) !important;
-  background: var(--mark-text-background) !important;
+/* mark text ----------------------------------------------- */
+.CodeMirror-lines .CodeMirror-line .cm-rm-highlight {
+  color: var(--mark-text-color);
+  background: #0d4a32;
 }
 
 /* search text --------------------------------------------- */
-.cm-overlay.cm-search-marker-selected {
-  font-weight: 600;
-  color: var(--search-text-selected) !important;
-  border: 2px dotted var(--search-text-selected-border) !important;
-  z-index: 1;
-}
-
-/* search marker on scrollbar */
-.cm-search-marker-scrollbar {
-  background: var(--search-marker-scrollbar) !important;
+.CodeMirror-lines .CodeMirror-line .cm-search-marker,
+.CodeMirror-lines .CodeMirror-line .cm-search-marker-selected {
+  padding: 2px 6px !important;
+  margin: 0 3px !important;
+  color: var(--search-text-color) !important;
+  border-radius: 1em;
+  background: inherit !important;
+  box-shadow: 0 0 3px var(--search-text-box-shadow) !important;
   opacity: 1;
 }
-.CodeMirror-line .cm-header[class*="cm-search"] {
-  text-shadow: none;
+.CodeMirror-lines .CodeMirror-line .cm-search-marker-selected {
+  border: 3px solid var(--search-text-border-color-selected);
+}
+/* search text - scrollbar search marker ------------------- */
+.cm-search-marker-scrollbar {
+  height: 1px !important;
+  background: var(--search-text-scrollbar-marker-background-color) !important;
+  opacity: 0.5;
 }
 
-/* group:  emphasize | abbreviation ------------------------ */
-.cm-em:not(.cm-image-alt-text) {
-  color: var(--emphasize-text) !important;
+/* text group:  emphasize | abbreviation ------------------- */
+/* joplin didn't provide an independent abbreviation text css class on markdown editor */
+.CodeMirror-lines .CodeMirror-line .cm-em:not(.cm-image-alt-text) {
+  color: var(--emphasize-text-color) !important;
+  border-color: var(--emphasize-text-border-color) !important;
 }
 
 /* strong text --------------------------------------------- */
-.cm-strong {
-  color: var(--strong-text) !important;
-}
-
-/* insert text --------------------------------------------- */
-.cm-rm-ins {
-  color: var(--insert-text) !important;
+.CodeMirror-lines .CodeMirror-line .cm-strong {
+  color: var(--strong-text-color) !important;
+  border-color: var(--strong-text-border-color) !important;
 }
 
 /* strikethrough text -------------------------------------- */
-.cm-strikethrough {
-  color: var(--strikethrough-text) !important;
+.CodeMirror-lines .CodeMirror-line .cm-strikethrough {
+  color: var(--strikethrough-text-color) !important;
+  border-color: none !important;
+  text-decoration: line-through !important;
+}
+
+/* insert text --------------------------------------------- */
+.CodeMirror-lines .CodeMirror-line .cm-rm-ins {
+  color: var(--insert-text-color) !important;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: var(--insert-text-border-color) !important;
+}
+
+/* inline code text ---------------------------------------- */
+.CodeMirror-lines .CodeMirror-line .cm-comment.cm-jn-inline-code {
+  color: var(--inline-code-text-color) !important;
+  border: 1px solid var(--inline-code-text-border-color) !important;
+  background: var(--inline-code-text-background-color) !important;
+  text-shadow: 1px 1px 2px var(--inline-code-text-shadow);
 }
 
 
 
-/* SYNTAX:  MATH | HTML ************************************ */
-.CodeMirror .CodeMirror-line .cm-tag:not(.cm-jn-monospace),
-.CodeMirror .CodeMirror-line .cm-number:not(.cm-jn-monospace) {
-  color: var(--syntax-tag);
-  background: var(--syntax-tag-background);
+/* SYNTAX ************************************************** */
+/* syntax tag ---------------------------------------------- */
+.CodeMirror-lines .CodeMirror-line .cm-tag:not(.cm-jn-monospace),
+.CodeMirror-lines .CodeMirror-line .cm-number:not(.cm-jn-monospace) {
+  color: var(--syntax-tag-text-color);
+  background: var(--syntax-tag-background-color);
 }
 
-.CodeMirror .CodeMirror-line .cm-string:not(.cm-url):not(.cm-jn-monospace),
-.CodeMirror .CodeMirror-line .cm-string.cm-rm-image:not(.cm-rm-link):not(.cm-jn-monospace) {
-  color: var(--syntax-string);
-  background: var(--syntax-string-background);
+/* syntax string ------------------------------------------- */
+.CodeMirror-lines .CodeMirror-line .cm-string:not(.cm-url):not(.cm-jn-monospace),
+.CodeMirror-lines .CodeMirror-line .cm-string.cm-rm-image:not(.cm-rm-link):not(.cm-jn-monospace) {
+  color: var(--syntax-string-text-color);
+  background: var(--syntax-string-background-color);
 }
 
-.CodeMirror .CodeMirror-line .cm-attribute:not(.cm-jn-monospace) {
-  color: var(--syntax-attribute);
-  background: var(--syntax-attribute-background);
-}
-
-
-
-/* PLUGIN: MARKDOWN TABLE COLORIZE ************************* */
-.CodeMirror .CodeMirror-line [class*="cm-tabcolor-col"] {
-  background: none;
-}
-
-/* table vertical bar -------------------------------------- */
-.CodeMirror .CodeMirror-line .cm-tabcolor-pipe {
-  color: var(--mtc-table-vertical-bar);
-}
-
-/* table text ---------------------------------------------- */
-.CodeMirror .CodeMirror-line [class*="cm-tabcolor-col"]:not(.cm-tabcolor-pipe) {
-  font-weight: normal;
-  color: var(--mtc-table-text);
-}
-
-/* table row separate -------------------------------------- */
-.cm-tabcolor-firstch::before,
-.cm-tabcolor-row.cm-tabcolor-firstch::before {
-  display: block;
-  margin: 5px 2px;
-  font-weight: 100;
-  font-size: 9px;
-  color: var(--mtc-table-row-separate-text);
-  background: var(--mtc-table-row-separate-background);
-  box-shadow: 0 0 1px var(--mtc-table-row-separate-shadow);
-}
-.cm-tabcolor-firstch::before {
-  content: " H E A D E R > ";
-}
-.cm-tabcolor-row.cm-tabcolor-firstch::before {
-  content: " R O W > ";
-}
-/* table row separate hover -------------------------------- */
-.CodeMirror-line:hover .cm-tabcolor-firstch::before {
-  filter: var(--mtc-table-row-separate-hover);
-  transition: filter 0.3s;
-}
-
-/* table column mark --------------------------------------- */
-[class*="cm-tabcolor-col"].cm-tabcolor-pipe::after {
-  content: "";
-  position: initial;
-  display: inline-block;
-  padding: 1px;
-  margin: 0 5px 0 0;
-  font-weight: 100;
-  font-size: 9px;
-  background: var(--mtc-table-column-mark-background);
-  border-radius: 2px;
-}
-.CodeMirror-line .cm-tabcolor-pipe:last-child::after {
-  display: none;
-}
-
-.CodeMirror-line:hover .cm-tabcolor-pipe::after {
-  filter: var(--mtc-table-column-mark-hover);
-  transition: filter 0.3s;
-}
-
-/* table column mark color --------------------------------- */
-[class*="cm-tabcolor-col"].cm-tabcolor-firstch::after {
-  content: "A:";
-  color: var(--mtc-table-col0-mark);
-}
-
-.cm-tabcolor-col1.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "B:";
-  color: var(--mtc-table-col1-mark);
-}
-
-.cm-tabcolor-col2.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "C:";
-  color: var(--mtc-table-col2-mark);
-}
-
-.cm-tabcolor-col3.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "D:";
-  color: var(--mtc-table-col3-mark);
-}
-
-.cm-tabcolor-col4.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "E:";
-  color: var(--mtc-table-col4-mark);
-}
-
-.cm-tabcolor-col5.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "F:";
-  color: var(--mtc-table-col5-mark);
-}
-
-.cm-tabcolor-col6.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "G:";
-  color: var(--mtc-table-col6-mark);
-}
-
-.cm-tabcolor-col7.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "H:";
-  color: var(--mtc-table-col7-mark);
-}
-
-.cm-tabcolor-col8.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "I:";
-  color: var(--mtc-table-col8-mark);
-}
-
-.cm-tabcolor-col9.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "J:";
-  color: var(--mtc-table-col9-mark);
-}
-
-.cm-tabcolor-col10.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
-.cm-tabcolor-col11.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
-.cm-tabcolor-col12.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
-.cm-tabcolor-col13.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
-.cm-tabcolor-col14.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
-.cm-tabcolor-col15.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
-.cm-tabcolor-col16.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
-.cm-tabcolor-col17.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
-.cm-tabcolor-col18.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
-.cm-tabcolor-col19.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  border: 1px solid var(--mtc-table-column-mark-border);
-}
-
-.cm-tabcolor-col10.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "K:";
-  color: var(--mtc-table-col10-mark);
-}
-
-.cm-tabcolor-col11.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "L:";
-  color: var(--mtc-table-col11-mark);
-}
-
-.cm-tabcolor-col12.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "M:";
-  color: var(--mtc-table-col12-mark);
-}
-
-.cm-tabcolor-col13.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "N:";
-  color: var(--mtc-table-col13-mark);
-}
-
-.cm-tabcolor-col14.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "O:";
-  color: var(--mtc-table-col14-mark);
-}
-
-.cm-tabcolor-col15.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "P:";
-  color: var(--mtc-table-col15-mark);
-}
-
-.cm-tabcolor-col16.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "Q:";
-  color: var(--mtc-table-col16-mark);
-}
-
-.cm-tabcolor-col17.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "R:";
-  color: var(--mtc-table-col17-mark);
-}
-
-.cm-tabcolor-col18.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "S:";
-  color: var(--mtc-table-col18-mark);
-}
-
-.cm-tabcolor-col19.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
-  content: "T:";
-  color: var(--mtc-table-col19-mark);
-}
-
-
-
-/* LIST **************************************************** */
-.CodeMirror .CodeMirror-line .cm-variable-2,
-.CodeMirror .CodeMirror-line .cm-variable-3,
-.CodeMirror .CodeMirror-line .cm-keyword {
-  color: var(--list-text);
-}
-
-.cm-variable-2.cm-overlay.cm-rm-list-token,
-.cm-variable-3.cm-overlay.cm-rm-list-token,
-.cm-keyword.cm-overlay.cm-rm-list-token {
-  color: var(--list-token);
+/* syntax attribute ---------------------------------------- */
+.CodeMirror-lines .CodeMirror-line .cm-attribute:not(.cm-jn-monospace) {
+  color: var(--syntax-attribute-text-color);
+  background: var(--syntax-attribute-background-color);
 }
 
 
@@ -585,38 +665,43 @@
 .CodeMirror .CodeMirror-line .cm-rm-link,
 .CodeMirror .CodeMirror-line .cm-url,
 .CodeMirror .CodeMirror-line .cm-link-text {
-  color: var(--link-text);
+  color: var(--link-text-color);
+}
+
+
+
+/* LIST **************************************************** */
+.CodeMirror .CodeMirror-line .cm-variable-2,
+.CodeMirror .CodeMirror-line .cm-variable-3,
+.CodeMirror .CodeMirror-line .cm-keyword {
+  color: var(--list-text-color);
+}
+.cm-variable-2.cm-overlay.cm-rm-list-token,
+.cm-variable-3.cm-overlay.cm-rm-list-token,
+.cm-keyword.cm-overlay.cm-rm-list-token {
+  color: var(--list-token-color);
 }
 
 
 
 /* BLOCKQUOTE ********************************************** */
 .CodeMirror .CodeMirror-line .cm-quote {
-  color: var(--blockquote-text);
+  color: var(--blockquote-text-color);
   opacity: 1;
 }
 
 
 
-/* CODE BLOCK & INLINE CODE ******************************** */
+/* CODE BLOCK ********************************************** */
 .CodeMirror .cm-jn-code-block-background.CodeMirror-linebackground {
-  background: var(--code-block-background);
+  background: var(--codeblock-background-color);
+  margin-right: -2px;
 }
 
 /* code block text ----------------------------------------- */
-.CodeMirror-line > span > .cm-comment:not(.cm-jn-inline-code) {
-  color: var(--code-block-text);
-}
+
 .cm-jn-code-block > span {
   filter: grayscale(0.1);
-}
-
-/* inline code text ---------------------------------------- */
-.CodeMirror-line > span > .cm-comment.cm-jn-inline-code {
-  color: var(--inline-code-text);
-  padding: 0 5px;
-  border-color: var(--inline-code-border) !important;
-  background: none !important;
 }
 
 
@@ -641,9 +726,9 @@
 span[cm-text]:only-child::after {
   content: " ";
   position: absolute;
+  display: var(--switcher-mde-abstract-content-bar-display);
   top: 0px;
-  right: 0px;
-  display: var(--abstract-content-bar);
+  right: -4px;
   width: 2px;
   height: 100%;
 }
@@ -654,21 +739,21 @@ span[cm-text]:only-child::after {
   z-index: 1;
 }
 
-/* headings ------------------------------------------------ */
+/* heading ------------------------------------------------- */
 .cm-header::after {
-  background: var(--acb-headings);
+  background: var(--acb-heading);
   z-index: 2;
-}
-
-/* blockquote ---------------------------------------------- */
-.cm-quote::after {
-  background: var(--acb-block-quote);
-  z-index: 3;
 }
 
 /* ordered list & unordered list --------------------------- */
 .cm-rm-list-token::after {
   background: var(--acb-list);
+  z-index: 3;
+}
+
+/* blockquote ---------------------------------------------- */
+.cm-quote::after {
+  background: var(--acb-blockquote);
   z-index: 4;
 }
 
@@ -685,14 +770,14 @@ span[cm-text]:only-child::after {
 }
 
 /* footnote ------------------------------------------------ */
-.cm-link-text::after {
+.cm-link-text:not(.cm-variable-2)::after {
   background: var(--acb-footnote);
   z-index: 7;
 }
 
 /* simple link & anchor text link & file path link --------- */
 .cm-overlay.cm-rm-link::after {
-  background: var(--acb-links);
+  background: var(--acb-link);
   z-index: 8;
 }
 
@@ -704,8 +789,10 @@ span[cm-text]:only-child::after {
 
 /* html tag ------------------------------------------------ */
 .cm-tag::after {
-  background: var(--acb-html-tags);
+  background: var(--acb-html-tag);
   z-index: 10;
+/*   height: 2em !important; */
+  max-height: 26px;
 }
 
 /* math notation ------------------------------------------- */
@@ -713,7 +800,7 @@ span[cm-text]:only-child::after {
 .cm-katex-marker-close::after,
 .cm-rm-sup::after,
 .cm-number:not(.cm-jn-monospace)::after {
-  background: var(--acb-math-notation);
+  background: var(--acb-katex);
   z-index: 11;
 }
 
@@ -723,17 +810,189 @@ span[cm-text]:only-child::after {
   z-index: 12;
 }
 
-/* code block ---------------------------------------------- */
+/* codeblock ----------------------------------------------- */
 .cm-jn-code-block.CodeMirror-line::after {
-  background: var(--acb-code-block);
+  background: var(--acb-codeblock);
   z-index: 13;
 }
 
 /* blank line ---------------------------------------------- */
 span[cm-text]:only-child::after {
-  display: var(--abstract-content-bar-blank-line);
+  display: var(--switcher-mde-abstract-content-bar-blank-line-display);
   background: var(--acb-blank-line);
   z-index: 14;
+}
+
+
+
+/* PLUGIN: MARKDOWN TABLE COLORIZE ************************* */
+/* markdown table colorize: caret -------------------------- */
+.CodeMirror-lines .CodeMirror-line [class*="cm-tabcolor-col"] {
+  caret-color: var(--mtc-table-caret-color);
+  /* disable original text background color */
+  background: none;
+}
+
+/* markdown table colorize: table vertical bar ------------- */
+.CodeMirror-lines .CodeMirror-line .cm-tabcolor-pipe {
+  color: var(--mtc-table-vertical-bar-color) !important;
+}
+
+/* markdown table colorize: table text --------------------- */
+.CodeMirror-lines .CodeMirror-line [class*="cm-tabcolor-col"]:not(.cm-tabcolor-pipe) {
+  font-weight: normal;
+  color: var(--mtc-table-text-color) !important;
+}
+
+/* markdown table colorize: table separate group: header | row */
+.cm-tabcolor-firstch::before,
+.cm-tabcolor-row.cm-tabcolor-firstch::before {
+  display: block;
+  font-family: var(--base-font);
+  margin: 10px 0 1px 0;
+  width: 100%;
+  height: fit-content;
+  color: var(--mtc-table-separate-text-color);
+  border-radius: 2px;
+  text-shadow: 0 0 2px var(--mtc-table-separate-text-shadow);
+}
+
+/* markdown table colorize: table separate header ---------- */
+.cm-tabcolor-firstch::before {
+  content: "    H E A D E R > ";
+  padding: 3px 0;
+  font-size: 10px;
+  background-image: var(--mtc-table-separate-header-background-color);
+}
+
+/* markdown table colorize: table separate row ------------- */
+.cm-tabcolor-row.cm-tabcolor-firstch::before {
+  content: "     R O W >";
+  padding: 2px 0 1px 0;
+  font-weight: 400;
+  font-size: 8px;
+  background-image: var(--mtc-table-separate-row-background-color);
+}
+
+/* markdown table colorize: table separate hover ----------- */
+.CodeMirror-line:hover .cm-tabcolor-firstch::before {
+  filter: brightness(160%);
+  transition: filter 0.3s;
+}
+
+/* markdown table colorize: table column mark -------------- */
+/* table column mark group --------------------------------- */
+[class*="cm-tabcolor-col"].cm-tabcolor-pipe::after {
+  content: "";
+  position: initial;
+  display: inline-block;
+  padding: 1px;
+  margin: 0 5px 0 0;
+  font-weight: 100;
+  font-size: 9px;
+  background: var(--mtc-table-column-mark-background-color);
+  border-radius: 2px;
+}
+.CodeMirror-line .cm-tabcolor-pipe:last-child::after {
+  display: none;
+}
+.CodeMirror-line:hover .cm-tabcolor-pipe::after {
+  filter: brightness(170%);
+  transition: filter 0.3s;
+}
+
+/* standalone table column mark ---------------------------- */
+[class*="cm-tabcolor-col"].cm-tabcolor-firstch::after {
+  content: "A:";
+  color: var(--mtc-table-col0-mark-color);
+}
+.cm-tabcolor-col1.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "B:";
+  color: var(--mtc-table-col1-mark-color);
+}
+.cm-tabcolor-col2.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "C:";
+  color: var(--mtc-table-col2-mark-color);
+}
+.cm-tabcolor-col3.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "D:";
+  color: var(--mtc-table-col3-mark-color);
+}
+.cm-tabcolor-col4.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "E:";
+  color: var(--mtc-table-col4-mark-color);
+}
+.cm-tabcolor-col5.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "F:";
+  color: var(--mtc-table-col5-mark-color);
+}
+.cm-tabcolor-col6.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "G:";
+  color: var(--mtc-table-col6-mark-color);
+}
+.cm-tabcolor-col7.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "H:";
+  color: var(--mtc-table-col7-mark-color);
+}
+.cm-tabcolor-col8.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "I:";
+  color: var(--mtc-table-col8-mark-color);
+}
+.cm-tabcolor-col9.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "J:";
+  color: var(--mtc-table-col9-mark-color);
+}
+.cm-tabcolor-col10.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+.cm-tabcolor-col11.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+.cm-tabcolor-col12.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+.cm-tabcolor-col13.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+.cm-tabcolor-col14.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+.cm-tabcolor-col15.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+.cm-tabcolor-col16.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+.cm-tabcolor-col17.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+.cm-tabcolor-col18.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after,
+.cm-tabcolor-col19.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  border: 1px solid var(--mtc-table-column-mark-border-color);
+}
+.cm-tabcolor-col10.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "K:";
+  color: var(--mtc-table-col10-mark-color);
+}
+.cm-tabcolor-col11.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "L:";
+  color: var(--mtc-table-col11-mark-color);
+}
+.cm-tabcolor-col12.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "M:";
+  color: var(--mtc-table-col12-mark-color);
+}
+.cm-tabcolor-col13.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "N:";
+  color: var(--mtc-table-col13-mark-color);
+}
+.cm-tabcolor-col14.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "O:";
+  color: var(--mtc-table-col14-mark-color);
+}
+.cm-tabcolor-col15.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "P:";
+  color: var(--mtc-table-col15-mark-color);
+}
+.cm-tabcolor-col16.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "Q:";
+  color: var(--mtc-table-col16-mark-color);
+}
+.cm-tabcolor-col17.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "R:";
+  color: var(--mtc-table-col17-mark-color);
+}
+.cm-tabcolor-col18.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "S:";
+  color: var(--mtc-table-col18-mark-color);
+}
+.cm-tabcolor-col19.cm-tabcolor-pipe:not(.cm-tabcolor-firstch)::after {
+  content: "T:";
+  color: var(--mtc-table-col19-mark-color);
 }
 
 
@@ -742,65 +1001,98 @@ span[cm-text]:only-child::after {
 /*                     STYLING: JOPLIN UI                    */
 /* ********************************************************* */
 
-/* STYLING: NOTEBOOKS PANEL ******************************** */
+
+
+/* GENERAL ************************************************* */
+body {
+  background: var(--general-body-background-color);
+}
+
+/* NOTEBOOK PANEL ****************************************** */
+/* notebook panel: container ------------------------------- */
 .sidebar {
-  background-color: var(--np-background) !important;
   border-radius: 0 0 7px 7px;
+  background-color: var(--np-background-color) !important;
   box-shadow: 0 0 2px var(--np-box-shadow);
 }
 
-/* notebooks panel header ---------------------------------- */
-/* group:  notebook icon | text | plus icon */
+/* notebook panel: header ---------------------------------- */
+/* group:  notebook icon | text | plus icon ---------------- */
 .sidebar > div:first-child > div:first-child > div > .icon-notebooks,
 .sidebar > div:first-child > div:first-child > div > .icon-notebooks ~ span,
 .sidebar > div:first-child > div:first-child > button > span {
-  color: var(--np-header) !important;
+  color: var(--np-header-text-color) !important;
 }
 
-/* hiding the "All Notes" link ----------------------------- */
-.all-notes {
-  display: var(--all-note-button) !important;
+/* notebook panel: the "All Notes" button ------------------ */
+.sidebar .all-notes {
+  display: var(--switcher-jui-all-note-button-display) !important;
 }
 
-/* directory icon ------------------------------------------ */
+/* notebook panel: directory icon -------------------------- */
 i.fas.fa-caret-down,
 i.fas.fa-caret-right {
+  padding: 0 0 7px 0;
   text-shadow: 0 0 5px var(--np-directory-icon-shadow);
   opacity: 1 !important;
 }
 i.fas.fa-caret-right {
-  color: var(--np-directory-icon-close);
+  color: var(--np-directory-icon-closed-color);
 }
 i.fas.fa-caret-down {
-  color: var(--np-directory-icon-open);
+  color: var(--np-directory-icon-opened-color);
 }
 
-/* notebooks ----------------------------------------------- */
-.rli-sideBar .tags .list-item-container,
-.rli-sideBar [class*="list-item-depth"] {
-  margin: 0 3px;
+/* notebook panel: body container -------------------------- */
+.rli-sideBar .list-item-container,
+.rli-noteList .tags .list-item-container {
+  width: calc(100% - 4px);
+  height: auto;
+  margin: 0 2px;
+  padding: 6px 0 0 0;
 }
 
-/* notebooks hover state ----------------------------------- */
-.rli-sideBar .tags .list-item-container,
-.rli-sideBar [class*="list-item-depth"],
-.rli-sideBar [class*="list-item-depth"]:hover {
-  height: fit-content;
-  border-radius: 5px 10px !important;
+/* notebook panel: notebook item --------------------------- */
+.list-item-container .list-item {
+  display: flex;
+  padding: 0 0 6px 0;
+  width: inherit;
+  border-bottom: 2px dotted var(--np-notebook-item-border-color);
 }
+.list-item-container .list-item > .title {
+  width: 100%;
+  color: var(--np-notebook-item-text-color);
+  line-height: normal !important;
+  font-size: 13px;
+  white-space: var(--switcher-jui-notebook-panel-notebook-item-wrap);
+  overflow-y: scroll;
+}
+.list-item-container .list-item > .title::-webkit-scrollbar {
+  height: 1px;
+}
+.list-item-container .list-item > .title::-webkit-scrollbar-thumb {
+  background: var(--np-notebook-item-scrollbar-color);
+}
+
+/* notebook panel: notebooks item hover -------------------- */
 .rli-sideBar .tags .list-item-container:hover,
-.rli-sideBar [class*="list-item-depth"]:hover {
-  filter: var(--np-notebook-hover);
+.rli-sideBar .list-item-container:hover {
+  width: calc(100% - 4px);
+  border-radius: 4px 10px !important;
+  background: #013f7466;
+  filter: hue-rotate(180deg);
 }
 
-/* notebooks selected state--------------------------------- */
+/* notebook panel: notebook item selected ------------------ */
 .rli-sideBar .tags .list-item-container.selected,
 .rli-sideBar [class*="list-item-depth"].selected {
-  background: var(--np-notebook-selected);
-  box-shadow: 0 0 3px var(--np-notebook-selected-box-shadow);
+  width: calc(100% - 4px);
+  border-radius: 4px 10px !important;
+  background: var(--np-notebook-item-background-color-selected);
+  box-shadow: 0 0 3px var(--np-notebook-item-box-shadow-selected);
 }
 
-/* notebook title indentation ------------------------------ */
+/* notebook panel: notebook item indentation --------------- */
 .rli-sideBar .list-item-depth-0 {
   padding-left: 11px;
 }
@@ -834,63 +1126,71 @@ i.fas.fa-caret-down {
 .rli-sideBar .list-item-depth-10 {
   padding-left: 121px;
 }
-
-/* notebook title ------------------------------------------ */
-div.list-item-container a.list-item {
-  display: flex;
-  flex-direction: row;
-  padding: 4px 0;
-  margin: 1px auto;
-  max-width: 90%;
-  min-height: 25px;
-  border-bottom: 2px dotted var(--np-notebook-title-border);
+.rli-sideBar .list-item-depth-11 {
+  padding-left: 132px;
+}
+.rli-sideBar .list-item-depth-12 {
+  padding-left: 143px;
+}
+.rli-sideBar .list-item-depth-13 {
+  padding-left: 154px;
+}
+.rli-sideBar .list-item-depth-14 {
+  padding-left: 165px;
+}
+.rli-sideBar .list-item-depth-15 {
+  padding-left: 176px;
 }
 
-/* notebook title text ------------------------------------- */
-.rli-sideBar [class*="list-item-depth"] span.title {
-  color: var(--np-notebook-title-text);
-  max-width: 80%;
-  line-height: normal !important;
-  white-space: normal;
-  overflow-wrap: break-word;
-}
-
-/* note count label ---------------------------------------- */
-.note-count-label.ihcmBd {
-  padding-left: 0;
-}
-.ihcmBd.note-count-label {
-  display: flex;
+/* notebook panel: note count label ------------------------ */
+.rli-sideBar .note-count-label {
+  position: -webkit-sticky;
+  position: sticky;
+  right: 6px;
   font-size: 10px;
-  margin: 0 0 0 auto;
-  padding: 0 5px;
-  background: var(--np-note-count-label-background);
-  border: 1px solid var(--np-note-count-label-border);
-  border-radius: 8px;
-  opacity: 0.8 !important;
+  margin: auto 0 auto 15px;
+  padding: 1px 6px;
+  font-weight: 700;
+  color: var(--np-note-count-label-text-color);
+  background: var(--np-note-count-label-background-color);
+  border-radius: 200px;
+  box-shadow: 0 0 2px var(--np-note-count-label-box-shadow);
+  opacity: 1 !important;
 }
 
-/* synchronize information --------------------------------- */
-.sc-fzoxKX {
-  color: var(--np-sync-info-text) !important;
+/* notebook panel: synchronize information text ------------ */
+.rli-sideBar .sidebar > div:last-child > div > div {
+  color: var(--np-sync-info-text-color) !important;
 }
 
-/* synchronize btn ----------------------------------------- */
+/* notebook panel: synchronize button ---------------------- */
 .sidebar > div > button,
 .sidebar > div > button:hover {
-  height: 25px;
+  height: 23px;
   font-size: 14px;
-  min-height: 25px;
-  max-height: 30px;
-  background-color: var(--np-sync-button) !important;
+  min-height: 23px;
+  max-height: 23px;
+  background-color: var(--np-sync-button-background-color) !important;
   border: none !important;
   border-radius: 1em !important;
+  box-shadow: 0 0 2px var(--np-sync-button-box-shadow);
 }
 .sidebar > div > button:hover {
-  filter: var(--np-sync-btn-hover);
+  background: var(--np-sync-button-background-color-hover) !important;
+  box-shadow: 0 0 2px var(--np-sync-button-box-shadow-hover);
+  transition: background 0.5s, box-shadow 0.5s;
+}
+.sidebar button > .icon-sync ~ span,
+.sidebar button > .icon-sync::before {
+  color: var(--np-sync-button-text-color);
+}
+.sidebar button:hover > .icon-sync ~ span,
+.sidebar button:hover > .icon-sync::before {
+  color: var(--np-sync-button-text-color-hover);
+  transition: color 1s;
 }
 
-/* turbo sync (for fun) ------------------------------------ */
+/* notebook panel: synchronize button icon ----------------- */
 .icon-sync {
   font-size: 18px;
   text-shadow: none;
@@ -899,7 +1199,7 @@ div.list-item-container a.list-item {
 }
 .sidebar > div > button:hover .icon-sync {
   font-size: 21px;
-  text-shadow: 0 0 5px var(--np-turbo-sync-icon-lightspeed-hover) !important;
+  text-shadow: 0 0 6px var(--np-sync-button-icon-shadow-hover) !important;
   transform: rotateZ(11000deg);
   -webkit-transition: transform 10s, font-size 1s, text-shadow 3s;
   transition: transform 10s, font-size 1s, text-shadow 3s;
@@ -907,238 +1207,420 @@ div.list-item-container a.list-item {
 
 
 
-/* STYLING: NOTE LIST PANEL ******************************** */
-
-/* note list panel container ------------------------------- */
+/* NOTELIST PANEL ****************************************** */
+/* notelist panel container -------------------------------- */
 .rli-noteList > div {
   box-shadow: 0 0 2px var(--nlp-box-shadow);
   border-radius: 7px;
 }
 
-/* note list panel header ---------------------------------- */
+/* notelist panel: header container ------------------------ */
 .rli-noteList > div > div > div {
-  background-color: var(--nlp-header) !important;
+  margin: 1px;
+  background-color: var(--nlp-header-background-color);
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 0 2px var(--nlp-header-box-shadow);
 }
 
-/* icon group:  search | cancel | new todo | new note ------ */
-.fa-check-square:before,
-.icon-note:before,
-.search-bar > div > button > span {
-  color: var(--nlp-btn-icons);
-}
-.search-bar > div > button > span:not(.icon-search) {
-  transform: rotateZ(0deg);
-  font-size: 1.3em;
-  -webkit-transition: transform 0.5s, font-size 0.5s;
-  transition: transform 0.5s, font-size 0.5s;
-}
-.search-bar > div > button > span:not(.icon-search):hover {
-  transform: rotateZ(360deg);
-  font-size: 1.6em;
-  -webkit-transition: transform 0.2s, font-size 0.2s;
-  transition: transform 0.2s, font-size 0.2s;
-}
-/* icon group: sorting icons ------------------------------- */
-.rli-noteList > div > div > div > div > button > span:not(.fa-check-square):not(.icon-note) {
-  color: var(--nlp-btn-icons);
-  font-size: 14px;
+/* notelist panel: disable official button hover effects --- */
+.dGfgOy:hover,
+.dGfgOy:active {
+  background: none;
 }
 
-/* button group:  new todo | new note ---------------------- */
-button[title="New to-do"],
-button[title="New note"],
-button[title="New to-do"]:hover,
-button[title="New note"]:hover {
-  background: var(--nlp-btns);
-  border-radius: 5px 10px;
+/* notelist panel: header search bar ----------------------- */
+.rli-noteList .search-bar > div > input {
+  background: var(--nlp-header-search-bar-background-color);
+  border: 0;
+  box-shadow: 0 0 2px var(--nlp-header-search-bar-box-shadow);
+  border-radius: 4px 8px !important;
 }
-button[title="New to-do"]:hover,
-button[title="New note"]:hover {
-  filter: var(--nlp-btns-hover);
+.rli-noteList .search-bar > div > input::placeholder {
+  color: var(--nlp-header-search-bar-placeholder-text-color);
 }
 
-/* note list panel body ------------------------------------ */
-.rli-noteList > div > div > div,
-.note-list {
-  background: var(--nlp-body) !important;
-  border: none !important;
-  border-radius: 0 0 7px 7px !important;
+/* notelist panel: header search bar hover ----------------- */
+.rli-noteList .search-bar > div > input:hover,
+.rli-noteList .search-bar > div > input:focus {
+  box-shadow: 0 0 4px var(--nlp-header-search-bar-box-shadow-hover);
+  transition: box-shadow 0.7s;
 }
-.note-list-item {
+
+/* notelist panel: header button --------------------------- */
+/* button group: sort field | sort reverse | todo | note --- */
+.rli-noteList button:not(.search-bar > div > input ~ button) {
+  background: var(--nlp-header-button-background-color);
+  border: 0;
+  box-shadow: 0 0 2px var(--nlp-header-button-box-shadow);
+  border-radius: 4px 8px;
+}
+
+/* notelist panel: header button hover --------------------- */
+.rli-noteList button:not(.search-bar > div > input ~ button):hover {
+  background: var(--nlp-header-button-background-color-hover);
+  box-shadow: 0 0 4px var(--nlp-header-button-box-shadow-hover);
+  transition: background 0.5s, box-shadow 0.7s;
+}
+/* sort order field button --------------------------------- */
+.rli-noteList > div > div > div > div > .sort-order-field-button {
+  border-radius: 4px 0 0 4px;
+}
+/* sort order reverse button ------------------------------- */
+.rli-noteList > div > div > div > div > .sort-order-reverse-button {
+  border-radius: 0 4px 4px 0;
+}
+/* button icon group:  search | cancel | sort field | sort reverse | todo | note */
+.icon-search::before,
+.fa-font::before,
+.fa-long-arrow-alt-down::before,
+.icon-note::before,
+.fa-check-square::before,
+.fa-times::before {
+  color: var(--nlp-header-button-icon-color);
+}
+/* button icon group hover --------------------------------- */
+.rli-noteList .search-bar > div > button:hover > .icon-search::before,
+.rli-noteList button:hover > .fa-font::before,
+.rli-noteList button:hover > .fa-long-arrow-alt-down::before,
+.rli-noteList button:hover > .icon-note::before,
+.rli-noteList button:hover > .fa-check-square::before,
+.rli-noteList button:hover > .fa-times::before {
+  color: var(--nlp-header-button-icon-color-hover);
+  transition: color 0.5s;
+}
+/* note button icon ---------------------------------------- */
+.rli-noteList .icon-note::before {
+  font-size: 22px;
+}
+/* icon group: sort field | sort reverse ------------------- */
+.rli-noteList .fa-long-arrow-alt-down,
+.rli-noteList .fa-font {
+  font-size: 17px;
+}
+
+/* notelist panel: body container -------------------------- */
+.rli-noteList .note-list {
   width: auto;
-  height: 32px;
-  margin: 2px 5px;
+  padding: 5px 3px 7px 3px;
+  background: var(--nlp-body-container-background-color);
 }
 
-/* note list selected state -------------------------------- */
-.selected.note-list-item {
-  width: auto;
-  height: 31px;
-  margin: 2px 5px;
-  background: var(--nlp-note-selected);
-  border-radius: 5px 10px;
-  box-shadow: 0 0 3px var(--nlp-note-selected-box-shadow);
+/* notelist panel: note list item -------------------------- */
+.rli-noteList .note-list .note-list-item,
+.rli-noteList .note-list .selected.note-list-item {
+  width: initial;
+  border-radius: 3px 13px;
+}
+.rli-noteList .note-list .note-list-item::before {
+  margin-left: -6px;
+}
+.rli-noteList .note-list .note-list-item a {
+  padding-left: 9px !important;
+}
+.rli-noteList .note-list .note-list-item a::-webkit-scrollbar {
+  display: none;
 }
 
-/* note list hover state ----------------------------------- */
-.note-list-item:hover {
-  width: auto;
-  margin: 2px 5px;
-  border-radius: 5px 10px;
-  filter: var(--nlp-note-hover);
+.rli-noteList .item-list.note-list ::before {
+  border-bottom: 2px dotted var(--nlp-list-item-border-color);
+  opacity: 0.8;
 }
-.note-list-item:not(.selected):hover {
-  width: auto;
-  margin: 2px 5px;
-  background: var(--nlp-note-hover2);
+.rli-noteList .note-list .note-list-item a > span {
+  color: var(--nlp-list-item-text-color);
 }
 
-
-
-/* STYLING: EDITOR HEADER ********************************** */
-
-/* editor header ------------------------------------------- */
-.rli-editor > div > div > div > div:first-child {
-  background: var(--eh-background);
+/* disable joplin official note list item hover ------------ */
+.cGoJUI:hover {
+  background-color: unset;
 }
-/* note title input bar ------------------------------------ */
+
+/* note list item hover ------------------------------------ */
+.rli-noteList .note-list .note-list-item:hover {
+  background-color: var(--nlp-note-list-item-background-color);
+}
+.rli-noteList .note-list .selected.note-list-item:hover {
+  filter: var(--nlp-note-list-item-filter-hover-selected);
+}
+
+/* note list item selected state --------------------------- */
+.rli-noteList .note-list .selected.note-list-item {
+  background: var(--nlp-note-list-item-background-color-selected);
+  box-shadow: 0 0 3px var(--nlp-note-list-item-box-shadow-selected);
+}
+
+
+
+/* EDITOR HEADER ******************************************* */
+/* editor header: container -------------------------------- */
+.rli-editor > div > div > div > div:first-child,
+.rli-editor input.title-input,
+span.updated-time-label,
+.updated-time-label ~ .editor-toolbar {
+  background: var(--eh-background-color) !important;
+  border-radius: 0 !important;
+}
+
+/* editor header: note title input bar --------------------- */
 .rli-editor input.title-input {
   padding: 0 0 0 2px !important;
-  background: var(--eh-note-title-input-bar) !important;
 }
-/* time label ---------------------------------------------- */
+
+/* editor header: time label ------------------------------- */
 span.updated-time-label {
   padding-right: 20px;
 }
-/* header toolbar ------------------------------------------ */
+
+/* editor header: header toolbar --------------------------- */
 .updated-time-label ~ .editor-toolbar {
-  background: var(--eh-right-side-toolbar) !important;
   box-shadow: none;
 }
 
-/* notebook navigation button ------------------------------- */
+/* editor header: notebook navigation button --------------- */
 .rli-editor > div > div > div > div > button {
-  background: var(--eh-notebook-navigation-button) !important;
-  border-radius: 5px 10px !important;
+  min-height: 30px;
+  max-height: 30px;
+  padding: 0 8px;
+  font-size: 15px;
+  background: var(--eh-notebook-navigation-button-background-color) !important;
+  border-radius: 4px 11px !important;
 }
+
+/* editor header: notebook navigation button text ---------- */
+.rli-editor > div > div > div > div > button > span {
+  color: var(--eh-notebook-navigation-button-text-color) !important;
+}
+
+/* editor header: notebook navigation button hover --------- */
 .rli-editor > div > div > div > div > button:hover {
   filter: var(--eh-notebook-navigation-button-hover);
 }
-.icon-notebooks,
-.icon-notebooks ~ span {
-  color: var(--eh-notebook-icon) !important;
-}
 
 
 
-/* STYLING: MAIN TOOLBAR ************************************ */
-
-/* main toolbar --------------------------------------------- */
-.editor-toolbar {
+/* EDITOR TOP TOOLBAR ************************************** */
+/* editor top toolbar: container --------------------------- */
+.rli-editor > div > div > div > div > div > div > .editor-toolbar {
   margin: 0 0 0 -12px;
-  background: var(--tt-editor-toolbar) !important;
-  border-radius: 1em;
-  box-shadow: 0 0 2px var(--tt-editor-toolbar-box-shadow);
+  background: var(--ett-background-color) !important;
+  border-radius: 7px;
+  box-shadow: 0 0 2px var(--ett-box-shadow);
 }
 
-/* editor rich text editor witch button --------------------- */
-div.editor-toolbar div button {
-  display: var(--rich-text-editor-switch-btn) !important;
+/* editor top toolbar: button ------------------------------ */
+.editor-toolbar > div > a {
+  border-radius: 4px 8px;
+}
+.editor-toolbar > div > a > i,
+.editor-toolbar > div > a > span {
+  color: var(--ett-button-icon-color);
+}
+/* button hover effect ------------------------------------- */
+.editor-toolbar > div > a:hover {
+  background: var(--ett-button-background-color-hover);
+  box-shadow: 0 0 4px var(--ett-button-box-shadow-hover);
+  transition: background 0.3s, box-shadow 0.4s;
+}
+.editor-toolbar > div > a:hover > span,
+.editor-toolbar > div > a:hover > i {
+  color: var(--ett-button-icon-color-hover);
+  transition: color .2s;
 }
 
-/* rich text editor main toolbar ---------------------------- */
-div.joplin-tinymce > div:nth-child(1) {
-  width: 90px !important;
+/* editor top toolbar: rich text editor switch button ------ */
+.editor-toolbar > div > button {
+  display: var(--switcher-jui-rich-text-editor-switch-button-display) !important;
+}
+
+/* editor top toolbar: rich text editor toolbar ------------ */
+.tox-editor-header > div > div > div {
+  background: none !important;
+}
+div.joplin-tinymce > div:nth-child(1),
+div.joplin-tinymce > div:nth-child(2),
+div.joplin-tinymce div.tox div.tox-toolbar__primary {
+  background-color: var(--ett-rich-text-editor-toolbar-background) !important;
   margin-top: 1px;
-  margin-left: -11px;
-  background: var(--tt-rich-text-editor-toolbar-background) !important;
-  border-radius: 1em 0 0 1em !important;
-  box-shadow: 0 0 2px var(--tt-rich-text-editor-toolbar-box-shadow);
+  box-shadow: 0 0 2px var(--ett-rich-text-editor-toolbar-box-shadow);
+}
+.tox-editor-container .tox-editor-header .tox-toolbar__primary {
+  margin-left: -11px !important;
+}
+.tox-editor-container .tox-editor-header .tox-toolbar-overlord {
+  margin-right: 6px !important;
+}
+
+div.joplin-tinymce > div:nth-child(1) {
+  margin-left: -11px !important;
+  border-radius: 7px 0 0 7px;
+  box-shadow: 0 0 2px var(--ett-rich-text-editor-toolbar-box-shadow);
 }
 div.joplin-tinymce > div:nth-child(2) {
-  margin-top: 1px;
-  background: var(--tt-rich-text-editor-toolbar-background) !important;
-  border-radius: 0 1em 1em 0 !important;
-  box-shadow: 0 0 2px var(--tt-rich-text-editor-toolbar-box-shadow);
-}
-
-.tox .tox-toolbar__group,
-.tox.tox-tinymce .tox-toolbar__primary,
-.tox.tox-tinymce .tox-toolbar__overflow {
-  background-color: var(--tt-rich-text-editor-toolbar-background) !important;
-}
-
-.tox:not(.tox-tinymce-inline) .tox-editor-header {
-  margin-top: 1px;
-  box-shadow: 0 0 2px var(--tt-rich-text-editor-toolbar-box-shadow) !important;
+  border-radius: 0 7px 7px 0;
+  box-shadow: 0 0 2px var(--ett-rich-text-editor-toolbar-box-shadow);
 }
 
 
 
-/* STYLING: BOTTOM TAG BAR ********************************* */
-.tag-bar {
+/* EDITOR BOTTOM TAG BAR *********************************** */
+.rli-editor .tag-bar {
   margin-left: -4px;
-  background: var(--btb-background);
-  border-radius: 1em;
-  box-shadow: 0 0 2px var(--btb-box-shadow);
-  z-index: 1;
+  background: var(--ebtb-background-color);
+  border-radius: 7px;
+  box-shadow: 0 0 2px var(--ebtb-box-shadow);
+  z-index: 100;
 }
 
-/* tags ---------------------------------------------------- */
-div.tag-bar div.tag-list > span {
-  text-shadow: 0 0 2px var(--btb-tags-text-shadow);
-  background: var(--btb-tags) !important;
-  border: 1px solid var(--btb-tags-border);
+/* editor bottom tag bar: tags ----------------------------- */
+.tag-bar > div > .tag-list > button {
+  text-shadow: 0 0 2px var(--ebtb-tag-text-shadow);
+  background: var(--ebtb-tag-background-color) !important;
+  border: 1px solid var(--ebtb-tag-border-color);
   font-size: 12px !important;
   -webkit-transition: font-size 0.1s;
   transition: font-size 0.1s;
 }
-div.tag-bar div.tag-list > span:hover {
-  font-size: 16px !important;
+
+/* editor bottom tag bar: tags hover effect ---------------- */
+.tag-bar > div > .tag-list > button:hover {
+  font-size: 18px !important;
+  color: var(--ebtb-tag-text-hover) !important;
   -webkit-transition: font-size 0.1s;
-  transition: font-size 0.1s;
+  transition: font-size 0.1s, color 0.1s;
 }
 
 
 
-/* STYLING: TAG MANAGER MODAL DIALOG *********************** */
-.modal-dialog,
-.modal-dialog button {
-  border-radius: 0.5em 1em;
+/* TAG MANAGER MODAL DIALOG ******************************** */
+.modal-dialog {
+  border-radius: 4px 12px;
+  background: var(--markdown-editor-background-color) !important;
+  box-shadow: 0 0 3px white !important;
 }
 
-/* tag selector bar ---------------------------------------- */
-.css-16hp18y-control,
+/* modal dialog: button ------------------------------------ */
+.modal-layer > .modal-dialog > div > button {
+  display: inline-block;
+  width: 100px;
+  border-radius: 4px 8px;
+}
+.modal-layer > .modal-dialog > div > button:hover {
+  filter: brightness(130%);
+  transition: filter 0.5s;
+}
+
+/* modal dialog: tag selector bar -------------------------- */
+.css-16hp18y-control {
+  border-radius: 8px;
+}
 .tag-selector > div > div > div > div {
-  border-radius: 1em;
+  border-radius: 3px 6px;
+}
+
+
+/* OPTIONS PAGE ******************************************** */
+/* option page: menu --------------------------------------- */
+.config-screen > div,
+.config-screen-content-wrapper > div > div > div > div {
+  background: var(--op-menu-background-color) !important;
+}
+.config-screen > div > a > span {
+  color: var(--op-menu-text-color) !important;
+}
+.kpFtJJ {
+  background: var(--op-menu-background-color-selected) !important;
+}
+.config-screen > div > a:hover {
+  background: var(--op-menu-background-color-hover) !important;
+}
+
+/* option page: config screen ------------------------------ */
+.sc-fznNvL.ihsqJx,
+.config-screen > div > div,
+.config-screen-content-wrapper > div > div {
+  background: var(--op-content-background-color) !important;
+}
+
+/* option page: input -------------------------------------- */
+input {
+  border-radius: 7px !important;
+  color: var(--op-input-text-color) !important;
+}
+
+/* option page: dropdown list ------------------------------ */
+select {
+  border-radius: 7px !important;
+  color: var(--op-dropdown-list-text-color) !important;
+}
+
+/* option page: checkbox ----------------------------------- */
+.config-screen input[checked] {
+  filter: var(--op-checkbox-checked-filter);
+}
+
+/* option page: label -------------------------------------- */
+.config-screen label {
+  font-size: var(--op-label-font-size) !important;
+}
+
+/* option page: button ------------------------------------- */
+.config-screen button {
+  background: var(--op-button-background-color) !important;
+  border-radius: 7px !important;
+}
+.config-screen button span,
+.config-screen-content-wrapper button {
+  color: var(--op-button-text-color) !important;
+}
+
+/* option page: table -------------------------------------- */
+.config-screen-content-wrapper table {
+  background: var(--op-table-container-background-color) !important;
+}
+.config-screen-content-wrapper table > thead > tr > th,
+.config-screen-content-wrapper table > tbody > tr > td {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--op-table-border-color);
+}
+.config-screen-content-wrapper table kbd {
+  background: var(--op-table-keyboard-shortcut-background-color) !important;
+  border: none !important;
+}
+
+/* option page: plugin ------------------------------------- */
+.sc-fzppAM.gNDenk {
+  background: var(--op-plugin-card-background-color) !important;
+  box-shadow: 0 0 5px var(--op-plugin-card-box-shadow);
+}
+/* option page: plugin switcher ---------------------------- */
+.config-screen .sc-fznBtT.fjjhGD > div > div {
+  filter: var(--op-plugin-switcher-filter);
+}
+/* option page: plugin update button ----------------------- */
+button.sc-AxirZ.sc-Axmtr.fuPMcZ.sc-fzozJi.dfRkax {
+  background: var(--op-plugin-update-button-background-color);
+  box-shadow: 0 0 3px var(--op-plugin-update-button-box-shadow);
 }
 
 
 
-/* STYLING: OPTIONS PAGE *********************************** */
+/* ********************************************************* */
+/* !!!!!!!!!     MAIN SOURCE CODE: SECTION END    !!!!!!!!!! */
+/* ********************************************************* */
+/* ********************************************************* */
+/* vvvvvvvvv             CUSTOM CODE              vvvvvvvvvv */
+/* ********************************************************* */
+/* Add your custom code below here to avoid confusing with OhmineDT's code. */
 
-/* dropdown list & input bar ------------------------------- */
-select, input {
-  color: var(--op-dropdown-list-and-input-text) !important;
-  border-radius: 0.8em !important;
+/*
+Font color of button appears not to be changeable at the moment without using temporary class names,
+so fix the background instead. Use standard bg color used by joplin for this inverted button, as is
+the case for other unstyled buttons (like editor switch).
+*/
+.new-note-button {
+  background: rgb(221, 221, 221) !important;
 }
 
-/* plugin card --------------------------------------------- */
-#react-root > div > .config-screen > div > div > div > div > div > div > div > div > div, /* v2.6.9 */
-#react-root .sc-fzocqA .sc-fzoPby,
-#react-root .sc-fzppip .sc-fzoPby {
-  border-radius: 0.6em 1.3em;
-}
-#react-root > div > .config-screen > div > div > div > div > div > div > div > div > div > div > button, /* v2.6.9 */
-#react-root .sc-fzoPby button {
-  border-radius: 0.4em 0.8em;
-}
-
-/* button group:  back | ok | apply | ---------------------- */
-#react-root > div > .config-screen > div > div > div > button, /* v2.6.9 */
-#react-root > div > .config-screen > div > div > button, /* v2.6.9 */
-#react-root > div > div > div > div.sc-fzoCCn > button,
-#react-root > div > div > div > div.sc-fzoCCn > div > button {
-  border-radius: 0.4em 0.8em;
-  font-size: 14px;
+.new-note-button:hover {
+  background: white !important;
 }

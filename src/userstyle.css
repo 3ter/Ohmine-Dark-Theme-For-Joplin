@@ -1,4 +1,4 @@
-/* OhmineDT v3.1.84 | userstyle.css */
+/* OhmineDT v3.1.87 | userstyle.css */
 /* CSS for: Render Viewer | Rich Text Editor | Print PDF | Export PDF | EXPORT HTML */
 
 /* By usual case, you would only to edit the source code within the root section to fulfill most of your personal needs */
@@ -40,26 +40,26 @@
   --switcher-h4-border-display: none; /* SHOW: "block;" | HIDE: "none;" | show/hide h4 heading border */
   --switcher-h5-border-width: 1px; /* SHOW: "1px;" | HIDE: "0;" | show/hide h5 heading border */
   --switcher-h6-border-width: 0; /* SHOW: "1px;" | HIDE: "0;" | show/hide h6 heading border */
-  
+
   --switcher-paragraph-text-align: justify; /* ON: "justify;" | OFF: "none;" | turn on/off the justify text effect of paragraph content*/
   --switcher-list-text-align: none;  /* ON: "justify;" | OFF: "none;" | turn on/off the justify text effect of list */
   --switcher-footnote-text-align: none;  /* ON: "justify;" | OFF: "none;" | turn on/off the justify text effect of footnote content */
-  
+
   --switcher-link-bracket-display: none; /* ON: "inline;" | OFF: "none;" | turn on/off the effect of automatically adding the monospace bracket to links */
   --switcher-link-break-word: break-all; /* ON: "break-all;" | OFF: "break-word" | turn on/off to set how a line break present on the link text */
-  
+
   --switcher-markdown-toc-position-left: 0; /* ON: "0;" | OFF: none | turn on/off to position the markdown TOC button to the left/right */
   --switcher-markdown-toc-link-text-wrap: normal; /* ON: "normal;" | OFF: "nowrap;" | turn on/off the wrap text of the Markdown TOC link text */
 
   --switcher-codeblock-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | turn on/off the max-height limit of codeblock */
   --switcher-art-gallery-max-height: 60vh; /* ON: "60vh;" | OFF: "none;" | turn on/off the max-height limit of art gallery */
-  
+
   --switcher-eye-protector-for-images-filter: brightness(75%); /* ON: "brightness(75%);" | OFF: "none;" | turn on/off the reduce raw brightness effect on attached image */
   --switcher-eye-protector-for-images-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" | OFF: "none;" | turn on/off the brightness increasing hover effect on attached image */
-  
+
   --switcher-eye-protector-for-mermaid-filter: brightness(75%); /* ON: "brightness(75%);" | OFF: "none;" | turn on/off the reduce raw brightness effect on mermaid chart */
   --switcher-eye-protector-for-mermaid-animation: eye-protector 1.5s forwards 1; /* ON: "eye-protector 1.5s forwards 1;" OFF: "none;" | turn on/off the brightness increasing hover effect on mermaid chart */
-  
+
   --switcher-custom-title-block-title-symbol-display: inline-block; /* SHOW: "inline-block;" | HIDE: "none;" | show/hide the custom title block title symbol */
 
 
@@ -72,7 +72,7 @@
   --switcher-print-h1-border-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide the h1 heading border from the PDF */
   --switcher-print-link-href-display: inline; /* SHOW: "inline;" | HIDE: "none;" | show/hide the link href after the link text from the PDF */
   --switcher-print-markdown-toc-display: block; /* SHOW: "block;" | HIDE: "none;" | show/hide the markdown toc from the PDF */
-  
+
 
 
   /* ******************************************************* */
@@ -86,15 +86,15 @@
   /* GENERAL *********************************************** */
   /* base font group:  all elements that other than monospace font group */
   --base-font: "montserrat", "chiron sans hk pro extralight", avenir, arial, sans-serif; /* by default, it's also affects to --print-base-font */
-  --base-font-size: 14px;
+  --base-font-size: 16px;
 
   /* monospace font group:  code block | pre | code | footnote ref no. */
   --monospace-font: "cascadia mono light", monospace, "chiron sans hk pro extralight"; /* by default, it's also affects to --print-monospace-font */
   --monospace-font-size: 12px;
-  
+
   /* render viewer background ------------------------------ */
   --render-viewer-background-color: #151b1a; /* by default, it's also affects to the table border color */
-  
+
   /* export html background -------------------------------- */
   --export-html-background-color: #242424; /* there would be generated a side margin when exporting to html, and this color is for that margin */
 
@@ -105,12 +105,12 @@
   /* paragraph --------------------------------------------- */
   --paragraph-text-line-height: 1.5em;
   --paragraph-text-color: #bdbdbd;
-   
+
   /* horizontal line --------------------------------------- */
   --hr-background-image-color: linear-gradient(to right, #30484c 30%, #2a423c 60%);
-  
-  
-  
+
+
+
   /* HEADING *********************************************** */
   /* heading group:  h1 to h6 ------------------------------ */
   --headings-font-weight: 600;
@@ -123,7 +123,7 @@
   --h4-font-size: 1.3em;
   --h5-font-size: 1.2em;
   --h6-font-size: 1.1em;
-  
+
   /* heading: h1 ------------------------------------------- */
   --h1-text-color: #32e2ac; /* it's only valid when h1 background clip effect has been removed */
   --h1-clip-text-color: linear-gradient(
@@ -141,13 +141,13 @@
 
   /* heading: h2 ------------------------------------------- */
   --h2-text-color: #d2d2d2;
-  --h2-rice-icon-color: var(--h2-text-color); 
+  --h2-rice-icon-color: var(--h2-text-color);
   --h2-border-color: linear-gradient(to right, #dadada 30%, #545454 60%); /* by default, it's also affects to h3 & h4 border color */
 
   /* heading: h3 ------------------------------------------- */
   --h3-text-color: #d2d2d2;
   --h3-border-color: var(--h2-border-color);
-  
+
   /* heading: h4 ------------------------------------------- */
   --h4-text-color: #d2d2d2;
   --h4-border-color: var(--h2-border-color);
@@ -161,7 +161,7 @@
   --h6-border-color: var(--h6-text-color);
 
 
-  
+
   /* SPECIAL TEXT ****************************************** */
   /* special text: mark text ------------------------------- */
   --mark-text-color: #000000;
@@ -198,24 +198,24 @@
   --math-notation-text-shadow-color: var(--math-notation-text-color);
 
 
-  
+
   /* LINK ************************************************** */
   --link-text-color: #cdd286;
   --link-resource-icon-color: var(--link-text-color);
-  
-  
-  
+
+
+
   /* LIST ************************************************** */
   /* list text group: unordered list | ordered list | checklist */
   --list-text-color: #51bba8;
-  
+
   /* list: checkbox ---------------------------------------- */
   --checkbox-color-filter: hue-rotate(320deg) brightness(125%); /* it's using the filter property to change the checkbox color */
-  
+
   /* list: list > span ------------------------------------- */
   --list-span-text-color: #bdbdbd;
-  
-  
+
+
 
   /* TABLE ************************************************* */
   /* table: table header ----------------------------------- */
@@ -230,15 +230,15 @@
   /* table: table row -------------------------------------- */
   --table-tr-odd-background-color: #172425;
   --table-tr-even-background-color: #1d2b2d;
-  
-  
-  
+
+
+
   /* BLOCKQUOTE ******************************************** */
   --blockquote-text-color: #a2998f;
   --blockquote-border-color: #b39674;
-  
-  
-  
+
+
+
   /* CODEBLOCK ********************************************* */
   /* codeblock: container ---------------------------------- */
   --codeblock-background-color: #191919;
@@ -254,7 +254,7 @@
 
   /* codeblock: selected status on rich text editor -------- */
   --codeblock-outline-color-selected: #002688;
- 
+
 
 
   /* MARKDOWN TOC ****************************************** */
@@ -277,7 +277,7 @@
 
   /* FOOTNOTE ********************************************** */
   /* footnote: title --------------------------------------- */
-  --footnote-title-font-size: 15px; 
+  --footnote-title-font-size: 15px;
   --footnote-title-text-color: #dedede;
   --footnote-title-border-color: #585858;
 
@@ -295,14 +295,14 @@
 
   /* CUSTOM ELEMENT: STICKY NOTES ************************** */
   /* sticky notes body group:  not including the stick note - "Important" */
-  --sn-text-color: #eaeaea; 
+  --sn-text-color: #eaeaea;
   --sn-background-color: linear-gradient(120deg, #191919, #232323, #191919);
   --sn-border-color: #43b991;
   --sn-box-shadow: #148059;
 
   /* sticky notes tags group: not including the stick note - "Important" */
   --sn-tags-text-shadow-color: #000000;
-  
+
   /* sticky notes: note ------------------------------------ */
   --sn-note-tag-background-color: #0065b3;
 
@@ -320,20 +320,20 @@
 
   /* sticky notes: keyword --------------------------------- */
   --sn-keyword-tag-background-color: #c10074;
-  
+
   /* sticky notes: important - body ------------------------ */
   --sn-important-text-color: #e8c399;
   --sn-important-background-color: #edad0b0d;
   --sn-important-border-color: red; /* by default, it's also affects to --sn-important-tag-border-color */
-  --sn-important-box-shadow: red; 
-  
+  --sn-important-box-shadow: red;
+
   /* sticky notes: important - tag ------------------------- */
   --sn-important-tag-text-color: red;
   --sn-important-tag-background-color: #3c0000;
   --sn-important-tag-border-color: var(--sn-important-border-color);
-  
-  
-  
+
+
+
   /* CUSTOM ELEMENT: CUSTOM TITLE BLOCK ******************** */
   /* custom title block: container ------------------------- */
   --ctb-background-color: #212925;
@@ -348,9 +348,9 @@
   /* CUSTOM ELEMENT: KEY POINT ***************************** */
   --kp-text-color: #76dccf;
   --kp-border-color: #76dccf78;
-  
-  
-  
+
+
+
   /* PLUGIN: TURNTOCHART *********************************** */
   --ttc-text-color: var(--paragraph-text-color);
 
@@ -371,23 +371,23 @@
 
   /* spoiler block: horizontal line ------------------------ */
   --sb-hr-background-color: linear-gradient(to right, #333333, #7e8062, #333333);
-  
+
   /* spoiler block: list ----------------------------------- */
   --sb-list-text-color: #9adebe;
-  
+
   /* spoiler block: span ----------------------------------- */
   --sb-span-text-color: #cccab0;
   --sb-span-background-color: #504f46;
-  
+
   /* spoiler block: list > span ---------------------------- */
   --sb-list-span-text-color: #d0d0d0;
-  
+
   /* spoiler block: custom title block --------------------- */
   --sb-ctb-title-text-color: #afac7e;
   --sb-ctb-background-color: #1d1d1c;
-  
-  
-  
+
+
+
   /* PLUGIN: SPOILER - SPOILER INLINE ********************** */
   /* spoiler inline: body ---------------------------------- */
   --si-border-color: #46792b;
@@ -422,9 +422,9 @@
   /* print note title -------------------------------------- */
   --print-note-title-font-size: 22px;
   --print-note-title-text-color: #606060;
-  
+
   /* print paragraph --------------------------------------- */
-  --print-paragraph-text-color: #595959;
+  --print-paragraph-text-color: #000000;
 
   /* print horizontal line --------------------------------- */
   --print-hr-background-color: linear-gradient(to right, #71a0a9 30%, #b3e6ea 60%);
@@ -486,7 +486,7 @@
 
   /* print special text: abbreviation text ----------------- */
   --print-abbreviation-text-color: #54d077;
-  
+
   /* print special text: inline code text ------------------ */
   --inline-code-text-font-size: 95%;
   --print-inline-code-text-color: #595959;
@@ -501,7 +501,7 @@
   /* PRINT LINK ******************************************** */
   /* print link: text -------------------------------------- */
   --print-link-text-color: #58bdf9; /* by default, it will also affects to --print-mt-list-token-color */
-  
+
   /* print link: href -------------------------------------- */
   --print-link-href-font-size: 10px;
 
@@ -510,7 +510,7 @@
   /* PRINT LIST ******************************************** */
   /* print list text group: unordered list | ordered list | checklist */
   --print-list-text-color: #51bba8;
-  
+
   /* print list: span -------------------------------------- */
   --print-list-span-text-color: #595959;
 
@@ -524,7 +524,7 @@
   /* print table: table data ------------------------------- */
   --print-table-td-text-color: var(--print-table-th-text-color);
   --print-table-td-border-color: rgb(255, 255, 255);
-  
+
   /* print table: table row -------------------------------- */
   --print-table-tr-even-background-color: #e0e0e0;
   --print-table-tr-odd-background-color: #fff;
@@ -557,7 +557,7 @@
   /* print footnote: title --------------------------------- */
   --print-footnote-title-text-color: #3a3a3a;
   --print-footnote-title-border-color: #999;
-  
+
   /* print footnote: text ---------------------------------- */
   --print-footnote-text-color: #666; /* [TODO]: list token and list text split */
 
@@ -567,7 +567,7 @@
   /* sticky notes body group: not including sticky notes - important - */
   --print-sn-text-color: var(--print-paragraph-text-color);
   --print-sn-border-color: #999;
-  
+
   /* sticky notes tags group: not including sticky notes - important */
   --print-sn-tags-font-size: 1em;
   --print-sn-tags-text-color: #fff;
@@ -583,7 +583,7 @@
   --print-ctb-title-text-color: #93c281;
   --print-ctb-title-symbol-color: radial-gradient(#93c281 34%, #93c281b8 60%);
   --print-ctb-border-color: #999;
-  
+
 
 
   /* PRINT CUSTOM ELEMENT: KEY POINT *********************** */
@@ -591,21 +591,21 @@
   --print-kp-border-color: #2cceb978;
 
 
-  
+
   /* PRINT PLUGIN: TURNTOCHART ***************************** */
   --print-ttc-text-color: #595959;
-  
-  
-  
+
+
+
   /* PRINT PLUGIN: SPOILER - SPOILER BLOCK ***************** */
   /* print spoiler block: container ------------------------ */
   --print-sb-border-color: #999;
-  
+
   /* print spoiler block: title ---------------------------- */
   --print-sb-title-font-size: 16px;
   --print-sb-title-text-color: #606060;
   --print-sb-title-border-color: var(--print-sb-border-color);
-  
+
   /* print spoiler block: body ----------------------------- */
   --print-sb-body-text-color: var(--print-paragraph-text-color);
 
@@ -622,7 +622,7 @@
 
   /* print spoiler block: list > span ---------------------- */
   --print-sb-list-span-text-color: #474747;
-  
+
   /* print spoiler block: custom title block --------------- */
   --print-sb-ctb-title-font-size: 1.2em;
   --print-sb-ctb-border-color: #999;
@@ -998,7 +998,7 @@ body {
 }
 
 /* list: list > span --------------------------------------- */
-#rendered-md > ul li span,
+#rendered-md > ul li span:not(.inline-todo),
 #rendered-md > ol li span {
   color: var(--list-span-text-color);
 }
@@ -1269,8 +1269,8 @@ ag12 {
   align-items: center;
   max-height: var(--switcher-art-gallery-max-height);
   border-radius: 7px;
-  background: var(--ag-background-color); 
-  box-shadow: 0 0 3px var(--ag-box-shadow); 
+  background: var(--ag-background-color);
+  box-shadow: 0 0 3px var(--ag-box-shadow);
   overflow-y: scroll;
 }
 ag2 img,
@@ -1474,7 +1474,7 @@ important::before {
   display: inline-block;
   height: 1em;
   border-style: solid;
-  border-color: var(--kp-border-color); 
+  border-color: var(--kp-border-color);
   border-radius: 4px;
 }
 #rendered-md > p > kp::before {
@@ -1622,6 +1622,7 @@ important::before {
   /* print ready: print exact color ------------------------ */
   #rendered-md * {
     -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
   /* print ready: print pdf  */
@@ -1741,7 +1742,7 @@ important::before {
   #rendered-md .mermaid:hover {
     animation: none;
   }
-  
+
 
 
   /* PRINT GENERAL ***************************************** */
@@ -1768,7 +1769,7 @@ important::before {
     font-family: var(--print-monospace-font) !important;
     font-size: var(--print-monospace-font-size);
   }
-  
+
   /* print background -------------------------------------- */
   body,
   #rendered-md,
@@ -2178,7 +2179,7 @@ important::before {
     font-size: 100%;
     background: none;
   }
-  
+
 
 
   /* PRINT CUSTOM ELEMENT: CUSTOM TITLE BLOCK ************** */
@@ -2236,7 +2237,7 @@ important::before {
   #rendered-md > .spoiler-block > .summary-content {
     color: var(--print-sb-body-text-color);
   }
-  
+
   /* print spoiler block: horizontal line ------------------ */
   #rendered-md > .spoiler-block > .summary-content > hr {
     margin: 20px auto;
@@ -2244,7 +2245,7 @@ important::before {
     height: 1px;
     background-image: var(--print-sb-hr-background-color);
   }
-  
+
   /* print spoiler block: list ----------------------------- */
   #rendered-md > .spoiler-block > .summary-content ul > li,
   #rendered-md > .spoiler-block > .summary-content ol > li {
@@ -2256,7 +2257,7 @@ important::before {
     position: relative;
     left: -18px;
     font-weight: 800;
-    font-size: var(--print-sb-span-font-size); 
+    font-size: var(--print-sb-span-font-size);
     color: var(--print-sb-span-text-color);
     line-height: normal;
     border-width: 0 0 1px;
@@ -2264,7 +2265,7 @@ important::before {
     border-color: var(--print-sb-span-border-color);
     background: none;
   }
-  
+
   /* print spoiler block: list > span ---------------------- */
   #rendered-md > .spoiler-block > .summary-content > ul li span,
   #rendered-md > .spoiler-block > .summary-content > ol li span {
@@ -2304,7 +2305,7 @@ important::before {
   #tinymce input.spoiler-inline {
     display: none;
   }
-  
+
 }
 
 /* ********************************************************* */
