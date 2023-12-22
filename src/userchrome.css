@@ -1611,3 +1611,16 @@ button.sc-AxirZ.sc-Axmtr.fuPMcZ.sc-fzozJi.dfRkax {
 /* vvvvvvvvv             CUSTOM CODE              vvvvvvvvvv */
 /* ********************************************************* */
 /* Add your custom code below here to avoid confusing with OhmineDT's code. */
+
+/*
+Font color of button appears not to be changeable at the moment without using temporary class names,
+so fix the background instead. Use standard bg color used by joplin for this inverted button, as is
+the case for other unstyled buttons (like editor switch).
+*/
+.new-note-button {
+  background: rgb(221, 221, 221) !important;
+}
+
+.new-note-button:hover {
+  background: white !important;
+}
